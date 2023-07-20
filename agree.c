@@ -10,7 +10,7 @@ int main(void)
 
     printf("Agreed.\n");
     }
-    else if (c = 'Y')
+    else if (c == 'Y')
     {
         printf("Agreed.\n");
     }
