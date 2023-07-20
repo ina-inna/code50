@@ -8,6 +8,10 @@ int main(void)
     if (c == 'y')
     {
 
-    pring("agree)
+    printf("Agreed.\n");
+    }
+    else if (c == 'n')
+    {
+        printf("Not Agreed.\n");
     }
 }
