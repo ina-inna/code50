@@ -12,6 +12,6 @@ int main(void)
    }
    else
    {
-    prinf("x is not less than y\n");
+    printf("x is not less than y\n");
    }
 }
