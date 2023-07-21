@@ -1,6 +1,10 @@
 #include <cs50.h>
 #include <stdio.h>
 
+void japwofijspodfs() {
+    printf("x equals y\n");
+}
+
 int main(void)
 {
    int x = get_int("What's x?\n ");
@@ -16,7 +20,6 @@ int main(void)
    }
    else if (x == y)
    {
-    printf("x equals y\n");
-
+      say_they_are_equal();
    }
 }
