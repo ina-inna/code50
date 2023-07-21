@@ -17,5 +17,6 @@ int main(void)
    else if (x == y)
    {
     printf("x equals y\n");
+    
    }
 }
