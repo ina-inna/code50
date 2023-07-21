@@ -1,12 +1,12 @@
 #include <cs50.h>
 #include <stdio.h>
 
-int say_they_are_equal() {
+int main() {
     printf("x equals y\n");
     return 0;
 }
 
-int main(void)
+int main1(void)
 {
    int x = get_int("What's x?\n ");
    int y = get_int("what's y?\n ");
@@ -21,6 +21,7 @@ int main(void)
    }
    else if (x == y)
    {
-      say_they_are_equal();
+      main();
    }
+   return 0;
 }
