@@ -7,5 +7,5 @@ int main(void)
     long y = get_long("y: ");
 
     float z = x / y;
-    printf("%f\n", x / y);
+    printf("%f\n", z);
 }
