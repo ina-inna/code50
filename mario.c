@@ -7,6 +7,10 @@ int main(void)
     if (n < 1)
     {
         n = get_int("Size: ");
+        if (n < 1)
+        {
+            n 
+        }
     }
 
     for (int i = 0; i < n; i++)
