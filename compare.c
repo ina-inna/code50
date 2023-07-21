@@ -1,8 +1,9 @@
 #include <cs50.h>
 #include <stdio.h>
 
-void japwofijspodfs() {
+int say_they_are_equal() {
     printf("x equals y\n");
+    return 0;
 }
 
 int main(void)
