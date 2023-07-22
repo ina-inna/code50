@@ -13,12 +13,12 @@ int main(void)
   while (n < 9);
 
     // TODO: Prompt for end size
-    int z;
+    int j;
   do
   {
-    z = get_int("End size: ");
+    j = get_int("End size: ");
   }
-  while (z > n);
+  while (j < n);
 
 
     // TODO: Calculate number of years until we reach threshold
@@ -27,7 +27,7 @@ do
 {
     n = n + (n/3) - (n/4);
 }
-while (n == z);
+while (n == j);
     // TODO: Print number of years
     printf("Years: %i\n", n);
 }
