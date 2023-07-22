@@ -23,11 +23,11 @@ int main(void)
 
     // TODO: Calculate number of years until we reach threshold
 int num = 0;
-
+while (n < j)
 {
     n = n + (n/3) - (n/4);
+    ++num;
 }
-while (n < j);
     // TODO: Print number of years
-    printf("Years: %i\n", n);
+    printf("Years: %i\n", num);
 }
