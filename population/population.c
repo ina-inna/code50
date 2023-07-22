@@ -27,7 +27,7 @@ do
 {
     n = n + (n/3) - (n/4);
 }
-while (n == z)
+while (n == z);
     // TODO: Print number of years
     printf("Years: %i\n", n);
 }
