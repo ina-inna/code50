@@ -8,7 +8,7 @@ int main(void)
     int n;
   do
   {
-    n = get_int("Positive Integer: ");
+    n = get_int("Start size: ");
   }
   while (n < 9);
 
@@ -16,7 +16,7 @@ int main(void)
     int z;
   do
   {
-    z = get_int("Positive Integer: ");
+    z = get_int("End size: ");
   }
   while (z > n);
 
