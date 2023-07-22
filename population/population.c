@@ -23,5 +23,10 @@ int main(void)
 
     // TODO: Calculate number of years until we reach threshold
 
+do
+{
+    
+}
+
     // TODO: Print number of years
 }
