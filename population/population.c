@@ -29,4 +29,5 @@ do
 }
 
     // TODO: Print number of years
+    printf("Years: %i\n", n);
 }
