@@ -7,5 +7,6 @@ int main(void)
         printf("%s!\n", answer);
     }
     {
-        int i = get_
+        int i = get_int("Age: ");
+        printf("%s\n", i);
     }
