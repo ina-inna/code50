@@ -3,12 +3,12 @@
 
 int main(void)
  {
-        string answer = get_string("Name: ");
-        printf("%s!\n", answer);
+        string name = get_string("Name: ");
+        printf("%s!\n", name);
 
-        int i = get_int("Age: ");
-        printf("%i\n", i);
+        int age = get_int("Age: ");
+        printf("%i\n", age);
 
-        long phone = get_long("Phone number: ");
-        printf("%ld\n", phone);
+        string phone = get_string("Phone number: ");
+        printf("%s\n", phone);
     }
