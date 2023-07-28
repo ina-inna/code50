@@ -12,7 +12,7 @@ int main(void)
   while ( n < 1 || n > 8);
 
   // Print grid of bricks
-  int i = #
+  char i = #
   int j = i + #
     for (int i = 0; i < n; i++)
     { printf("#");
