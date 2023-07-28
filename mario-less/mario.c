@@ -9,7 +9,7 @@ int main(void)
   {
     n = get_int("Size: ");
   }
-  while ( n < 1);
+  while (0 < n < 9);
 
   // Print grid of bricks
     for (int i = 0; i < n; i++)
