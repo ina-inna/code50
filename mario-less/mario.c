@@ -20,7 +20,7 @@ int main(void)
             printf(" ");
         }
 
-        for (int column = 0; column <= row; column++)
+        for (int column = 0; column <= n - row - 1; column++)
         {
             printf("#");
         }
