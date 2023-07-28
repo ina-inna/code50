@@ -9,14 +9,14 @@ int main(void)
   {
     n = get_int("Size: ");
   }
-  while (0 < n < 9);
+  while ( n > 8);
 
   // Print grid of bricks
     for (int i = 0; i < n; i++)
 {
         for (int j = 0; j < n; j++)
 {
-    printf("#");
+    printf(".#");
 }
     printf("\n");
 }
