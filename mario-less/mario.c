@@ -9,17 +9,18 @@ int main(void)
   {
     n = get_int("Size: ");
   }
-  while ( n < 1 && n > 8);
+  while ( n < 1 || n > 8);
 
   // Print grid of bricks
     for (int i = 0; i < n; i++)
     { printf("#");
+        for (int j = 1; j < n; j++)
+{
+    printf("#.\n");
+}
 
 {
-        for (int j = i + j; j < n; j++)
-{
-    printf(".");
-}
+
     printf("\n");
 }
 }
