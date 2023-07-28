@@ -15,7 +15,7 @@ int main(void)
 
     for (int row = 0; row < n; row++)
     {
-        for (int space = 0; space < n - row - 1; space++)
+        for (int space = 0; space <=row; space++)
         {
             printf(" ");
         }
