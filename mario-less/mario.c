@@ -13,6 +13,7 @@ int main(void)
 
   // Print grid of bricks
   int i = #
+  int j = i + #
     for (int i = 0; i < n; i++)
     { printf("#");
         for (int j = 1; j < n; j++)
