@@ -13,9 +13,9 @@ int main(void)
 
   // Print grid of bricks
 
-    for (int i = 0; i < n; i++)
+    for (int row = 0; row < n; row++)
     { printf("#");
-        for (int j = 1; j < n; j++)
+        for (int column = 1; column < n; column++)
 {
     printf(" ");
 }
