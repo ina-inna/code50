@@ -39,12 +39,12 @@ int get_cents(void)
 {
 
     // TODO
-  int cents1;
+  int cents;
     do
     {
-        cents1 = get_int("Size: ");
+        cents = get_int("Change owed: ");
     }
-    while (n < 1 || n > 8);
+    while (cents < 1 || cents > 100);
 
     return 0;
 }
