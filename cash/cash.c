@@ -37,11 +37,14 @@ int main(void)
 
 int get_cents(void)
 {
+
     // TODO
+    int cents;
+    do
     {
-        while (n < 0 || n > 100);
+       cents = get_int("How many cents: ");
     }
-  
+        while (cents < 0 || cents > 100);
 
     return 0;
 }
