@@ -40,9 +40,9 @@ do
 {
     // TODO
     {
-        n = get_int("Size: ");
+        cents = get_cents("How many cents: ");
     }
-    while (n < 1 || n > 8);
+    while (n < 0 || n > 100);
 
     return 0;
 }
