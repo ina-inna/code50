@@ -25,6 +25,11 @@ int main(void)
             printf("#");
         }
         printf(".");
+
+        for (int column2 = 0; column2 <= n - row - 1; column2++)
+        {
+            printf("#");
+        }
         printf("\n");
     }
 }
