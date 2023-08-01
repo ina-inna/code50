@@ -42,7 +42,7 @@ int get_cents(void)
     int cents;
     do
     {
-       cents = get_cents("How many cents: ");
+
     }
         while (cents < 0 || cents > 100);
 
