@@ -39,7 +39,13 @@ int get_cents(void)
 {
 
     // TODO
-    
+  int cents1;
+    do
+    {
+        cents1 = get_int("Size: ");
+    }
+    while (n < 1 || n > 8);
+
     return 0;
 }
 
