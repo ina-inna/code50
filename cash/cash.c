@@ -39,13 +39,7 @@ int get_cents(void)
 {
 
     // TODO
-    int cents;
-    do
-    {
-
-    }
-        while (cents < 0 || cents > 100);
-
+    
     return 0;
 }
 
