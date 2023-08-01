@@ -36,8 +36,14 @@ int main(void)
 }
 
 int get_cents(void)
+do
 {
     // TODO
+    {
+        n = get_int("Size: ");
+    }
+    while (n < 1 || n > 8);
+
     return 0;
 }
 
