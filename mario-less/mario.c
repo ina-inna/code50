@@ -15,18 +15,18 @@ int main(void)
 
     for (int row = 0; row < n; row++)
     {
-        for (int space = 0; space <= n - row; space++)
+        for (int space = 0; space < n - row; space++)
         {
             printf(" ");
         }
 
-        for (int column = 0; column < row; column++)
+        for (int column = 0; column <= row; column++)
         {
             printf("#");
         }
-        printf(".");
+        printf(" ");
 
-        for (int column2 = 0; column2 <= n - row - 1; column2++)
+        for (int column2 = 0; column2 <= row; column2++)
         {
             printf("#");
         }
