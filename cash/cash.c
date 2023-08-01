@@ -36,7 +36,6 @@ int main(void)
 }
 
 int get_cents(void)
-do
 {
     // TODO
     {
