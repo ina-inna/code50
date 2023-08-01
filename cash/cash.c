@@ -57,7 +57,7 @@ int calculate_quarters(int cents)
     return (calculate_quarters);
 }
 
-int calculate_dimes(int cents)
+int calculate_dimes(int cents);
 
     // TODO
     int cents;
