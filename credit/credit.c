@@ -7,7 +7,7 @@ int main(void)
 
 // Number is ok, print VISA
 
-    if (number % 10 = 0)
+    if (number % 10 == 0)
    {
     printf("VISA\n");
    }
