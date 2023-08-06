@@ -2,8 +2,9 @@
 #include <stdio.h>
 #include <stdbool.h>
 
+int a,b,c;
 
-int main(int a, int b, int c)
+int main()
 {
     bool isTrue = true;
     bool isFalse = false;
