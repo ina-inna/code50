@@ -10,5 +10,6 @@ int main(void)
    }
     while (length < 1);
 
-    
+    int array[length];
+    printf()
 }
