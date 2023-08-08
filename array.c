@@ -11,5 +11,10 @@ int main(void)
     while (length < 1);
 
     int array[length];
-    printf()
+    for (int i = 0; i < length; i++)
+    {
+            printf("%i", array[length]);
+
+    }
+    printf("\n");
 }
