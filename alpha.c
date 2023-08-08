@@ -5,5 +5,17 @@
 int main (void)
 {
     string word = get_string("Word: ");
-    for (i = 0, )
+
+    int word_length = strlen(word);
+    for (int i = 0, i < word_length - 1, i++)
+   {
+    // check if not alphabetical
+    if (word[i] > word [i+1])
+    {
+        printf("No\n");
+        return 0;
+    }
+   }
+   printf("Yes\n");
+   return 0;
 }
