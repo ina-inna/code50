@@ -56,6 +56,6 @@ int compute_score(string word)
         score = score + POINTS[point_index];
     }
 
-
+    return score;
 }
-return score
+
