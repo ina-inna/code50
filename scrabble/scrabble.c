@@ -44,13 +44,15 @@ int compute_score(string word)
     for (int i = 0, i < length, i++) {
         // get a sum of all elements
         int point_index;
-        if (isupper(word[i]))
+        char current_letter = word[i];
+
+        if (isupper(current_letter))
         {
-            point_index = word[i] - 'A';
+            point_index = current_letter - 'A';
         }
-        else if (islower(word[i]))
+        else if (islower(current_letter))
         {
-            point_index = word[i] - 'a';
+            point_index = current_letter - 'a';
         }
 
         score = score + POINTS[point_index];
