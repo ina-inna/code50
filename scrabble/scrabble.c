@@ -41,16 +41,21 @@ int compute_score(string word)
     // define length of the word
     int length = strlen(word);
     //convert each character to nth element in the array points
-    for (int i = 0, i < length, i++)
-    // get a sum of all elements
-    if (isupper(word[i]))
-    {
-        score += POINTS[word[i] - 'A'];
+    for (int i = 0, i < length, i++) {
+        // get a sum of all elements
+        int point_index;
+        if (isupper(word[i]))
+        {
+            point_index = word[i] - 'A';
+        }
+        else if (islower(word[i]))
+        {
+            point_index = word[i] - 'a';
+        }
+
+        score = score + POINTS[point_index];
     }
-    else if (islower(word[i]))
-    {
-        score += POINTS[word[i] - 'a']
-    }
+
 
 }
 return score
