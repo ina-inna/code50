@@ -44,7 +44,6 @@ int compute_score(string word)
     {
         // get a sum of all elements
 
-
         // int point_index = tolower(current_letter) - 'a';
 
         if (isupper(word[i]))
@@ -53,10 +52,8 @@ int compute_score(string word)
         }
         else if (islower(word[i]))
         {
-        score = score + POINTS[word[i] - 'a'];
+            score = score + POINTS[word[i] - 'a'];
         }
-
-
     }
 
     return score;
