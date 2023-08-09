@@ -56,7 +56,7 @@ int compute_score(string word)
         //     point_index = current_letter - 'a';
         // }
 
-        score = score + POINTS[point_index];
+        score += POINTS[point_index];
     }
 
     return score;
