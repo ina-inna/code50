@@ -48,9 +48,9 @@ int compute_score(string word)
         int point_index;
         // int point_index = tolower(current_letter) - 'a';
 
-        if (isupper(current_letter))
+        if (isupper(word[i]))
         {
-             point_index = current_letter - 'A';
+            score = current_letter - 'A';
         }
         else if (islower(current_letter))
         {
