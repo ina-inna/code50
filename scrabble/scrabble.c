@@ -37,8 +37,9 @@ int main(void)
 int compute_score(string word)
 {
     // TODO: Compute and return score for string
+    int score = 0;
     // define length of the word
-    int length = strlen(string word);
+    int length = strlen(word);
     for (int i = 0, i < length, i++)
 
     //convert each character to nth element in the array points
