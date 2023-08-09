@@ -1,5 +1,5 @@
-#include <ctype.h>
 #include <cs50.h>
+#include <ctype.h>
 #include <stdio.h>
 #include <string.h>
 
@@ -31,7 +31,6 @@ int main(void)
     {
         printf("Player 2 wins\n");
     }
-
 }
 
 int compute_score(string word)
@@ -40,8 +39,9 @@ int compute_score(string word)
     int score = 0;
     // define length of the word
     int length = strlen(word);
-    //convert each character to nth element in the array points
-    for (int i = 0; i < length; i++) {
+    // convert each character to nth element in the array points
+    for (int i = 0; i < length; i++)
+    {
         // get a sum of all elements
 
         char current_letter = word[i];
@@ -61,4 +61,3 @@ int compute_score(string word)
 
     return score;
 }
-
