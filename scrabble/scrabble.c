@@ -41,19 +41,13 @@ int compute_score(string word)
     // define length of the word
     int length = strlen(word);
     for (int i = 0, i < length, i++)
+    score += POINTS
 
     //convert each character to nth element in the array points
 
     // get a sum of all elements
 
-    int sumArray(int arr[], int size)
-    {
-    int sum = 0;
-    for (int i = 0; i < size; i++)
-    {
-        sum += arr[i];
-    }
-    return sum;
+
 
 }
 }
