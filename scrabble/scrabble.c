@@ -43,10 +43,15 @@ int compute_score(string word)
     //convert each character to nth element in the array points
     for (int i = 0, i < length, i++)
     // get a sum of all elements
-    if (isupper)
-
-
-
+    if (isupper(word[i]))
+    {
+        score += POINTS[word[i] - 'A'];
+    }
+    else if (islower(word[i]))
+    {
+        score += POINTS[word[i] - 'a']
+    }
 
 }
+return score
 }
