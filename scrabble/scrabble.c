@@ -37,6 +37,7 @@ int main(void)
 int compute_score(string word)
 {
     // TODO: Compute and return score for string
-     int word_sum = strlen(string word);
-    for (int i = 0, i < word_length - 1, i++)
+    int length = strlen(string word);
+    for (int i = 0, i < length, i++)
+    return int 
 }
