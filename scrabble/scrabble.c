@@ -41,7 +41,7 @@ int compute_score(string word)
     // define length of the word
     int length = strlen(word);
     //convert each character to nth element in the array points
-    for (int i = 0, i < length, i++) {
+    for (int i = 0; i < length; i++) {
         // get a sum of all elements
 
         char current_letter = word[i];
