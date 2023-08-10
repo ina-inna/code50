@@ -10,7 +10,7 @@ void asciiToBinary(int value)
     for (int i = 7; i >= 0; i--)
     {
         int bit = (value >> i) & 1;
-        printf("d%", bit);
+        printf("%d", bit);
     }
 
 }
@@ -27,7 +27,7 @@ int main(void)
     // convert user's input into binary
     for (int i = 0; i < length; i++)
     {
-      printf("ASCII: %d, Binary: ", word[i], word[i]);
+      printf("%d, ", word[i], word[i]);
       asciiToBinary(word[i]);
       printf("\n");
     }
