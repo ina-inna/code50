@@ -15,8 +15,9 @@ int main(int argc, char *argv[])
         return 1;
     }
     // only digits
-    bool only_digits(string s);
-    int length = strlen(s);
+    bool only_digits(argv[1]);
+    int length = strlen(argv[1]);
+    
 
 
     // prompt user to type a phrase
