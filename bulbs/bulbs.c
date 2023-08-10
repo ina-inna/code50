@@ -9,6 +9,11 @@ void print_bulb(int bit);
 int main(void)
 {
     // TODO
+    // get users input
+
+    // convert users input into binary
+
+    
 }
 
 void print_bulb(int bit)
