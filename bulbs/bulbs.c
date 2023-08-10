@@ -6,9 +6,14 @@ const int BITS_IN_BYTE = 8;
 
 void print_bulb(int bit);
 void asciiToBinary(int value)
-[
+{
+    for (int i = 7; i >= 0; i--)
+    {
+        int bit = (value >> i) & 1;
+        printf("d%", bit);
+    }
 
-]
+}
 
 int main(void)
 {
