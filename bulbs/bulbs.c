@@ -5,6 +5,10 @@
 const int BITS_IN_BYTE = 8;
 
 void print_bulb(int bit);
+void asciiToBinary(int value)
+[
+
+]
 
 int main(void)
 {
