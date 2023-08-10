@@ -24,7 +24,7 @@ int main(void)
            message[i] = message[i] / 2;
            j++;
         }
-
+    return print_bulb
     }
 
 }
