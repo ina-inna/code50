@@ -12,7 +12,11 @@ int main(void)
     // get users input
     string message = get_string("Message: ");
 
+    // get the length of the message
+    int length = strlen(message);
+
     // convert users input into binary
+    for (int i = 0; i < length; i++)
 
 
 }
