@@ -27,7 +27,9 @@ int main(void)
     // convert user's input into binary
     for (int i = 0; i < length; i++)
     {
-      printf("%d\n", word[i]);
+      printf("ASCII: %d, Binary: ", word[i], word[i]);
+      asciiToBinary(word[i]);
+      printf("\n");
     }
 
 }
