@@ -18,13 +18,7 @@ int main(void)
     // convert user's input into binary
     for (int i = 0; i < length; i++)
     {
-        while (message[i] > 0)
-        {
-           int bit = message[i] % 2;
-           message[i] = message[i] / 2;
-
-        }
-        return 0;
+      
     }
 
 }
