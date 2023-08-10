@@ -17,7 +17,9 @@ int main(void)
 
     // convert users input into binary
     for (int i = 0; i < length; i++)
-
+    {
+        
+    }
 
 }
 
