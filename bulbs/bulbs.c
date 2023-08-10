@@ -10,15 +10,15 @@ int main(void)
 {
     // TODO
     // get users input
-    string message = get_string("Message: ");
+    string word = get_string("Message: ");
 
     // get the length of the message
-    int length = strlen(message);
+    int length = strlen(word);
 
     // convert user's input into binary
     for (int i = 0; i < length; i++)
     {
-      printf("%i", message[0]);
+      printf("%s", word);
     }
 
 }
