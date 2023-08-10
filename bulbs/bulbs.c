@@ -20,11 +20,11 @@ int main(void)
     {
         while (message[i] > 0)
         {
-           int bit[j] = message[i] % 2;
+           int bit = message[i] % 2;
            message[i] = message[i] / 2;
-           j++;
+
         }
-    return print_bulb
+        return 0;
     }
 
 }
