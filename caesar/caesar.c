@@ -4,7 +4,7 @@
 int main(int argc, string argv[])
 {
     // let user input just 1 number
-    if (argc < 1;
+    if (argc < 1)
     {
         printf("%i\n", argv);
         return 0
