@@ -10,10 +10,11 @@ int main(void)
 {
     // TODO
     // get users input
+    string message = get_string("Message: ");
 
     // convert users input into binary
 
-    
+
 }
 
 void print_bulb(int bit)
