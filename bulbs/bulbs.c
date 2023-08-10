@@ -17,6 +17,8 @@ int main(void)
 
     // get the length of the message
     int length = strlen(word);
+    int byte = word[i]
+    
 
     // convert user's input into binary
     for (int i = 0; i < length; i++)
