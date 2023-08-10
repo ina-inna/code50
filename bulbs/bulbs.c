@@ -15,10 +15,10 @@ int main(void)
     // get the length of the message
     int length = strlen(message);
 
-    // convert users input into binary
+    // convert user's input into binary
     for (int i = 0; i < length; i++)
     {
-        
+
     }
 
 }
