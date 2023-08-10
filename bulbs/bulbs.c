@@ -20,7 +20,9 @@ int main(void)
     {
         while (message[i] > 0)
         {
-            
+           int bit[j] = message[i] % 2;
+           message[i] = message[i] / 2;
+           j++;
         }
 
     }
