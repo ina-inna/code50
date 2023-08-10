@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
-int main(int argc, char argv[])
+int main(int argc, char *argv[])
 {
     // let user input just 1 number
     if (argc != 2)
