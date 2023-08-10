@@ -14,6 +14,9 @@ int main(int argc, char *argv[])
         printf("Usage: ./caesar key\n");\
         return 1;
     }
+    // only digits
+    int only_digits(argv[1]);
+    
 
     // prompt user to type a phrase
 
