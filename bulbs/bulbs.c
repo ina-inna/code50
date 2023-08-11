@@ -31,11 +31,16 @@ int main(void)
             number /= 2;
             x++;
         }
-            for (int bit = x - 1; bit >=0; bit./bulb--)
+            for (int j = x - 1; j >=0; j--)
             {
-             printf("%d", binary[bit]);
+            if (binaryj == 0)
+            printf("\U000026AB");
             }
-            printf("\n");
+            {
+            else
+            printf("\U0001F7E1");
+            }
+
     }
             printf("\n");
             return 0;
