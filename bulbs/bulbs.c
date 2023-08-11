@@ -21,14 +21,14 @@ int main(void)
     for (int i = 0; i < length; i++)
     {
         char c = word[i];
-        int number = (int)c;
+        int bit = (int)c;
         int binary[8];
             int x = 0;
 
-            while (number > 0)
+            while (bit > 0)
         {
-            binary[x] = number % 2;
-            number /= 2;
+            binary[x] = bit % 2;
+            bit /= 2;
             x++;
         }
             for (int j = x - 1; j >=0; j--)
