@@ -19,6 +19,7 @@ int main(void)
 
     // convert the message into ascii
     for (int i = 0; i < length; i++)
+    {
         char c = word[i];
         int number = (int)c;
         int binary[8];
@@ -30,10 +31,15 @@ int main(void)
             number /= 2;
             x++;
         }
-             printf("%d", binary[x]);
+            for (int j = x - 1; j >=0; j--)
+            {
+             printf("%d", binary[j]);
             }
+            printf(" ");
+    }
             printf("\n");
-
+            return 0;
+}
 
 
 
