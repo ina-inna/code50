@@ -20,24 +20,16 @@ int main(void)
     // convert the message into ascii
     for (int i = 0; i < length; i++)
         char c = word[i];
-        
-
-
-    int binary[32];  // Array to store binary bits
-    int x = 0;
-
-    while (word[i] > 0) {
-        binary[x] = bit % 2;
-       bit /= 2;
-        x++;
-    }
-
-    printf("Binary representation: 0b");
-    for (int j = x - 1; j >= 0; j--) {
-        printf("%d", binary[j]);
+             for (int j = 7; j >= 0; j--)
+             {
+            printf("%d", (c >> j) & 1);
+              }
+        printf(" ");
     }
     printf("\n");
-}
+
+
+
 
     // {
     //     for (int i = 0; i < length; i++)
@@ -55,7 +47,7 @@ int main(void)
     //         printf("\n");
 
 
-}
+
 
 
 
