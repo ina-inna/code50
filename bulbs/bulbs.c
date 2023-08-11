@@ -21,16 +21,16 @@ int main(void)
 
 
     int binary[32];
-    int i = 0;
+    int x = 0;
 
     while (byte > 0)
 {
-    binary[i] = number % 2;
+    binary[x] = number % 2;
     number /= 2;
     i++;
 }
 
- for (int j = i - 1; j >= 0; j--)
+ for (int j = x - 1; j >= 0; j--)
  {
         printf("%d", binary[j]);
     }
@@ -38,15 +38,15 @@ int main(void)
 }
 
 
-    // convert user's input into binary
-    for (int i = 0; i < length; i++)
-    {
-      printf("%d", word[i]);
+    // // convert user's input into binary
+    // for (int i = 0; i < length; i++)
+    // {
+    //   printf("%d", word[i]);
 
-      printf("\n");
-    }
+    //   printf("\n");
+    // }
 
-}
+
 
 void print_bulb(int bit)
 {
