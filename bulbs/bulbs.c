@@ -20,7 +20,7 @@ int main(void)
     {
         char c = word[i];
         int number = (int) c;
-        int bit[BITS_IN_BYTE] = {0};
+        int bit[BITS_IN_BYTE] = {};
         int x = 0;
 
         while (number > 0)
