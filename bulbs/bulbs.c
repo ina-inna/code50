@@ -17,25 +17,32 @@ int main(void)
     // get the length of the message
     int length = strlen(word);
 
+    // convert the message into ascii
+    for (int i = 0; i < length; i++)
     {
-        for (int i = 0; i < length; i++)
-        int binary[32];
-            int x = 0;
+      printf("%d", word[i]);
 
-            while (word[i] > 0)
-        {
-            binary[x] = number % 2;
-            number /= 2;
-            x++;
-        }
-             printf("%d", binary[x]);
-            }
-            printf("\n");
+      printf("\n");
+    }
+    // {
+    //     for (int i = 0; i < length; i++)
+    //     int binary[32];
+    //         int x = 0;
+
+    //         while (word[i] > 0)
+    //     {
+    //         binary[x] = number % 2;
+    //         number /= 2;
+    //         x++;
+    //     }
+    //          printf("%d", binary[x]);
+    //         }
+    //         printf("\n");
 
 
 }
 
-    
+
 
 
 
