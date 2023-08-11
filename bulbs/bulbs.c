@@ -22,12 +22,12 @@ int main(void)
     {
         char c = word[i];
         int number = (int)c;
-        int binary[BITS_IN_BYTE];
+        int bit[BITS_IN_BYTE];
             int x = 0;
 
             while (number > 0)
         {
-            binary[x] = number % 2;
+            bit[x] = number % 2;
             number /= 2;
             x++;
 
@@ -36,12 +36,12 @@ int main(void)
             for (int j = x - 1; j >=0; j--)
            {
 
-            if (binary[j] == 0)
+            if (bit[j] == 0)
             {
             printf("\U000026AB");
             }
 
-            else if (binary[j] == 1)
+            else if (bit[j] == 1)
             {
             printf("\U0001F7E1");
             }
