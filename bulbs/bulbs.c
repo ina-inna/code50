@@ -28,12 +28,11 @@ int main(void)
             number /= 2;
             i++;
         }
-
-        for (int j = x - 1; j >= 0; j--)
-        {
-                printf("%d", binary[j]);
+             printf("%d", binary[x]);
             }
             printf("\n");
+
+
 }
 
     }
