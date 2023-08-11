@@ -35,23 +35,13 @@ int main(void)
         }
             for (int j = x - 1; j >=0; j--)
            {
-
-            if (bit[j] == 0)
-            {
-            printf("\U000026AB");
-            }
-
-            else if (bit[j] == 1)
-            {
-            printf("\U0001F7E1");
-            }
+                print_bulb(bit[j]);
            }
             printf("\n");
     }
             printf("\n");
             return 0;
 }
-
 
 
 void print_bulb(int bit)
