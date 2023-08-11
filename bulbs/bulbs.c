@@ -26,7 +26,7 @@ int main(void)
         {
             binary[x] = number % 2;
             number /= 2;
-            i++;
+            x++;
         }
              printf("%d", binary[x]);
             }
