@@ -6,7 +6,8 @@ const int BITS_IN_BYTE = 8;
 
 void print_bulb(int bit);
 
-
+    int binary[32];
+    int x = 0;
 
 
 int main(void)
@@ -19,9 +20,8 @@ int main(void)
     int length = strlen(word);
 
     {
-        for (int i = 0; i < length; i++)
-        int binary[32];
-            int x = 0;
+
+
 
             while (word[i] > 0)
         {
