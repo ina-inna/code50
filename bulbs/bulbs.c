@@ -20,13 +20,18 @@ int main(void)
     // convert the message into ascii
     for (int i = 0; i < length; i++)
         char c = word[i];
-             for (int j = 7; j >= 0; j--)
-             {
-            printf("%d", (c >> j) & 1);
-              }
-        printf(" ");
-    }
-    printf("\n");
+        int binary[32];
+            int x = 0;
+
+            while (c > 0)
+        {
+            binary[x] = number % 2;
+            number /= 2;
+            x++;
+        }
+             printf("%d", binary[x]);
+            }
+            printf("\n");
 
 
 
