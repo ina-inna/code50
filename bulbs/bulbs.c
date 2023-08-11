@@ -31,7 +31,7 @@ int main(void)
             number /= 2;
             x++;
         }
-            for (int bit = x - 1; bit >=0; bit--)
+            for (int bit = x - 1; bit >=0; bit./bulb--)
             {
              printf("%d", binary[j]);
             }
