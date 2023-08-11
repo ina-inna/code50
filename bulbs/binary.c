@@ -22,20 +22,5 @@ while (number > 0)
         printf("%d", binary[j]);
     }
     printf("\n");
-
-    int length = 8;
-
-    for (int bit; bit < length; bit++)
-
-     if (binary[bit] == 0)
-    {
-        // Dark emoji
-        printf("\U000026AB");
-    }
-    else if (binary[bit] == 1)
-    {
-        // Light emoji
-        printf("\U0001F7E1");
-    }
 }
 
