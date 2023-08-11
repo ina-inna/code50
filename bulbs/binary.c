@@ -19,10 +19,10 @@ while (number > 0)
     i++;
 }
 
-    printf("Binary representation: 0b");
+    printf("Binary representation: ");
  for (int j = i - 1; j >= 0; j--)
  {
-    if (binary[j] == 0)
+    if (binary[j] == 0 )
     {
           printf("\U000026AB");
     }
