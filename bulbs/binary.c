@@ -10,6 +10,12 @@ int number = get_int("your number: ");
 int binary[32];
 int i = 0;
 
+
+   if (number == 0) {
+        printf("Binary representation: 0b0\n");
+        return;
+    }
+
 while (number > 0)
 {
     binary[i] = number % 2;
