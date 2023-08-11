@@ -5,10 +5,10 @@
 
 int main(void)
 {
-int number = get_int("your number: ")
+int number = get_int("your number: ");
 
 int binary[32];
-int i = 0
+int i = 0;
 
 while (number > 0)
 {
