@@ -23,6 +23,7 @@ while (number > 0)
     i++;
 }
 
+    printf("Binary representation: 0b");
  for (int j = i - 1; j >= 0; j--)
  {
     if (binary[j] == 0)
