@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 
-
+const int BITS_IN_BYTE = 8;
 int main(void)
 {
 int number = get_int("your number: ");
@@ -23,7 +23,7 @@ while (number > 0)
     }
     printf("\n");
 
-    int length = strlen(binary)
+    int length = strlen(const BITS_IN_BYTE)
 
     for (int bit; bit < length; bit++)
 
