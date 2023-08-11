@@ -19,8 +19,20 @@ while (number > 0)
 
  for (int j = i - 1; j >= 0; j--)
  {
-        printf("%d", binary[j]);
+    if (binary[j] == 0)
+    {
+          printf("\U000026AB");
+    }
+       else if (binary[j] == 1)
+    {
+        // Light emoji
+        printf("\U0001F7E1");
+    }
+
     }
     printf("\n");
+
+
+
 }
 
