@@ -46,11 +46,11 @@ void print_bulb(int bit)
     {
         // Dark emoji
         // printf("\U000026AB");
-        printf("⚫️");
+        printf("\U000026AB");
     }
     else if (bit == 1)
     {
         // Light emoji
-        printf("🟡");
+        printf("\U0001F7E1");
     }
 }
