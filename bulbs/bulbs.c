@@ -22,7 +22,7 @@ int main(void)
     {
         char c = word[i];
         int bit = (int)c;
-        int binary[8];
+        int binary[BITS_IN_BYTE];
             int x = 0;
 
             while (bit > 0)
