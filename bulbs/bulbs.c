@@ -18,24 +18,30 @@ int main(void)
     // get the length of the message
     int length = strlen(word);
     int byte = word[i]
+    {
+        for (int i = 0; i < length; i++)
+        int binary[32];
+            int x = 0;
 
+            while (byte > 0)
+        {
+            binary[x] = number % 2;
+            number /= 2;
+            i++;
+        }
 
-    int binary[32];
-    int x = 0;
-
-    while (byte > 0)
-{
-    binary[x] = number % 2;
-    number /= 2;
-    i++;
+        for (int j = x - 1; j >= 0; j--)
+        {
+                printf("%d", binary[j]);
+            }
+            printf("\n");
 }
 
- for (int j = x - 1; j >= 0; j--)
- {
-        printf("%d", binary[j]);
     }
-    printf("\n");
-}
+
+
+
+
 
 
     // // convert user's input into binary
