@@ -35,7 +35,7 @@ int main(void)
             {
              printf("%d", binary[j]);
             }
-            printf(" ");
+            printf("\n");
     }
             printf("\n");
             return 0;
