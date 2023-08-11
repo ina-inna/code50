@@ -17,13 +17,13 @@ int main(void)
 
     // get the length of the message
     int length = strlen(word);
-    int byte = word[i]
+
     {
         for (int i = 0; i < length; i++)
         int binary[32];
             int x = 0;
 
-            while (byte > 0)
+            while (word[i] > 0)
         {
             binary[x] = number % 2;
             number /= 2;
