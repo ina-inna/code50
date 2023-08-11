@@ -24,6 +24,9 @@ int main(void)
 
       printf("\n");
     }
+
+    int bit(word[i]);
+    
     // {
     //     for (int i = 0; i < length; i++)
     //     int binary[32];
