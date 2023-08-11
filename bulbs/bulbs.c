@@ -42,42 +42,6 @@ int main(void)
 }
 
 
-
-    // {
-    //     for (int i = 0; i < length; i++)
-    //     int binary[32];
-    //         int x = 0;
-
-    //         while (word[i] > 0)
-    //     {
-    //         binary[x] = number % 2;
-    //         number /= 2;
-    //         x++;
-    //     }
-    //          printf("%d", binary[x]);
-    //         }
-    //         printf("\n");
-
-
-
-
-
-
-
-
-
-
-
-    // // convert user's input into binary
-    // for (int i = 0; i < length; i++)
-    // {
-    //   printf("%d", word[i]);
-
-    //   printf("\n");
-    // }
-
-
-
 void print_bulb(int bit)
 {
     if (bit == 0)
