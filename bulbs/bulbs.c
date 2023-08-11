@@ -20,8 +20,8 @@ int main(void)
     // convert the message into ascii
     for (int i = 0; i < length; i++)
         char c = word[i];
-        int number = (int)c
-        int binary[32];
+        int number = (int)c;
+        int binary[8];
             int x = 0;
 
             while (number > 0)
