@@ -23,4 +23,15 @@ while (number > 0)
     }
     printf("\n");
 
+     if (binary[i] == 0)
+    {
+        // Dark emoji
+        printf("\U000026AB");
+    }
+    else if (binary[i] == 1)
+    {
+        // Light emoji
+        printf("\U0001F7E1");
+    }
 }
+
