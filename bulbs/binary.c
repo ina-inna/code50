@@ -27,12 +27,12 @@ while (number > 0)
 
     for (int bit; bit < length; bit++)
 
-     if (bit == 0)
+     if (binary[bit] == 0)
     {
         // Dark emoji
         printf("\U000026AB");
     }
-    else if (bit == 1)
+    else if (binary[bit] == 1)
     {
         // Light emoji
         printf("\U0001F7E1");
