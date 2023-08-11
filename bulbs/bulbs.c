@@ -19,11 +19,9 @@ int main(void)
 
     // convert the message into ascii
     for (int i = 0; i < length; i++)
-    {
-      printf("%d", word[i]);
+        char c = word[i];
+        
 
-      printf("\n");
-    }
 
     int binary[32];  // Array to store binary bits
     int x = 0;
