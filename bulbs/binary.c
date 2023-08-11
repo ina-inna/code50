@@ -23,12 +23,16 @@ while (number > 0)
     }
     printf("\n");
 
-     if (binary[i] == 0)
+    int length = strlen(binary)
+
+    for (int bit; bit < length; bit++)
+
+     if (bit == 0)
     {
         // Dark emoji
         printf("\U000026AB");
     }
-    else if (binary[i] == 1)
+    else if (bit == 1)
     {
         // Light emoji
         printf("\U0001F7E1");
