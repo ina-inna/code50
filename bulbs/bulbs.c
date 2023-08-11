@@ -10,7 +10,7 @@ void print_bulb(int bit);
 
 int main(void)
 {
-    // TODO
+
     // get users input
     string word = get_string("Message: ");
 
