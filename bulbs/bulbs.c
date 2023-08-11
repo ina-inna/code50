@@ -25,12 +25,10 @@ int main(void)
       printf("\n");
     }
 
-    int bit(word[i]);
-
     int binary[32];  // Array to store binary bits
     int x = 0;
 
-    while (bit > 0) {
+    while (word[i] > 0) {
         binary[x] = bit % 2;
        bit /= 2;
         x++;
