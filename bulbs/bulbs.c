@@ -20,10 +20,11 @@ int main(void)
     // convert the message into ascii
     for (int i = 0; i < length; i++)
         char c = word[i];
+        int number = (int)c
         int binary[32];
             int x = 0;
 
-            while (c > 0)
+            while (number > 0)
         {
             binary[x] = number % 2;
             number /= 2;
