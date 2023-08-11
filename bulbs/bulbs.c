@@ -6,8 +6,6 @@ const int BITS_IN_BYTE = 8;
 
 void print_bulb(int bit);
 
-
-
 int main(void)
 {
 
@@ -21,28 +19,25 @@ int main(void)
     for (int i = 0; i < length; i++)
     {
         char c = word[i];
-        int number = (int)c;
+        int number = (int) c;
         int bit[BITS_IN_BYTE] = {0};
-            int x = 0;
+        int x = 0;
 
-            while (number > 0)
+        while (number > 0)
         {
             bit[x] = number % 2;
             number /= 2;
             x++;
-
-
         }
-            for (int j = BITS_IN_BYTE - 1; j >= 0; j--)
-           {
-                print_bulb(bit[j]);
-           }
-            printf("\n");
+        for (int j = BITS_IN_BYTE - 1; j >= 0; j--)
+        {
+            print_bulb(bit[j]);
+        }
+        printf("\n");
     }
-            printf("\n");
-            return 0;
+    printf("\n");
+    return 0;
 }
-
 
 void print_bulb(int bit)
 {
