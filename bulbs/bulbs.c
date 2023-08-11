@@ -34,7 +34,7 @@ int main(void)
             printf("Binary representation: ");
         }
             for (int j = x - 1; j >=0; j--)
-            {
+           { {
             if (binary[j] == 0)
             printf("\U000026AB");
             }
@@ -42,9 +42,12 @@ int main(void)
             else if (binary[j] == 1)
             printf("\U0001F7E1");
             }
+           }
 
     }
             printf("\n");
+            return 0;
+}
 
 
 
