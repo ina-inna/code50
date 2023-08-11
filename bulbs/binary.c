@@ -11,10 +11,6 @@ int binary[32];
 int i = 0;
 
 
-   if (number == 0) {
-        printf("Binary representation: 0b0\n");
-        return;
-    }
 
 while (number > 0)
 {
