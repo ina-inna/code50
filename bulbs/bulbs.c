@@ -30,6 +30,8 @@ int main(void)
             binary[x] = number % 2;
             number /= 2;
             x++;
+
+            printf("Binary representation: ");
         }
             for (int j = x - 1; j >=0; j--)
             {
@@ -43,7 +45,7 @@ int main(void)
 
     }
             printf("\n");
-      
+
 
 
 void print_bulb(int bit)
