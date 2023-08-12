@@ -22,16 +22,19 @@ int main(void)
 
   // compute a grade using the given formula
         int letters = count_letters(text);
+        printf("Letters: %d\n", letters);
         int words = count_words(text);
+        printf("Wordss: %d\n", words);
         int sentences = count_sentences(text);
+        printf("Sentences: %d\n", sentences);
 
 
         int l = (letters/ words)*100;
-        printf("%d\n", l);
+        printf("Letters/words: %d\n", l);
         int s = (sentences / words)*100;
-        printf("%d\n", s);
+        printf("sentences / words: %d\n", s);
         float index = 0.0588 * l - 0.296 * s - 15.8;
-        printf("%f\n", index);
+        printf("index: %f\n", index);
         if (index > 16)
         {
             printf("Grade 16+\n");
