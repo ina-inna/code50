@@ -11,9 +11,13 @@ int main(void)
 
     // count and print letters
 
-    int length = strlen(text);
-    printf("%d characters\n", length);
-    return 0;
+    for (int i = 0; i != '\0'; i++)
+    {
+        int count = 0;
+        if (text[i] == )
+    }
+
+
         // char c = text[i];
         // int count = 0;
 
