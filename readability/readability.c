@@ -10,7 +10,8 @@ int main(void)
     string text = get_string("Text: ");
 
     // count and print letters
-    count_letters(int count);
+    count_letters(text);
+}
 
     // count and print words
 
@@ -34,4 +35,3 @@ int main(void)
          printf("Letters: %d\n", count);
          return count;
     }
-}
