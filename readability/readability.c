@@ -40,10 +40,10 @@ int main(void)
 
     int count_words(string text)
     {
-         int count = 0;
-    for (int i = 0; text[i] != '\0'; i++)
+         int count = 1;
+         for (int i = 0; text[i] != '\0'; i++)
     {
-        if ((text[i] == ' ') || (text[i] != '\0') )
+        if (text[i] == ' ')
         {
             count++;
         }
