@@ -9,22 +9,24 @@ int main(void)
     string text = get_string("Text: ");
 
     // count and print letters
-     int count_letters(string text);
+     int count(string text);
 
             int length = strlen(text);
             for (int i = 0; i < length; i++)
             {
                  int count = 0;
+                 if (text[i] == ' ')
 
-            count++;
-
+            {
+                count++;
+            }
             }
             return count;
             printf("%d", count);
 
 
     // count and print words
-       int count_words(string text);
+    //    int count_words(string text);
 
 
     // count and print sentences
