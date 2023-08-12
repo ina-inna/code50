@@ -16,9 +16,10 @@ int main(void)
         if (text[i] >= 'a' && text[i] <= 'z' )
         {
             count++;
+            
         }
         printf("%d", count);
-    
+
     }
 
 
