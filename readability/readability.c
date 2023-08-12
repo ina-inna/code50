@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 
-
+int count(string text);
 
 int main(void)
 {
@@ -29,4 +29,6 @@ int main(void)
 
 
     //    int count_words(string text);
+
+    int count_letters(string text)
 }
