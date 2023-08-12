@@ -9,7 +9,19 @@ int main(void)
     string text = get_string("Text: ");
 
     // count and print letters
-    count_letters(string text);
+     int count_letters(string text);
+
+            int count = 0;
+            char c = text[i];
+            for (int i = 0; text[i] != '\0'; i++)
+            {
+
+            count++;
+
+            }
+            return count;
+            printf(" ", count);
+
 
     // count and print words
        int count_words(string text);
@@ -21,17 +33,4 @@ int main(void)
 
 
 
-        int count_letters(string text)
-        {
-            int count = 0;
-            char c = text[i];
-            for (int i = 0; text[i] != '\0'; i++)
-            {
-
-            count++;
-
-            }
-            return count;
-            printf(" ", count);
-        }
 }
