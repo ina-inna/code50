@@ -9,10 +9,6 @@ int main(void)
     // count and print letters
     int count_letters(string text);
 
-    {
-        printf("%i letters", count_letters)
-    }
-
     // count and print words
        int count_words(string text);
 
@@ -34,5 +30,6 @@ int main(void)
                 }
             }
             return count;
+            printf(" ", count);
         }
 }
