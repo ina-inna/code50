@@ -24,6 +24,7 @@ int main(void)
         int count_letters(string text)
         {
             int count = 0;
+            char c = text[i];
             for (int = 0; text[i] != '\0'; i++)
             {
                 if (text[i] == " ")
