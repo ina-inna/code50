@@ -27,10 +27,9 @@ int main(void)
             char c = text[i];
             for (int i = 0; text[i] != '\0'; i++)
             {
-                if (text[i] == " ")
-                {
-                    count++;
-                }
+
+            count++;
+
             }
             return count;
             printf(" ", count);
