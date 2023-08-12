@@ -20,9 +20,13 @@ int main(void)
 
 
   // compute a grade using the given formula
+        int letters = count_letters(text);
+        int words = count_words(text);
+        int sentences = count_sentences(text);
 
-        int l = count_letters/ count_words;
-        int s = count_words / count_sentences;
+
+        int l = letters/ words;
+        int s = words / sentences;
         float index = 0.0588 * l - 0.296 * s - 15.8;
         if (index > 16)
         {
