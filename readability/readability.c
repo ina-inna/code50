@@ -21,21 +21,21 @@ int main(void)
 
   // compute a grade using the given formula
 
-        // int l = count_letters / count_words;
-        // int s = count_words / count_sentences;
-        // float index = 0.0588 * l - 0.296 * s - 15.8;
-        // if (index > 16)
-        // {
-        //     printf("Grade 16+");
-        // }
-        // else if(index < 1)
-        // {
-        //     printf("Before Grade 1");
-        // }
-        // else
-        // {
-        //     printf("Grade %d\n", round(index));
-        // }
+        int l = count_letters / count_words;
+        int s = count_words / count_sentences;
+        float index = 0.0588 * l - 0.296 * s - 15.8;
+        if (index > 16)
+        {
+            printf("Grade 16+");
+        }
+        else if(index < 1)
+        {
+            printf("Before Grade 1");
+        }
+        else
+        {
+            printf("Grade %d\n", round(index));
+        }
 }
 
 
