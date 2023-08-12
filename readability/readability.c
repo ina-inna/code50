@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int count(string text);
+int count_letters(string text);
 
 int main(void)
 {
@@ -11,7 +11,7 @@ int main(void)
 
     // count and print letters
     count_letters(string text);
-    
+
     // count and print words
 
     // count and print sentences
@@ -26,11 +26,11 @@ int main(void)
          int count_letters = 0;
     for (int i = 0; text[i] != '\0'; i++)
     {
-        if (text[i] >= 'a' && text[i] <= 'z' )
+        if (text[i] >= 'a' && text[i] <= 'z' || text[i] >= 'A' && text[i] <= 'Z')
         {
             count_letters++;
         }
     }
-         printf("%d", coun_letters);
+         printf("Letters: %d\n", count_letters);
     }
 }
