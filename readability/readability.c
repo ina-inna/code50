@@ -17,7 +17,7 @@ int main(void)
 
             for (int j = 0; j != '\0'; j++)
             {
-                 if (c[j] == ' ')
+                 if (text[i] = char)
 
             {
                 count++;
