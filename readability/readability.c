@@ -10,16 +10,15 @@ int main(void)
     string text = get_string("Text: ");
 
     // count and print letters
-
+    int count = 0;
     for (int i = 0; text[i] != '\0'; i++)
     {
-        int count = 0;
         if (text[i] >= 'a' && text[i] <= 'z' )
         {
             count++;
         }
         printf("%d", count);
-
+    
     }
 
 
