@@ -21,4 +21,11 @@ int main(void)
 
     // compute a grade using the given formula
 
+
+
+        int count_letters(string text)
+        {
+            
+
+        }
 }
