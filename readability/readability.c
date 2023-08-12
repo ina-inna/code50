@@ -17,10 +17,7 @@ int main(void)
         {
             count++;
             printf("%d", count);
-
         }
-        printf("%d", count);
-
     }
 
 
