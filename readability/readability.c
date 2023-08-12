@@ -16,9 +16,9 @@ int main(void)
     count_words(text);
     count_sentences(text);
 
-    int l = count_letters / count_words;
-    int s = count_words / count_sentences;
-    float index = 0.0588 * l - 0.296 * s - 15.8;
+    int l = (count_letters / count_words);
+    int s = (count_words / count_sentences);
+    float index = (0.0588 * l - 0.296 * s - 15.8);
     if (index > 16)
     {
         printf("Grade 16+");
