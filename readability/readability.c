@@ -27,15 +27,18 @@ int main(void)
 
 
         int l = letters/ words;
+        printf("%d\n", l);
         int s = words / sentences;
+        printf("%d\n", s);
         float index = 0.0588 * l - 0.296 * s - 15.8;
+        printf("%f\n", index);
         if (index > 16)
         {
-            printf("Grade 16+");
+            printf("Grade 16+\n");
         }
         else if(index < 1)
         {
-            printf("Before Grade 1");
+            printf("Before Grade 1\n");
         }
         else
         {
@@ -55,7 +58,6 @@ int main(void)
             count++;
         }
     }
-         printf("Letters: %d\n", count);
          return count;
     }
 
@@ -70,7 +72,6 @@ int main(void)
             count++;
         }
     }
-         printf("Words: %d\n", count);
          return count;
     }
 
@@ -86,6 +87,5 @@ int main(void)
             count++;
         }
     }
-         printf("Sentences: %d\n", count);
          return count;
     }
