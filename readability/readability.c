@@ -60,6 +60,7 @@ int main(void)
             count++;
         }
     }
+
          return count;
     }
 
@@ -89,5 +90,6 @@ int main(void)
             count++;
         }
     }
+        printf("%d", count);
          return count;
     }
