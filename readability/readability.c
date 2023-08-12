@@ -14,7 +14,10 @@ int main(void)
     for (int i = 0; i != '\0'; i++)
     {
         int count = 0;
-        if (text[i] == )
+        if (text[i] >= 'a' && text[i] <= 'z' )
+        {
+            count++;
+        }
     }
 
 
