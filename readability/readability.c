@@ -16,10 +16,9 @@ int main(void)
         if (text[i] >= 'a' && text[i] <= 'z' )
         {
             count++;
-            printf("%d", count);
         }
     }
-
+         printf("%d", count);
 
         // char c = text[i];
         // int count = 0;
