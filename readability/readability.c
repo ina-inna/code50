@@ -42,7 +42,9 @@ int main(void)
         }
         else
         {
-            printf("Grade %f\n", round(index));
+            float round = round(index);
+            int index_int = (int)round;
+            printf("Grade %d\n", index_int);
         }
 }
 
