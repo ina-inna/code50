@@ -26,9 +26,9 @@ int main(void)
         int sentences = count_sentences(text);
 
 
-        int l = letters/ words;
+        int l = (letters/ words)*100;
         printf("%d\n", l);
-        int s = words / sentences;
+        int s = (words / sentences)*100;
         printf("%d\n", s);
         float index = 0.0588 * l - 0.296 * s - 15.8;
         printf("%f\n", index);
