@@ -29,10 +29,10 @@ int main(void)
         printf("Sentences: %d\n", sentences);
 
 
-        int l = (letters/ words)*100;
-        printf("Letters/words: %d\n", l);
-        int s = (sentences / words)*100;
-        printf("sentences / words: %d\n", s);
+        float l = (float)(letters/ words)*100;
+        printf("Letters/words: %f\n", l);
+        float s = (float)(sentences / words)*100;
+        printf("sentences / words: %f\n", s);
         float index = 0.0588 * l - 0.296 * s - 15.8;
         printf("index: %f\n", index);
         if (index > 16)
