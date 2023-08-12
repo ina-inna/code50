@@ -28,7 +28,7 @@ int main(void)
 
         int l = (letters/ words)*100;
         printf("%d\n", l);
-        int s = (words / sentences)*100;
+        int s = (sentences / words)*100;
         printf("%d\n", s);
         float index = 0.0588 * l - 0.296 * s - 15.8;
         printf("%f\n", index);
