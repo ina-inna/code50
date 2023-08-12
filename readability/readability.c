@@ -12,7 +12,6 @@ int main(void)
      int count_letters(string text);
 
             int count = 0;
-            char c = text[i];
             for (int i = 0; text[i] != '\0'; i++)
             {
 
@@ -20,7 +19,7 @@ int main(void)
 
             }
             return count;
-            printf(" ", count);
+            printf("%d", count);
 
 
     // count and print words
