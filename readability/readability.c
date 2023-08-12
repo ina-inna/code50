@@ -42,8 +42,8 @@ int main(void)
         }
         else
         {
-            float round = round(index);
-            int index_int = (int)round;
+
+            int rounded = (int)round(index);
             printf("Grade %d\n", index_int);
         }
 }
