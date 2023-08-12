@@ -4,8 +4,14 @@
 int main(void)
 {
     // prompt user for an input
+    string text = get_string("Text: ");
 
     // count and print letters
+    int count_letters(string text);
+
+    {
+        printf("%i letters", count_letters)
+    }
 
     // count and print words
 
