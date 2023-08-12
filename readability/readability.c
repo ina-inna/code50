@@ -11,20 +11,22 @@ int main(void)
 
     // count and print letters
 
+    int length = strlen(text);
+    printf("%d characters\n", length);
+    return 0;
+        // char c = text[i];
+        // int count = 0;
 
-        char c = text[i];
-        int count = 0;
+        //     for (int j = 0; j != '\0'; j++)
+        //     {
+        //          if (text[i] = char)
 
-            for (int j = 0; j != '\0'; j++)
-            {
-                 if (text[i] = char)
-
-            {
-                count++;
-            }
-            }
-            return 0;
-            printf("%d", count);
+        //     {
+        //         count++;
+        //     }
+        //     }
+        //     return 0;
+        //     printf("%d", count);
 
 
     // count and print words
