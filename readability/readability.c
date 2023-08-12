@@ -10,17 +10,8 @@ int main(void)
     string text = get_string("Text: ");
 
     // count and print letters
-    int count = 0;
-    for (int i = 0; text[i] != '\0'; i++)
-    {
-        if (text[i] >= 'a' && text[i] <= 'z' )
-        {
-            count++;
-        }
-    }
-         printf("%d", count);
-
-
+    count_letters(string text);
+    
     // count and print words
 
     // count and print sentences
@@ -31,4 +22,15 @@ int main(void)
     //    int count_words(string text);
 
     int count_letters(string text)
+    {
+         int count_letters = 0;
+    for (int i = 0; text[i] != '\0'; i++)
+    {
+        if (text[i] >= 'a' && text[i] <= 'z' )
+        {
+            count_letters++;
+        }
+    }
+         printf("%d", coun_letters);
+    }
 }
