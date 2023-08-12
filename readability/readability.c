@@ -29,9 +29,9 @@ int main(void)
         printf("Sentences: %d\n", sentences);
 
 
-        float l = (float)(letters/ words)*100;
+        float l = (letters/ words)*100.00;
         printf("Letters/words: %f\n", l);
-        float s = (float)(sentences / words)*100;
+        float s = (sentences / words)*100.00;
         printf("sentences / words: %f\n", s);
         float index = 0.0588 * l - 0.296 * s - 15.8;
         printf("index: %f\n", index);
