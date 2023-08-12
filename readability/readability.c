@@ -12,12 +12,11 @@ int main(void)
     // count and print letters
 
 
-            int length = strlen(text);
+        char c = text[i];
+        int count = 0;
 
-            for (int i = 0; i < length; i++)
+            for (int c = 0; c != '\0'; c++)
             {
-                 char c = text[i];
-                 int count = 0;
                  if (c == ' ')
 
             {
