@@ -15,6 +15,22 @@ int main(void)
     count_letters(text);
     count_words(text);
     count_sentences(text);
+
+    int l = count_letters / count_words;
+    int s = count_words / count_sentences;
+    int index = 0.0588 * l - 0.296 * s - 15.8;
+    if (index > 16)
+    {
+        printf("Grade 16+");
+    }
+    else if(index < 1)
+    {
+        printf("Before Grade 1");
+    }
+    else
+    {
+        printf("Grade %d\n");
+    }
 }
 
     // count and print words
@@ -69,6 +85,4 @@ int main(void)
     }
          printf("Sentences: %d\n", count);
          return count;
-
-
     }
