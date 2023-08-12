@@ -11,7 +11,7 @@ int main(void)
 
     // count and print letters
 
-    for (int i = 0; i != '\0'; i++)
+    for (int i = 0; text[i] != '\0'; i++)
     {
         int count = 0;
         if (text[i] >= 'a' && text[i] <= 'z' )
@@ -19,7 +19,7 @@ int main(void)
             count++;
         }
         printf("%d", count);
-  
+
     }
 
 
