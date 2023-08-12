@@ -20,29 +20,13 @@ int main(void)
     }
          printf("%d", count);
 
-        // char c = text[i];
-        // int count = 0;
-
-        //     for (int j = 0; j != '\0'; j++)
-        //     {
-        //          if (text[i] = char)
-
-        //     {
-        //         count++;
-        //     }
-        //     }
-        //     return 0;
-        //     printf("%d", count);
-
 
     // count and print words
-    //    int count_words(string text);
-
 
     // count and print sentences
 
     // compute a grade using the given formula
 
 
-
+    //    int count_words(string text);
 }
