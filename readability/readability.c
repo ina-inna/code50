@@ -11,8 +11,9 @@ int main(void)
     // count and print letters
      int count_letters(string text);
 
+            int length = strlen(text);
             int count = 0;
-            for (int i = 0; text[i] != '\0'; i++)
+            for (int i = 0; i < length; i++)
             {
 
             count++;
