@@ -16,8 +16,8 @@ int main(void)
     count_words(text);
     count_sentences(text);
 
-    float l = count_letters / count_words;
-    float s = count_words / count_sentences;
+    int l = count_letters / count_words;
+    int s = count_words / count_sentences;
     float index = 0.0588 * l - 0.296 * s - 15.8;
     if (index > 16)
     {
