@@ -18,6 +18,8 @@ int main(void)
         {
             count++;
         }
+        return count;
+        printf("%d", count);
     }
 
 
