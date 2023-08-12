@@ -21,12 +21,12 @@ int main(void)
 
 
   // compute a grade using the given formula
-        int letters = count_letters(text);
-        printf("Letters: %d\n", letters);
-        int words = count_words(text);
-        printf("Wordss: %d\n", words);
-        int sentences = count_sentences(text);
-        printf("Sentences: %d\n", sentences);
+        float letters = (float)count_letters(text);
+        printf("Letters: %f\n", letters);
+        float words = (float)count_words(text);
+        printf("Wordss: %f\n", words);
+        float sentences = (float)count_sentences(text);
+        printf("Sentences: %f\n", sentences);
 
 
         float l = (letters/ words)*100.00;
