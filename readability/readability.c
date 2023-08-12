@@ -25,7 +25,7 @@ int main(void)
         {
             int count = 0;
             char c = text[i];
-            for (int = 0; text[i] != '\0'; i++)
+            for (int i = 0; text[i] != '\0'; i++)
             {
                 if (text[i] == " ")
                 {
