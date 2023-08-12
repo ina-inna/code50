@@ -13,8 +13,13 @@ int main(void)
 
     // count and print letters
     count_letters(text);
+    // count and print words
     count_words(text);
+    // count and print sentences
     count_sentences(text);
+
+
+  // compute a grade using the given formula
 
     int l = (count_letters / count_words);
     int s = (count_words / count_sentences);
@@ -33,14 +38,7 @@ int main(void)
     }
 }
 
-    // count and print words
 
-    // count and print sentences
-
-    // compute a grade using the given formula
-
-
-    //    int count_words(string text);
 
     int count_letters(string text)
     {
