@@ -12,9 +12,9 @@ int main(void)
      int count_letters(string text);
 
             int length = strlen(text);
-            int count = 0;
             for (int i = 0; i < length; i++)
             {
+                 int count = 0;
 
             count++;
 
