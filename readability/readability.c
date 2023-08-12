@@ -3,6 +3,7 @@
 #include <string.h>
 
 int count_letters(string text);
+int count_words(string text);
 
 int main(void)
 {
@@ -11,6 +12,7 @@ int main(void)
 
     // count and print letters
     count_letters(text);
+    count_words(text);
 }
 
     // count and print words
@@ -23,6 +25,20 @@ int main(void)
     //    int count_words(string text);
 
     int count_letters(string text)
+    {
+         int count = 0;
+    for (int i = 0; text[i] != '\0'; i++)
+    {
+        if ((text[i] >= 'a' && text[i] <= 'z') || (text[i] >= 'A' && text[i] <= 'Z'))
+        {
+            count++;
+        }
+    }
+         printf("Letters: %d\n", count);
+         return count;
+    }
+
+    int count_words(string text)
     {
          int count = 0;
     for (int i = 0; text[i] != '\0'; i++)
