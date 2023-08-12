@@ -15,9 +15,9 @@ int main(void)
         char c = text[i];
         int count = 0;
 
-            for (int c = 0; c != '\0'; c++)
+            for (int j = 0; j != '\0'; j++)
             {
-                 if (c == ' ')
+                 if (c[j] == ' ')
 
             {
                 count++;
