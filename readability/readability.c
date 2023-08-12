@@ -7,7 +7,7 @@ int main(void)
     string text = get_string("Text: ");
 
     // count and print letters
-    int count_letters(string text);
+    count_letters(string text);
 
     // count and print words
        int count_words(string text);
