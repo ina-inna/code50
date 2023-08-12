@@ -14,6 +14,8 @@ int main(void)
     }
 
     // count and print words
+       int count_words(string text);
+
 
     // count and print sentences
 
