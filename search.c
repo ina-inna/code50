@@ -1,5 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <string.h>
 
 int main(void)
 {
@@ -8,7 +9,7 @@ int main(void)
     string s = get_string("string: ")
     for (int i = 0; i < 7; i++)
     {
-        if (numbers[i] == n)
+        if (strcmp(strings[i], s) == 0)
         {
             printf("Found\n");
             return 0;
