@@ -3,7 +3,9 @@
 #include <string.h>
 
 int main(void)
-{}
+{
+    draw(1);
+}
 
 void draw(int n)
 {
