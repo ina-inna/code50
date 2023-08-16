@@ -9,12 +9,12 @@ int main(void)
 {
     int i = 0;
     int number = get_int("Number: ");
-    collatz(number);
+    collatz(number, i);
     printf("%i ", i);
 }
 
 
-int collatz(int number)
+int collatz(int number, int ++)
 
 {
 {
