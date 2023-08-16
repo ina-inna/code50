@@ -10,6 +10,7 @@ int main(void)
     int i = 0;
     int number = get_int("Number: ");
     collatz(number, i);
+    printf("%i", i);
 }
 
 
