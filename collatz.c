@@ -7,10 +7,10 @@ int collatz(int number);
 
 int main(void)
 {
-    int i = 0;
+
     int number = get_int("Number: ");
-    i = collatz(number);
-    printf("%i", i);
+    int res = collatz(number);
+    printf("%i", res);
 }
 
 
