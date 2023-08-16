@@ -13,6 +13,8 @@ int main(void)
 
 int collatz(int number)
 {
+    for
+    {
     if (number = 1)
     {
         return;
@@ -26,4 +28,6 @@ int collatz(int number)
         number = 3 * number + 1;
     }
     collatz(number);
+    }
+    printf(" ", i)
 }
