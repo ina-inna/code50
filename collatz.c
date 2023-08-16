@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int collatz(int n);
+int collatz(int number);
 
 int main(void)
 {
@@ -11,9 +11,16 @@ int main(void)
 }
 
 
-int collatz(int n)
+int collatz(int number)
 {
-    if n
-
+    if (number = 1)
+    {
+        return;
+    }
+    else if (number%2 == 0)
+    {
+        number = number/2
+    }
+    else if ()
 
 }
