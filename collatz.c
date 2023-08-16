@@ -2,27 +2,23 @@
 #include <stdio.h>
 #include <string.h>
 
-int collatz(int number, int i);
+int collatz(int number);
 
 
 int main(void)
 {
-    int i = 0;
     int number = get_int("Number: ");
-    i = collatz(number, i);
+    int res = collatz(number, i);
     printf("%i", i);
 }
 
 
 
-int collatz(int number, int &i)
+int collatz(int number)
 {
-
-    i++;
-
     if (number == 1)
     {
-        return i;
+        return 0;
     }
     else if (number%2 == 0)
     {
@@ -33,6 +29,5 @@ int collatz(int number, int &i)
         number = 3 * number + 1;
     }
 
-    collatz(number, i);
-    return i;
+    return 1 + collatz(number, i);
 }
