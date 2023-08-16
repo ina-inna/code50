@@ -9,7 +9,7 @@ int main(void)
 {
     int number = get_int("Number: ");
     int res = collatz(number, i);
-    printf("%i", i);
+    printf("%i\n", i);
 }
 
 
