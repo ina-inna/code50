@@ -14,14 +14,14 @@ int main(void)
 }
 
 
-int collatz(int number, int i)
 
+int collatz(int number, int i)
 {
 {
     i++;
     if (number == 1)
     {
-        return;
+        return i;
     }
     else if (number%2 == 0)
     {
