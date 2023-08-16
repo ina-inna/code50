@@ -14,6 +14,7 @@ int main(void)
 int collatz(int number)
 {
     int i = 0;
+    i++;
     {
     if (number == 1)
     {
@@ -29,7 +30,6 @@ int collatz(int number)
         number = 3 * number + 1;
     }
     collatz(number);
-    i++;
     }
     printf("%i ", i);
     return i;
