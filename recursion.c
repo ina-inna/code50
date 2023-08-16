@@ -16,6 +16,7 @@ void draw(int n)
     {
         return;
     }
+    draw(n - 1);
 
     for (int i = 0; i < n; i++)
     {
@@ -23,5 +24,4 @@ void draw(int n)
     }
 
     printf("\n");
-     draw(n - 2);
 }
