@@ -21,8 +21,7 @@ int collatz(int number, int i)
     i++;
     if (number == 1)
     {
-        printf("%i", i+1);
-        return 0;
+        return;
     }
     else if (number%2 == 0)
     {
