@@ -17,20 +17,20 @@ int collatz(int number)
     {
     if (number == 1)
     {
-        printf("%i", i+1)
-        return;
+        printf("%i", i+1);
+        return i;make c
     }
     else if (number%2 == 0)
     {
         number = number/2;
-        i++;
     }
     else
     {
         number = 3 * number + 1;
-        i++
     }
     collatz(number);
+    i++;
     }
-    printf("%i ", i)
+    printf("%i ", i);
+    return i;
 }
