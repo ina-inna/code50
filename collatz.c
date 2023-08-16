@@ -19,8 +19,11 @@ int collatz(int number)
     }
     else if (number%2 == 0)
     {
-        number = number/2
+        number = number/2;
     }
-    else if ()
-
+    else
+    {
+        number = 3 * number + 1;
+    }
+    collatz(number);
 }
