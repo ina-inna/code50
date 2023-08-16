@@ -24,4 +24,5 @@ void draw(int n)
     }
 
     printf("\n");
+    draw(n - 1);
 }
