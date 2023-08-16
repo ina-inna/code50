@@ -19,7 +19,7 @@ int collatz(int number)
     if (number == 1)
     {
         printf("%i", i+1);
-        return i;
+        return 0;
     }
     else if (number%2 == 0)
     {
