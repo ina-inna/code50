@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int collatz(int number);
+int collatz(int number, int i);
 
 
 int main(void)
@@ -14,7 +14,7 @@ int main(void)
 }
 
 
-int collatz(int number, int ++)
+int collatz(int number, int i)
 
 {
 {
@@ -32,7 +32,7 @@ int collatz(int number, int ++)
     {
         number = 3 * number + 1;
     }
-    collatz(number);
 }
+    collatz(number, i);
     return i;
 }
