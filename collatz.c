@@ -3,6 +3,7 @@
 #include <string.h>
 
 int collatz(int number);
+int i = 0;
 
 int main(void)
 {
@@ -12,10 +13,10 @@ int main(void)
 
 
 int collatz(int number)
+
 {
-    int i = 0;
+{
     i++;
-    {
     if (number == 1)
     {
         printf("%i", i+1);
@@ -30,7 +31,7 @@ int collatz(int number)
         number = 3 * number + 1;
     }
     collatz(number);
-    }
+}
     printf("%i ", i);
     return i;
 }
