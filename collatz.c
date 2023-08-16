@@ -13,10 +13,11 @@ int main(void)
 
 int collatz(int number)
 {
-    for
+    int i = 0;
     {
     if (number = 1)
     {
+        printf("%i", i+1)
         return;
     }
     else if (number%2 == 0)
