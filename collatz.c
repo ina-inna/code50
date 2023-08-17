@@ -8,8 +8,8 @@ int collatz(int number);
 int main(void)
 {
     int number = get_int("Number: ");
-    int res = collatz(number, i);
-    printf("%i\n", i);
+    int res = collatz(number);
+    printf("%i\n", res);
 }
 
 
@@ -29,5 +29,5 @@ int collatz(int number)
         number = 3 * number + 1;
     }
 
-    return 1 + collatz(number, i);
+    return 1 + collatz(number);
 }
