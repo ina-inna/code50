@@ -14,7 +14,7 @@ candidate get_candidate(string prompt);
 int main(void)
 {
     candidate candidates_array[3];
-    for (int = 0; i < 3; i++)
+    for (int i = 0; i < 3; i++)
     {
         candidates_array[i] = get_candidate("Enter a candidate: ");
     }
