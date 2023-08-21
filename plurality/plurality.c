@@ -70,6 +70,7 @@ bool vote(string name)
 
 
     // if name matches, then vote 1+vote
+    for 
 
      if (strcmp(argv[], name) == 0)
         {
