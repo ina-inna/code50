@@ -71,7 +71,7 @@ bool vote(string name)
 
     // if name matches, then +1 vote to the candidate with the same name
 
-    int i = 0;
+    int n = 0;
 
 
     if (candidates[i].name == name)
