@@ -71,13 +71,15 @@ bool vote(string name)
 
     // if name matches, then +1 vote to the candidate with the same name
 
-    int n = 0;
+    int n = voter_count;
 
-
-    if (candidates[i].name == name)
+    int result(candidates[].name, candidates[].votes)
+    {
+    if (candidates[n].name == name)
         {
-            candidates[i].votes = 1;
+            candidates[i].votes = 1 + result(candidates[n-1].name, candidates[n-1].votes);
         }
+    }
         return true;
 
     // if not, then false
