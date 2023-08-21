@@ -29,3 +29,4 @@ candidate get_candidate(string prompt)
     c.votes = get_int("Enter a number: ");
     return c;
 }
+
