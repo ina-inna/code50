@@ -69,7 +69,9 @@ bool vote(string name)
     // TODO
 
 
-    // if name matches, then
+    // if name matches, then vote 1+vote
+
+    // if not, then
 
     return false;
 }
