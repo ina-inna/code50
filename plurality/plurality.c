@@ -75,7 +75,6 @@ bool vote(string name)
     if (strcmp(candidates[i].name, name) == 0)
         {
             candidates[i].votes = 1;
-            printf("%i\n", candidates[i].votes);
         }
         return true;
 
@@ -88,6 +87,8 @@ bool vote(string name)
 void print_winner(void)
 {
     // TODO
+    int i = 0;
+    printf("%i\n", candidates[i].votes);
     // find the candidate with max votes
     // print it
     return;
