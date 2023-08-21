@@ -88,7 +88,7 @@ void print_winner(void)
 {
     // TODO
     int i = 0;
-    printf("%i\n", candidates[i].votes);
+    printf("%i, %s\n", candidates[i].votes, candidates[i].name);
     // find the candidate with max votes
     // print it
     return;
