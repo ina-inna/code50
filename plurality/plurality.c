@@ -69,15 +69,16 @@ bool vote(string name)
     // TODO
 
 
-    // if name matches, then vote 1+vote
+    // if name matches, then vote 1
 
-     int i = 0;
+
      if (strcmp(candidates[].name, name[0]) == 0)
         {
-            candidates 1 + strcmp(argv[i+1], name[i+1])
+            candidates[].vote = 1 + vote(name)
         }
+        return true;
 
-    // // if not, then
+    // if not, then
 
     return false;
 }
