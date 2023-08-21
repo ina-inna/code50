@@ -1,11 +1,11 @@
-sort1 uses: TODO
+sort1 uses: bubble sort
 
-How do you know?: TODO
+How do you know?: it gives better results for already sorted lists than the sort3, because if the list is sorted there will be no swaps (lower bound is O(n))
 
-sort2 uses: TODO
+sort2 uses: merge sort
 
-How do you know?: TODO
+How do you know?: it performs better for all types of lists than the other two.
 
-sort3 uses: TODO
+sort3 uses: selection sort
 
-How do you know?: TODO
+How do you know?: It gives the worst resuls for already sorted lists, because its lower bound is O(n2).
