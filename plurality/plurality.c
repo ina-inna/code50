@@ -72,9 +72,9 @@ bool vote(string name)
     // if name matches, then +1 vote to the candidate with the same name
 
     int i = 0;
-    if (strcmp(candidates[i+1].name, name) == 0)
+    if (strcmp(candidates[i].name, name[i]) == 0)
         {
-            candidates[1].vote = 1;
+            candidates[i].vote = 1 + ;
         }
         return true;
 
