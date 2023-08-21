@@ -71,12 +71,12 @@ bool vote(string name)
 
     // if name matches, then +1 vote to the candidate with the same name
 
-    int i = 0;
-    if (strcmp(candidates[i].name, name) == 0)
-        {
-            candidates[i].votes = 1;
-        }
-        return true;
+    // int i = 0;
+    // if (strcmp(candidates[i].name, name) == 0)
+    //     {
+    //         candidates[i].votes = 1;
+    //     }
+    //     return true;
 
     // if not, then false
 
@@ -86,10 +86,10 @@ bool vote(string name)
 // Print the winner (or winners) of the election
 void print_winner(void)
 {
-    // TODO
-    int i = 0;
-    printf("%i, %s\n", candidates[i].votes, candidates[i].name);
-    // find the candidate with max votes
-    // print it
-    return;
+    // // TODO
+    // int i = 0;
+    // printf("%i, %s\n", candidates[i].votes, candidates[i].name);
+    // // find the candidate with max votes
+    // // print it
+    // return;
 }
