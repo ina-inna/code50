@@ -71,13 +71,10 @@ bool vote(string name)
 
     // if name matches, then vote 1+vote
 
-     if (strcmp(strings[i], s) == 0)
+     if (strcmp(name[i], s) == 0)
         {
-            printf("Found\n");
             return 0;
         }
-
-    return true;
 
     // if not, then
 
