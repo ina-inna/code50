@@ -69,7 +69,7 @@ bool vote(string name)
     // TODO
 
 
-    // if name is in the
+    // if name matches, then
 
     return false;
 }
