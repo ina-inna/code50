@@ -71,7 +71,7 @@ bool vote(string name)
 
     // if name matches, then vote 1+vote
 
-     if (strcmp(candidates[i], name) == 0)
+     if (strcmp(candidate[i], name) == 0)
         {
             return 1 + vote(name);
         }
