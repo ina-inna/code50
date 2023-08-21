@@ -88,7 +88,6 @@ void print_winner(void)
 {
     // TODO
     // find the candidate with max votes
-    printf(" ")
     // print it
     return;
 }
