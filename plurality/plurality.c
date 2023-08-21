@@ -71,7 +71,7 @@ bool vote(string name)
 
     // if name matches, then vote 1+vote
 
-    return true
+    return true;
 
     // if not, then
 
