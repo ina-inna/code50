@@ -73,12 +73,13 @@ bool vote(string name)
 
     int n = voter_count;
 
-    int result(candidates[].name, candidates[].votes)
+    int result(candidates[].name, name)
     {
     if (candidates[n].name == name)
         {
-            candidates[i].votes = 1 + result(candidates[n-1].name, candidates[n-1].votes);
+            candidates[n].votes = 1 + result(candidates[n-1].name, name);
         }
+        return result;
     }
         return true;
 
