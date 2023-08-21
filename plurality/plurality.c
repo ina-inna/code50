@@ -72,9 +72,9 @@ bool vote(string name)
     // if name matches, then vote 1
 
 
-     if (strcmp(candidates[].name, name[0]) == 0)
+     if (strcmp(candidates[1].name, name[0]) == 0)
         {
-            candidates[].vote = 1 + vote(name)
+            int candidates[1].vote = 1;
         }
         return true;
 
@@ -88,6 +88,7 @@ void print_winner(void)
 {
     // TODO
     // find the candidate with max votes
+    printf(" ")
     // print it
     return;
 }
