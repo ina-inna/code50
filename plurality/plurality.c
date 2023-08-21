@@ -69,7 +69,7 @@ bool vote(string name)
     // TODO
 
 
-    // if name matches, then vote 1
+    // if name matches, then +1 vote to the candidate with the same name
 
 
      if (strcmp(candidates[1].name, name) == 0)
@@ -78,7 +78,7 @@ bool vote(string name)
         }
         return true;
 
-    // if not, then
+    // if not, then false
 
     return false;
 }
