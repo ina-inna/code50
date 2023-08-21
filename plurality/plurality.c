@@ -71,9 +71,9 @@ bool vote(string name)
 
     // if name matches, then vote 1+vote
 
-     if (strcmp(name[i], s) == 0)
+     if (strcmp(candiates[i], name) == 0)
         {
-            return 0;
+            return 1 + vote(name);
         }
 
     // if not, then
