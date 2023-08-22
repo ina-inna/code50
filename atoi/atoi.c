@@ -31,10 +31,9 @@ int convert(string input)
     int n = strlen(input);
     int num = input[n-1] - '0';
 
-
+        convert(input[n-1]);
         input[n - 1] = '\0';
         int last = (input[n - 2] - '0') * 10;
-        int value = num + last;
 
     return num + last;
 
