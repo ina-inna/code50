@@ -26,4 +26,8 @@ int main(void)
 int convert(string input)
 {
     // TODO
+    long atoi (string input)
+    {
+        
+    }
 }
