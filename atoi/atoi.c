@@ -31,10 +31,10 @@ int convert(string input)
     int n = strlen(input);
     char c = input[n-1];
     int num = c - '0';
-    while (n > 0)
-    {
-        input[n - 1] = '\0';
-    }
+    // while (n > 0)
+    // {
+    //     input[n - 1] = '\0';
+    // }
     return num;
 
     // transform it into integer
