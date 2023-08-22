@@ -34,7 +34,6 @@ int convert(string input)
 
 
         input[n - 1] = '\0';
-        convert(input[n - 1]);
         char last_char = input[n - 2];
         int last = (last_char - '0') * 10;
 
