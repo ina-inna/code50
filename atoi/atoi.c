@@ -31,16 +31,13 @@ int convert(string input)
     int n = strlen(input);
     char c = input[n-1];
     int num = c - '0';
-
-        int numbers(int last)
-        {
+        
         input[n - 1] = '\0';
         char last_char = input[n - 2];
         int last = (last_char - '0') * 10;
-        return last + numbers(last)
-        }
 
-    return num + numbers;
+
+    return num + last;
 
     // transform it into integer
 
