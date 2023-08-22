@@ -35,7 +35,9 @@ int convert(string input)
     {
         input[n - 1] = '\0';
     }
-    return num;
+
+    int sum = int num + int last_char
+    return sum;
 
     // transform it into integer
 
