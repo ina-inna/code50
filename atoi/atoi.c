@@ -35,6 +35,7 @@ int convert(string input)
     {
         input[n - 1] = '\0';
     }
+    return num;
 
     // transform it into integer
 
