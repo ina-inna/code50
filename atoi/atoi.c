@@ -5,6 +5,7 @@
 #include <string.h>
 
 int convert(string input);
+int n = strlen(string input);
 
 int main(void)
 {
