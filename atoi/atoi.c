@@ -35,9 +35,8 @@ int convert(string input)
 
         input[n - 1] = '\0';
         char last_char = input[n - 2];
-        int last = (last_char - '0') * 10 + convert(input[n - 1]);
-
-
+        int last = (last_char - '0') * 10;
+        
     return num + last;
 
     // transform it into integer
