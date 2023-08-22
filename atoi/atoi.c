@@ -5,7 +5,6 @@
 #include <string.h>
 
 int convert(string input);
-int n = strlen(string input);
 
 int main(void)
 {
@@ -29,12 +28,12 @@ int convert(string input)
     // TODO
 
     // define last character in a string
-
+    int n = strlen(input);
     char c = input[n-1];
     int num = c - '0';
     while (n > 0)
     {
-        str[n - 1] = '\0';
+        input[n - 1] = '\0';
     }
 
     // transform it into integer
