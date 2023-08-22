@@ -37,8 +37,7 @@ int convert(string input)
         int last_char = input[n - 2] * 10
     }
 
-    int sum = int num + int last_char
-    return num + ;
+    return num + last_char;
 
     // transform it into integer
 
