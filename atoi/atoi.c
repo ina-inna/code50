@@ -26,8 +26,13 @@ int main(void)
 int convert(string input)
 {
     // TODO
-    long atoi (string input)
-    {
-        
-    }
+
+    // define last character in a string
+
+    char c = input[n-1];
+    int num = c - '0';
+
+    // transform it into integer
+
+    // recursive function to transform every char into integer
 }
