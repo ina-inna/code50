@@ -38,7 +38,7 @@ int convert(string input)
     }
 
     int sum = int num + int last_char
-    return sum;
+    return num + ;
 
     // transform it into integer
 
