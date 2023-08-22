@@ -29,8 +29,7 @@ int convert(string input)
 
     // define last character in a string
     int n = strlen(input);
-    char c = input[n-1];
-    int num = c - '0';
+    int num = input[n-1] - '0';
 
 
         input[n - 1] = '\0';
