@@ -34,6 +34,7 @@ int convert(string input)
     if (n > 0)
     {
         input[n - 1] = '\0';
+        int last_char = input[n - 2] * 10
     }
 
     int sum = int num + int last_char
