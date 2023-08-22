@@ -29,12 +29,13 @@ int convert(string input)
 
     // define last character in a string
     int n = strlen(input);
+    int last_char;
     char c = input[n-1];
     int num = c - '0';
-    if (n > 0)
+    while (n > 0)
     {
         input[n - 1] = '\0';
-        int last_char = input[n - 2] * 10
+        last_char = input[n - 2] * 10;
     }
 
     return num + last_char;
