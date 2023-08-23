@@ -6,6 +6,8 @@
 
 int convert(string input);
 
+int convert_helper(string input, int original_length);
+
 int main(void)
 {
     string input = get_string("Enter a positive integer: ");
@@ -28,9 +30,16 @@ int convert(string input)
     // TODO
 
     // if it's a single digit string:
+return convert_helper(input, strlen(input))
 
 
-    int n = strlen(input);
+
+
+}
+
+int convert_helper(string input, int original_length)
+{
+ int n = strlen(input);
 
     // if (n >= 0 && n <= 1)
     // {
@@ -47,6 +56,4 @@ int convert(string input)
         // int last = (input[n - 2] - '0') * 10;       // value of the n - 2 digit
         // int sum = num + last;
         return num + (input[n - 2] - '0') * 10;
-
-
 }
