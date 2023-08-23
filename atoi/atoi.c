@@ -32,14 +32,14 @@ int convert(string input)
 
     int n = strlen(input);
 
-    // if (n >= 0 && n <= 1)
-    // {
-    //     int num = input[n - 1] - '0';
-    //     return num;
-    // }
-    // // if it's >1 digit string
-    // else
-
+    if (n >= 0 && n <= 1)
+    {
+        int num = input[n - 1] - '0';
+        return num;
+    }
+    // if it's >1 digit string
+    else
+    {
     int num = input[n - 1] - '0';   // define last digit
 
 
@@ -47,6 +47,6 @@ int convert(string input)
         int last = (input[n - 2] - '0') * 10;       // value of the n - 2 digit
         int sum = num + last;
         return sum + convert(input);
-    
+    }
 
 }
