@@ -44,8 +44,8 @@ int convert(string input)
 
 
         input[n - 1] = '\0';        // truncate the string by 1
-        int last = (input[n - 2] - '0');       // value of the n - 2 digit
-        int sum = num + last * 10;
+        int last = (input[n - 2] - '0') * 10;       // value of the n - 2 digit
+        int sum = num + last;
         return sum + convert(input);
     }
 
