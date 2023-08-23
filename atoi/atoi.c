@@ -39,8 +39,8 @@ return convert_helper(input, strlen(input))
 
 int convert_helper(string input, int original_length)
 {
- int n = strlen(input);
-
+int n = strlen(input);
+int position = original_length - n;
     // if (n >= 0 && n <= 1)
     // {
     //     int num = input[n - 1] - '0';
