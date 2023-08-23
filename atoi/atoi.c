@@ -28,9 +28,9 @@ int main(void)
 int convert(string input)
 {
     // TODO
-
+    int n = strlen(input);
     // base case;
-    if (strlen(input) == 0)
+    if (n == 0)
     {
         return 0;
     }
