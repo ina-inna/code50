@@ -34,7 +34,8 @@ int max(int array[], int n)
     {
         max_value = array[i];
     }
-    else
+    else if
+    (array[i+1] > array[i])
     {
         max_value = array[i + 1];
     }
