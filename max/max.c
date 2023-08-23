@@ -31,11 +31,11 @@ int max(int array[], int n)
     {
     if (array[i] > array[i + 1])
     {
-        int max_value = array[i]
+        int max_value = array[i];
     }
     else
-     {
-        int max_value = array[i + 1]
+    {
+        int max_value = array[i + 1];
     }
     }
     return 0;
