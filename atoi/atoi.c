@@ -42,11 +42,11 @@ int convert(string input)
     {
     int num = input[n - 1] - '0';   // define last digit
 
-        // convert(input[n-1]);
+
         input[n - 1] = '\0';        // truncate the string by 1
         int last = (input[n - 2] - '0');       // value of the n - 2 digit
-
-    return num + last*10;
+        int sum = num + last * 10;
+        return sum + convert(input[n-1]);
     }
 
 }
