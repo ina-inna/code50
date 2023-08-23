@@ -28,10 +28,18 @@ int main(void)
 int max(int array[], int n)
 {
 
+    if (array[0] > array[1])
+    {
+        int max_value = array[0]
+    }
+    else
+     {
+        int max_value = array[1]
+    }
     for (int i = 0; i < n; i++)
 
     {
-        
+
     }
     return 0;
 }
