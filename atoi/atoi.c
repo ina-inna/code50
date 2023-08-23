@@ -44,24 +44,3 @@ int convert(string input)
     return result;
 
 }
-
-// int convert_helper(string input, int original_length)
-// {
-// int n = strlen(input);
-// int position = original_length - n;
-//     // if (n >= 0 && n <= 1)
-//     // {
-//     //     int num = input[n - 1] - '0';
-//     //     return num;
-//     // }
-//     // // if it's >1 digit string
-//     // else
-//     // {
-//     int num = input[n - 1] - '0';   // define last digit
-
-
-//         input[n - 1] = '\0';        // truncate the string by 1
-//         // int last = (input[n - 2] - '0') * 10;       // value of the n - 2 digit
-//         // int sum = num + last;
-//         return num + (input[n - 2] - '0') * 10;
-// }
