@@ -28,6 +28,10 @@ int main(void)
 int max(int array[], int n)
 {
 
-    int max_value
+    for (int i = 0; i < n; i++)
+
+    {
+        
+    }
     return 0;
 }
