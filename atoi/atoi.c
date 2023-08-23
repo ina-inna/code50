@@ -27,7 +27,7 @@ int convert(string input)
 {
     // TODO
 
-    // define last character in a string
+    // if it's a single digit string:
 
 
     int n = strlen(input);
@@ -37,13 +37,14 @@ int convert(string input)
         int num = input[n - 1] - '0';
         return num;
     }
+    // if it's >1 digit string
     else
     {
-    int num = input[n - 1] - '0';
+    int num = input[n - 1] - '0';   // define last digit
 
         // convert(input[n-1]);
-        input[n - 1] = '\0';
-        int last = (input[n - 2] - '0') * 10;
+        input[n - 1] = '\0';        // truncate the string by 1
+        int last = (input[n - 2] - '0') * 10;       // value of the n - 2 digit
 
     return num + last;
     }
