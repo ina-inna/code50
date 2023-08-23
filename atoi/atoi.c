@@ -29,7 +29,16 @@ int convert(string input)
 
     // define last character in a string
 
+
     int n = strlen(input);
+
+    if (n >= 0 || n <= 9)
+    {
+        int num = input[n - 1] - '0';
+        return num;
+    }
+    else
+    {
     int num = input[n - 1] - '0';
 
         // convert(input[n-1]);
@@ -37,6 +46,6 @@ int convert(string input)
         int last = (input[n - 2] - '0') * 10;
 
     return num + last;
-
+    }
 
 }
