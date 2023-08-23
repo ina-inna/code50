@@ -28,9 +28,9 @@ int convert(string input)
     // TODO
 
     // define last character in a string
-    
+
     int n = strlen(input);
-    int num = input[n-1] - '0';
+    int num = input[n - 1] - '0';
 
         // convert(input[n-1]);
         input[n - 1] = '\0';
