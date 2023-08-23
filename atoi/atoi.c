@@ -32,7 +32,7 @@ int convert(string input)
 
     int n = strlen(input);
 
-    if (n >= 0 || n <= 9)
+    if (n >= 0 && n <= 1)
     {
         int num = input[n - 1] - '0';
         return num;
