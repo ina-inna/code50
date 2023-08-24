@@ -115,14 +115,18 @@ float get_cost(string item)
     // check if the item is in the struct
     for (int i = 0; i < NUM_ITEMS; i++)
     {
-        if (strcasecmp (item, menu[i].item) == 0)
+        if (strcmp (item, menu[i].item) == 0)
 
     // if yes, return the index
         {
             index = i;
             break;
         }
-        else (strcasecmp (item, menu[i].item) == 0)
+        else
+        {
+            printf("Not in the menu.\n");
+            return 0;
+        }
 
     }
     if (index >= 0)
