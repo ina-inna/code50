@@ -22,7 +22,7 @@ int compare(const void *a, const void *b);
 
 int main(void)
 {
-    
+    struct avg_temp temps
     temps[0].city = "Austin";
     temps[0].temp = 97;
 
