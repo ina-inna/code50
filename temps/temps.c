@@ -63,5 +63,5 @@ int main(void)
 void sort_cities(void)
 {
     // Add your code here
-    qsort(temps, NUM_CITIES,  )
+    qsort(temps, NUM_CITIES, sizeof(int), )
 }
