@@ -122,11 +122,6 @@ float get_cost(string item)
             index = i;
             break;
         }
-        else
-        {
-            printf("Not in the menu.\n");
-            return 0;
-        }
 
     }
     if (index >= 0)
