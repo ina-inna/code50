@@ -122,6 +122,7 @@ float get_cost(string item)
             index = i;
             break;
         }
+        else
 
     }
     if (index >= 0)
