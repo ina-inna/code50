@@ -18,10 +18,7 @@ avg_temp temps[NUM_CITIES];
 
 void sort_cities(void);
 
- int compare(const void *a, const void *b)
-    {
-    return ((struct avg_temp *)b)->temp - ((struct avg_temp *)a)->temp;
-    }
+int compare(const void *a, const void *b);
 
 int main(void)
 {
@@ -74,3 +71,8 @@ void sort_cities(void)
 
     return;
 }
+
+int compare(const void *a, const void *b);
+    {
+    return ((struct avg_temp *)b)->temp - ((struct avg_temp *)a)->temp;
+    }
