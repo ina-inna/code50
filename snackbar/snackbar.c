@@ -110,7 +110,7 @@ void add_items(void)
 // Search through the menu array to find an item's cost
 float get_cost(string item)
 {
-    int index;
+    int index = 0;
     // check if the item is in the struct
     for (int i = 0; i < NUM_ITEMS; i++)
     {
@@ -120,7 +120,7 @@ float get_cost(string item)
         {
             return i;
         }
-        i = int index;
+        index = i;
     }
     return index;
 }
