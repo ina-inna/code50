@@ -111,6 +111,7 @@ void add_items(void)
 float get_cost(string item)
 {
     int index = 0;
+    float price;
     // check if the item is in the struct
     for (int i = 0; i < NUM_ITEMS; i++)
     {
@@ -125,7 +126,11 @@ float get_cost(string item)
     }
     if (index >= 0)
     {
-        float price = menu[index].price;
+        price = menu[index].price;
+    }
+    else
+    {
+        return;
     }
     return price;
 }
