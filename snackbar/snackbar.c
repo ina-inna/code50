@@ -130,7 +130,7 @@ float get_cost(string item)
     }
     else
     {
-        return;
+        return 0;
     }
     return price;
 }
