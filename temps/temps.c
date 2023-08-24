@@ -3,6 +3,7 @@
 
 #include <cs50.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 #define NUM_CITIES 10
 
@@ -63,5 +64,10 @@ int main(void)
 void sort_cities(void)
 {
     // Add your code here
-    qsort(temps, NUM_CITIES, sizeof(int), )
+    int compare(const void *a, const void *b)
+    {
+    return (*(int *)a - *(int *)b);
+    }
+
+    qsort(temps, NUM_CITIES, sizeof(int), compare)
 }
