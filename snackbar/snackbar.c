@@ -121,6 +121,11 @@ float get_cost(string item)
             return i;
         }
         index = i;
+        break;
     }
-    return index;
+    if (index >= 0)
+    {
+        float price = menu[index].price;
+    }
+    return price;
 }
