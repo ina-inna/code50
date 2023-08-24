@@ -18,6 +18,11 @@ avg_temp temps[NUM_CITIES];
 
 void sort_cities(void);
 
+ int compare(const void *a, const void *b)
+    {
+    return (*(int *)a - *(int *)b);
+    }
+
 int main(void)
 {
     temps[0].city = "Austin";
@@ -64,10 +69,8 @@ int main(void)
 void sort_cities(void)
 {
     // Add your code here
-    int compare(const void *a, const void *b)
-    {
-    return (*(int *)a - *(int *)b);
-    }
 
-    qsort(temps, NUM_CITIES, sizeof(int), compare)
+    qsort(temps, NUM_CITIES, sizeof(int), compare);
+
+    return;
 }
