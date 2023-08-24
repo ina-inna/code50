@@ -112,9 +112,10 @@ float get_cost(string item)
 {
     // check if the item is in the struct
     for (int i = 0, i < NUM_ITEMS, i++)
-    if (item = menu[i].item
+    if (item = menu[i].item)
 
     // if yes, return the cost
-
+{
     return menu[i].price;
+}
 }
