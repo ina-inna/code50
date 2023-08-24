@@ -119,10 +119,9 @@ float get_cost(string item)
 
     // if yes, return the index
         {
-            return i;
+            index = i;
+            break;
         }
-        index = i;
-        break;
     }
     if (index >= 0)
     {
