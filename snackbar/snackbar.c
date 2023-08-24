@@ -121,7 +121,6 @@ float get_cost(string item)
             return i;
         }
         i = index;
-        return 1;
     }
     return index;
 }
