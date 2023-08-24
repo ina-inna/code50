@@ -22,6 +22,7 @@ int compare(const void *a, const void *b);
 
 int main(void)
 {
+    
     temps[0].city = "Austin";
     temps[0].temp = 97;
 
