@@ -122,6 +122,8 @@ float get_cost(string item)
             index = i;
             break;
         }
+        else (strcasecmp (item, menu[i].item) == 0)
+
     }
     if (index >= 0)
     {
