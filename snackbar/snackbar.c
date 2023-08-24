@@ -115,16 +115,15 @@ float get_cost(string item)
     // check if the item is in the struct
     for (int i = 0; i < NUM_ITEMS; i++)
     {
-        char *str1 = item;
-        char *str2 = menu[i].item;
-        if (strncasecmp(*str1, str2) == 0)
+        const char *str1 = item;
+        const char *str2 = menu[i].item;
+        if (strcasecmp(str1, str2) == 0)
 
     // if yes, return the index
         {
             index = i;
             break;
         }
-        else
 
     }
     if (index >= 0)
