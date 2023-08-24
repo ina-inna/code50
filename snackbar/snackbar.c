@@ -120,7 +120,7 @@ float get_cost(string item)
         {
             return i;
         }
-        i = index;
+        i = int index;
     }
     return index;
 }
