@@ -120,7 +120,6 @@ float get_cost(string item)
         {
             return menu[i].price;
         }
-        else return 0;
+        else return 1;
     }
-    return menu[i].price;
 }
