@@ -111,6 +111,7 @@ void add_items(void)
 float get_cost(string item)
 {
     // check if the item is in the struct
+    for (int i = 0, i < NUM_ITEMS, i++)
 
     // if yes, return the cost
 
