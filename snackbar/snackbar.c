@@ -115,7 +115,9 @@ float get_cost(string item)
     // check if the item is in the struct
     for (int i = 0; i < NUM_ITEMS; i++)
     {
-        if (strncasecmp(item, menu[i].item) == 0)
+        char *str1 = item;
+        char *str2 = menu[i].item;
+        if (strncasecmp(*str1, str2) == 0)
 
     // if yes, return the index
         {
