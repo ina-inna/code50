@@ -70,7 +70,7 @@ void sort_cities(void)
 {
     // Add your code here
 
-    qsort(temps, NUM_CITIES, sizeof(int), compare);
+    qsort(temps, NUM_CITIES, sizeof(struct avg_temp), compare);
 
     return;
 }
