@@ -72,7 +72,7 @@ bool vote(string name)
     // TODO
 
 
-    // if name appears in the argv,
+    // if name appears in the array of candidates,
         int index;
         for (int i = 0; i < candidate_count; i++)
         {
@@ -92,9 +92,10 @@ bool vote(string name)
         }
     //then +1 vote to the candidate with the same name
 
-        if (index <= 0)
+        if (index >= 0)
         {
         candidates[index].votes = candidates[index].votes + 1;
+        return candidates[index].votes;
         }
     return true;
 }
