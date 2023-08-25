@@ -100,9 +100,10 @@ void print_winner(void)
         {
             top_votes = candidates[i].votes;
         }
-        printf("%s\n", candidates[i].name);
+        return candidates[i].name;
     }
 
+    printf("%s\n", candidates[i].name);
 
 
 }
