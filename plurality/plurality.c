@@ -76,7 +76,7 @@ bool vote(string name)
         int index = 0;
         int i = 0;
         const char *str1 = name;
-        const char *str2 = candidates[i].name;
+        const char *str2 = candidates[].name;
         if (strcasecmp(str1, str2) == 0)
 
     // if yes, return the index
