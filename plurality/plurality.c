@@ -89,9 +89,9 @@ bool vote(string name)
 
     if (index >= 0)
     {
-        candidates[i].votes = candidates[i].votes + 1;
-        int result = candidates[i].votes + vote(name);
-        return result;
+        candidates[index].votes = candidates[index].votes + 1;
+        // int result = candidates[index].votes + vote(name);
+        return candidates[index].votes;
     }
     else
     {
