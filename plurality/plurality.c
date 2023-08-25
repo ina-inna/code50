@@ -81,18 +81,17 @@ bool vote(string name)
             break;
         }
 
+    //then +1 vote to the candidate with the same name
+
 
     if (index >= 0)
     {
-        price = menu[index].price;
+        candidates[i].votes = candidates[i].votes + 1;
     }
     else
     {
         return 0;
     }
-
-
-    //then +1 vote to the candidate with the same name
 
 }
 
