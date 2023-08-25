@@ -92,9 +92,10 @@ bool vote(string name)
         }
     //then +1 vote to the candidate with the same name
 
-
+        if (index <= 0)
+        {
         candidates[index].votes = candidates[index].votes + 1;
-
+        }
     return true;
 }
 
