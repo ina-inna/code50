@@ -81,14 +81,13 @@ bool vote(string name)
 
     // if yes, return the index and +1 vote to the candidate with the same name
         {
-            index = i;
-            candidates[index].votes = candidates[index].votes + 1;
+            // index = i;
+            candidates[i].votes = candidates[i].votes + 1;
+            return true;
         }
 
-            return candidates[index].votes;
         }
-
-    return true;
+    return false;
 }
 
 // Print the winner (or winners) of the election
