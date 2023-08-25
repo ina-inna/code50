@@ -83,6 +83,8 @@ bool vote(string name)
     // if yes, return the index
         {
             index = i;
+            candidates[index].votes = candidates[index].votes + 1;
+            return candidates[index].votes;
         }
 
         else
@@ -92,11 +94,6 @@ bool vote(string name)
         }
     //then +1 vote to the candidate with the same name
 
-        if (index >= 0)
-        {
-        candidates[index].votes = candidates[index].votes + 1;
-        return candidates[index].votes;
-        }
     return true;
 }
 
