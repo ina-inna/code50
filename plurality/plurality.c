@@ -96,6 +96,7 @@ void print_winner(void)
     int top_votes = candidates[0].votes;
     for (int i = 1; i < candidate_count; i++)
     {
+        
         if (top_votes < candidates[i].votes)
         {
             top_votes = candidates[i].votes;
