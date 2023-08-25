@@ -71,7 +71,6 @@ bool vote(string name)
 {
     // TODO
 
-
     // if name appears in the array of candidates,
         int index;
         for (int i = 0; i < candidate_count; i++)
@@ -80,7 +79,7 @@ bool vote(string name)
         const char *str2 = candidates[i].name;
         if (strcasecmp(str1, str2) == 0)
 
-    // if yes, return the index
+    // if yes, return the index and +1 vote to the candidate with the same name
         {
             index = i;
             candidates[index].votes = candidates[index].votes + 1;
@@ -92,7 +91,6 @@ bool vote(string name)
            return 0;
         }
         }
-    //then +1 vote to the candidate with the same name
 
     return true;
 }
