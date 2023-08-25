@@ -88,11 +88,11 @@ bool vote(string name)
 
         else
         {
-           return 0;
+           break;
         }
         }
 
-    return 0;
+    return true;
 }
 
 // Print the winner (or winners) of the election
@@ -101,7 +101,7 @@ void print_winner(void)
     // // TODO
     for (int i = 0; i < candidate_count; i++)
     {
-    printf("%i, %s\n", candidates[index].votes, candidates[i].name);
+    printf("%i, %s\n", candidates[i].votes, candidates[i].name);
     }
     // // find the candidate with max votes
     // // print it
