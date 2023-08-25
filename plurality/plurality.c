@@ -94,7 +94,9 @@ void print_winner(void)
 
     // find the biggest vote
 
-    // 
+    // sort the votes
+
+
 
 
     for (int i = 0; i < candidate_count; i++)
