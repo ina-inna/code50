@@ -71,28 +71,12 @@ bool vote(string name)
 
     // if name matches, then +1 vote to the candidate with the same name
 
-    int n = voter_count;
-
-    int result(candidates[].name, name)
-    {
-    if (candidates[n].name == name)
-        {
-            candidates[n].votes = 1 + result(candidates[n-1].name, name);
-        }
-        return result;
-    }
-        return true;
-
-    // if not, then false
-
-    return false;
 }
 
 // Print the winner (or winners) of the election
 void print_winner(void)
 {
     // // TODO
-    int i = 0;
     printf("%i, %s\n", candidates[i].votes, candidates[i].name);
     // // find the candidate with max votes
     // // print it
