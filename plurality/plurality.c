@@ -93,16 +93,15 @@ void print_winner(void)
     // // TODO
 
     // find the biggest vote
-
-    // sort the votes
-
-
-
-
-    for (int i = 0; i < candidate_count; i++)
+    int top_votes = candidates[0].votes;
+    for (int i = 1; i < candidate_count; i++)
     {
-    printf("%i, %s\n", candidates[i].votes, candidates[i].name);
+        if (top_votes < candidates[i].votes)
+        {
+            top_votes = candidates[i].votes;
+            printf("%s\n", candidates[i].name);
+        }
     }
 
-    // return;
+
 }
