@@ -91,6 +91,12 @@ bool vote(string name)
 void print_winner(void)
 {
     // // TODO
+
+    // find the biggest vote
+
+    // 
+
+
     for (int i = 0; i < candidate_count; i++)
     {
     printf("%i, %s\n", candidates[i].votes, candidates[i].name);
