@@ -4,6 +4,7 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #define NUM_CITIES 10
 
@@ -79,7 +80,7 @@ void sort_cities(void)
 
 int compare(const void *a, const void *b)
     {
-        int l = ((struct avg_temp *)b)->temp;
-        int r = ((struct avg_temp *)a)->temp;
+        int l = ((const avg_temp *)b)->temp;
+        int r = ((const avg_temp *)a)->temp;
         return (l - r);
     }
