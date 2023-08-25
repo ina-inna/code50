@@ -77,7 +77,10 @@ bool vote(string name)
 void print_winner(void)
 {
     // // TODO
+    for (int i = 0; i < MAX; i++)
+    {
     printf("%i, %s\n", candidates[i].votes, candidates[i].name);
+    }
     // // find the candidate with max votes
     // // print it
     // return;
