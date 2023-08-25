@@ -71,6 +71,7 @@ bool vote(string name)
 
     // if name appears in the argv,
         int index = 0;
+        int i = 0;
         const char *str1 = name;
         const char *str2 = candidates[i].name;
         if (strcasecmp(str1, str2) == 0)
