@@ -82,7 +82,6 @@ bool vote(string name)
     // if yes, return the index
         {
             index = i;
-            break;
         }
 
     //then +1 vote to the candidate with the same name
@@ -96,7 +95,7 @@ bool vote(string name)
     {
         return 0;
     }
-
+    return true;
 }
 
 // Print the winner (or winners) of the election
