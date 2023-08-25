@@ -93,10 +93,11 @@ void print_winner(void)
     // // TODO
 
     // find the biggest vote
+    int index;
     int top_votes = candidates[0].votes;
     for (int i = 1; i < candidate_count; i++)
     {
-        
+
         if (top_votes < candidates[i].votes)
         {
             top_votes = candidates[i].votes;
