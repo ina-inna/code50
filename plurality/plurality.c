@@ -98,14 +98,14 @@ bool vote(string name)
     {
         return 0;
     }
-    return candidates[index].votes;
+    return true;
 }
 
 // Print the winner (or winners) of the election
 void print_winner(void)
 {
     // // TODO
-    for (int i = 0; i < MAX; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
     printf("%i, %s\n", candidates[i].votes, candidates[i].name);
     }
