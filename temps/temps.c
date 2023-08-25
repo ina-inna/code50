@@ -22,7 +22,7 @@ int compare(const void *a, const void *b);
 
 int main(void)
 {
-    struct avg_temp temps [NUM_CITIES];
+    // struct avg_temp temps [NUM_CITIES];
 
     temps[0].city = "Austin";
     temps[0].temp = 97;
@@ -54,8 +54,8 @@ int main(void)
     temps[9].city = "San Francisco";
     temps[9].temp = 66;
 
-    struct avg_temp temps2 [NUM_CITIES];
-    temps2 = temps;
+    // struct avg_temp temps2 [NUM_CITIES];
+    // temps2 = temps;
 
     sort_cities();
 
@@ -79,6 +79,6 @@ void sort_cities(void)
 
 int compare(const void *a, const void *b);
     {
-    struct avg_temp;
+    struct avg_temp *temps;
     return ((struct avg_temp *)b)->temp - ((struct avg_temp *)a)->temp;
     }
