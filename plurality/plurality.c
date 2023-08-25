@@ -87,7 +87,7 @@ bool vote(string name)
 
         else
         {
-            break;
+            return 0;
         }
         }
     //then +1 vote to the candidate with the same name
