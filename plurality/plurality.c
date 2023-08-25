@@ -69,28 +69,28 @@ int main(int argc, string argv[])
 // Update vote totals given a new vote
 bool vote(string name)
 {
-    // // TODO
+    // TODO
 
-    // // if name appears in the array of candidates,
-    //     int index;
-    //     for (int i = 0; i < candidate_count; i++)
-    //     {
-    //     const char *str1 = name;
-    //     const char *str2 = candidates[i].name;
-    //     if (strcasecmp(str1, str2) == 0)
+    // if name appears in the array of candidates,
+        int index;
+        for (int i = 0; i < candidate_count; i++)
+        {
+        const char *str1 = name;
+        const char *str2 = candidates[i].name;
+        if (strcasecmp(str1, str2) == 0)
 
-    // // if yes, return the index and +1 vote to the candidate with the same name
-    //     {
-    //         index = i;
-    //         candidates[index].votes = candidates[index].votes + 1;
-    //         return candidates[index].votes;
-    //     }
+    // if yes, return the index and +1 vote to the candidate with the same name
+        {
+            index = i;
+            candidates[index].votes = candidates[index].votes + 1;
+            return candidates[index].votes;
+        }
 
-    //     else
-    //     {
-    //        return 0;
-    //     }
-    //     }
+        else
+        {
+           return 0;
+        }
+        }
 
     return 0;
 }
@@ -101,7 +101,7 @@ void print_winner(void)
     // // TODO
     for (int i = 0; i < candidate_count; i++)
     {
-    printf("%i, %s\n", candidates[i].votes, candidates[i].name);
+    printf("%i, %s\n", candidates[index].votes, candidates[i].name);
     }
     // // find the candidate with max votes
     // // print it
