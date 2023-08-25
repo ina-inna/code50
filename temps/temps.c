@@ -77,8 +77,8 @@ void sort_cities(void)
     return;
 }
 
-int compare(const void *a, const void *b);
+int compare(const void *a, const void *b)
     {
-    struct avg_temp *temps;
+    struct avg_temp;
     return ((struct avg_temp *)b)->temp - ((struct avg_temp *)a)->temp;
     }
