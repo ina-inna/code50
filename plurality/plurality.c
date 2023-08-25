@@ -70,7 +70,26 @@ bool vote(string name)
 
 
     // if name appears in the argv,
-    if ()
+        int index = 0;
+        const char *str1 = name;
+        const char *str2 = candidates[i].name;
+        if (strcasecmp(str1, str2) == 0)
+
+    // if yes, return the index
+        {
+            index = i;
+            break;
+        }
+
+
+    if (index >= 0)
+    {
+        price = menu[index].price;
+    }
+    else
+    {
+        return 0;
+    }
 
 
     //then +1 vote to the candidate with the same name
