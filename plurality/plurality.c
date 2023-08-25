@@ -75,10 +75,9 @@ bool vote(string name)
         int index;
         for (int i = 0; i < candidate_count; i++)
         {
-        // const char *str1 = name;
-        // const char *str2 = candidates[i].name;
-        // if (strcasecmp(str1, str2) == 0)
-        if (name == candidates[i].name)
+        const char *str1 = name;
+        const char *str2 = candidates[i].name;
+        if (strcasecmp(str1, str2) == 0)
 
     // if yes, return the index and +1 vote to the candidate with the same name
         {
