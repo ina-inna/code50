@@ -99,9 +99,10 @@ void print_winner(void)
         if (top_votes < candidates[i].votes)
         {
             top_votes = candidates[i].votes;
-            printf("%s\n", candidates[i].name);
         }
+        printf("%s\n", candidates[i].name);
     }
+
 
 
 }
