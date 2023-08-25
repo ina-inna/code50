@@ -83,13 +83,13 @@ bool vote(string name)
         {
             index = i;
             candidates[index].votes = candidates[index].votes + 1;
-            return candidates[index].votes;
         }
 
         else
         {
            break;
         }
+        return candidates[index].votes;
         }
 
     return true;
