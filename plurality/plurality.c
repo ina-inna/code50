@@ -73,7 +73,7 @@ bool vote(string name)
 
 
     // if name appears in the argv,
-        int index = 0;
+        int index;
         for (int i = 0; i < candidate_count; i++)
         {
         const char *str1 = name;
