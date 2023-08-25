@@ -85,11 +85,7 @@ bool vote(string name)
             candidates[index].votes = candidates[index].votes + 1;
         }
 
-        else
-        {
-           break;
-        }
-        return candidates[index].votes;
+            return candidates[index].votes;
         }
 
     return true;
@@ -103,7 +99,6 @@ void print_winner(void)
     {
     printf("%i, %s\n", candidates[i].votes, candidates[i].name);
     }
-    // // find the candidate with max votes
-    // // print it
+
     // return;
 }
