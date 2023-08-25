@@ -95,7 +95,7 @@ bool vote(string name)
     {
         return 0;
     }
-    return true;
+    return candidates[i].votes;
 }
 
 // Print the winner (or winners) of the election
