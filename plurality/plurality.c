@@ -69,7 +69,11 @@ bool vote(string name)
     // TODO
 
 
-    // if name matches, then +1 vote to the candidate with the same name
+    // if name appears in the argv,
+    if ()
+
+
+    //then +1 vote to the candidate with the same name
 
 }
 
