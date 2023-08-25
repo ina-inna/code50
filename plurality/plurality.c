@@ -74,16 +74,17 @@ bool vote(string name)
 
     // if name appears in the argv,
         int index = 0;
-        int i = 0;
+        for (int i = 0; i < candidate_count; i++)
+        {
         const char *str1 = name;
-        const char *str2 = candidates[].name;
+        const char *str2 = candidates[i].name;
         if (strcasecmp(str1, str2) == 0)
 
     // if yes, return the index
         {
             index = i;
         }
-
+        }
     //then +1 vote to the candidate with the same name
 
 
