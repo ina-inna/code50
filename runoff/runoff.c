@@ -131,27 +131,28 @@ int main(int argc, string argv[])
 bool vote(int voter, int rank, string name)
 {
     // TODO
-    for (int voter = 0; voter < voter_count; voter++)
+    for (voter = 0; voter < voter_count; voter++)
     {
-        for (int rank = 0; rank < candidate_count; rank++ )
+        for (rank = 0; rank < candidate_count; rank++ )
         {
 
-    for (int i = 0; i < candidate_count; i++)
-    {
-        const char *str1 = name;
-        const char *str2 = candidates[i].name;
-        if (strcasecmp(str1, str2) == 0)
+            for (int i = 0; i < candidate_count; i++)
+                {
+                    const char *str1 = name;
+                    const char *str2 = candidates[i].name;
+                    if (strcasecmp(str1, str2) == 0)
 
-        // if yes, return the index and +1 vote to the candidate with the same name
-        {
-            preferences[voter][rank] = i;
-            candidates[i].votes = candidates[i].votes + 1;
-            return true;
-        }
-    }
+                    // if yes, return the index and +1 vote to the candidate with the same name
+                    {
+                        preferences[voter][rank] = i;
+                        candidates[i].votes = candidates[i].votes + 1;
+                        return true;
+                    }
+                 }
         return false;
     }
     }
+    return 0;
 }
 
 
