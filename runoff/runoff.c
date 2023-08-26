@@ -128,9 +128,8 @@ int main(int argc, string argv[])
 bool vote(int voter, int rank, string name)
 {
     // TODO
+        preferences
 
-    for (int i = 0; i < candidate_count; i++)
-    {
         const char *str1 = name;
         const char *str2 = candidates[i].name;
         if (strcasecmp(str1, str2) == 0)
@@ -142,7 +141,7 @@ bool vote(int voter, int rank, string name)
         }
     return false;
     }
-    }
+
 
 // Tabulate votes for non-eliminated candidates
 void tabulate(void)
