@@ -134,7 +134,7 @@ bool vote(int voter, int rank, string name)
 
         // if yes, return the index and +1 vote to the candidate with the same name
         {
-            
+            i = preferences [voter] [rank]
             candidates[i].votes = candidates[i].votes + 1;
             return true;
         }
