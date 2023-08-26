@@ -1,9 +1,8 @@
 #include <cs50.h>
+#include <ctype.h>
 #include <stdio.h>
 #include <string.h>
 #include <strings.h>
-#include <ctype.h>
-
 
 // Max number of candidates
 #define MAX 9
@@ -13,8 +12,7 @@ typedef struct
 {
     string name;
     int votes;
-}
-candidate;
+} candidate;
 
 // Array of candidates
 candidate candidates[MAX];
@@ -72,18 +70,18 @@ bool vote(string name)
     // TODO
 
     // if name appears in the array of candidates,
-        for (int i = 0; i < candidate_count; i++)
-        {
+    for (int i = 0; i < candidate_count; i++)
+    {
         const char *str1 = name;
         const char *str2 = candidates[i].name;
         if (strcasecmp(str1, str2) == 0)
 
-    // if yes, return the index and +1 vote to the candidate with the same name
+        // if yes, return the index and +1 vote to the candidate with the same name
         {
             candidates[i].votes = candidates[i].votes + 1;
             return true;
         }
-        }
+    }
     return false;
 }
 
@@ -93,19 +91,22 @@ void print_winner(void)
     // // TODO
 
     // find the biggest vote
-    int index;
     int top_votes = candidates[0].votes;
     for (int i = 1; i < candidate_count; i++)
     {
 
-        if (top_votes < candidates[i].votes)
+        if (candidates[i].votes > top_votes)
         {
             top_votes = candidates[i].votes;
         }
-        index = i;
     }
 
-    printf("%s\n", candidates[index].name);
+    for (int i = 0; i < candidate_count; i++)
+    {
 
-
+        if (top_votes == candidates[i].votes)
+        {
+            printf("%s\n", candidates[i].name);
+        }
+    }
 }
