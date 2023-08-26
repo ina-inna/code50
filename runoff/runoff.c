@@ -146,7 +146,6 @@ bool vote(int voter, int rank, string name)
             candidates[i].votes = candidates[i].votes + 1;
             return true;
         }
-    
     }
     return false;
     }
