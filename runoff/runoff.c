@@ -132,10 +132,10 @@ bool vote(int voter, int rank, string name)
 {
     // TODO
 
+        voter = 0;
+        rank = 0;
     for (int i = 0; i < candidate_count; i++)
     {
-        int voter = 0;
-        int rank = 0;
         const char *str1 = name;
         const char *str2 = candidates[i].name;
         if (strcasecmp(str1, str2) == 0)
@@ -146,6 +146,7 @@ bool vote(int voter, int rank, string name)
             candidates[i].votes = candidates[i].votes + 1;
             return true;
         }
+    
     }
     return false;
     }
