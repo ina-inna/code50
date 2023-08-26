@@ -134,13 +134,15 @@ bool vote(int voter, int rank, string name)
 
     for (int i = 0; i < candidate_count; i++)
     {
+        int voter = 0;
+        int rank = 0;
         const char *str1 = name;
         const char *str2 = candidates[i].name;
         if (strcasecmp(str1, str2) == 0)
 
         // if yes, return the index and +1 vote to the candidate with the same name
         {
-            preferences[voter][rank] = i;
+            preferences[voter++][rank++] = i;
             candidates[i].votes = candidates[i].votes + 1;
             return true;
         }
