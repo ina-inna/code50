@@ -128,8 +128,21 @@ int main(int argc, string argv[])
 bool vote(int voter, int rank, string name)
 {
     // TODO
+
+    for (int i = 0; i < candidate_count; i++)
+    {
+        const char *str1 = name;
+        const char *str2 = candidates[i].name;
+        if (strcasecmp(str1, str2) == 0)
+
+        // if yes, return the index and +1 vote to the candidate with the same name
+        {
+            candidates[i].votes = candidates[i].votes + 1;
+            return true;
+        }
+    }
     return false;
-}
+    }
 
 // Tabulate votes for non-eliminated candidates
 void tabulate(void)
