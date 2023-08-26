@@ -132,8 +132,8 @@ bool vote(int voter, int rank, string name)
 {
     // TODO
 
-        voter = 0;
-        rank = 0;
+    voter = i;
+    rank = j;
     for (int i = 0; i < candidate_count; i++)
     {
         const char *str1 = name;
