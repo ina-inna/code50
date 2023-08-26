@@ -131,7 +131,9 @@ int main(int argc, string argv[])
 bool vote(int voter, int rank, string name)
 {
     // TODO
-    for (int voter = 0; voter < )
+    for (int voter = 0; voter < voter_count; voter++)
+    {
+        for (int rank = 0; rank < )
 
     for (int i = 0; i < candidate_count; i++)
     {
@@ -148,6 +150,7 @@ bool vote(int voter, int rank, string name)
     }
     return false;
     }
+}
 
 
 // Tabulate votes for non-eliminated candidates
