@@ -128,8 +128,6 @@ int main(int argc, string argv[])
 bool vote(int voter, int rank, string name)
 {
     // TODO
-        preferences
-
         const char *str1 = name;
         const char *str2 = candidates[i].name;
         if (strcasecmp(str1, str2) == 0)
