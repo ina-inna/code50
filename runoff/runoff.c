@@ -157,10 +157,14 @@ void tabulate(void)
 {
     // TODO
 
-    // calculate for 1st row if none of the candidates are eliminated
+    // calculate votes for every candidate
 
     for (int i = 0; i < candidate_count; i++)
-    candidate[i].votes = 
+    {
+
+
+
+    }
 
     // calculate if eliminated
 
