@@ -133,9 +133,7 @@ int main(int argc, string argv[])
 bool vote(int voter, int rank, string name)
 {
     // TODO
-    voter = 0;
-    rank = 0;
-
+    int index
     for (int i = 0; i < candidate_count; i++)
         {
                     const char *str1 = name;
@@ -144,12 +142,12 @@ bool vote(int voter, int rank, string name)
 
                     // if yes, return the index and +1 vote to the candidate with the same name
                     {
-                    preferences[voter][rank] = i;
-                    rank++;
+                    index = i;
                     }
-                    voter++;
                     return true;
         }
+
+        
 
     return false;
 }
