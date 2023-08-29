@@ -136,8 +136,8 @@ bool vote(int voter, int rank, string name)
             voter = 0;
             rank = 0;
 
-            for (int i = 0; i < candidate_count; i++)
-                {
+    for (int i = 0; i < candidate_count; i++)
+        {
                     const char *str1 = name;
                     const char *str2 = candidates[i].name;
                     if (strcasecmp(str1, str2) == 0)
@@ -148,8 +148,9 @@ bool vote(int voter, int rank, string name)
                         // candidates[i].votes = candidates[i].votes + 1;
                         return true;
                     }
-                    rank++;
-                 }
+            rank++;
+     }
+
 
 
      return false;
@@ -157,20 +158,6 @@ bool vote(int voter, int rank, string name)
 
 
 
-
-             for (int i = 0; i < voter_count; i++)
-             {
-        for (int j = 0; j < candidate_count; j++) {
-            printf("%d ", preferences[i][j]);
-        }
-        printf("\n"); // Move to the next row
-
-
-
-            }
-
-               return 0;
-}
 
 
 // Tabulate votes for non-eliminated candidates
