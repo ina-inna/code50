@@ -58,6 +58,15 @@ int main(int argc, string argv[])
         {
             printf("Invalid vote.\n");
         }
+        else
+        {
+             for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 4; j++) {
+            printf("%d ", myArray[i][j]);
+        }
+        printf("\n"); // Move to the next row
+    }
+        }
     }
 
     // Display winner of election
