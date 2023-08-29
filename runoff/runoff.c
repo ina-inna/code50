@@ -81,22 +81,8 @@ int main(int argc, string argv[])
                 return 4;
             }
 
-            else
-             {
-             for (int i = 0; i < voter_count; i++)
 
-             {
-        for (int j = 0; j < candidate_count; j++)
-        {
-            printf("%d ", myArray[i][j]);
         }
-        printf("\n"); // Move to the next row
-            }
-
-
-
-
-             }
 
         printf("\n");
     }
@@ -168,7 +154,22 @@ bool vote(int voter, int rank, string name)
         return false;
     }
     }
-    return 0;
+
+
+
+
+             for (int i = 0; i < voter_count; i++)
+             {
+        for (int j = 0; j < candidate_count; j++) {
+            printf("%d ", preferences[i][j]);
+        }
+        printf("\n"); // Move to the next row
+
+
+
+            }
+
+               return 0;
 }
 
 
