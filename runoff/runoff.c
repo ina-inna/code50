@@ -80,7 +80,23 @@ int main(int argc, string argv[])
                 printf("Invalid vote.\n");
                 return 4;
             }
+
+            else
+             {
+             for (int i = 0; i < voter_count; i++)
+
+             {
+        for (int j = 0; j < candidate_count; j++)
+        {
+            printf("%d ", myArray[i][j]);
         }
+        printf("\n"); // Move to the next row
+            }
+
+
+
+
+             }
 
         printf("\n");
     }
@@ -161,7 +177,7 @@ void tabulate(void)
 {
     // TODO
 
-    // calculate for 1st row 
+    // calculate for 1st row
 
     return;
 }
