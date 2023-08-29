@@ -157,7 +157,10 @@ void tabulate(void)
 {
     // TODO
 
-    // calculate for 1st row
+    // calculate for 1st row if none of the candidates are eliminated
+
+    // calculate if elimin
+
 
     return;
 }
