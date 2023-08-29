@@ -159,7 +159,7 @@ void tabulate(void)
 
     // calculate for 1st row if none of the candidates are eliminated
 
-    // calculate if elimin
+    // calculate if eliminated
 
 
     return;
