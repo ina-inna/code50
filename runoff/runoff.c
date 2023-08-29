@@ -159,6 +159,9 @@ void tabulate(void)
 
     // calculate for 1st row if none of the candidates are eliminated
 
+    for (int i = 0; i < candidate_count; i++)
+    candidate[i].votes = 
+
     // calculate if eliminated
 
 
