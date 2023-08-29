@@ -133,10 +133,8 @@ int main(int argc, string argv[])
 bool vote(int voter, int rank, string name)
 {
     // TODO
-    for (voter = 0; voter < voter_count; voter++)
-    {
-        for (rank = 0; rank < candidate_count; rank++)
-        {
+            voter = 0;
+            rank = 0;
 
             for (int i = 0; i < candidate_count; i++)
                 {
@@ -152,7 +150,7 @@ bool vote(int voter, int rank, string name)
                     }
                  }
 
-        }
+
      return false;
     }
 
