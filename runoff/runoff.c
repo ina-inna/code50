@@ -161,7 +161,8 @@ void tabulate(void)
 {
     // TODO
 
-    
+    // calculate for 1st row 
+
     return;
 }
 
