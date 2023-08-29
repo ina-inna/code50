@@ -168,8 +168,8 @@ void tabulate(void)
                 i++;
             }
 
-
         }
+        return candidate[i].votes;
     }
 
     // calculate if eliminated
