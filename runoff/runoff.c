@@ -133,7 +133,8 @@ int main(int argc, string argv[])
 bool vote(int voter, int rank, string name)
 {
     // TODO
-
+    voter = 0;
+    rank = 0;
 
     for (int i = 0; i < candidate_count; i++)
         {
@@ -143,18 +144,14 @@ bool vote(int voter, int rank, string name)
 
                     // if yes, return the index and +1 vote to the candidate with the same name
                     {
-
-                        for (voter = 0; voter < voter_count; voter_count++)
-                        {
-                            for (rank = 0; rank < candidate_count; rank++)
-                            {
-                                preferences[voter][rank] = i;
-                            }
-                        }
-                        // candidates[i].votes = candidates[i].votes + 1;
-                        return true;
+                    preferences[voter][rank] = i;
+                    rank++;
                     }
-    }
+
+                    // candidates[i].votes = candidates[i].votes + 1;
+                    return true;
+        }
+
     return false;
 }
 
