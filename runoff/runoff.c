@@ -142,8 +142,9 @@ bool vote(int voter, int rank, string name)
                     // if yes, return the index and +1 vote to the candidate with the same name
                     {
                         preferences[voter][rank] = i;
+                        return true;
                     }
-                    return true;
+            
         }
 
     return false;
