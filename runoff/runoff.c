@@ -180,12 +180,20 @@ bool print_winner(void)
     // TODO
     // if any of the candidates have > 50% print winner
 
-    
+    int sum = 0;
+    for (int i = 0; i < candidate_count; i++)
+    {
+        sum += candidates[i].votes;
+    }
 
     for (int i = 0; i < candidate_count; i++)
 
     {
-        if (candidates[i].votes > (sum =+))
+        if (candidates[i].votes > (sum / 2))
+        {
+            printf("The winner is: %s\n", candidates[i].name);
+            return true;
+        }
     }
     return false;
 }
