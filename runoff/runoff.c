@@ -166,17 +166,14 @@ void tabulate(void)
         {
             if (preferences[j][0] == i)
             {
-                i++;
+                candidates[i].votes++;
             }
 
         }
-        return candidates[i].votes;
-    }
 
     // calculate if eliminated
 
-
-    return;
+    }
 }
 
 // Print the winner of the election, if there is one
