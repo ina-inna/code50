@@ -170,7 +170,7 @@ void tabulate(void)
             }
 
         }
-        return candidate[i].votes;
+        return candidates[i].votes;
     }
 
     // calculate if eliminated
