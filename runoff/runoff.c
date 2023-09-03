@@ -203,12 +203,16 @@ int find_min(void)
 {
     // TODO
     // while candidate not eliminated compare and find the minimum vote total
-    int min = 0;
-    for (int i = 0; candidates[i].eliminated = false; i < candidate_count; i++)
+    int min_votes = candidates[0].votes;
+    for (int i = 1; candidates[i].eliminated = false; i < candidate_count; i++)
 
     {
-       int min = candidates[i];
-       
+
+        if (candidates[i].votes < min_votes)
+        {
+            min_votes = candidates[i].votes;
+        }
+
     }
     return 0;
 }
