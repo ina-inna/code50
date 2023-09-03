@@ -170,11 +170,11 @@ void tabulate(void)
         }
 
     // calculate if eliminated
-
+        int n = 0;
     while (candidates[i].eliminated = true)
     {
 
-        
+
     }
     }
 }
