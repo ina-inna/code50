@@ -202,6 +202,7 @@ bool print_winner(void)
 int find_min(void)
 {
     // TODO
+    // while candidate not eliminated compare and find the minimum vote total
     return 0;
 }
 
