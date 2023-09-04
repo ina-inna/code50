@@ -169,30 +169,11 @@ void tabulate(void)
                     candidates[n].votes++;
                     break;
                    }
-                   
+
             }
 
         }
 
-    // for (int i = 0; i < candidate_count; i++)
-    // {
-    //     for (int j = 0; j < voter_count; j++)
-    //     {
-    //         if (preferences[j][0] == i)
-    //         {
-    //             candidates[i].votes++;
-    //         }
-
-    //     }
-
-    // calculate if eliminated
-    //     int n = 0;
-    // while (candidates[i].eliminated = true)
-    {
-
-
-    }
-    }
 }
 
 // Print the winner of the election, if there is one
