@@ -243,15 +243,18 @@ void eliminate(int min)
 {
     // TODO
     min = candidates[0].votes;
-    for (int i = 1; i < candidate_count; i++)
+    for (int i = 0; i < candidate_count; i++)
 
-    {
-
-        if (candidates[i].votes < min && candidates[i].eliminated == false)
         {
-            min = candidates[i].votes;
+         if (candidates[i].votes < min && candidates[i].eliminated == false)
+            {
+                min = candidates[i].votes;
+                candidates[i].eliminated = true;
+            }
+            else if (candidates[0].eliminated == false)
+            {
+                candidates[0].eliminated = true;
+            }
         }
-        candidates[i].eliminated = true;
-    }
     return;
 }
