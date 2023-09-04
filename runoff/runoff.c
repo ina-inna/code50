@@ -223,6 +223,8 @@ int find_min(void)
 bool is_tie(int min)
 {
     // TODO
+
+    if (int min)
     return false;
 }
 
