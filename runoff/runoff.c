@@ -170,7 +170,6 @@ void tabulate(void)
                     break;
                    }
             }
-
         }
 
 }
