@@ -158,20 +158,30 @@ void tabulate(void)
 
     // calculate votes for every candidate
 
-    for (int i = 0; i < candidate_count; i++)
-    {
-        for (int j = 0; j < voter_count; j++)
+
+    for (int i = 0; i < voter_count; i++)
         {
-            if (preferences[j][0] == i)
+            for (int j = 0; j < candidate_count; j++)
             {
-                candidates[i].votes++;
+                if ()
             }
 
         }
 
+    // for (int i = 0; i < candidate_count; i++)
+    // {
+    //     for (int j = 0; j < voter_count; j++)
+    //     {
+    //         if (preferences[j][0] == i)
+    //         {
+    //             candidates[i].votes++;
+    //         }
+
+    //     }
+
     // calculate if eliminated
-        int n = 0;
-    while (candidates[i].eliminated = true)
+    //     int n = 0;
+    // while (candidates[i].eliminated = true)
     {
 
 
