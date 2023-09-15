@@ -27,4 +27,5 @@ int main(int argc, string argv[])
     {
         printf("%i ", buffer[i]);
     }
+    printf("\n")
 }
