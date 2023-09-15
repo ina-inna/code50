@@ -11,5 +11,5 @@ int main(int argc, string argv[])
 
     // open file
     string filename = argv[1];
-    FILE *pdf = fopen(filename, "r");
+    FILE *file = fopen(filename, "r");
 }
