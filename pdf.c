@@ -1,4 +1,5 @@
 #include <cs50.h>
+#include <stdint.h>
 #include <stdio.h>
 
 int main(int argc, string argv[])
@@ -20,5 +21,5 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    uint8_t
+    uint8_t buffer[4]
 }
