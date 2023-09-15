@@ -26,7 +26,11 @@ int main(int argc, string argv[])
     fread(buffer, 1, 4, file);
     for (int i = 0; i < 4; i++)
     {
-        printf("%i ", buffer[i]);
+        if (buffer[i] != signature [i])
+        {
+        printf("Likely not a pdf.");
+        return 0;
+        }
     }
     printf("\n")
 }
