@@ -9,5 +9,7 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    
+    // open file
+    string filename = argv[1];
+    FILE *pdf = fopen(filename, "r");
 }
