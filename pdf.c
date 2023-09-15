@@ -12,4 +12,13 @@ int main(int argc, string argv[])
     // open file
     string filename = argv[1];
     FILE *file = fopen(filename, "r");
+
+    // check if file exists
+    if (file == NULL)
+    {
+        print("No such file found.\n");
+        return 1;
+    }
+
+    uint8_t
 }
