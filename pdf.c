@@ -23,5 +23,8 @@ int main(int argc, string argv[])
 
     uint8_t buffer[4];
     fread(buffer, 1, 4, file);
-    For (int i = 0)
+    for (int i = 0; i < 4; i++)
+    {
+        printf("%i ", buffer[i]);
+    }
 }
