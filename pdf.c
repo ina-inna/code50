@@ -17,7 +17,7 @@ int main(int argc, string argv[])
     // check if file exists
     if (file == NULL)
     {
-        print("No such file found.\n");
+        printf("No such file found.\n");
         return 1;
     }
 
