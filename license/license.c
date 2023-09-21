@@ -16,6 +16,7 @@ int main(int argc, char *argv[])
     char *plates[8];
 
     FILE *infile = fopen(argv[1], "r");
+    fclose(infile);
 
     int idx = 0;
 
