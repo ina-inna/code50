@@ -16,9 +16,10 @@ void colorize(int height, int width, RGBTRIPLE image[height][width])
 
 }
 
-int main (colorize)
+int main (void)
 
 {
+    colorize (height, width, image);
     return 0;
 }
 
