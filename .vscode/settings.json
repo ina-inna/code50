@@ -3,6 +3,7 @@
     "files.associations": {
         "cs50.h": "c",
         "stdio.h": "c",
-        "string_view": "c"
+        "string_view": "c",
+        "helpers.h": "c"
     }
 }
