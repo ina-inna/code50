@@ -9,6 +9,7 @@ void colorize(int height, int width, RGBTRIPLE image[height][width])
     {
         pixel.rgbtBlue = 0;
         pixel.rgbtGreen = 0;
+        pixel.rgbtRed = 255;
     }
 
 }
