@@ -13,9 +13,9 @@ void colorize(int height, int width, RGBTRIPLE image[height][width])
 
         if (pixel.rgbtBlue == 0 && pixel.rgbtGreen == 0 && pixel.rgbtRed == 0)
             {
-                pixel.rgbtBlue = 0;
-                pixel.rgbtGreen = 0;
-                pixel.rgbtRed = 255;
+                image[i][j].rgbtBlue = 0;
+                image[i][j].rgbtGreen = 0;
+                image[i][j].rgbtRed = 255;
             }
             printf("%i %i %i \n", pixel.rgbtBlue, pixel.rgbtGreen, pixel.rgbtRed);
         }
