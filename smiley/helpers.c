@@ -1,7 +1,6 @@
 #include "helpers.h"
 
-int main (void)
-{
+
 void colorize(int height, int width, RGBTRIPLE image[height][width])
 {
     // Change all black pixels to a color of your choosing
@@ -17,6 +16,6 @@ void colorize(int height, int width, RGBTRIPLE image[height][width])
     }
 
 }
-}
+
 
 
