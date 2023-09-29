@@ -1,4 +1,5 @@
 #include "helpers.h"
+#include "stdio.h"
 
 
 void colorize(int height, int width, RGBTRIPLE image[height][width])
@@ -9,13 +10,14 @@ void colorize(int height, int width, RGBTRIPLE image[height][width])
         for (int j = 0; j < width; j++)
         {
         RGBTRIPLE pixel = image[i][j];
-        printf("%i %i %i", pixel.rgbtBlue, pixel.rgbtGreen, pixel.rgbtRed);
+
         if (pixel.rgbtBlue == 0 && pixel.rgbtGreen == 0 && pixel.rgbtRed == 0)
             {
                 pixel.rgbtBlue = 0;
                 pixel.rgbtGreen = 0;
                 pixel.rgbtRed = 255;
             }
+            printf("%i %i %i \n", pixel.rgbtBlue, pixel.rgbtGreen, pixel.rgbtRed);
         }
     }
 
