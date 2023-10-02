@@ -50,11 +50,11 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 
 
             {
-                  int x = j;
-                    int y = width;
+                    RGBTRIPLE pixel = image [i][j];
+                    RGBTRIPLE pixel2 = image [i][width - j];
 
-                image[i][width] = image[i][x];
-                image [i][j] = image[i][y - x];
+                image[i][width] = pixel;
+                image [i][j] = pixel2;
 
             }
 
