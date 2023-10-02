@@ -74,14 +74,16 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
             {
                 int blur1 = ((image[i][j].rgbtBlue + image[i][j].rgbtRed + image[i][j].rgbtGreen) / 3);
-                int blur2 = ((image[i][j].rgbtBlue + image[i][j].rgbtRed + image[i][j].rgbtGreen) / 3);
-                int blur3 = ((image[i][j].rgbtBlue + image[i][j].rgbtRed + image[i][j].rgbtGreen) / 3);
-                int blur4 = ((image[i][j].rgbtBlue + image[i][j].rgbtRed + image[i][j].rgbtGreen) / 3);
-                int blur5 = ((image[i][j].rgbtBlue + image[i][j].rgbtRed + image[i][j].rgbtGreen) / 3);
-                int blur6 = ((image[i][j].rgbtBlue + image[i][j].rgbtRed + image[i][j].rgbtGreen) / 3);
-                int blur7 = ((image[i][j].rgbtBlue + image[i][j].rgbtRed + image[i][j].rgbtGreen) / 3);
-                int blur8 = ((image[i][j].rgbtBlue + image[i][j].rgbtRed + image[i][j].rgbtGreen) / 3);
-                int blur9 = ((image[i][j].rgbtBlue + image[i][j].rgbtRed + image[i][j].rgbtGreen) / 3);
+                int blur2 = ((image[i][j-1].rgbtBlue + image[i][j-1].rgbtRed + image[i][j-1].rgbtGreen) / 3);
+                int blur3 = ((image[i][j+1].rgbtBlue + image[i][j+1].rgbtRed + image[i][j+1].rgbtGreen) / 3);
+                int blur4 = ((image[i-1][j-1].rgbtBlue + image[i-1][j-1].rgbtRed + image[i-1][j-1].rgbtGreen) / 3);
+                int blur5 = ((image[i-1][j].rgbtBlue + image[i-1][j].rgbtRed + image[i-1][j].rgbtGreen) / 3);
+                int blur6 = ((image[i-1][j+1].rgbtBlue + image[i-1][j+1].rgbtRed + image[i-1][j+1].rgbtGreen) / 3);
+                int blur7 = ((image[i+1][j-1].rgbtBlue + image[i+1][j-1].rgbtRed + image[i+1][j-1].rgbtGreen) / 3);
+                int blur8 = ((image[i+1][j].rgbtBlue + image[i+1][j].rgbtRed + image[i+1][j].rgbtGreen) / 3);
+                int blur9 = ((image[i+1][j+1].rgbtBlue + image[i+1][j+1].rgbtRed + image[i+1][j+1].rgbtGreen) / 3);
+
+                int blur = (blur1 + blur2 + blur3 + blur4 + blur5 + blur6 + blur7 + blur8 + blur9) / 9;
 
 
                 image[i][j].rgbtBlue = blur;
