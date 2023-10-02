@@ -73,11 +73,20 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         {
 
             {
-                int blur = ((image[i][j].rgbtBlue + image[i][j].rgbtRed + image[i][j].rgbtGreen) / 3);
+                int blur1 = ((image[i][j].rgbtBlue + image[i][j].rgbtRed + image[i][j].rgbtGreen) / 3);
+                int blur2 = ((image[i][j].rgbtBlue + image[i][j].rgbtRed + image[i][j].rgbtGreen) / 3);
+                int blur3 = ((image[i][j].rgbtBlue + image[i][j].rgbtRed + image[i][j].rgbtGreen) / 3);
+                int blur4 = ((image[i][j].rgbtBlue + image[i][j].rgbtRed + image[i][j].rgbtGreen) / 3);
+                int blur5 = ((image[i][j].rgbtBlue + image[i][j].rgbtRed + image[i][j].rgbtGreen) / 3);
+                int blur6 = ((image[i][j].rgbtBlue + image[i][j].rgbtRed + image[i][j].rgbtGreen) / 3);
+                int blur7 = ((image[i][j].rgbtBlue + image[i][j].rgbtRed + image[i][j].rgbtGreen) / 3);
+                int blur8 = ((image[i][j].rgbtBlue + image[i][j].rgbtRed + image[i][j].rgbtGreen) / 3);
+                int blur9 = ((image[i][j].rgbtBlue + image[i][j].rgbtRed + image[i][j].rgbtGreen) / 3);
 
-                image[i][j].rgbtBlue = avg;
-                image[i][j].rgbtGreen = avg;
-                image[i][j].rgbtRed = avg;
+
+                image[i][j].rgbtBlue = blur;
+                image[i][j].rgbtGreen = blur;
+                image[i][j].rgbtRed = blur;
 
             }
         }
