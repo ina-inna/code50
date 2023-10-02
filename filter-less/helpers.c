@@ -56,7 +56,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
                     RGBTRIPLE *pixel2 = &image[i][left2right];
 
                     *pixel = image[i][left2right];
-                    *pixel2 = pixel0;
+                    //*pixel2 = pixel0;
 
             }
 
