@@ -40,7 +40,6 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
                     image[i][j].rgbtRed = 255;
                     image[i][j].rgbtGreen = 255;
                     image[i][j].rgbtBlue = 255;
-                    break;
                 }
 
                 image[i][j].rgbtGreen = round(.349 * pixel.rgbtRed + .686 * pixel.rgbtGreen + .168 * pixel.rgbtBlue);
@@ -51,7 +50,6 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
                      image[i][j].rgbtRed = 255;
                     image[i][j].rgbtGreen = 255;
                     image[i][j].rgbtBlue = 255;
-                    break;
                 }
                 image[i][j].rgbtBlue = round(.272 * pixel.rgbtRed + .534 * pixel.rgbtGreen + .131 * pixel.rgbtBlue);
 
@@ -61,7 +59,6 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
                      image[i][j].rgbtRed = 255;
                     image[i][j].rgbtGreen = 255;
                     image[i][j].rgbtBlue = 255;
-                    break;
                 }
             }
         }
