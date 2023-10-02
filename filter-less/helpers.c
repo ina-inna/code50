@@ -1,4 +1,5 @@
 #include "helpers.h"
+#include "math.h"
 
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
@@ -33,19 +34,19 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
         {
             {
                 RGBTRIPLE pixel = image[i][j];
-                image[i][j].rgbtRed = .393 * pixel.rgbtRed + .769 * pixel.rgbtGreen + .189 * pixel.rgbtBlue;
+                image[i][j].rgbtRed = round(.393 * pixel.rgbtRed + .769 * pixel.rgbtGreen + .189 * pixel.rgbtBlue);
                 if (image[i][j].rgbtRed > 255)
                 {
                     image[i][j].rgbtRed = 255;
                 }
 
-                image[i][j].rgbtGreen = .349 * pixel.rgbtRed + .686 * pixel.rgbtGreen + .168 * pixel.rgbtBlue;
+                image[i][j].rgbtGreen = round(.349 * pixel.rgbtRed + .686 * pixel.rgbtGreen + .168 * pixel.rgbtBlue);
 
                  if (image[i][j].rgbtGreen > 255)
                 {
                     image[i][j].rgbtGreen = 255;
                 }
-                image[i][j].rgbtBlue = .272 * pixel.rgbtRed + .534 * pixel.rgbtGreen + .131 * pixel.rgbtBlue;
+                image[i][j].rgbtBlue = round(.272 * pixel.rgbtRed + .534 * pixel.rgbtGreen + .131 * pixel.rgbtBlue);
 
                  if (image[i][j].rgbtBlue > 255)
                 {
