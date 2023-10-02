@@ -48,12 +48,13 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
 
+
             {
-                j = int x;
-                width = int y;
+                  int x = j;
+                    int y = width;
 
                 image [i][j] = image[i][y - x];
-                image[i][width] = image [i][y];
+                image[i][width] = image[i][x];
             }
 
     }
