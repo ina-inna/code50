@@ -56,12 +56,9 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
                     RGBTRIPLE *pixel = &image[i][j];
                     RGBTRIPLE *pixel2 = &image[i][width - j];
 
-
                     *pixel = pixel00;
                     *pixel2 = pixel0;
-
             }
-
     }
     return;
 }
@@ -69,5 +66,6 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
+    
     return;
 }
