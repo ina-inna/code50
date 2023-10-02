@@ -51,6 +51,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
         {
            int copy = j;
            int reflected = width - copy;
+           image[i][reflected] = image[i][copy];
            image[i][j] = image[i][reflected];
 
         }
