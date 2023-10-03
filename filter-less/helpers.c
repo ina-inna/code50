@@ -116,7 +116,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                         int row = newI + i;
 
 
-                        if (row >= 0 && col >=1 && row < height; col < width)
+                        if (row >= 0 && col >=1 && row < height && col < width)
 
                         {
                             sumBlue =+ image[row][col].rgbtBlue;
