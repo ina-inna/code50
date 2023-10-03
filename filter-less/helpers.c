@@ -180,5 +180,34 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     image[0][0].rgbtGreen = blur02;
     image[0][0].rgbtRed = blur03;
 
+
+
+    int blur1 = round((image[height][0].rgbtBlue + image[height][1].rgbtBlue + image[height-1][1].rgbtBlue + image[height-1][0].rgbtBlue) / 4.0);
+    int blur2 = round((image[height][0].rgbtGreen + image[height][1].rgbtGreen + image[height-1][1].rgbtGreen + image[height-1][0].rgbtGreen) / 4.0);
+    int blur3 = round((image[height][0].rgbtRed + image[height][1].rgbtRed + image[height-1][1].rgbtRed + image[height-1][0].rgbtRed) / 4.0);
+
+    image[height][0].rgbtBlue = blur1;
+    image[height][0].rgbtGreen = blur2;
+    image[height][0].rgbtRed = blur3;
+
+    int blur11 = round((image[0][width].rgbtBlue + image[0][width-1].rgbtBlue + image[1][width].rgbtBlue + image[1][width-1].rgbtBlue) / 4.0);
+    int blur12 = round((image[0][width].rgbtGreen + image[0][width-1].rgbtGreen + image[1][width].rgbtGreen + image[1][width-1].rgbtGreen) / 4.0);
+    int blur13 = round((image[0][width].rgbtRed + image[0][width-1].rgbtRed + image[1][width].rgbtRed + image[1][width-1].rgbtRed) / 4.0);
+
+    image[0][width].rgbtBlue = blur11;
+    image[0][width].rgbtGreen = blur12;
+    image[0][width].rgbtRed = blur13;
+
+
+    int blur10 = round((image[height][width].rgbtBlue + image[height][width-1].rgbtBlue + image[height-1][width].rgbtBlue + image[height-1][width-1].rgbtBlue) / 4.0);
+    int blur20 = round((image[height][width].rgbtGreen + image[height][width-1].rgbtGreen + image[height-1][width].rgbtGreen + image[height-1][width-1].rgbtGreen) / 4.0);
+    int blur30 = round((image[height][width].rgbtRed + image[height][width-1].rgbtRed + image[height-1][width].rgbtRed + image[height-1][width-1].rgbtRed) / 4.0);
+
+    image[height][width].rgbtBlue = blur10;
+    image[height][width].rgbtGreen = blur20;
+    image[height][width].rgbtRed = blur30;
+
+
+
     return;
 }
