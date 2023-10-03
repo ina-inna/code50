@@ -173,6 +173,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 image[i][j].rgbtRed = blur3;
         }
 
+    
 
     return;
 }
