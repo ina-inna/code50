@@ -131,9 +131,9 @@ RGBTRIPLE copy[height][width];
                     }
             }
 
-                copy[i][j].rgbtBlue = round((float)(sumBlue/count));
-                copy[i][j].rgbtGreen = round((float)(sumGreen/count));
-                copy[i][j].rgbtRed = round((float)(sumRed/count));
+                copy[i][j].rgbtBlue = round((float)sumBlue/count);
+                copy[i][j].rgbtGreen = round((float)sumGreen/count);
+                copy[i][j].rgbtRed = round((float)sumRed/count);
         }
     }
 
