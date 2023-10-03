@@ -134,17 +134,30 @@ RGBTRIPLE copy[height][width];
                 copy[i][j].rgbtBlue = round((float)sumBlue/count);
                 copy[i][j].rgbtGreen = round((float)sumGreen/count);
                 copy[i][j].rgbtRed = round((float)sumRed/count);
+
+
+
+            for (int i = 0; i < height; i++)
+            {
+                for (int j = 0; j < width; j++)
+                {
+                    image[i][j] = copy[i][j];
+
+                }
+            }
         }
+
+
     }
 
-    for (int i = 0; i < height; i++)
-    {
-        for (int j = 0; j < width; j++)
-        {
-            image[i][j] = copy[i][j];
+   // for (int i = 0; i < height; i++)
+   // {
+   //     for (int j = 0; j < width; j++)
+    //    {
+   //         image[i][j] = copy[i][j];
 
-        }
-    }
+   //     }
+    
 
     return;
 }
