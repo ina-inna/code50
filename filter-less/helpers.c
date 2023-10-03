@@ -173,7 +173,13 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 image[i][j].rgbtRed = blur3;
         }
 
-    
+    int blur01 = round((image[0][0].rgbtBlue + image[0][1].rgbtBlue + image[1][1].rgbtBlue + image[1][0].rgbtBlue) / 4);
+    int blur02 = round((image[0][0].rgbtGreen + image[0][1].rgbtGreen + image[1][1].rgbtGreen + image[1][0].rgbtGreen) / 4);
+    int blur03 = round((image[0][0].rgbtRed + image[0][1].rgbtRed + image[1][1].rgbtRed + image[1][0].rgbtRed) / 4);
+
+    image[0][0].rgbtBlue = blur01;
+    image[0][0].rgbtGreen = blur02;
+    image[0][0].rgbtRed = blur03;
 
     return;
 }
