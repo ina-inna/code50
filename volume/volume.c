@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
 
 
 
-    fwrite(header, sizeof(header), 1, ouput);
+    fwrite(header, sizeof(header), 1, output);
 
     // TODO: Read samples from input file and write updated data to output file
 
@@ -51,7 +51,7 @@ int main(int argc, char *argv[])
 
 
         // write into an ouput file:
-        fwrite(buffer, sizeof(header), 1, output);
+        fwrite(&buffer, sizeof(header), 1, output);
 
     }
 
