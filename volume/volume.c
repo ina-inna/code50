@@ -34,9 +34,8 @@ int main(int argc, char *argv[])
     float factor = atof(argv[3]);
 
     // TODO: Copy header from input file to output file
-
-    BITMAPFILEHEADER bf;
-    fread(&bf, sizeof(BITMAPFILEHEADER), 1, inptr);
+    char header[HEADER_SIZE];
+    fread(header, sizeof(header), 1, argv[1]);
 
     // TODO: Read samples from input file and write updated data to output file
 
