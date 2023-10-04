@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
 
     int16_t buffer;
 
-    while (fread(&buffer, 2, 1, argv[1]) == 1)
+    while (fread(&buffer, 2, 1, file* argv[1]) == 1)
     {
         // multiply by 2
 
