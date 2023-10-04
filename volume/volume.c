@@ -35,23 +35,23 @@ int main(int argc, char *argv[])
 
     // TODO: Copy header from input file to output file
     uint8_t header[HEADER_SIZE];
-    fread(header, sizeof(header), 1, argv[1]);
+    fread(header, sizeof(header), 1, input);
 
 
 
-    fwrite(header, sizeof(header), 1, argv[2]);
+    fwrite(header, sizeof(header), 1, ouput);
 
     // TODO: Read samples from input file and write updated data to output file
 
     int16_t buffer;
 
-    while (fread(&buffer, 2, 1, file* argv[1]) == 1)
+    while (fread(&buffer, 2, 1, input) == 1)
     {
         // multiply by 2
 
 
         // write into an ouput file:
-        fwrite(buffer, sizeof(header), 1, argv[2]);
+        fwrite(buffer, sizeof(header), 1, output);
 
     }
 
