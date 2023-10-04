@@ -37,6 +37,10 @@ int main(int argc, char *argv[])
     char header[HEADER_SIZE];
     fread(header, sizeof(header), 1, argv[1]);
 
+    
+
+    fwrite(header, sizeof(header), 1, argv[2]);
+
     // TODO: Read samples from input file and write updated data to output file
 
     // Close files
