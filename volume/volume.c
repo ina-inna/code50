@@ -51,7 +51,7 @@ int main(int argc, char *argv[])
 
 
         // write into an ouput file:
-        fwrite(&buffer, sizeof(header), 1, output);
+        fwrite(&buffer, sizeof(buffer), 1, output);
 
     }
 
