@@ -49,7 +49,7 @@ int main(int argc, char *argv[])
         int16_t buffer2 = buffer * factor;
 
         // write into an ouput file:
-        fwrite(&buffer2, sizeof(buffer), 1, output);
+        fwrite(&buffer2, sizeof(buffer2), 1, output);
     }
 
     // Close files
