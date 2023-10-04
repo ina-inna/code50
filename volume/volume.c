@@ -51,7 +51,7 @@ int main(int argc, char *argv[])
 
 
         // write into an ouput file:
-        fwrite(&buffer, sizeof(buffer), 1, output);
+        fwrite(&buffer*factor, sizeof(buffer), 1, output);
 
     }
 
