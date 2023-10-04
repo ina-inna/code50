@@ -45,7 +45,15 @@ int main(int argc, char *argv[])
 
     int16_t buffer;
 
-    
+    while (fread(&buffer, 2, 1, argv[1]) == 1)
+    {
+        // multiply by 2
+
+
+        // write into an ouput file:
+        fwrite(buffer, sizeof(header), 1, argv[2]);
+
+    }
 
     // Close files
     fclose(input);
