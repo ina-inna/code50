@@ -37,8 +37,6 @@ int main(int argc, char *argv[])
     uint8_t header[HEADER_SIZE];
     fread(header, sizeof(header), 1, input);
 
-
-
     fwrite(header, sizeof(header), 1, output);
 
     // TODO: Read samples from input file and write updated data to output file
@@ -52,7 +50,6 @@ int main(int argc, char *argv[])
 
         // write into an ouput file:
         fwrite(&buffer2, sizeof(buffer), 1, output);
-
     }
 
     // Close files
