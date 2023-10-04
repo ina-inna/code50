@@ -48,10 +48,10 @@ int main(int argc, char *argv[])
     while (fread(&buffer, 2, 1, input) == 1)
     {
         // multiply by 2
-
+        int16_t buffer2 = buffer * factor;
 
         // write into an ouput file:
-        fwrite(&buffer, sizeof(buffer), 1, output);
+        fwrite(&buffer2, sizeof(buffer), 1, output);
 
     }
 
