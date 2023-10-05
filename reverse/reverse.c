@@ -99,7 +99,7 @@ int main(int argc, char *argv[])
             fread(&audioData, block_size, 1, inptr);
             int16_t buffer = audioData;
             fwrite(&buffer, block_size, 1, outptr);
-
+            current_position = current_position - block_size;
         }
 
 
