@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 
       // remember filenames
     char *input = argv[1];
-    char *outout = argv[2];
+    char *output = argv[2];
 
     // Open input file for reading
     // DONE #2
@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
 
     // Use check_format to ensure WAV format
     // TODO #4
-    check_format(WAVHEADER header);
+    check_format(header);
 
     // Open output file for writing
     // DONE #5
@@ -71,14 +71,14 @@ int check_format(WAVHEADER header)
 {
     // TODO #4
 
-    if (header.format[4] != 'WAVE')
+    if (header.format == 'WAVE')
     {
-    return 4;
+    return 0;
     }
 
     else
     {
-        return 0;
+        return 4;
     }
 }
 
