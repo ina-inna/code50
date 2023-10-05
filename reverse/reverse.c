@@ -84,7 +84,7 @@ int main(int argc, char *argv[])
         {
             long int file_size = ftell(inptr);
 
-            int16_t audioData;
+            int32_t audioData;
             long int current_position = file_size;
             int samples = (current_position - position) / (block_size*8);
             printf("%li %li %i %i\n", current_position, position, block_size, samples);
