@@ -84,7 +84,8 @@ int main(int argc, char *argv[])
     long int offset = -block_size;
     int origin = SEEK_END;
 
-      fseek(inptr, offset, origin);
+      fseek(inptr, 0, SEEK_END);
+        long int fileSize = ftell(inputr);
 
         int16_t audioData;
         // find file_size
