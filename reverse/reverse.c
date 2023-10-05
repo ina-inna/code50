@@ -48,14 +48,7 @@ int main(int argc, char *argv[])
     // Use check_format to ensure WAV format
     // DONE #4
    int result = check_format(header);
-   if (result == 0)
-   {
-        return 0;
-   }
-   else
-   {
-        return 4;
-   }
+
 
     // Open output file for writing
     // DONE #5
@@ -68,7 +61,46 @@ int main(int argc, char *argv[])
         return 3;
     }
 
-   
+
+        // Write header to file
+    // Done#6
+
+    fwrite(&header, sizeof(WAVHEADER), 1, outptr);
+
+
+    // Use get_block_size to calculate size of block
+    // Done #7
+    int block_size = get_block_size(header);
+
+    // Write reversed audio to file
+    // TODO #8
+
+     fseek(inptr, 0, SEEK_END);
+    long int file_size = ftell(inptr);
+
+    int16_t audioData;
+    // find file_size
+    int current_position = file_size;
+
+        // write blocks to outfile
+
+        while (current_position > position)
+        {
+            fseek(inptr, current_position - block_size, SEEK_SET);
+            if (fread(&audioData, block_size, 1, inptr) == 1)
+            {
+                    int16_t buffer = audioData;
+                    fwrite(&buffer, block_size, 1, outptr);
+            }
+
+            else
+            {
+                printf("Error when reading file %s\n", input);
+            }
+
+            current_position -= block_size;
+
+        }
 
 
     // close infile
