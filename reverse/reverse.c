@@ -81,10 +81,11 @@ int main(int argc, char *argv[])
 
     // Write reversed audio to file
     // TODO #8
+    long int offset = -block_size;
     int origin = SEEK_END;
 
 
-   for (int i = num; i < 0; i--)
+        while ()
 
         // write blocks to outfile
         {
