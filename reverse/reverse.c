@@ -72,10 +72,15 @@ int check_format(WAVHEADER header)
 {
     // TODO #4
 
-    // if format[4] in WAVHEADER = wave
-    return 0;
+    if (header.format[4] != 'wave')
+    {
+    return 4;
+    }
 
-    // else return 4;
+    else
+    {
+        return 0;
+    }
 }
 
 int get_block_size(WAVHEADER header)
