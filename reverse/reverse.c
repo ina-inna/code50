@@ -109,8 +109,6 @@ int main(int argc, char *argv[])
     // close outfile
     fclose(outptr);
 
-
-
 }
 
 int check_format(WAVHEADER header)
