@@ -86,8 +86,8 @@ int main(int argc, char *argv[])
 
             int16_t audioData;
             long int current_position = file_size;
-            int samples = (current_position - position) / block_size*8;
-            printf("%li\n", current_position);
+            int samples = (current_position - position) / (block_size*8);
+            printf("%li %li %i %i\n", current_position, position, block_size, samples);
 
             // write blocks to outfile
 
