@@ -95,10 +95,10 @@ int main(int argc, char *argv[])
 
                 {
                     fseek(inptr, -block_size, SEEK_CUR);
-                    if (fread(&audioData, 1, 1, inptr) == 1)
+                    if (fread(&audioData, 2, 1, inptr) == 1)
                     {
                             int16_t buffer = audioData;
-                            fwrite(&buffer, 1, 1, outptr);
+                            fwrite(&buffer, 2, 1, outptr);
                     }
 
                     else
