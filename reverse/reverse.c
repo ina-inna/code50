@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
         printf("Error getting file %s position\n", input);
         return 3;
     }
-
+    printf("%li\n", position);
 
     // Use check_format to ensure WAV format
     // DONE #4
@@ -86,6 +86,7 @@ int main(int argc, char *argv[])
         int16_t audioData;
         // find file_size
         long int current_position = file_size;
+        printf("%li\n", current_position);
 
             // write blocks to outfile
 
