@@ -41,8 +41,8 @@ int main(int argc, char *argv[])
 
     long int position = ftell(inptr);
     if (position == -1L) {
-        perror("Error getting file position");
-        return 2;
+        printf("Error getting file %s position\n", input);
+        return 3;
     }
 
 
