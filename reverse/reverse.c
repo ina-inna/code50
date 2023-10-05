@@ -83,7 +83,7 @@ int main(int argc, char *argv[])
         {
             long int file_size = ftell(inptr);
 
-            int8_t audioData;
+            int16_t audioData;
             // find file_size
             long int current_position = file_size;
             printf("%li\n", current_position);
@@ -97,7 +97,7 @@ int main(int argc, char *argv[])
                     fseek(inptr, -block_size, SEEK_CUR);
                     if (fread(&audioData, 1, 1, inptr) == 1)
                     {
-                            int8_t buffer = audioData;
+                            int16_t buffer = audioData;
                             fwrite(&buffer, 1, 1, outptr);
                     }
 
