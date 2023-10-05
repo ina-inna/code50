@@ -66,6 +66,8 @@ int main(int argc, char *argv[])
 
     // Write reversed audio to file
     // TODO #8
+    int num = header.subchunk2Size / get_block_size;
+
     
 
 
