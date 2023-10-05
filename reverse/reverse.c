@@ -81,10 +81,36 @@ int main(int argc, char *argv[])
 
     // Write reversed audio to file
     // TODO #8
-   // long int offset = -block_size;
-    //int origin = SEEK_END;
 
-   
+     fseek(inptr, 0, SEEK_END);
+    long int file_size = ftell(inptr);
+
+    int16_t audioData;
+    // find file_size
+    int current_position = file_size;
+
+        // write blocks to outfile
+
+        while (current_position > position)
+        {
+            fseek(inptr, current_position - block_size, SEEK_SET);
+            if (fread(&audioData, block_size, 1, inptr) == 1)
+            {
+                    int16_t buffer = audioData;
+                    fwrite(&buffer, block_size, 1, outptr);
+            }
+
+            else
+            {
+                printf("Error when reading file %s\n", input);
+            }
+
+            current_position -= block_size;
+
+        }
+
+
+
     // close infile
     fclose(inptr);
 
