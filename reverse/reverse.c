@@ -106,7 +106,7 @@ int main(int argc, char *argv[])
                         printf("Error when reading file %s\n", input);
                     }
 
-
+                    fseek(inptr, -block_size, SEEK_CUR);
                 }
 
 
