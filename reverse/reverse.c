@@ -70,13 +70,13 @@ int main(int argc, char *argv[])
 
     int16_t buffer;
 
-    while (fread(&buffer, 2, 1, input) == 1)
+    while (fread(&buffer, 2, 1, inptr) == 1)
     {
         // multiply by 2
 
 
         // write into an ouput file:
-        fwrite(&buffer, sizeof(buffer), 1, output);
+        fwrite(&buffer, sizeof(buffer), 1, outptr);
     }
     //uint32_t num_blocks = header.subchunk2Size;
    // int num = num_blocks / get_block_size;
