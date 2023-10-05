@@ -23,13 +23,13 @@ int main(int argc, char *argv[])
     char *outout = argv[2];
 
     // Open input file for reading
-    // TODO #2
+    // DONE #2
 
-    FILE *inptr = fopen(infile, "r");
+    FILE *inptr = fopen(input, "r");
     if (inptr == NULL)
     {
-        printf("Could not open %s.\n", infile);
-        return 4;
+        printf("Could not open %s.\n", input);
+        return 1;
     }
 
 
