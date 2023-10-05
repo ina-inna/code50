@@ -79,45 +79,50 @@ int main(int argc, char *argv[])
 
     {
 
-    if (end == 0)
-    {
-        long int file_size = ftell(inptr);
+        if (end == 0)
+        {
+            long int file_size = ftell(inptr);
 
-        int16_t audioData;
-        // find file_size
-        long int current_position = file_size;
-        printf("%li\n", current_position);
+            int16_t audioData;
+            // find file_size
+            long int current_position = file_size;
+            printf("%li\n", current_position);
 
-            // write blocks to outfile
+                // write blocks to outfile
 
-            while (current_position > position)
-            {
-                fseek(inptr, -block_size, SEEK_CUR);
-                if (fread(&audioData, 2, 1, inptr) == 1)
+               // while (current_position > position)
+
+
+
+                    for (int i = current_position; i > position; i--)
+
                 {
-                        int16_t buffer = audioData;
-                        fwrite(&buffer, 2, 1, outptr);
+                    fseek(inptr, -block_size, SEEK_CUR);
+                    if (fread(&audioData, 2, 1, inptr) == 1)
+                    {
+                            int16_t buffer = audioData;
+                            fwrite(&buffer, 2, 1, outptr);
+                    }
+
+                    else
+                    {
+                        printf("Error when reading file %s\n", input);
+                    }
+
+                // current_position -= block_size;
+                // printf("%li\n", current_position);
+
                 }
 
-                else
-                {
-                    printf("Error when reading file %s\n", input);
-                }
 
-                current_position -= block_size;
-                printf("%li\n", current_position);
+                // close infile
+                fclose(inptr);
 
+                // close outfile
+                fclose(outptr);
+
+                return 0;
             }
-
-
-        // close infile
-        fclose(inptr);
-
-        // close outfile
-        fclose(outptr);
-
-        return 0;
-        }
 
 
         else
