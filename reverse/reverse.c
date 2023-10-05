@@ -96,15 +96,15 @@ int main(int argc, char *argv[])
                 {
                     if (fread(&audioData, block_size/header.numChannels, 1, inptr) == 1)
                     {
-                            int16_t buffer = audioData;
-                        fwrite(&buffer, block_size/header.numChannels, 1, outptr);
+                        //int16_t buffer = audioData;
+                        fwrite(&audioData, block_size/header.numChannels, 1, outptr);
                     }
 
                     else
                     {
                         printf("Error when reading file %s\n", input);
                     }
-                    fseek(inptr, -2 * block_size, SEEK_CUR);
+                    fseek(inptr, -block_size, SEEK_CUR);
                 }
 
 
