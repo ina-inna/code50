@@ -66,13 +66,14 @@ int main(int argc, char *argv[])
 
     // Write reversed audio to file
     // TODO #8
-    int num = header.subchunk2Size / get_block_size;
+    int block_size = get_block_size;
+    int num = header.subchunk2Size / block_size;
     int16_t buffer;
 
      for (int i = num; i < 0; i--)
     {
         // write blocks to outfile
-        fread(&buffer, get_block_size, 1, input);
+        fread(&buffer, block_size, 1, input);
         fwrite(&buffer, sizeof(buffer), 1, outptr);
 
     }
