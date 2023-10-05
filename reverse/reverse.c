@@ -81,11 +81,8 @@ int main(int argc, char *argv[])
 
     // Write reversed audio to file
     // TODO #8
+    int origin = SEEK_END;
 
-
-    //uint32_t num_blocks = header.subchunk2Size;
-   int num = header.subchunk2Size / block_size;
-    int16_t buffer;
 
    for (int i = num; i < 0; i--)
 
