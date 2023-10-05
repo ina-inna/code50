@@ -85,7 +85,7 @@ int main(int argc, char *argv[])
 
         int16_t audioData;
         // find file_size
-        int current_position = file_size;
+        long int current_position = file_size;
 
             // write blocks to outfile
 
