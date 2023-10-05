@@ -92,20 +92,21 @@ int main(int argc, char *argv[])
             // write blocks to outfile
 
                 fseek(inptr, -block_size, SEEK_END);
-                for (int i = 0; i < samples; i++)
+                //for (int i = 0; i < samples; i++)
+                for (int i = current_position; i >= position; i--)
 
                 {
-                    if (fread(&audioData, block_size, 1, inptr) == 1)
+                    if (fread(&audioData, block_size/2, 1, inptr) == 1)
                     {
                         int32_t buffer = audioData;
-                        fwrite(&buffer, block_size, 1, outptr);
+                        fwrite(&buffer, block_size/2, 1, outptr);
                     }
 
                     else
                     {
                         printf("Error when reading file %s\n", input);
                     }
-                    fseek(inptr, -2*block_size, SEEK_CUR);
+                    fseek(inptr, -block_size, SEEK_CUR);
                 }
 
 
