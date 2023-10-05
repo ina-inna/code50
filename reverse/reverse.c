@@ -94,7 +94,7 @@ int main(int argc, char *argv[])
                 for (int i = current_position; i > position; i--)
 
                 {
-                    fseek(inptr, -block_size, SEEK_CUR);
+                    fseek(inptr, -2 * block_size, SEEK_CUR);
                     if (fread(&audioData, 2, 1, inptr) == 1)
                     {
                             int16_t buffer = audioData;
