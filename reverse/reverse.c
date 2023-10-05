@@ -72,7 +72,7 @@ int main(int argc, char *argv[])
      for (int i = num; i < 0; i--)
     {
         // write blocks to outfile
-        fread(&buffer, 2, 1, input);
+        fread(&buffer, get_block_size, 1, input);
         fwrite(&buffer, sizeof(buffer), 1, outptr);
 
     }
