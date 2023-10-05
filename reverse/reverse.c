@@ -99,7 +99,7 @@ int main(int argc, char *argv[])
             if (fread(&audioData, block_size, 1, inptr) == 1)
             {
                     int16_t buffer = audioData;
-                    fwrite(&buffer, sizeof(buffer), 1, outptr);
+                    fwrite(&buffer, block_size, 1, outptr);
             }
 
             else
@@ -110,6 +110,7 @@ int main(int argc, char *argv[])
             current_position -= block_size;
 
         }
+
 
     // close infile
     fclose(inptr);
