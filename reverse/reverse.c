@@ -68,7 +68,12 @@ int main(int argc, char *argv[])
     // TODO #8
     int num = header.subchunk2Size / get_block_size;
 
-    
+     for (int i = num; i < 0; i--)
+    {
+        // write blocks to outfile
+        fwrite(image[i], sizeof(WAVHEADER), num, outptr);
+
+    }
 
 
     // close infile
