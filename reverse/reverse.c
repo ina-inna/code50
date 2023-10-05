@@ -6,6 +6,7 @@
 
 int check_format(WAVHEADER header);
 int get_block_size(WAVHEADER header);
+long int position;
 
 int main(int argc, char *argv[])
 {
@@ -38,7 +39,7 @@ int main(int argc, char *argv[])
     WAVHEADER header;
     fread(&header, sizeof(WAVHEADER), 1, inptr);
 
-    long int position = ftell(inptr);
+    position = ftell(inptr);
     if (position == -1L) {
         printf("Error getting file %s position\n", input);
         return 3;
