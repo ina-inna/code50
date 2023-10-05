@@ -75,41 +75,59 @@ int main(int argc, char *argv[])
     // Write reversed audio to file
     // TODO #8
 
-    fseek(inptr, 0, SEEK_END);
-    long int file_size = ftell(inptr);
+    int end = fseek(inptr, 0, SEEK_END);
 
-    int16_t audioData;
-    // find file_size
-    int current_position = file_size;
+    {
 
-        // write blocks to outfile
+    if (end == 0)
+    {
+        long int file_size = ftell(inptr);
 
-        while (current_position > position)
-        {
-            fseek(inptr, -block_size, SEEK_CUR);
-            if (fread(&audioData, block_size, 1, inptr) == 1)
+        int16_t audioData;
+        // find file_size
+        int current_position = file_size;
+
+            // write blocks to outfile
+
+            while (current_position > position)
             {
-                    int16_t buffer = audioData;
-                    fwrite(&buffer, block_size, 1, outptr);
+                fseek(inptr, -block_size, SEEK_CUR);
+                if (fread(&audioData, 2, 1, inptr) == 1)
+                {
+                        int16_t buffer = audioData;
+                        fwrite(&buffer, 2, 1, outptr);
+                }
+
+                else
+                {
+                    printf("Error when reading file %s\n", input);
+                }
+
+                current_position -= block_size;
+
             }
 
-            else
-            {
-                printf("Error when reading file %s\n", input);
-            }
 
-            current_position -= block_size;
+        // close infile
+        fclose(inptr);
 
+        // close outfile
+        fclose(outptr);
+
+        return 0;
         }
 
 
-    // close infile
-    fclose(inptr);
+        else
 
-    // close outfile
-    fclose(outptr);
+            {
+                printf("Error when reaching end of file %s\n", input);
+            }
 
-    return 0;
+    }
+
+
+
 
 }
 
