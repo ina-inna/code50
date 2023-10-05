@@ -105,6 +105,7 @@ int main(int argc, char *argv[])
                 }
 
                 current_position -= block_size;
+                printf("%li\n", current_position);
 
             }
 
