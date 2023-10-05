@@ -86,13 +86,13 @@ int main(int argc, char *argv[])
 
             int16_t audioData;
             long int current_position = file_size;
-            
+            int samples = (current_position - position) / block_size*8;
             printf("%li\n", current_position);
 
             // write blocks to outfile
 
                 fseek(inptr, -block_size, SEEK_END);
-                for (int i = current_position; i >= position; i--)
+                for (int i = 0; i < samples; i++)
 
                 {
                     if (fread(&audioData, block_size, 1, inptr) == 1)
@@ -150,7 +150,7 @@ int check_format(WAVHEADER header)
 int get_block_size(WAVHEADER header)
 {
     // TODO #7
-    int block_size = ((header.bitsPerSample) * header.numChannels);
+    int block_size = ((header.bitsPerSample/8) * header.numChannels);
     printf("%i %i %i\n", block_size, header.bitsPerSample, header.numChannels);
 
     return block_size;
