@@ -89,9 +89,9 @@ int main(int argc, char *argv[])
 
         // write blocks to outfile
         {
-            fread(&audioData, block_size, 1, inptr);
+            fread(&audioData, sizeof(block_size), 1, inptr);
             int16_t buffer = audioData;
-            fwrite(&buffer, block_size, 1, outptr);
+            fwrite(&buffer, sizeof(block_size), 1, outptr);
 
         }
 
