@@ -39,6 +39,12 @@ int main(int argc, char *argv[])
     WAVHEADER header;
     fread(&header, sizeof(WAVHEADER), 1, inptr);
 
+    long int position = ftell(inptr);
+    if (position == -1L) {
+        perror("Error getting file position");
+        return 2;
+    }
+
 
     // Use check_format to ensure WAV format
     // DONE #4
