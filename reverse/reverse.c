@@ -72,7 +72,7 @@ int check_format(WAVHEADER header)
 {
     // TODO #4
 
-    if (header.format[4] != 'wave')
+    if (header.format[4] != 'WAVE')
     {
     return 4;
     }
