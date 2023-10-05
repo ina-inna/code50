@@ -81,8 +81,8 @@ int main(int argc, char *argv[])
 
     // Write reversed audio to file
     // TODO #8
-    long int offset = -block_size;
-    int origin = SEEK_END;
+   // long int offset = -block_size;
+    //int origin = SEEK_END;
 
     fseek(inptr, 0, SEEK_END);
     long int file_size = ftell(inptr);
