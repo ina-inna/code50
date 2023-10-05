@@ -71,7 +71,7 @@ int check_format(WAVHEADER header)
 {
     // TODO #4
 
-    if (header.format == 'WAVE')
+    if (header.format[0] == 'W' && header.format[0] == 'A' && header.format[0] == 'V' && header.format[0] == 'E')
     {
     return 0;
     }
