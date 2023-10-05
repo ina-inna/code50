@@ -98,7 +98,7 @@ int main(int argc, char *argv[])
                     if (fread(&audioData, 2, 1, inptr) == 1)
                     {
                             int16_t buffer = audioData;
-                            fwrite(&buffer, 2, 1, outptr);
+                            fwrite(&buffer, sizeof(int16_t), 1, outptr);
                     }
 
                     else
