@@ -91,7 +91,7 @@ int main(int argc, char *argv[])
             // write blocks to outfile
 
 
-                for (int i = current_position; i > position; i--)
+                for (int i = current_position; i >= position; i--)
 
                 {
                     fseek(inptr, -block_size, SEEK_CUR);
