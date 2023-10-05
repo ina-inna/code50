@@ -62,7 +62,7 @@ int main(int argc, char *argv[])
     }
 
 
-        // Write header to file
+    // Write header to file
     // Done#6
 
     fwrite(&header, sizeof(WAVHEADER), 1, outptr);
