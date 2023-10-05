@@ -75,7 +75,7 @@ int main(int argc, char *argv[])
     // Write reversed audio to file
     // TODO #8
 
-     fseek(inptr, 0, SEEK_END);
+    fseek(inptr, 0, SEEK_END);
     long int file_size = ftell(inptr);
 
     int16_t audioData;
