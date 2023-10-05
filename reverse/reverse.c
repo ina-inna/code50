@@ -87,7 +87,7 @@ int main(int argc, char *argv[])
         while (current_position > position)
         {
             fseek(inptr, current_position - block_size, SEEK_SET);
-            if (fread(&audioData, block_size, 1, inptr) == 1)
+            if (fread(&audioData, 2, 1, inptr) == 1)
             {
                     int16_t buffer = audioData;
                     fwrite(&buffer, block_size, 1, outptr);
