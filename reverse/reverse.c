@@ -70,7 +70,7 @@ int main(int argc, char *argv[])
 
     int16_t buffer;
 
-    while (fread(&buffer, get_block_size, 1, input) == 1)
+    while (fread(&buffer, 2, 1, input) == 1)
     {
         // multiply by 2
 
