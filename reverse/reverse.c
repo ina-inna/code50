@@ -41,6 +41,7 @@ int main(int argc, char *argv[])
 
     // Use check_format to ensure WAV format
     // TODO #4
+    bool WAVE(check_format);
 
 
     // Open output file for writing
@@ -70,6 +71,8 @@ int main(int argc, char *argv[])
 int check_format(WAVHEADER header)
 {
     // TODO #4
+
+    if
     return 0;
 }
 
