@@ -96,10 +96,18 @@ int main(int argc, char *argv[])
         while (current_position > position)
         {
             fseek(inptr, current_position - block_size, SEEK_CUR);
-            fread(&audioData, block_size, 1, inptr);
-            int16_t buffer = audioData;
-            fwrite(&buffer, block_size, 1, outptr);
-            current_position = current_position - block_size;
+            if (fread(&audioData, block_size, 1, inptr) == 1)
+            {
+                    int16_t buffer = audioData;
+                    fwrite(&buffer, block_size, 1, outptr);
+                    current_position = current_position - block_size;
+            }
+
+            else
+            {
+                printf("Error when reading file %s\n", inptr);
+            }
+
         }
 
 
