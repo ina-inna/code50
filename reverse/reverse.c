@@ -90,7 +90,7 @@ int main(int argc, char *argv[])
 
             // write blocks to outfile
 
-                fseek(inptr, -block_size*8, SEEK_END);
+                fseek(inptr, -block_size, SEEK_END);
                 for (int i = current_position; i >= position; i--)
 
                 {
@@ -104,7 +104,7 @@ int main(int argc, char *argv[])
                     {
                         printf("Error when reading file %s\n", input);
                     }
-                    fseek(inptr, -block_size*8*2, SEEK_CUR);
+                    fseek(inptr, -block_size, SEEK_CUR);
                 }
 
 
