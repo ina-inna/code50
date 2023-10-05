@@ -1,7 +1,6 @@
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h>
 
 #include "wav.h"
 
@@ -48,14 +47,14 @@ int main(int argc, char *argv[])
 
     // Use check_format to ensure WAV format
     // DONE #4
-   bool result = check_format(header);
+   int result = check_format(header);
    if (result == 0)
    {
-        return true;
+        return 0;
    }
    else
    {
-        return false;
+        return 4;
    }
 
     // Open output file for writing
@@ -116,6 +115,8 @@ int main(int argc, char *argv[])
 
     // close outfile
     fclose(outptr);
+
+    return 0;
 
 }
 
