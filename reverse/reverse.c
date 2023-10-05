@@ -90,11 +90,10 @@ int main(int argc, char *argv[])
 
             // write blocks to outfile
 
-
+                fseek(inptr, -block_size, SEEK_END);
                 for (int i = current_position; i >= position; i--)
 
                 {
-                    fseek(inptr, -block_size, SEEK_CUR);
                     if (fread(&audioData, 2, 1, inptr) == 1)
                     {
                             int16_t buffer = audioData;
@@ -105,6 +104,7 @@ int main(int argc, char *argv[])
                     {
                         printf("Error when reading file %s\n", input);
                     }
+                    fseek(inptr, -2 * block_size, SEEK_CUR);
                 }
 
 
