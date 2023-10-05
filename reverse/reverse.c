@@ -88,13 +88,10 @@ int main(int argc, char *argv[])
             long int current_position = file_size;
             printf("%li\n", current_position);
 
-                // write blocks to outfile
-
-               // while (current_position > position)
+            // write blocks to outfile
 
 
-
-                    for (int i = current_position; i > position; i--)
+                for (int i = current_position; i > position; i--)
 
                 {
                     fseek(inptr, -block_size, SEEK_CUR);
@@ -109,8 +106,6 @@ int main(int argc, char *argv[])
                         printf("Error when reading file %s\n", input);
                     }
 
-                // current_position -= block_size;
-                // printf("%li\n", current_position);
 
                 }
 
