@@ -150,7 +150,7 @@ int check_format(WAVHEADER header)
 int get_block_size(WAVHEADER header)
 {
     // TODO #7
-    int block_size = (header.bitsPerSample * header.numChannels);
+    int block_size = ((header.bitsPerSample/8) * header.numChannels);
     printf("%i\n", block_size);
 
     return block_size;
