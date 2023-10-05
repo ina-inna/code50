@@ -55,7 +55,7 @@ int main(int argc, char *argv[])
     }
 
     // Write header to file
-    // TODO #6
+    // Done#6
 
     fwrite(&header, sizeof(WAVHEADER), 1, outptr);
 
@@ -86,7 +86,7 @@ int check_format(WAVHEADER header)
 int get_block_size(WAVHEADER header)
 {
     // TODO #7
-    int bits = header.bitsPerSample;
+    int bits = header.bitsPerSample * header.NumChannels;
 
     return bits;
 }
