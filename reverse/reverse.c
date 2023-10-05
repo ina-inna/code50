@@ -85,7 +85,6 @@ int main(int argc, char *argv[])
             long int file_size = ftell(inptr);
 
             int16_t audioData;
-            // find file_size
             long int current_position = file_size;
             printf("%li\n", current_position);
 
