@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
     if (inptr == NULL)
     {
         printf("Could not open %s.\n", input);
-        return 1;
+        return 2;
     }
 
 
@@ -43,10 +43,21 @@ int main(int argc, char *argv[])
     // TODO #4
 
     // Open output file for writing
-    // TODO #5
+    // DONE #5
+
+    FILE *outptr = fopen(output, "w");
+    if (outptr == NULL)
+    {
+        fclose(inptr);
+        printf("Could not create %s.\n", output);
+        return 3;
+    }
 
     // Write header to file
     // TODO #6
+
+    fwrite(&wh, sizeof(WAVHEADER), 1, outptr);
+
 
     // Use get_block_size to calculate size of block
     // TODO #7
