@@ -86,6 +86,7 @@ int main(int argc, char *argv[])
 
             int16_t audioData;
             long int current_position = file_size;
+            
             printf("%li\n", current_position);
 
             // write blocks to outfile
@@ -94,10 +95,10 @@ int main(int argc, char *argv[])
                 for (int i = current_position; i >= position; i--)
 
                 {
-                    if (fread(&audioData, block_size/header.numChannels, 1, inptr) == 1)
+                    if (fread(&audioData, block_size, 1, inptr) == 1)
                     {
                         //int16_t buffer = audioData;
-                        fwrite(&audioData, block_size/header.numChannels, 1, outptr);
+                        fwrite(&audioData, block_size, 1, outptr);
                     }
 
                     else
@@ -149,7 +150,7 @@ int check_format(WAVHEADER header)
 int get_block_size(WAVHEADER header)
 {
     // TODO #7
-    int block_size = ((header.bitsPerSample/8) * header.numChannels);
+    int block_size = ((header.bitsPerSample) * header.numChannels);
     printf("%i %i %i\n", block_size, header.bitsPerSample, header.numChannels);
 
     return block_size;
