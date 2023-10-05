@@ -77,7 +77,8 @@ int main(int argc, char *argv[])
         // write blocks to outfile
         {
             fread(&buffer, block_size, 1, inptr);
-            fwrite(&buffer, sizeof(buffer), 1, outptr);
+            int16_t buffer2 = buffer;
+            fwrite(&buffer2, sizeof(buffer), 1, outptr);
 
         }
 
