@@ -86,7 +86,7 @@ int main(int argc, char *argv[])
 
             int32_t audioData;
             long int current_position = file_size;
-            int samples = (current_position - position) / (block_size*8);
+            int samples = (current_position - position) / (block_size);
             printf("%li %li %i %i\n", current_position, position, block_size, samples);
 
             // write blocks to outfile
@@ -97,15 +97,15 @@ int main(int argc, char *argv[])
                 {
                     if (fread(&audioData, block_size, 1, inptr) == 1)
                     {
-                        //int16_t buffer = audioData;
-                        fwrite(&audioData, block_size, 1, outptr);
+                        int32_t buffer = audioData;
+                        fwrite(&buffer, block_size, 1, outptr);
                     }
 
                     else
                     {
                         printf("Error when reading file %s\n", input);
                     }
-                    fseek(inptr, -block_size, SEEK_CUR);
+                    fseek(inptr, -2*block_size, SEEK_CUR);
                 }
 
 
