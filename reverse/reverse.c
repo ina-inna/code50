@@ -41,7 +41,15 @@ int main(int argc, char *argv[])
 
     // Use check_format to ensure WAV format
     // DONE #4
-    check_format(header);
+   bool result = check_format(header);
+   if (result == 0)
+   {
+        return true;
+   }
+   else
+   {
+        return false;
+   }
 
     // Open output file for writing
     // DONE #5
