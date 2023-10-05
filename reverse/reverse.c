@@ -72,7 +72,8 @@ int main(int argc, char *argv[])
      for (int i = num; i < 0; i--)
     {
         // write blocks to outfile
-        fwrite(image[i], sizeof(WAVHEADER), num, outptr);
+        fread(&buffer, 2, 1, input);
+        fwrite(&buffer, sizeof(buffer), 1, outptr);
 
     }
 
