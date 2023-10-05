@@ -1,7 +1,7 @@
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h> 
+#include <stdbool.h>
 
 #include "wav.h"
 
@@ -87,7 +87,7 @@ int main(int argc, char *argv[])
         {
             fread(&buffer, block_size, 1, inptr);
             int16_t buffer2 = buffer;
-            fwrite(&buffer2, sizeof(buffer), 1, outptr);
+            fwrite(&buffer2, block_size, 1, outptr);
 
         }
 
