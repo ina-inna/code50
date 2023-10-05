@@ -105,7 +105,7 @@ int main(int argc, char *argv[])
 
             else
             {
-                printf("Error when reading file %s\n", inptr);
+                printf("Error when reading file %s\n", input);
             }
 
         }
