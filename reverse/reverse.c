@@ -94,10 +94,10 @@ int main(int argc, char *argv[])
                 for (int i = current_position; i >= position; i--)
 
                 {
-                    if (fread(&audioData, block_size, 1, inptr) == 1)
+                    if (fread(&audioData, block_size/header.numChannels, 1, inptr) == 1)
                     {
                         //int16_t buffer = audioData;
-                        fwrite(&audioData, block_size, 1, outptr);
+                        fwrite(&audioData, block_size/header.numChannels, 1, outptr);
                     }
 
                     else
