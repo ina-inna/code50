@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
 
 
     // Use check_format to ensure WAV format
-    // TODO #4
+    // DONE #4
     check_format(header);
 
     // Open output file for writing
@@ -57,7 +57,7 @@ int main(int argc, char *argv[])
     // Write header to file
     // TODO #6
 
-    fwrite(&header, sizeof(WAVHEADER), 1, outptr);
+   // fwrite(&header, sizeof(WAVHEADER), 1, outptr);
 
 
     // Use get_block_size to calculate size of block
