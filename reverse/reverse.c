@@ -84,14 +84,14 @@ int main(int argc, char *argv[])
     long int offset = -block_size;
     int origin = SEEK_END;
 
-        
+        int16_t audioData;
         while (fseek(inptr, offset, origin) != position)
 
         // write blocks to outfile
         {
-            fread(&buffer, block_size, 1, inptr);
-            int16_t buffer2 = buffer;
-            fwrite(&buffer2, block_size, 1, outptr);
+            fread(&audioData, block_size, 1, inptr);
+            int16_t buffer = audioData;
+            fwrite(&buffer, block_size, 1, outptr);
 
         }
 
@@ -102,7 +102,7 @@ int main(int argc, char *argv[])
     // close outfile
     fclose(outptr);
 
-    return 0;
+
 
 }
 
