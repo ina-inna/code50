@@ -84,7 +84,7 @@ int main(int argc, char *argv[])
     long int offset = -block_size;
     int origin = SEEK_END;
 
-
+        
         while (fseek(inptr, offset, origin) != position)
 
         // write blocks to outfile
