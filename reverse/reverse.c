@@ -85,7 +85,7 @@ int main(int argc, char *argv[])
     int origin = SEEK_END;
 
         int16_t audioData;
-        while (fseek(inptr, offset, origin) == position)
+        while (fseek(inptr, offset, origin) != position)
 
         // write blocks to outfile
         {
