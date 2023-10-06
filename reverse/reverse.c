@@ -88,14 +88,14 @@ int main(int argc, char *argv[])
 
             // write blocks to outfile
 
-                fseek(inptr, -block_size, SEEK_END);
-                for (int i = 0; i < samples; i++)
+            fseek(inptr, -block_size, SEEK_END);
+            for (int i = 0; i < samples; i++)
+            {
+                if (fread(&audioData, block_size, 1, inptr) == 1)
                 {
-                    if (fread(&audioData, block_size, 1, inptr) == 1)
-                    {
-                        int32_t buffer = audioData;
-                        fwrite(&buffer, block_size, 1, outptr);
-                    }
+                    int32_t buffer = audioData;
+                    fwrite(&buffer, block_size, 1, outptr);
+                }
 
                 else
                 {
