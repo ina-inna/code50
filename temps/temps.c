@@ -76,12 +76,13 @@ for (first = 0; first < NUM_CITIES; first++)
                         max = temps[i].temp;
                     }
                     temps[start].temp = max;
-                    start++;
+
                 //  first++;
                 // start++;
         }
         printf("%i\n", temps[start].temp);
-    
+        start++;
+
     }
 
 
