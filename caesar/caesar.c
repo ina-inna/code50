@@ -1,6 +1,8 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
 
 
 int only_digits(string input);
@@ -40,7 +42,7 @@ int only_digits(string input)
 {
     for (int i = 0, n = strlen(input); i < n; i++)
     {
-        if (!isdigit(input))
+        if (!isdigit(input[i]))
         {
             printf("Usage: ./caesar key\n");
             return 1;
