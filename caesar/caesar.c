@@ -32,8 +32,8 @@ int main(int argc, string argv[])
     }
 
     // convert argv to an integer
-
-    int key = atoi(argv[1]);
+    string input = argv[1];
+    int key = atoi(input);
     string text = get_string("plaintext: ");
 
 
