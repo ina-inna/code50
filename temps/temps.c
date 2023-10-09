@@ -70,7 +70,7 @@ for (int i = 0; i < NUM_CITIES; i++)
 
         for (int j = i+1; j < NUM_CITIES; j++)
         {
-        max_index = temps[i].temp;
+        max_index = i;
         if (temps[j].temp > temps[i].temp)
 
         {
