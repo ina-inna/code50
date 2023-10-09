@@ -68,13 +68,15 @@ for (int i = 0; i < NUM_CITIES; i++)
     {
         for (int j = i+1; j < NUM_CITIES; j++)
         {
-        int max_index;
+        int max_index = temps[i].temp;
         if (temps[j].temp > temps[i].temp)
 
         {
             max_index = j
         }
         }
+
+        
     }
 
 
