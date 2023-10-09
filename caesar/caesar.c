@@ -15,7 +15,16 @@ int main(int argc, string argv[])
 
     bool only_digits(argv[1])
    {
-    if (atoi(argv[1]) == true)
+    if (atoi(argv[1]) == 0)
+
+    {
+        return true;
+    }
+
+    else
+    {
+        return false;
+    }
 
    }
 
