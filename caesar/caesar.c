@@ -34,7 +34,6 @@ int main(int argc, string argv[])
     // convert argv to an integer
 
     int key = atoi(argv[1]);
-    printf("%d\n", key);
 
 
 }
