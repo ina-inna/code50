@@ -18,9 +18,17 @@ int main(int argc, string argv[])
     }
 
 
-    bool check_usage = only_digits(argv[1])
+    bool check_usage = only_digits(argv[1]);
 
-    if (check_usage == 0)
+    if (check_usage == true)
+    {
+        return 0;
+    }
+    else
+    {
+        printf("Usage: ./caesar key\n");
+        return 1;
+    }
 
 }
 
@@ -46,10 +54,12 @@ bool only_digits(string input)
     {
         if (!isdigit(input[i]))
         {
-            printf("Usage: ./caesar key\n");
-            return true;
+            return false;
         }
     }
-    return false;
+    else
+    {
+    return true;
+    }
 }
 
