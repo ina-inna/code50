@@ -65,7 +65,7 @@ void sort_cities(void)
     // Add your code here
     int first = 0;
    int start = 0;
-for (int start = 0; start < NUM_CITIES; start++)
+for (start = 0; start < NUM_CITIES; start++)
     {
         for (int i = 1; i < NUM_CITIES; i++)
         {
