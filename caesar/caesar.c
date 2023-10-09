@@ -17,6 +17,7 @@ int main(int argc, string argv[])
         return 1;
     }
 
+ // check the key - function only_digits
 
     bool check_usage = only_digits(argv[1]);
 
@@ -30,14 +31,12 @@ int main(int argc, string argv[])
         return 1;
     }
 
-}
-
-
-    // check the key - function only_digits
-
-
     // convert argv to an integer
 
+    
+
+
+}
 
     // prompt the user for a text
 
