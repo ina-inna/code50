@@ -65,14 +65,14 @@ void sort_cities(void)
     // Add your code here
     int first = 0;
     int start = 0;
-    int starting_point = 1;
+    int starting_point = 0;
     for (first = 0; first < NUM_CITIES; first++)
     {
         starting_point++;
         for (int i = starting_point; i < NUM_CITIES; i++)
         {
                 int max = temps[first].temp;
-                int less = temps[i].temp
+                int less = temps[i].temp;
 
                     if (temps[i].temp > max)
                     {
@@ -80,7 +80,7 @@ void sort_cities(void)
 
                     }
                     temps[start].temp = max;
-                    temps[less]
+                    temps[i].temp = less;
 
                 //  first++;
                 // start++;
