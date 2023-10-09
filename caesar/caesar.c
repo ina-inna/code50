@@ -2,6 +2,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
+int only_digits(string input);
+
 int main(int argc, string argv[])
 {
     // check the number of command lines
@@ -13,7 +16,7 @@ int main(int argc, string argv[])
     }
 
 
-    int check_usage = int only_digits(string argv[1]);
+    int check_usage = only_digits(argv[1]);
 
 }
 
@@ -32,10 +35,10 @@ int main(int argc, string argv[])
 
     // print the cipher text
 
-only_digits(argv[1])
+int only_digits(string input)
 
 {
-    string input = argv[1];
+    input = char* argv[1];
     for (int i = 0, n = strlen(input); i < n; i++)
     {
         if (!isdigit(input))
