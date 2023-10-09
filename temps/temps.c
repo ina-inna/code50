@@ -63,8 +63,8 @@ int main(void)
 void sort_cities(void)
 {
     // Add your code here
-     int max_index;
-for (int i = 0; i < NUM_CITIES; i++)
+    int max_index;
+    for (int i = 0; i < NUM_CITIES; i++)
     {
 
         max_index = i;
@@ -82,6 +82,11 @@ for (int i = 0; i < NUM_CITIES; i++)
         int temp1 = temps[max_index].temp;
         temps[i].temp = temp1;
         temps[max_index].temp = temp;
+
+        string city0 = temps[i].city;
+        string city1 = temps[max_index].city;
+        temps[i].city = city1;
+        temps[max_index].city = city0;
     }
 
 }
