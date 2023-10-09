@@ -67,7 +67,7 @@ for (int i = 0; i < NUM_CITIES; i++)
 
     int max_index;
     {
-        int max_index;
+
         for (int j = i+1; j < NUM_CITIES; j++)
         {
         max_index = temps[i].temp;
@@ -77,11 +77,9 @@ for (int i = 0; i < NUM_CITIES; i++)
             max_index = j;
         }
         }
-
+    }
         int temp = temps[i].temp;
         temps[i].temp = temps[max_index].temp;
         temps[max_index].temp = temp;
-    }
-
 
 }
