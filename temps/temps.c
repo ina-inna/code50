@@ -70,7 +70,9 @@ void sort_cities(void)
     if (temps[i].temp > max)
     {
         max = temps[i].temp;
-        temps[i].temp = max;
     }
-  
+    temps[0].temp = max;
+    
+    printf("%s: %i\n", temps[0].city, temps[0].temp);
+
 }
