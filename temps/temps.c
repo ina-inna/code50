@@ -84,7 +84,8 @@ for (int i = 0; i < NUM_CITIES; i++)
         }
     }
         int temp = temps[i].temp;
-        temps[i].temp = temps[max_index].temp;
+        int temp1 = temps[max_index].temp;
+        temps[i].temp = temp1;
         temps[max_index].temp = temp;
 
 }
