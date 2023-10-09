@@ -72,12 +72,13 @@ void sort_cities(void)
         for (int i = starting_point; i < NUM_CITIES; i++)
         {
                 int max = temps[first].temp;
+                int less = temps[i].temp
 
                     if (temps[i].temp > max)
                     {
                         //max = temps[i].temp;
                         temps[start].temp = max;
-                        
+
                     }
                     temps[start].temp = max;
 
