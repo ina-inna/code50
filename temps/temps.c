@@ -75,10 +75,10 @@ void sort_cities(void)
                         max = temps[i].temp;
                     }
                     temps[start].temp = max;
-
                 //  first++;
                 // start++;
         }
+         printf("%s: %i\n", temps[start].city, temps[start].temp);
 
     }
 
