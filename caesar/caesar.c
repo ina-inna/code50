@@ -26,7 +26,7 @@ int main(int argc, string argv[])
     }
     else
     {
-        printf("Usage: ./caesar key\n");
+        printf("Usage: ./caesar key2\n");
         return 1;
     }
 
