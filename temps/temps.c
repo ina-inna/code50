@@ -80,9 +80,7 @@ void sort_cities(void)
                 // start++;
         }
 
-        
-
     }
 
 
-}
+
