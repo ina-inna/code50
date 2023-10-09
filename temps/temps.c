@@ -80,7 +80,7 @@ void sort_cities(void)
                     if (temps[i].temp > max)
                     {
                         max = temps[i].temp;
-                        less = temps[i].temp;
+                        less = temps[first].temp;
                     }
 
 
