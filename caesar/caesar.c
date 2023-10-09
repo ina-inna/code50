@@ -11,7 +11,7 @@ int main(int argc, string argv[])
 {
     // check the number of command lines
 
-    if (argc != 1)
+    if (argc != 2)
     {
         printf("Usage: ./caesar key\n");
         return 1;
