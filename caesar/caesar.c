@@ -56,10 +56,8 @@ bool only_digits(string input)
         {
             return false;
         }
+
     }
-    else
-    {
     return true;
-    }
 }
 
