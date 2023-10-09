@@ -6,7 +6,19 @@ int main(int argc, string argv[])
     // check the number of command lines
 
 
-    // check the n
+    // check the key - function only_digits
+
+
+    // convert argv to an integer
+
+
+    // prompt the user for a text
+
+
+    // function rotate: rotates characters by that many positions
+
+
+    // print the cipher text
 
 
 }
