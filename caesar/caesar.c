@@ -12,9 +12,9 @@ int main(int argc, string argv[])
     }
 
 
-    bool only_digits(argv[])
+    bool only_digits(argv[1])
    {
-    
+
 
    }
 
