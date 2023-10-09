@@ -18,7 +18,9 @@ int main(int argc, string argv[])
     }
 
 
-    int check_usage = only_digits(argv[1]);
+    bool check_usage = only_digits(argv[1])
+
+    if (check_usage == 0)
 
 }
 
