@@ -85,7 +85,7 @@ void sort_cities(void)
 
 
         }
-        temps[start].temp = max;
+        temps[first].temp = max;
         temps[i].temp = less;
         printf("%i\n", temps[start].temp);
         start++;
