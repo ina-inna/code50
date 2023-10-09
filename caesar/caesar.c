@@ -33,7 +33,8 @@ int main(int argc, string argv[])
 
     // convert argv to an integer
 
-    int key = 
+    int key = atoi(argv[1]);
+    printf("%i", key);
 
 
 }
