@@ -38,7 +38,6 @@ int main(int argc, string argv[])
 int only_digits(string input)
 
 {
-    input = char* argv[1];
     for (int i = 0, n = strlen(input); i < n; i++)
     {
         if (!isdigit(input))
