@@ -67,5 +67,9 @@ void sort_cities(void)
     for (int i = 0; i < NUM_CITIES; i++)
 
 
-    int max = temps[0].city
+    int max = temps[i].city;
+    if (temps[i+1].city > temps[i].city)
+    {
+        int max = temps[i+1].city;
+    }
 }
