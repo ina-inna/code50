@@ -63,9 +63,11 @@ int main(void)
 void sort_cities(void)
 {
     // Add your code here
-    int start = 0;
+
     int max = temps[0].temp;
     for (int i = 1; i < NUM_CITIES; i++)
+
+    for (int start = 0; start < NUM_CITIES; start++)
 
     if (temps[i].temp > max)
     {
