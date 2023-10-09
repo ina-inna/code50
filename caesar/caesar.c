@@ -14,19 +14,18 @@ int main(int argc, string argv[])
 
 
     int only_digits(argv[1])
-   {
-    if (atoi(argv[1]) == 0)
-
     {
-        return true;
+    for (int i = 0, n = strlen(input); i < n; i++)
+    {
+        if (!isdigit(input[i]))
+        {
+            printf("Usage: ./caesar key\n");
+            return 1;
+        }
+    }
+    return 0;
     }
 
-    else
-    {
-        return false;
-    }
-
-   }
 
     // check the key - function only_digits
 
