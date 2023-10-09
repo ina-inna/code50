@@ -63,33 +63,7 @@ int main(void)
 void sort_cities(void)
 {
     // Add your code here
-    int first = 0;
-    int start = 0;
-    int starting_point = 0;
-    for (first = 0; first < NUM_CITIES; first++)
-    {
-        starting_point++;
-        int i;
-        int max;
-        int less;
-        for (i = starting_point; i < NUM_CITIES; i++)
-        {
-                max = temps[first].temp;
-                less = temps[i].temp;
 
-                    if (temps[i].temp > max)
-                    {
-                        max = temps[i].temp;
-                    }
-
-
-        }
-        int temp = max;
-        temps[i].temp = less;
-        printf("%i\n", temps[start].temp);
-        start++;
-
-    }
 
 
 }
