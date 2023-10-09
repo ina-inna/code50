@@ -51,12 +51,12 @@ int main(void)
 
     sort_cities();
 
-    printf("\nAverage July Temperatures by City\n\n");
+    //printf("\nAverage July Temperatures by City\n\n");
 
-    for (int i = 0; i < NUM_CITIES; i++)
-    {
-        printf("%s: %i\n", temps[i].city, temps[i].temp);
-    }
+   // for (int i = 0; i < NUM_CITIES; i++)
+   // {
+    //    printf("%s: %i\n", temps[i].city, temps[i].temp);
+   // }
 }
 
 // TODO: Sort cities by temperature in descending order
@@ -69,6 +69,8 @@ void sort_cities(void)
 
     if (temps[i].temp > max)
     {
+        max = temps[i].temp;
         temps[i].temp = max;
     }
+    printf("%s: %i", temps[i].city, temps[i].temp);
 }
