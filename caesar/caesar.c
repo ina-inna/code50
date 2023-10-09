@@ -13,7 +13,7 @@ int main(int argc, string argv[])
     }
 
 
-    bool only_digits(argv[1])
+    int only_digits(argv[1])
    {
     if (atoi(argv[1]) == 0)
 
