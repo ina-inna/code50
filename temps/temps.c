@@ -77,6 +77,11 @@ for (int i = 0; i < NUM_CITIES; i++)
             max_index = j;
         }
         }
+
+        else
+        {
+            max_index = i;
+        }
     }
         int temp = temps[i].temp;
         temps[i].temp = temps[max_index].temp;
