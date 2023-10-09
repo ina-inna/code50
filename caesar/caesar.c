@@ -5,6 +5,18 @@ int main(int argc, string argv[])
 {
     // check the number of command lines
 
+    if (argc != 1)
+    {
+        printf("Usage: ./caesar key\n");
+        return 1;
+    }
+
+
+    bool only_digits (argv[])
+   {
+    
+
+   }
 
     // check the key - function only_digits
 
