@@ -65,19 +65,24 @@ void sort_cities(void)
     // Add your code here
     int first = 0;
     int max = temps[first].temp;
-    for (int i = 1; i < NUM_CITIES; i++)
+    int start = 0;
 
-    for (int start = 0; start < NUM_CITIES; start++)
+    for (int i = 1; i < NUM_CITIES; i++)
     {
 
-            if (temps[i].temp > max)
-            {
-                max = temps[i].temp;
-            }
-            temps[start].temp = max;
-            first++;
 
-            printf("%s: %i\n", temps[start].city, temps[start].temp);
+
+                if (temps[i].temp > max)
+                {
+                    max = temps[i].temp;
+                }
+                temps[start].temp = max;
+                first++;
+
+
+                printf("%i\n", temps[start].temp);
+                start++;
+
     }
 
 }
