@@ -5,7 +5,7 @@
 #include <ctype.h>
 
 
-int only_digits(string input);
+bool only_digits(string input);
 
 int main(int argc, string argv[])
 {
@@ -37,7 +37,7 @@ int main(int argc, string argv[])
 
     // print the cipher text
 
-int only_digits(string input)
+bool only_digits(string input)
 
 {
     for (int i = 0, n = strlen(input); i < n; i++)
@@ -45,9 +45,9 @@ int only_digits(string input)
         if (!isdigit(input[i]))
         {
             printf("Usage: ./caesar key\n");
-            return 1;
+            return true;
         }
     }
-    return 0;
+    return false;
 }
 
