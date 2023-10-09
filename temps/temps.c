@@ -76,11 +76,11 @@ void sort_cities(void)
 
                     if (temps[i].temp > max)
                     {
-                        //max = temps[i].temp;
-                        temps[start].temp = max;
+                        max = temps[i].temp;
 
                     }
                     temps[start].temp = max;
+                    temps[less]
 
                 //  first++;
                 // start++;
