@@ -43,8 +43,11 @@ int main(int argc, string argv[])
 
     for (int i = 0, n = strlen(text); i < n; i++)
     {
-        printf("text: %c", rotate(text[i], key));
+        rotate(text[i], key);
     }
+    printf("Ciphertext: %s", text);
+
+    return 0;
 
 }
 
@@ -72,11 +75,11 @@ char rotate(char letter, int number)
 {
     if (letter >= 'A' && letter <= 'Z')
         {
-            letter = (letter + number)%26;
+            letter += number;
         }
     else if (letter >= 'a' && letter <= 'z')
         {
-            letter = (letter + number)%26;
+            letter += number;
         }
     else
         {
