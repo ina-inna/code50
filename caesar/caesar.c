@@ -40,7 +40,7 @@ int main(int argc, string argv[])
 
     for (int i = 0, n = strlen(text); i < n; i++)
     {
-        printf("plaintext: %c", rotate(text[i], key));
+        printf("plaintext: %c\n", rotate(text[i], key));
     }
 
 }
@@ -69,18 +69,18 @@ bool only_digits(string input)
 
 char rotate(char letter, int number)
 {
-    if (letter >= 'A' && <= 'Z')
+    if (letter >= 'A' && letter <= 'Z')
         {
-            letter += number
+            letter += number;
         }
-    else if (letter >= 'a' && <= 'z')
+    else if (letter >= 'a' && letter <= 'z')
         {
-            letter =+ number
+            letter += number;
         }
     else
         {
             return letter;
         }
-
+    return letter;
 }
 
