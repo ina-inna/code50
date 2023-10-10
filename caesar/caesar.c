@@ -63,8 +63,18 @@ bool only_digits(string input)
 
 char rotate(char letter, int number)
 {
-    
-
+    if (letter >= 'A' && <= 'Z')
+        {
+            letter =+ number
+        }
+    else if (letter >= 'a' && <= 'z')
+        {
+            letter =+ number
+        }
+    else
+        {
+            return letter;
+        }
 
 }
 
