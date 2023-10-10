@@ -41,11 +41,13 @@ int main(int argc, string argv[])
 
     // char new = rotate(text[x], key);
 
+    printf("Ciphertext: ");
+
     for (int i = 0, n = strlen(text); i < n; i++)
     {
-        rotate(text[i], key);
+        printf("%c", rotate(text[i], key));
     }
-    printf("Ciphertext: %s\n", text);
+     printf("\n");
 
     return 0;
 
