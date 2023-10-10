@@ -26,7 +26,7 @@ int main(int argc, string argv[])
         printf("Usage: ./caesar key2\n");
         return 1;
     }
- 
+
 
     // convert argv to an integer
     string input = argv[1];
@@ -34,7 +34,7 @@ int main(int argc, string argv[])
     string text = get_string("plaintext: ");
 
 
-
+    string rotate 
 }
 
     // prompt the user for a text
