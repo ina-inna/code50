@@ -43,7 +43,7 @@ int main(int argc, string argv[])
 
     for (int i = 0, n = strlen(text); i < n; i++)
     {
-        printf("plaintext: %c\n", rotate(text[i], key));
+        printf("%c", rotate(text[i], key));
     }
 
 }
@@ -72,11 +72,11 @@ char rotate(char letter, int number)
 {
     if (letter >= 'A' && letter <= 'Z')
         {
-            letter (+= number)%26;
+            letter += number;
         }
     else if (letter >= 'a' && letter <= 'z')
         {
-            letter (+= number)%26;
+            letter += number;
         }
     else
         {
