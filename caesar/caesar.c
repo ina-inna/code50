@@ -34,12 +34,13 @@ int main(int argc, string argv[])
     int key = atoi(input);
     string text = get_string("plaintext: ");
 
+  //  int x = strlen(text);
 
-    char new = rotate(text, key);
+   // char new = rotate(text[x], key);
 
     for (int i = 0, n = strlen(text); i < n; i++)
     {
-        printf("plaintext: ", rotate(text[i], key));
+        printf("plaintext: %c", rotate(text[i], key));
     }
 
 }
