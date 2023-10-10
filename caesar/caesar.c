@@ -37,11 +37,10 @@ int main(int argc, string argv[])
 
     string text = get_string("plaintext: ");
 
-    //  int x = strlen(text);
-
-    // char new = rotate(text[x], key);
-
     printf("Ciphertext: ");
+
+    // function rotate: rotates characters by that many positions
+    // print the cipher text
 
     for (int i = 0, n = strlen(text); i < n; i++)
     {
@@ -53,11 +52,6 @@ int main(int argc, string argv[])
 
 }
 
-
-    // function rotate: rotates characters by that many positions
-
-
-    // print the cipher text
 
 bool only_digits(string input)
 
@@ -78,12 +72,12 @@ char rotate(char letter, int number)
     if (letter >= 'A' && letter <= 'Z')
         {
             letter += number;
-            letter = (letter) % 26;
+            //letter = (letter) % 26;
         }
     else if (letter >= 'a' && letter <= 'z')
         {
             letter += number;
-            letter = (letter) % 26;
+            //letter = (letter) % 26;
         }
     else
         {
