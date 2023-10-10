@@ -6,6 +6,7 @@
 
 
 bool only_digits(string input);
+char rotate(char letter, int number);
 
 int main(int argc, string argv[])
 {
@@ -34,7 +35,8 @@ int main(int argc, string argv[])
     string text = get_string("plaintext: ");
 
 
-    string rotate 
+    rotate(text, key);
+
 }
 
     // prompt the user for a text
@@ -57,5 +59,12 @@ bool only_digits(string input)
 
     }
     return true;
+}
+
+char rotate(char letter, int number)
+{
+    
+
+
 }
 
