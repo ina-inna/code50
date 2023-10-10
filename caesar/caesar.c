@@ -32,11 +32,14 @@ int main(int argc, string argv[])
     // convert argv to an integer
     string input = argv[1];
     int key = atoi(input);
+
+    // prompt the user for a text
+
     string text = get_string("plaintext: ");
 
-  //  int x = strlen(text);
+    //  int x = strlen(text);
 
-   // char new = rotate(text[x], key);
+    // char new = rotate(text[x], key);
 
     for (int i = 0, n = strlen(text); i < n; i++)
     {
@@ -44,8 +47,6 @@ int main(int argc, string argv[])
     }
 
 }
-
-    // prompt the user for a text
 
 
     // function rotate: rotates characters by that many positions
