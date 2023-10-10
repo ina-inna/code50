@@ -21,15 +21,12 @@ int main(int argc, string argv[])
 
     bool check_usage = only_digits(argv[1]);
 
-    if (check_usage == true)
-    {
-        return 0;
-    }
-    else
+    if (check_usage != true)
     {
         printf("Usage: ./caesar key2\n");
         return 1;
     }
+ 
 
     // convert argv to an integer
     string input = argv[1];
