@@ -35,7 +35,10 @@ int main(int argc, string argv[])
     string text = get_string("plaintext: ");
 
 
-    rotate(text, key);
+    for (int i = 0, n = strlen(text); i < n; i++)
+    {
+        rotate(text[i], key);
+    }
 
 }
 
@@ -65,7 +68,7 @@ char rotate(char letter, int number)
 {
     if (letter >= 'A' && <= 'Z')
         {
-            letter =+ number
+            letter += number
         }
     else if (letter >= 'a' && <= 'z')
         {
