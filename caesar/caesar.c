@@ -1,9 +1,8 @@
 #include <cs50.h>
+#include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <ctype.h>
-
 
 bool only_digits(string input);
 char rotate(char letter, int number);
@@ -18,7 +17,7 @@ int main(int argc, string argv[])
         return 1;
     }
 
- // check the key - function only_digits
+    // check the key - function only_digits
 
     bool check_usage = only_digits(argv[1]);
 
@@ -27,7 +26,6 @@ int main(int argc, string argv[])
         printf("Usage: ./caesar key2\n");
         return 1;
     }
-
 
     // convert argv to an integer
     string input = argv[1];
@@ -46,12 +44,10 @@ int main(int argc, string argv[])
     {
         printf("%c", rotate(text[i], key));
     }
-     printf("\n");
+    printf("\n");
 
     return 0;
-
 }
-
 
 bool only_digits(string input)
 
@@ -62,7 +58,6 @@ bool only_digits(string input)
         {
             return false;
         }
-
     }
     return true;
 }
@@ -70,19 +65,18 @@ bool only_digits(string input)
 char rotate(char letter, int number)
 {
     if (letter >= 'A' && letter <= 'Z')
-        {
-            letter = (letter - 'A' + number)%26 + 'A';
-            //letter = (letter) % 26;
-        }
+    {
+        letter = (letter - 'A' + number) % 26 + 'A';
+        // letter = (letter) % 26;
+    }
     else if (letter >= 'a' && letter <= 'z')
-        {
-            letter = (letter - 'a' + number)%26 + 'a';
-            //letter = (letter) % 26;
-        }
+    {
+        letter = (letter - 'a' + number) % 26 + 'a';
+        // letter = (letter) % 26;
+    }
     else
-        {
-            return letter;
-        }
+    {
+        return letter;
+    }
     return letter;
 }
-
