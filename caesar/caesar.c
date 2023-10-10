@@ -71,12 +71,12 @@ char rotate(char letter, int number)
 {
     if (letter >= 'A' && letter <= 'Z')
         {
-            letter = (letter - 'A' + number)%26 ;
+            letter = (letter - 'A' + number)%26 + 'A';
             //letter = (letter) % 26;
         }
     else if (letter >= 'a' && letter <= 'z')
         {
-            letter += number;
+            letter = (letter - 'a' + number)%26 + 'a';
             //letter = (letter) % 26;
         }
     else
