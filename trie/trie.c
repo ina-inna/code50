@@ -123,10 +123,9 @@ bool check(char* word)
             {
                 return false;
             }
-            else
-            {
-                cursor = cursor->children[index];
-            }
+
+            cursor = cursor->children[index];
+
         }
 
     // check if the last one is true
