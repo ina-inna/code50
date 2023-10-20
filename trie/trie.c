@@ -128,6 +128,8 @@ bool check(char* word)
 
         }
 
+        cursor = cursor->is_word;
+
     // check if the last one is true
     if (cursor->is_word != true)
     {
