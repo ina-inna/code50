@@ -107,16 +107,16 @@ int main(int argc, char *argv[])
 }
 
 // TODO: Complete the check function, return true if found, false if not found
-bool check(char *word)
+bool check(char *name)
 {
     // start at the root
 
     node *cursor = root;
 
     // move a pointer through all the characters and stop at the end
-    for (int i = 0, n = strlen(word); i < n; i++)
+    for (int i = 0, n = strlen(name); i < n; i++)
     {
-        int index = tolower(word[i]) - 'a';
+        int index = tolower(name[i]) - 'a';
         if (cursor->children[index] == NULL)
 
         {
