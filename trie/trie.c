@@ -122,15 +122,12 @@ bool check(char* word)
         }
 
     // check if the last one is true
-    if (cursor->is_word == true)
-    {
-        return true;
-    }
-
-    else
+    if (cursor->is_word != true)
     {
         return false;
     }
+    return true;
+
 }
 
 // Unload trie from memory
