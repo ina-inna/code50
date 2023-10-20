@@ -115,9 +115,9 @@ bool check(char* word)
     node *cursor = root;
 
     // move a pointer through all the characters and stop at the end
-    for (int i = 0, n = strlen(name); i < n; i++)
+    for (int i = 0, n = strlen(word); i < n; i++)
         {
-            int index = tolower(name[i]) - 'a';
+            int index = tolower(word[i]) - 'a';
             if (cursor->children[index] == NULL)
 
             {
