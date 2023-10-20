@@ -130,11 +130,11 @@ bool check(char* word)
         }
 
     // check if the last one is true
-    if (cursor->is_word != true)
+    if (cursor->is_word == true)
     {
-        return false;
+        return true;
     }
-    return true;
+    return false;
 
 }
 
