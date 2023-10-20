@@ -114,11 +114,11 @@ bool check(char* word)
 
         node *cursor = root;
         int index = tolower(name[i]) - 'a';
-        
+
         // move a pointer through all the characters except the last one -- n - 1
         for (int i = 0, n = strlen(name); i < n - 1; i++)
         {
-
+            cursor = cursor->children[index];
         }
 
     // move a pointer through all the characters except the last one -- n - 1
