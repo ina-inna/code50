@@ -112,10 +112,17 @@ bool check(char* word)
 {
     // start at the root
 
+        node *cursor = root;
+
+        for (int i = 0, n = strlen(name); i < n; i++)
+        {
+            
+        }
+
     // move a pointer through all the characters except the last one -- n - 1
 
     // check if the last one is true
-    
+
     return false;
 }
 
