@@ -115,17 +115,22 @@ bool check(char* word)
         node *cursor = root;
         int index = tolower(name[i]) - 'a';
 
-        // move a pointer through all the characters except the last one -- n - 1
+        // move a pointer through all the characters and stop at the end
         for (int i = 0, n = strlen(name); i < n; i++)
         {
             cursor = cursor->children[index];
         }
 
     // check if the last one is true
+    if (cursor->is_word == true)
+    {
+        return true;
+    }
 
-    
-
-    return false;
+    else
+    {
+        return false;
+    }
 }
 
 // Unload trie from memory
