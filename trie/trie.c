@@ -112,10 +112,10 @@ bool check(char* word)
 {
     // start at the root
 
-        node *cursor = root;
+    node *cursor = root;
 
-        // move a pointer through all the characters and stop at the end
-        for (int i = 0, n = strlen(name); i < n; i++)
+    // move a pointer through all the characters and stop at the end
+    for (int i = 0, n = strlen(name); i < n; i++)
         {
             int index = tolower(name[i]) - 'a';
             if (cursor->children[index] == NULL)
@@ -129,11 +129,11 @@ bool check(char* word)
         }
 
     // check if the last one is true
-    if (cursor->is_word == true)
+    if (cursor->is_word != true)
     {
-        return true;
+        return false;
     }
-    return false;
+    return true;
 
 }
 
