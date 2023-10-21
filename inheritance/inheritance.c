@@ -118,8 +118,6 @@ void free_family(person *p)
 
     // TODO: Free child
     free(p);
-    p->parents[0] = NULL;
-    p->parents[1] = NULL;
 
 
 }
