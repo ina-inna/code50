@@ -63,7 +63,7 @@ person *create_family(int generations)
         char a = parent0->alleles[0];
         char b = parent0->alleles[1];
         char c = parent1->alleles[0];
-        char d = parent1->alleles[1]
+        char d = parent1->alleles[1];
 
         int l = rand() % 2;
         if (l == 0)
