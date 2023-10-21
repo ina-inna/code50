@@ -44,7 +44,7 @@ person *create_family(int generations)
     person *p = malloc(sizeof(person));
     if (p == NULL)
         {
-          return 1;
+          return false;
         }
 
     // If there are still generations left to create
@@ -68,21 +68,21 @@ person *create_family(int generations)
         int l = rand() % 2;
         if (l == 0)
         {
-            p->allelles[0] = a;
+            p->alleles[0] = a;
         }
         else
         {
-            p->allelles[0] = b;
+            p->alleles[0] = b;
         }
 
         int r = rand() % 2;
         if (r == 0)
         {
-            p->allelles[1] = c;
+            p->alleles[1] = c;
         }
         else
         {
-            p->allelles[1] = d;
+            p->alleles[1] = d;
         }
 
 
@@ -96,8 +96,8 @@ person *create_family(int generations)
         p->parents[1] = NULL;
 
         // TODO: Randomly assign alleles
-        p->alelles[0] = random_allele();
-        p->alelles[1] = random_allele();
+        p->alleles[0] = random_allele();
+        p->alleles[1] = random_allele();
     }
 
     // TODO: Return newly created person
