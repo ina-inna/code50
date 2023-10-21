@@ -64,21 +64,21 @@ person *create_family(int generations)
         int l = rand() % 2;
         if (l == 0)
         {
-            return int(parent0->alleles[0]);
+            p->allelles[0] = parent0->alleles[0];
         }
         else
         {
-            return int(parent0->alleles[1]);
+            p->allelles[0] = parent0->alleles[1];
         }
 
         int r = rand() % 2;
         if (r == 0)
         {
-            return int(parent1->alleles[0]);
+            p->allelles[1] = parent1->alleles[0];
         }
         else
         {
-            return int(parent1->alleles[1]);
+            p->allelles[1] = parent1->alleles[0];
         }
 
 
