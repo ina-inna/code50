@@ -110,7 +110,7 @@ void free_family(person *p)
     // TODO: Handle base case
     if (p == NULL)
     {
-        return 0;
+        return;
     }
 
     // TODO: Free parents recursively
