@@ -44,6 +44,14 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     // TODO
+    // open a dictionary file
+
+    // read data
+
+    // write data into memory
+
+    // until EOF
+
     return false;
 }
 
