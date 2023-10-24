@@ -69,9 +69,7 @@ bool load(const char *dictionary)
             node *head = table[hash];
 
             new_node->next = head->next;
-            head->next = new_node->next;
-
-
+            head = new_node;
         }
 
 
