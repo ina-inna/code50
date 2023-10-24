@@ -35,7 +35,8 @@ unsigned int hash(const char *word)
     {
         sum +=toupper(word[i]);
     }
-    return sum % 1000;
+    int final_num = sum % 1000;
+    return final_num;
 
    // return toupper(word[0]) - 'A';
 }
