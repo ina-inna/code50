@@ -46,7 +46,7 @@ bool load(const char *dictionary)
 {
     // TODO
     // open a dictionary file -> fopen + check if return value is NULL
-    char *dictionary = (argc == 3) ? argv[1] : DICTIONARY;
+    //char *dictionary = (argc == 3) ? argv[1] : DICTIONARY;
     FILE *file = fopen(dictionary, "r");
     if (file == NULL)
     {
@@ -56,7 +56,8 @@ bool load(const char *dictionary)
 
     // read strings from file one at a time -> fscanf(file, "%s", word) -> fscanf will return EOF one it reaches it
     string s;
-    
+    while (fscanf(file, "%s", word)
+
 
     // allocate memory for a new node -> node * n = malloc(sizeof(node))
     // strcpy(n->word, "")
