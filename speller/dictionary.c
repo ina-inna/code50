@@ -14,6 +14,8 @@ typedef struct node
 }
 node;
 
+int number_of_words;
+
 // TODO: Choose number of buckets in hash table
 const unsigned int N = 1000;
 
@@ -57,6 +59,7 @@ bool load(const char *dictionary)
 
     // read strings from file one at a time -> fscanf(file, "%s", word) -> fscanf will return EOF one it reaches it
     //string s;
+    number_of_words = 0
     while (fscanf(file, "%s", word) != EOF)
         {
             node* new_node = malloc(sizeof(node));
@@ -70,6 +73,7 @@ bool load(const char *dictionary)
 
             new_node->next = head->next;
             head = new_node;
+            number_of_words++;
         }
         fclose(file);
 
