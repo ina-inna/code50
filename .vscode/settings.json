@@ -4,6 +4,13 @@
         "cs50.h": "c",
         "stdio.h": "c",
         "string_view": "c",
-        "helpers.h": "c"
+        "helpers.h": "c",
+        "*.tcc": "c",
+        "string": "c",
+        "unordered_map": "c",
+        "vector": "c",
+        "functional": "c",
+        "memory": "c",
+        "system_error": "c"
     }
 }
