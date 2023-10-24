@@ -70,7 +70,7 @@ bool load(const char *dictionary)
                     printf("Memory allocation failed.\n");
                     return 2;
                 }
-            strcpy(new_node, word);
+            strcpy(new_node->word, word);
             node *head = table[hash];
 
             new_node->next = head->next;
