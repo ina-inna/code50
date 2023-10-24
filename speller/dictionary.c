@@ -59,15 +59,15 @@ bool load(const char *dictionary)
     //string s;
     while (fscanf(file, "%s", word) != EOF)
         {
-            node* n = malloc(sizeof(node));
-                if (n == NULL)
+            node* new_node = malloc(sizeof(node));
+                if (new_node == NULL)
                 {
                     printf("Memory allocation failed.\n");
                     return 2
                 }
-            strcpy(n, word);
-            node *cursor = table[hash];
-            
+            strcpy(new_node, word);
+            node *head = table[hash];
+
 
         }
 
