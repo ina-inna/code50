@@ -44,9 +44,9 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     // TODO
-    // open a dictionary file
+    // open a dictionary file -> fopen + check if return value is NULL
 
-    // read strings from file one at a time
+    // read strings from file one at a time -> fscanf(file, "%s", word) -> fscanf will return EOF one it reaches it
 
     // allocate memory for a new node -> node * n = malloc(sizeof(node))
     // strcpy(n->word, "")
