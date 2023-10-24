@@ -73,10 +73,9 @@ bool load(const char *dictionary)
             strcpy(new_node->word, word);
 
             int location = hash(new_node->word);
-            new_node->next = table[location];
+            new_node->next = table[location]->next;
 
-            new_node->next = head->next;
-            head = new_node;
+          
             number_of_words++;
         }
         fclose(file);
