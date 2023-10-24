@@ -49,6 +49,7 @@ bool load(const char *dictionary)
     // read data
 
     // allocate memory for a new node -> node * n = malloc(sizeof(node))
+    // strcpy(n->word, "")
 
     // write data into memory -> word(hash number) add to a table(hash number)
 
