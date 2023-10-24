@@ -58,12 +58,14 @@ bool load(const char *dictionary)
     string s;
     while (fscanf(file, "%s", word) != EOF)
             {
-                node* n = malloc(sizeof(node))
+                node* n = malloc(sizeof(node));
                     if (n == NULL)
                     {
-                        printf("Could not open %s.\n", text);
-                        return 1
+                        printf("Memory allocation failed.\n");
+                        return 2
                     }
+                
+
             }
 
 
