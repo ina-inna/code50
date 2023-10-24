@@ -46,6 +46,13 @@ bool load(const char *dictionary)
 {
     // TODO
     // open a dictionary file -> fopen + check if return value is NULL
+    char *dictionary = (argc == 3) ? argv[1] : DICTIONARY;
+    FILE *file = fopen(dictionary, "r");
+    if (file == NULL)
+    {
+        printf("Could not open %s.\n", text);
+        return 1
+    }
 
     // read strings from file one at a time -> fscanf(file, "%s", word) -> fscanf will return EOF one it reaches it
 
