@@ -68,7 +68,7 @@ bool load(const char *dictionary)
                 if (new_node == NULL)
                 {
                     printf("Memory allocation failed.\n");
-                    return 2
+                    return 2;
                 }
             strcpy(new_node, word);
             node *head = table[hash];
