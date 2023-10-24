@@ -73,7 +73,7 @@ bool load(const char *dictionary)
             strcpy(new_node->word, word);
 
             int location = hash(new_node->word);
-            node* head[hash];
+            new_node->word = table[location];
 
             new_node->next = head->next;
             head = new_node;
