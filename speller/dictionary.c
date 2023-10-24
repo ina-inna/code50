@@ -58,16 +58,15 @@ bool load(const char *dictionary)
     // read strings from file one at a time -> fscanf(file, "%s", word) -> fscanf will return EOF one it reaches it
     string s;
     while (fscanf(file, "%s", word) != EOF)
-            {
-                node* n = malloc(sizeof(node));
-                    if (n == NULL)
-                    {
-                        printf("Memory allocation failed.\n");
-                        return 2
-                    }
-                strcpy
-
-            }
+        {
+            node* n = malloc(sizeof(node));
+                if (n == NULL)
+                {
+                    printf("Memory allocation failed.\n");
+                    return 2
+                }
+            strcpy(n, word);
+        }
 
 
     // allocate memory for a new node -> node * n = malloc(sizeof(node))
