@@ -3,6 +3,7 @@
 #include <ctype.h>
 #include <stdbool.h>
 #include <string.h>
+#include <stdio.h>
 
 #include "dictionary.h"
 
@@ -53,13 +54,13 @@ bool load(const char *dictionary)
     FILE *file = fopen(dictionary, "r");
     if (file == NULL)
     {
-        printf("Could not open %s.\n", text);
-        return 1
+        printf("Could not open %s.\n", dictionary);
+        return 1;
     }
 
     // read strings from file one at a time -> fscanf(file, "%s", word) -> fscanf will return EOF one it reaches it
     //string s;
-    number_of_words = 0
+    number_of_words = 0;
     while (fscanf(file, "%s", word) != EOF)
         {
             node* new_node = malloc(sizeof(node));
