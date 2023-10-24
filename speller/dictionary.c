@@ -55,6 +55,7 @@ bool load(const char *dictionary)
     }
 
     // read strings from file one at a time -> fscanf(file, "%s", word) -> fscanf will return EOF one it reaches it
+    
 
     // allocate memory for a new node -> node * n = malloc(sizeof(node))
     // strcpy(n->word, "")
