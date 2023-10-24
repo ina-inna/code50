@@ -2,6 +2,7 @@
 
 #include <ctype.h>
 #include <stdbool.h>
+#include <string.h>
 
 #include "dictionary.h"
 
@@ -64,7 +65,7 @@ bool load(const char *dictionary)
                         printf("Memory allocation failed.\n");
                         return 2
                     }
-                
+                strcpy
 
             }
 
