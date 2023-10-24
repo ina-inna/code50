@@ -60,7 +60,6 @@ bool load(const char *dictionary)
     }
 
     // read strings from file one at a time -> fscanf(file, "%s", word) -> fscanf will return EOF one it reaches it
-    char *word;
     number_of_words = 0;
     while (fscanf(file, "%s", word) != EOF)
         {
@@ -74,7 +73,7 @@ bool load(const char *dictionary)
 
             int location = hash(new_node->word);
             new_node->next = table[location];
-            table[location]= new_node->next;
+            table[location] = new_node;
 
             number_of_words++;
         }
