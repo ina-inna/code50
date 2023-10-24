@@ -4,6 +4,7 @@
 #include <stdbool.h>
 #include <string.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 #include "dictionary.h"
 
@@ -59,7 +60,7 @@ bool load(const char *dictionary)
     }
 
     // read strings from file one at a time -> fscanf(file, "%s", word) -> fscanf will return EOF one it reaches it
-    string word;
+    char *word;
     number_of_words = 0;
     while (fscanf(file, "%s", word) != EOF)
         {
