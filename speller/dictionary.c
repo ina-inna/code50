@@ -71,7 +71,7 @@ bool load(const char *dictionary)
             new_node->next = head->next;
             head = new_node;
         }
-
+        fclose(file);
 
     // allocate memory for a new node -> node * n = malloc(sizeof(node))
     // strcpy(n->word, "")
@@ -82,7 +82,7 @@ bool load(const char *dictionary)
 
     // until EOF
 
-    return false;
+    return true;
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
