@@ -66,7 +66,9 @@ bool load(const char *dictionary)
                     return 2
                 }
             strcpy(n, word);
+            node *cursor = table[hash];
             
+
         }
 
 
