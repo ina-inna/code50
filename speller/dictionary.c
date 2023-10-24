@@ -46,12 +46,14 @@ bool load(const char *dictionary)
     // TODO
     // open a dictionary file
 
-    // read data
+    // read strings from file one at a time
 
     // allocate memory for a new node -> node * n = malloc(sizeof(node))
     // strcpy(n->word, "")
 
-    // write data into memory -> word(hash number) add to a table(hash number)
+    // hash word to obtain a hash value
+
+    // insert node into hash table at that location -> word(hash number) add to a table(hash number)
 
     // until EOF
 
