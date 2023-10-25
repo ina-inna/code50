@@ -138,7 +138,8 @@ bool unload(void)
         {
             free(tmp);
         }
+        return true;
     }
 
-    return true;
+    return false;
 }
