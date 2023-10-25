@@ -34,13 +34,15 @@ bool check(const char *word)
 
     int result = strcasecmp(word, cursor->word);
 
+    while ()
+
     if (result == 0)
     {
         return true;
     }
     else
     {
-        
+
     }
 
 
