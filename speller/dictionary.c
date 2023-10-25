@@ -30,26 +30,25 @@ bool check(const char *word)
     // TODO
     // turn to hash
     int location = hash(word);
-    node* cursor = table[location];
-
-    int result = strcasecmp(word, cursor->word);
-
-    while ()
-
-    if (result == 0)
-    {
-        return true;
-    }
-    else
-    {
-
-    }
-
-
     // access linked list at that index
+
+    node* cursor = table[location]->next;
 
     // traverse linked list looking for that word - strcasecmp
 
+    if(strcasecmp(word, cursor->word) == 0)
+    {
+        return true;
+    }
+    while (cursor->next != NULL)
+    {
+        int result = strcasecmp(word, cursor->word);
+        if (result == 0)
+        {
+            return true;
+        }
+
+    }
     return false;
 }
 
