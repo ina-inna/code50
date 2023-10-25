@@ -82,7 +82,7 @@ bool load(const char *dictionary)
 
     // read strings from file one at a time -> fscanf(file, "%s", word) -> fscanf will return EOF one it reaches it
     number_of_words = 0;
-    string word;
+    char word[LENGTH + 1];
     while (fscanf(file, "%s", word) != EOF)
         {
             // allocate memory for a new node
@@ -92,7 +92,7 @@ bool load(const char *dictionary)
                     printf("Memory allocation failed.\n");
                     return 2;
                 }
-            strcpy(new_node->word, input);
+            strcpy(new_node->word, word);
 
             // hash word to obtain a hash value
             int location = hash(new_node->word);
