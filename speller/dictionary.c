@@ -77,7 +77,7 @@ bool load(const char *dictionary)
     if (file == NULL)
     {
         printf("Could not open %s.\n", dictionary);
-        return 1;
+        return false;
     }
 
     // read strings from file one at a time -> fscanf(file, "%s", word) -> fscanf will return EOF one it reaches it
@@ -90,7 +90,7 @@ bool load(const char *dictionary)
                 if (new_node == NULL)
                 {
                     printf("Memory allocation failed.\n");
-                    return 2;
+                    return false;
                 }
             strcpy(new_node->word, word);
 
