@@ -28,6 +28,15 @@ node *table[N];
 bool check(const char *word)
 {
     // TODO
+    // turn to hash
+    int location = hash(word);
+    node* cursor = table[location];
+    
+
+    // access linked list at that index
+
+    // traverse linked list looking for that word - strcasecmp
+
     return false;
 }
 
