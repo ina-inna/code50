@@ -91,6 +91,8 @@ bool load(const char *dictionary)
 unsigned int size(void)
 {
     // TODO
+    if ()
+    int size = number_of_words;
     return 0;
 }
 
