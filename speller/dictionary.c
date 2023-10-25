@@ -82,8 +82,8 @@ bool load(const char *dictionary)
 
     // read strings from file one at a time -> fscanf(file, "%s", word) -> fscanf will return EOF one it reaches it
     number_of_words = 0;
-    char *input[LENGTH + 1];
-    while (fscanf(file, "%s", input) != EOF)
+    string word;
+    while (fscanf(file, "%s", word) != EOF)
         {
             // allocate memory for a new node
             node* new_node = malloc(sizeof(node));
