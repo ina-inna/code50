@@ -76,7 +76,7 @@ bool load(const char *dictionary)
 
             // insert node into hash table at that location -> word(hash number) add to a table(hash number)
 
-            new_node->next = table[location];
+            new_node->next = table[location]->next;
             table[location] = new_node;
 
             number_of_words++;
