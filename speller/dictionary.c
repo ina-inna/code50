@@ -134,12 +134,11 @@ bool unload(void)
         node *cursor = table[i];
         node *tmp = table[i];
         cursor = cursor->next;
-        free(tmp);
-        if (current->children[i] != NULL)
+        while (cursor->next != NULL)
         {
-            unloader(current->children[i]);
+            free(tmp);
         }
     }
 
-    return false;
+    return true;
 }
