@@ -32,7 +32,7 @@ bool check(const char *word)
     int location = hash(word);
     node* cursor = table[location];
 
-    if (strcasecmp())
+    if (strcasecmp(word, cursor->word))
 
 
     // access linked list at that index
