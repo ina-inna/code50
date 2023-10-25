@@ -2,9 +2,9 @@
 
 #include <ctype.h>
 #include <stdbool.h>
-#include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <strings.h>
 
 #include "dictionary.h"
@@ -14,8 +14,7 @@ typedef struct node
 {
     char word[LENGTH + 1];
     struct node *next;
-}
-node;
+} node;
 
 int number_of_words;
 
@@ -33,7 +32,7 @@ bool check(const char *word)
     int location = hash(word);
     // access linked list at that index
 
-    node* cursor = table[location];
+    node *cursor = table[location];
 
     // traverse linked list looking for that word - strcasecmp
 
@@ -44,7 +43,6 @@ bool check(const char *word)
             return true;
         }
         cursor = cursor->next;
-
     }
     return false;
 }
@@ -56,10 +54,10 @@ unsigned int hash(const char *word)
     int sum = 0;
     for (int i = 0, n = strlen(word); i < n; i++)
     {
-        sum +=toupper(word[i]);
+        sum += toupper(word[i]);
     }
     return sum % N;
-   // return toupper(word[0]) - 'A';
+    // return toupper(word[0]) - 'A';
 }
 
 // Loads dictionary into memory, returning true if successful, else false
@@ -67,7 +65,7 @@ bool load(const char *dictionary)
 {
     // TODO
     // open a dictionary file -> fopen + check if return value is NULL
-    //char *dictionary = (argc == 3) ? argv[1] : DICTIONARY;
+    // char *dictionary = (argc == 3) ? argv[1] : DICTIONARY;
     FILE *file = fopen(dictionary, "r");
     if (file == NULL)
     {
@@ -79,28 +77,27 @@ bool load(const char *dictionary)
     number_of_words = 0;
     char word[LENGTH + 1];
     while (fscanf(file, "%s", word) != EOF)
+    {
+        // allocate memory for a new node
+        node *new_node = malloc(sizeof(node));
+        if (new_node == NULL)
         {
-            // allocate memory for a new node
-            node* new_node = malloc(sizeof(node));
-                if (new_node == NULL)
-                {
-                    printf("Memory allocation failed.\n");
-                    return false;
-                }
-            strcpy(new_node->word, word);
-
-            // hash word to obtain a hash value
-            int location = hash(new_node->word);
-
-            // insert node into hash table at that location -> word(hash number) add to a table(hash number)
-
-            new_node->next = table[location];
-            table[location] = new_node;
-
-            number_of_words++;
+            printf("Memory allocation failed.\n");
+            return false;
         }
-        fclose(file);
+        strcpy(new_node->word, word);
 
+        // hash word to obtain a hash value
+        int location = hash(new_node->word);
+
+        // insert node into hash table at that location -> word(hash number) add to a table(hash number)
+
+        new_node->next = table[location];
+        table[location] = new_node;
+
+        number_of_words++;
+    }
+    fclose(file);
 
     return true;
 }
@@ -115,7 +112,7 @@ unsigned int size(void)
     }
     else
     {
-       return number_of_words;
+        return number_of_words;
     }
 }
 
