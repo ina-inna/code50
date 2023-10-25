@@ -128,5 +128,16 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
+    for (int i = 0; i < N; i++)
+    {
+
+        node *cursor = table[i];
+        node *tmp = table[i];
+        if (current->children[i] != NULL)
+        {
+            unloader(current->children[i]);
+        }
+    }
+
     return false;
 }
