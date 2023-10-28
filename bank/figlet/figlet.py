@@ -15,4 +15,4 @@ elif len(sys.argv) == 2:
 
 
 else:
-         sys.exit("Incorrect usage")
+         sys.exit("Invalid usage")
