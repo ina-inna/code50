@@ -2,7 +2,7 @@ from pyfiglet import Figlet
 
 figlet = Figlet()
 figlet.getFonts()
-figlet.setFont(font=f)
+figlet.setFont(font=sys.argv[1])
 
 
 if len(sys.argv) == 0:
