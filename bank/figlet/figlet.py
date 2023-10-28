@@ -4,10 +4,13 @@ from pyfiglet import Figlet
 
 figlet = Figlet()
 figlet.getFonts()
+figlet.setFont(font=f)
+
 
 if len(sys.argv) == 0:
         text = input ("Input: ")
-        print()
+        print(figlet.renderText(text))
+
 elif len(sys.argv) == 2:
 
 
