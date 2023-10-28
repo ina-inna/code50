@@ -3,14 +3,14 @@ import sys
 from pyfiglet import Figlet
 
 figlet = Figlet()
-list = figlet.getFonts()
+fonts = figlet.getFonts()
 
 
-if len(sys.argv) == 0:
+if len(sys.argv) == 1:
         text = input ("Input: ")
-        figlet.setFont(font=random(list))
+        figlet.setFont(font=random(fonts))
         print(figlet.renderText(text))
-elif len(sys.argv) == 2:
+elif len(sys.argv) == 3:
         if sys.argv[0] != "-f" or "--font" and sys.argv[1] in list:
                 sys.exit("Invalid usage")
         else:
