@@ -1,5 +1,6 @@
 if len(sys.argv) == 0:
-        
+        text = input ("Input: ")
+        print()
 elif len(sys.argv) == 2:
 
 
