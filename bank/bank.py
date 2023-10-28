@@ -1,0 +1,2 @@
+text = input ("Greeting: ")
+if 
