@@ -59,9 +59,10 @@ def calculate(reader):
         state = 'Mark'
         values = new_cases[state] # values = [1,2,3,4,5]
 
+        for i in range(0, len(new_cases[state])):
         for case in new_cases[state]:
-            case = 1
-            case = 2
+            case = 1 #
+            case = 2 #
 
     return new_cases
 
