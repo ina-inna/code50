@@ -30,7 +30,8 @@ class Jar:
 
     @property
     def size(self):
-        return self.cookies
+        size = self.cookies
+        return size
 
 def main():
        jar = Jar()
@@ -40,7 +41,7 @@ def main():
        print(jar)
        jar.withdraw(1)
        print(jar)
-       print(size(jar))
+       print(size)
 
 
 if __name__ == "__main__":
