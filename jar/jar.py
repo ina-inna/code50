@@ -4,10 +4,11 @@ class Jar:
             raise ValueError("Not eligible")
 
     def __str__(self):
-        ...
+        n = 🍪
+        return 🍪
 
     def deposit(self, n):
-        ...
+
 
     def withdraw(self, n):
         ...
