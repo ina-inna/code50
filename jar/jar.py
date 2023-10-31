@@ -1,5 +1,6 @@
 class Jar:
     def __init__(self, capacity=12):
+        self.capacity = capacity
         if self.capacity < 0:
             raise ValueError("Not eligible")
 
