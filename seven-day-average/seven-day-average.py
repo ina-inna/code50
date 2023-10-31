@@ -40,8 +40,7 @@ def calculate(reader):
         key = row[1]
         value = row[3]
         new_cases[key] = value
-
-print(new_cases)
+        print(f"Key: {key}, Value: {value}")
 
 
 
