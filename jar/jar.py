@@ -40,7 +40,7 @@ def main():
        print(jar)
        jar.withdraw(1)
        print(jar)
-       print(size)
+       print(jar.size)
 
 
 if __name__ == "__main__":
