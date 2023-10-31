@@ -46,7 +46,7 @@ def calculate(reader):
         new_cases[state].append(cases)
 
         if len(new_cases[cases]) > 14:
-            new_cases[cases].pop(0)
+            new_cases[cases].pop()
 
 
 # TODO: Calculate and print out seven day average for given state
