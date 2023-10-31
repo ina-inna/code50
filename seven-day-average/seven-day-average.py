@@ -39,7 +39,7 @@ def calculate(reader):
     with open('data.csv', mode='r') as csv_file:
         csv_reader = csv.DictReader(csv_file)
 
-        for row in csv_reader:
+        for row in reversed(csv_reader):
             state = row['state']
             cases = row['cases']
         # new_cases[state] = key
