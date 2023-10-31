@@ -37,8 +37,8 @@ def calculate(reader):
     new_cases = {}
     data = list(reader)
 
+    for row in reversed(data) :
     previous_cases = {}
-    for row in reversed(data) in range(0, 16):
         state = row['state']
             for cases = row['cases']
 
