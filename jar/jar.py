@@ -12,7 +12,7 @@ class Jar:
     def __str__(self):
         cookie = "\U0001F36A"
         n = self.cookies
-        return f"{[cookie * n]}"
+        return f"{cookie * n}"
 
     def deposit(self, n):
         if self.cookies > self.capacity:
