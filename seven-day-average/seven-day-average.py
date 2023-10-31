@@ -39,20 +39,19 @@ def calculate(reader):
 
 
 
-
     for row in reversed(data):
-        if len(new_cases[cases]) <= 14:
-            state = row['state']
-            cases = row['cases']
-            # new_cases[state] = key
-            new_cases[state].append(cases)
-    print(new_cases)
+        state = row['state']
+        cases = row['cases']
+        # new_cases[state] = key
+        new_cases[state].append(cases)
 
+        if len(new_cases[cases]) > 14:
+            new_cases[cases].pop(0)
 
 
 # TODO: Calculate and print out seven day average for given state
 def comparative_averages(new_cases, states):
-    return
+    ...
 
 
 main()
