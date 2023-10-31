@@ -36,20 +36,17 @@ def main():
 def calculate(reader):
     new_cases = {}
 
-    # open a fi
-    with open('data.csv', mode='r') as csv_file:
-        csv_reader = csv.DictReader(csv_file)
 
-        for row in reversed(csv_reader):
-            state = row['state']
-            cases = row['cases']
+    for row in reversed(reader):
+        state = row['state']
+        cases = row['cases']
         # new_cases[state] = key
-            new_cases[state].append(cases)
+        new_cases[state].append(cases)
 
-    if len(new_cases[cases]) > 14:
-        new_cases[cases].pop(0)
-    for state, cases in new_cases.items():
-        print(f"{state}: {cases}")
+        if len(new_cases[cases]) > 14:
+            new_cases[cases].pop(0)
+        for state, cases in new_cases.items():
+            print(f"{state}: {cases}")
 
 
 
