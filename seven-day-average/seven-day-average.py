@@ -60,11 +60,13 @@ def calculate(reader):
 def comparative_averages(new_cases, states):
 
     last_week = 0
-    for state, cases in list(new_cases.items())[:7]:
-        last_week += (sum(cases))/7
     previous_week = 0
-    for state, cases in list(new_cases.items())[8:15]:
-        previous_week += (sum(cases))/7
+    for state in states:
+        for i, cases in list(new_cases.items())[:7]:
+            last_week += (sum(cases))/7
+        previous_week = 0
+        for j, cases in list(new_cases.items())[8:15]:
+            previous_week += (sum(cases))/7
 
 
 
