@@ -53,7 +53,7 @@ def calculate(reader):
             previous_cases[state].pop()
         for state in previous_cases:
             for i in range (0, 14):
-                i = 
+                new_cases[state] = 
 
 
     return new_cases
