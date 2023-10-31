@@ -38,6 +38,10 @@ def main():
        print(str(jar))
        jar.deposit(12)
        print(jar)
+       jar.withdraw(1)
+       print(jar)
+       print(size(jar))
+
 
 if __name__ == "__main__":
     main()
