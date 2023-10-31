@@ -39,8 +39,14 @@ def calculate(reader):
 
     for row in reversed(data) :
     previous_cases = {}
+    for row in reversed(data):
         state = row['state']
-            for cases = row['cases']
+        cases = row['cases']
+        # new_cases[state] = key
+        new_cases[state].append(cases)
+
+        if len(new_cases[cases]) > 14:
+            new_cases[cases].pop(0)
 
 
     for row in reversed(data):
@@ -50,7 +56,7 @@ def calculate(reader):
         new_cases[state].append(cases)
 
         if len(new_cases[cases]) > 14:
-            new_cases[cases].pop(0)
+            new_cases[cases].pop(14)
 
 
 # TODO: Calculate and print out seven day average for given state
