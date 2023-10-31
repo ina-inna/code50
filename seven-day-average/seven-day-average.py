@@ -42,7 +42,7 @@ def calculate(reader):
 
     for row in reversed(data):
         state = row['state']
-        cases = row['cases']
+        cases = int(row['cases'])
         if state not in previous_cases:
             previous_cases[state] = []
         previous_cases[state].append(cases)
@@ -58,7 +58,8 @@ def calculate(reader):
 
 # TODO: Calculate and print out seven day average for given state
 def comparative_averages(new_cases, states):
-    return
+        
+
 
 
 main()
