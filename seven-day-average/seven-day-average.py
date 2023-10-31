@@ -38,10 +38,11 @@ def calculate(reader):
 
     for row in reader in range of 14:
         key = row[1]
-        value = row
+        value = row[3]
+        new_cases[key] = value
 
+print(new_cases)
 
-    }
 
 
 # TODO: Calculate and print out seven day average for given state
