@@ -51,7 +51,9 @@ def calculate(reader):
             new_cases[state].pop()
 
     for states in new_cases:
-        print(states)
+        for case in new_cases[states]:
+            case = 
+
     return new_cases
 
 
