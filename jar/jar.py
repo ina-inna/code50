@@ -36,6 +36,8 @@ def main():
        jar = Jar()
        print(str(jar.capacity))
        print(str(jar))
+       jar.deposit(12)
+       print(jar)
 
 if __name__ == "__main__":
     main()
