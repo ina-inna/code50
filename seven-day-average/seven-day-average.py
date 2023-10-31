@@ -50,6 +50,7 @@ def calculate(reader):
         if len(new_cases[state]) > 15:
             new_cases[state].pop()
 
+
     return new_cases
 
 
