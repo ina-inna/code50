@@ -6,7 +6,7 @@ class Jar:
             raise ValueError("Not eligible")
 
     def __str__(self):
-        cookie = 🍪
+        cookie = '🍪'
         n = self.cookies
         return f"{[cookie * n]}"
 
@@ -27,3 +27,8 @@ class Jar:
     @property
     def size(self):
         return self.cookies
+
+
+    if __name__ == "__main__":
+        jar = Jar()
+        print(str(jar.capacity))
