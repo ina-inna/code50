@@ -36,11 +36,14 @@ def main():
 def calculate(reader):
     new_cases = {}
 
-    for row in reader:
-        state = row['state']
-        cases = row['cases']
-       # new_cases[state] = key
-        new_cases[state].append(cases)
+    with open('data.csv', mode='r') as csv_file:
+        csv_reader = csv.DictReader(csv_file)
+
+        for row in csv_reader:
+            state = row['state']
+            cases = row['cases']
+        # new_cases[state] = key
+            new_cases[state].append(cases)
 
     if len(new_cases[state]) > 14:
         new_cases[state].pop(0)
