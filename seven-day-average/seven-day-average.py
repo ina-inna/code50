@@ -60,8 +60,14 @@ def calculate(reader):
 def comparative_averages(new_cases, states):
 
     for state in states:
-        last_week += sum(new_cases[state][:7])/7
-        previous_week += sum(new_cases[state][8:15])/7
+        last_week = 0
+        previous_week = 0
+        for cases in new_cases[state][:7]:
+            last_week += cases
+        for cases in new_cases[state][8:15]:
+            previous_week += cases
+        last_week /= 7
+        previous_week /= 7
         print(f'{state} had a 7 day average of {last_week} and a decrease of .')
 
 
