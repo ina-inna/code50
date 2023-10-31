@@ -47,22 +47,8 @@ def calculate(reader):
             new_cases[state] = []
         new_cases[state].append(cases)
 
-        if len(new_cases[state]) > 14:
+        if len(new_cases[state]) > 15:
             new_cases[state].pop()
-
-    new_cases = {
-        'Mark': [1,2,3,4,5]
-        'Ina': [5,6,7,8,9]
-    }
-
-    for state in new_cases:
-        state = 'Mark'
-        values = new_cases[state] # values = [1,2,3,4,5]
-
-        for i in range(0, len(new_cases[state])):
-        for case in new_cases[state]:
-            case = 1 #
-            case = 2 #
 
     return new_cases
 
