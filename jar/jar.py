@@ -32,6 +32,9 @@ class Jar:
     def size(self):
         return self.cookies
 
+def main():
+       jar = Jar()
+       print(str(jar.capacity))
 
 if __name__ == "__main__":
     main()
