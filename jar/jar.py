@@ -10,7 +10,7 @@ class Jar:
             raise ValueError("Not eligible")
 
     def __str__(self):
-        cookie = '🍪'
+        cookie = "\U0001F36A"
         n = self.cookies
         return f"{[cookie * n]}"
 
