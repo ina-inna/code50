@@ -67,8 +67,18 @@ def comparative_averages(new_cases, states):
         for cases in new_cases[state][8:15]:
             previous_week += cases
         last_week /= 7
+        last_week = int(last_week)
         previous_week /= 7
-        print(f'{state} had a 7 day average of {last_week} and a decrease of .')
+        previous_week = int(previous_week)
 
+        if previous_week > last_week:
+            try:
+            percent = int(previous_week / last_week)*100
+            print(f'{state} had a 7 day average of {last_week} and a decrease of {percent}.')
+        elif previous_week < last_week
+
+
+
+        print(f'{state} had a 7 day average of {last_week} and a decrease of .')
 
 main()
