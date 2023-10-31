@@ -6,8 +6,9 @@ class Jar:
             raise ValueError("Not eligible")
 
     def __str__(self):
-        n = 🍪
-        return f"{[n]}"
+        cookie = 🍪
+        n = int(n)
+        return f"{[cookie * n]}"
 
     def deposit(self, n):
         if self.cookies > self.capacity:
