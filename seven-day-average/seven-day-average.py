@@ -36,7 +36,7 @@ def main():
 def calculate(reader):
     new_cases = {}
 
-    
+    for 
         "state":
 
 
