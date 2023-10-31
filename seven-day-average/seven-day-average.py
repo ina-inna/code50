@@ -50,8 +50,8 @@ def calculate(reader):
         if len(new_cases[state]) > 14:
             new_cases[state].pop()
 
-
-    print(new_cases)
+    for states in new_cases:
+        print(states)
     return new_cases
 
 
