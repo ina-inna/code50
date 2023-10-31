@@ -7,7 +7,7 @@ class Jar:
 
     def __str__(self):
         n = 🍪
-        return 🍪
+        return f"{[n]}"
 
     def deposit(self, n):
         if self.cookies > self.capacity:
