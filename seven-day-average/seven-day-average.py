@@ -40,6 +40,9 @@ def calculate(reader):
         state = row[1]
         cases = row[3]
         new_cases[state] = key
+    
+
+
 
 
 
