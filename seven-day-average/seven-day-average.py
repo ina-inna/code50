@@ -37,10 +37,9 @@ def calculate(reader):
     new_cases = {}
 
     for row in reader:
-        key = row[1]
-        value = row[3]
-        new_cases[key] = value
-        print(f"Key: {key}, Value: {value}")
+        state = row[1]
+        cases = row[3]
+        new_cases[state] = key
 
 
 
