@@ -36,6 +36,7 @@ def main():
 def calculate(reader):
     new_cases = {}
 
+    # open a fi
     with open('data.csv', mode='r') as csv_file:
         csv_reader = csv.DictReader(csv_file)
 
