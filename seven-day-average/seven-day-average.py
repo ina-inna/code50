@@ -50,9 +50,18 @@ def calculate(reader):
         if len(new_cases[state]) > 14:
             new_cases[state].pop()
 
-    for states in new_cases:
-        for case in new_cases[states]:
-            case = 
+    new_cases = {
+        'Mark': [1,2,3,4,5]
+        'Ina': [5,6,7,8,9]
+    }
+
+    for state in new_cases:
+        state = 'Mark'
+        values = new_cases[state] # values = [1,2,3,4,5]
+
+        for case in new_cases[state]:
+            case = 1
+            case = 2
 
     return new_cases
 
