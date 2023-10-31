@@ -40,18 +40,7 @@ def calculate(reader):
 
 
 
-    for row in reversed(data):
-        state = row['state']
-        cases = row['cases']
-        # new_cases[state] = key
-        if state not in new_cases:
-            new_cases[state] = []
-        new_cases[state].append(cases)
-
-        if len(new_cases[state]) > 15:
-            new_cases[state].pop()
-
-    for 
+    for state in
 
     for row in reversed(data):
         state = row['state']
@@ -60,8 +49,10 @@ def calculate(reader):
             previous_cases[state] = []
         previous_cases[state].append(cases)
 
-        if len(new_cases[state]) > 15:
-            new_cases[state].pop()
+        if len(previous_cases[state]) > 15:
+            previous_cases[state].pop()
+        for state in previous_cases:
+            for i in range (0, 14)
 
 
     return new_cases
