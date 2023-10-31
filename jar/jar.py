@@ -7,7 +7,7 @@ class Jar:
 
     def __str__(self):
         cookie = 🍪
-        n = int(n)
+        n = self.cookies
         return f"{[cookie * n]}"
 
     def deposit(self, n):
