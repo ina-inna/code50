@@ -50,8 +50,7 @@ def calculate(reader):
         for state, cases_list in previous_cases.items():
                 new_cases[state] = [cases.list[i] - cases.list[i+1] for i in range (14)]
 
-
-
+    print(new_cases)
     return new_cases
 
 
