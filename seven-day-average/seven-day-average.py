@@ -40,7 +40,10 @@ def calculate(reader):
         state = row[1]
         cases = row[3]
         new_cases[state] = key
-    
+    new_cases[state].append(cases)
+
+    if len(new_cases[state]) > 14:
+        new_cases[state].pop(0)
 
 
 
