@@ -36,8 +36,9 @@ def main():
 def calculate(reader):
     new_cases = {}
 
-    for 
-        "state":
+    for row in reader in range of 14:
+        key = row[1]
+        value = row
 
 
     }
