@@ -74,12 +74,13 @@ def comparative_averages(new_cases, states):
         if previous_week >= last_week:
             try:
                 percent = int(previous_week / last_week)*100
-                print(f'{state} had a 7 day average of {last_week} and a decrease of {percent}.')
+                print(f'{state} had a 7 day average of {last_week} and a decrease of {percent}%.')
             except ZeroDivisionError:
                 print("Error: Division by zero is not allowed.")
         elif previous_week < last_week:
+            try:
                 percent = int(previous_week / last_week)*100
-                print(f'{state} had a 7 day average of {last_week} and a decrease of {percent}.')
+                print(f'{state} had a 7 day average of {last_week} and a decrease of {percent}%.')
             except ZeroDivisionError:
                 print("Error: Division by zero is not allowed.")
 
