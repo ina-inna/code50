@@ -37,15 +37,15 @@ def calculate(reader):
     new_cases = {}
 
     for row in reader:
-        state = row[1]
-        cases = row[3]
+        state = row[state]
+        cases = row[cases]
         new_cases[state] = key
     new_cases[state].append(cases)
 
     if len(new_cases[state]) > 14:
         new_cases[state].pop(0)
-
-
+    for state, cases in new_cases.items():
+        print(f"{state}: {cases}")
 
 
 
