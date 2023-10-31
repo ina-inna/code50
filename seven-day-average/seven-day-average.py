@@ -35,8 +35,10 @@ def main():
 # TODO: Create a dictionary to store 14 most recent days of new cases by state
 def calculate(reader):
     new_cases = {}
-    data = list(reader)
     previous_cases = {}
+
+    data = list(reader)
+
 
     for row in reversed(data):
         state = row['state']
@@ -47,8 +49,8 @@ def calculate(reader):
 
         if len(previous_cases[state]) > 15:
             previous_cases[state].pop()
-            for state, cases_list in previous_cases.items():
-                new_cases[state] = [cases_list[i] - cases_list[i+1] for i in range (14)]
+    for state, cases_list in previous_cases.items():
+        new_cases[state] = [cases_list[i] - cases_list[i+1] for i in range (14)]
 
     print(new_cases)
     return new_cases
