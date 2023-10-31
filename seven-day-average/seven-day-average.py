@@ -36,7 +36,7 @@ def main():
 def calculate(reader):
     new_cases = {}
 
-    for row in reader in range of 14:
+    for row in reader:
         key = row[1]
         value = row[3]
         new_cases[key] = value
