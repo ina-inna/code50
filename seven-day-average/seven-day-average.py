@@ -47,9 +47,8 @@ def calculate(reader):
 
         if len(previous_cases[state]) > 15:
             previous_cases[state].pop()
-        for state in previous_cases:
-            for i in range (0, 14):
-                new_cases[state] = previous_cases.items()[i] - previous_cases.items()[i+1]
+        for state, cases_list in previous_cases.items():
+                new_cases[state] = [cases.list[i] - cases.list[i+1] for i in range (14)]
 
 
 
