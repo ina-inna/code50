@@ -30,8 +30,7 @@ class Jar:
 
     @property
     def size(self):
-        size = self.cookies
-        return size
+        return self.cookies
 
 def main():
        jar = Jar()
