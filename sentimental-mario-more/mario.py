@@ -11,4 +11,3 @@ while True:
 
 for row in range(n):
     print(" " * (n - row - 1) + "#" * (row + 1) + "  " + "#" * (row + 1))
-
