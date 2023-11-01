@@ -4,11 +4,10 @@ while True:
         n = input("Height: ")
     elif int(n) >= 1 or int(n) <= 8:
         n = int(n)
-        for row in range (n+1):
-            print(" " * (n - row) + "#" * row + " " + "#" * row)
-            break
+        break
     else:
        n = input("Height: ")
 
-
+for row in range(n):
+    print(" " * (n - row - 1) + "#" * (row + 1) + "  " + "#" * (row + 1))
 
