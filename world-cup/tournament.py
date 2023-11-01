@@ -38,10 +38,9 @@ def main():
         victories += victories
         if team_name not in counts:
             counts[team_name] = []
+            
         counts[team_name] = victories
 
-    # a loop
-    # that keeps a count of the winners
 
     # Print each team's chances of winning, according to simulation
     for team in sorted(counts, key=lambda team: counts[team], reverse=True):
