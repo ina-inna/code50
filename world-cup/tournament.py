@@ -21,14 +21,14 @@ def main():
     # Store each team as a dictionary, convert rating into an integer
         football_teams = {}
 
-        data = list(file_reader)
+        # data = list(file_reader)
 
-        for row in data:
+        for row in file_reader:
             team = row['team']
             rating = int(row['rating'])
-            if team not in football_teams:
-                football_teams[team] = []
-            football_teams[team].append(rating)
+            #if team not in football_teams:
+                #football_teams[team] = []
+            football_teams.append({"team": team, "rating": rating})
 
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
