@@ -1,10 +1,10 @@
 
-while answer < 1 or answer > 8:
+while n < 1 or answer > 8:
     answer = input("Height:\n")
 n = int(answer)
 
-for row in range of n:
-    for space in range (n - row - 1)
+for row in range (n):
+    for space in range (n-1, n, -1):
         print(" ")
-    for block in range 
-    print(f"hello, {answer}")
+    for block in range (1, n):
+        print("#")
