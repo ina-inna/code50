@@ -32,14 +32,13 @@ def main():
 
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
-    victories = 0
     for i in range (0, N):
         team_name = simulate_tournament(dict)
-        victories += victories
         if team_name not in counts:
             counts[team_name] = []
-            
-        counts[team_name] = victories
+            counts[team_name] = 1
+        else:
+            counts[team_name] += counts[team_name]
 
 
     # Print each team's chances of winning, according to simulation
