@@ -33,6 +33,9 @@ def main():
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
 
+    for i in range (0, N):
+        
+
     # a loop
     # that keeps a count of the winners
 
