@@ -19,21 +19,17 @@ def main():
     with open(sys.argv[1]) as file:
         file_reader = csv.DictReader(file)
     # Store each team as a dictionary, convert rating into an integer
-        football_teams = {}
-
-        # data = list(file_reader)
-
         for row in file_reader:
             team = row['team']
             rating = int(row['rating'])
-            if team not in football_teams:
-                football_teams[team] = []
-            football_teams[team].append(rating)
+            if team not in teams:
+                teams[team] = []
+            teams[team].append(rating)
 
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
     for i in range (N):
-        team_name = simulate_tournament(football_teams)
+        team_name = simulate_tournament(teams)
         if team_name not in counts:
             #counts[team_name] = []
             counts[team_name] = 1
