@@ -35,7 +35,7 @@ def main():
     for i in range (N):
         team_name = simulate_tournament(football_teams)
         if team_name not in counts:
-            counts[team_name] = []
+            #counts[team_name] = []
             counts[team_name] = 1
         else:
             counts[team_name] += 1
