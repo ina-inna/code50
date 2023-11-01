@@ -1,2 +1,2 @@
-answer = get_string("What is your name")
+answer = input("What is your name?\n")
 print(f"hello, {answer}")
