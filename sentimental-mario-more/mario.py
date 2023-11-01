@@ -6,6 +6,6 @@ if n < 1 or n > 8:
 
 for row in range (n):
     #for space in range (row):
-    print(" " * (n - row - 1) + "#" * row + " " + "#" * row)
+    print(" " * (n - row) + "#" * row + " " + "#" * row)
 
 
