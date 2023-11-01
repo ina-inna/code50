@@ -26,9 +26,9 @@ def main():
         for row in file_reader:
             team = row['team']
             rating = int(row['rating'])
-            #if team not in football_teams:
-                #football_teams[team] = []
-            football_teams.append({"team": team, "rating": rating})
+            if team not in football_teams:
+                football_teams[team] = []
+            football_teams[team].append(rating)
 
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
