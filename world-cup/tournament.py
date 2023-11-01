@@ -16,7 +16,7 @@ def main():
 
     teams = []
     # TODO: Read teams into memory from file
-    with open(sys.argv[1]) as file
+    with open(sys.argv[1]) as file:
         file_reader = csv.DictReader(sys.argv[1])
     # Store each team as a dictionary, convert rating into an integer
         football_teams = {}
