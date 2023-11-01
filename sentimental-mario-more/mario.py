@@ -1,9 +1,14 @@
 while True:
     n = input("Height: ")
-    if n < 1 or n > 8:
+    if not n.isdigit():
         n = input("Height: ")
-    for row in range (n+1):
-        print(" " * (n - row) + "#" * row + " " + "#" * row)
+    elif n.isdigit() and int(n) < 1 or int(n) > 8:
+        n = input("Height: ")
+    else:
+        n = int(n)
+        for row in range (n+1):
+            print(" " * (n - row) + "#" * row + " " + "#" * row)
+            break
 
 
 
