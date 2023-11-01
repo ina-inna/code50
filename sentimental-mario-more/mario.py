@@ -1,9 +1,9 @@
 while True:
     n = input("Height: ")
     if not n.isdigit():
-        n = input("Height: ")
+        print("Invalid input. Please enter an integer between 1 and 8.")
     elif int(n) < 1 or int(n) > 8:
-        n = input("Height: ")
+        print("Invalid input. Please enter an integer between 1 and 8.")
     elif int(n) >= 1 or int(n) <= 8:
         n = int(n)
         break
