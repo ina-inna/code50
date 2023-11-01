@@ -38,7 +38,7 @@ def main():
             counts[team_name] = []
             counts[team_name] = 1
         else:
-            counts[team_name] += counts[team_name]
+            counts[team_name] += 1
 
 
     # Print each team's chances of winning, according to simulation
