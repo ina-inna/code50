@@ -32,9 +32,10 @@ def main():
 
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
-
+    victories = 0
     for i in range (0, N):
         winner = simulate_tournament(dict)
+        victories += victories
         if winner not in counts:
             counts[winner] = []
 
