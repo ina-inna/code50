@@ -6,4 +6,6 @@
 
 # or for american express
 
+# write Luhn's algorithms
+
 # print card's name
