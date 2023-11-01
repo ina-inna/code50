@@ -8,5 +8,5 @@ for row in range (n):
     for space in range (row):
         print(" " * (n - row - 1))
     for block in range (0, n):
-        print("#")
+        print("#" * row)
     print("")
