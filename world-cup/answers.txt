@@ -10,7 +10,7 @@ Times:
 Questions:
 
 Which predictions, if any, proved incorrect as you increased the number of simulations?: as I increased the number of simulations
-from 1000 till 1000000 the distribution hasn't changed
+from 1000 till 1000000 the distribution hasn't changed at all for top6 rankings, whereas for bottom 6 we've seen some small changes.
 
 Suppose you're charged a fee for each second of compute time your program uses.
-After how many simulations would you call the predictions "good enough"?: TODO
+After how many simulations would you call the predictions "good enough"?: 1000 is good enough, numbers after 1000 yield little variation.
