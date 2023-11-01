@@ -1,6 +1,7 @@
 
-while n < 1 or n > 8:
+while True:
     n = input("Height:\n")
+    if not n < 1 or n > 8
 n = int(n)
 
 for row in range (n):
