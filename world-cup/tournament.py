@@ -38,6 +38,7 @@ def main():
         victories += victories
         if winner not in counts:
             counts[winner] = []
+        counts[winner] = victories
 
     # a loop
     # that keeps a count of the winners
