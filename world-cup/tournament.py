@@ -22,8 +22,8 @@ def main():
         for row in file_reader:
             team = row['team']
             rating = int(row['rating'])
-            #if team not in teams:
-                #teams[team] = []
+            if team not in teams:
+                teams[team] = []
             teams.append({"team": team, "rating": rating})
 
     counts = {}
