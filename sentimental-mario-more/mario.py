@@ -5,7 +5,7 @@ while True:
     elif int(n) >= 1 or int(n) <= 8:
         n = int(n)
         break
-    else:
+    elif int(n) < 1 or int(n)< 8:
        n = input("Height: ")
 
 for row in range(n):
