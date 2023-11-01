@@ -35,6 +35,8 @@ def main():
 
     for i in range (0, N):
         winner = simulate_tournament(dict)
+        if winner not in counts:
+            counts[winner] = []
 
     # a loop
     # that keeps a count of the winners
