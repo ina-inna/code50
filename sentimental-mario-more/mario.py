@@ -1,7 +1,7 @@
 
-while n < 1 or answer > 8:
-    answer = input("Height:\n")
-n = int(answer)
+while n < 1 or n > 8:
+    n = input("Height:\n")
+n = int(n)
 
 for row in range (n):
     for space in range (n-1, n, -1):
