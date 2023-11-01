@@ -33,7 +33,7 @@ def main():
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
     for i in range (0, N):
-        team_name = simulate_tournament(dict)
+        team_name = simulate_tournament(football_teams)
         if team_name not in counts:
             counts[team_name] = []
             counts[team_name] = 1
