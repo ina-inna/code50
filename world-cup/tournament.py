@@ -34,11 +34,11 @@ def main():
     # TODO: Simulate N tournaments and keep track of win counts
     victories = 0
     for i in range (0, N):
-        winner = simulate_tournament(dict)
+        team_name = simulate_tournament(dict)
         victories += victories
-        if winner not in counts:
-            counts[winner] = []
-        counts[winner] = victories
+        if team_name not in counts:
+            counts[team_name] = []
+        counts[team_name] = victories
 
     # a loop
     # that keeps a count of the winners
