@@ -53,7 +53,16 @@ def simulate_tournament(teams):
     """Simulate a tournament. Return name of winning team."""
     # TODO
     #Simulate games to identify a winner
-    
+    winners = []
+    while len(winners) > 1:
+        for i in range(0, len(teams), 2):
+        if simulate_game(teams[i], teams[i + 1]):
+            winners.append(teams[i])
+        else:
+            winners.append(teams[i + 1])
+
+    return winners
+
 
 
 if __name__ == "__main__":
