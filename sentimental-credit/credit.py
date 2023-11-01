@@ -1,4 +1,5 @@
 # prompt for user input
+card_number = input("Number: ")
 
 # check if it's valid for mastercard
 
