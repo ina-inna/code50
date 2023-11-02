@@ -52,8 +52,8 @@ def main():
     for name in database:
         if database[name] == counts:
             print(name)
-        else:
-            print
+    else:
+        print("No match")
 
     return
 
