@@ -37,7 +37,7 @@ def main():
 
     # TODO: Find longest match of each STR in DNA sequence
     #DNA = ['AGATC', 'TTTTTTCT', 'AATG', 'TCTAG', 'GATA', 'TATC', 'GAAA', 'TCTG']
-    print(DNA_names)
+    DNA_names = list(my_dict.keys())
     counts = {}
     for name in DNA_names in range (1, len(DNA_names)):
         result = longest_match(sequence_txt, name)
