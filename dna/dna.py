@@ -16,9 +16,9 @@ def main():
         # Store each team as a dictionary, convert rating into an integer
         for row in file_reader:
             name = row["name"]
-            rating = int(row["rating"])
-            if name not in teams:
-                database.append({"team": team, "rating": rating})
+            sequence = row["sequence"]
+            if name not in database:
+                database.append({"name": name, "sequnce": sequence})
 
     # TODO: Read DNA sequence file into a variable
 
