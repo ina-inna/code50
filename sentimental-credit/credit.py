@@ -6,10 +6,11 @@ if len(card_number) is not (13, 15, 16):
     print("INVALID")
 
 # or for visa
-elif len(card_number) is 16 and (card_number[0] + card_number[1]) is (51, 52, 53, 54, 55):
+elif len(card_number) is 16 and card_number[0] is 5 and card_number[1] is (1, 2, 3, 4, 5):
     n = len(card_number)
     sum_of_numbers_1 = 0
     for i in range (n-1, 0, -2):
+        card_number[i] = int(card_number[i])
         card_number[i] = card_number[i] * 2
         if card_number[i] > 9:
             sum_of_numbers += card_number[i]
@@ -18,6 +19,7 @@ elif len(card_number) is 16 and (card_number[0] + card_number[1]) is (51, 52, 53
 
     sum_of_numbers_2 = 0
     for i in range (n, 0, -2):
+        card_number[i] = int(card_number[i])
         sum_of_numbers_2 += card_number[i]
 
     final_sum = sum_of_numbers_1 + sum_of_numbers_2
