@@ -9,8 +9,8 @@ if len(card_number) not in (13, 15, 16):
 elif len(card_number) == 16 and card_number[0] == '5' and card_number[1] in ('1', '2', '3', '4', '5'):
     n = len(card_number)
     sum_of_numbers_1 = 0
+    card_number = int(card_number)
     for i in range (n-1, 0, -2):
-        card_number[i] = int(card_number[i])
         card_number[i] = card_number[i] * 2
         if card_number[i] > 9:
             sum_of_numbers += card_number[i]
