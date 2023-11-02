@@ -30,8 +30,9 @@ def main():
         print(database)
     # TODO: Read DNA sequence file into a variable
     with open(sys.argv[2]) as file2:
-        sequence= csv.DictReader(file2)
+        sequence = file2.read()
 
+    print(sequence)
 
     # TODO: Find longest match of each STR in DNA sequence
 
