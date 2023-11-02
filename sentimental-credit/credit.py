@@ -8,9 +8,8 @@ if len(card_number) is not (13, 15, 16):
 # or for visa
 elif len(card_number) is 16 and card_number[0] + card_number[1] is (51, 52, 53, 54, 55):
     n = len(card_number)
-    for i in range (n+1, len(card_number), -2):
-        sum_of_digits = 0
-        sum_of_digits += card_number[i] * 2
+    for i in range (n-1, 0, -2):
+        card_number[i] = card_number[i] * 2
 
 # or for american express
 
