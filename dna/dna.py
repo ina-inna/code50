@@ -10,6 +10,7 @@ def main():
 
     # TODO: Read database file into a variable
     database = {}
+    DNA_names = []
     with open(sys.argv[1]) as file:
         file_reader = csv.DictReader(file)
         # Store each name as a dictionary
@@ -36,19 +37,15 @@ def main():
 
     # TODO: Find longest match of each STR in DNA sequence
     #DNA = ['AGATC', 'TTTTTTCT', 'AATG', 'TCTAG', 'GATA', 'TATC', 'GAAA', 'TCTG']
-    with open(sys.argv[1]) as file:
-        file_reader = csv.DictReader(file)
-        DNA_names = next(file_reader)
-        print(DNA_names)
-        counts = {}
-        for name in DNA_names in range (1, len(DNA_names)):
-
-            result = longest_match(sequence_txt, name)
-
-            if name not in counts:
-                counts[name] = []
+    DNA_names = list(column_name)
+    print(DNA_names)
+    counts = {}
+    for name in DNA_names in range (1, len(DNA_names)):
+        result = longest_match(sequence_txt, name)
+        if name not in counts:
+            counts[name] = []
             counts[name].append(result)
-            print(counts)
+    print(counts)
 
 
 
