@@ -10,10 +10,9 @@ def main():
 
     # TODO: Read database file into a variable
     database = []
-    # TODO: Read teams into memory from file
     with open(sys.argv[1]) as file:
         file_reader = csv.DictReader(file)
-        # Store each team as a dictionary, convert rating into an integer
+        # Store each name as a dictionary
         for row in file_reader:
             name = row["name"]
             sequence = row["sequence"]
