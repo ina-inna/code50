@@ -9,7 +9,7 @@ def main():
         sys.exit("Usage: python dna.py database sequence")
 
     # TODO: Read database file into a variable
-    database = []
+    database = {}
     with open(sys.argv[1]) as file:
         file_reader = csv.DictReader(file)
         # Store each name as a dictionary
@@ -20,7 +20,10 @@ def main():
             for column_name in row.keys():
                 if column_name != 'name':
                     number_sequences = []
-                    for 
+                    for value in column_values:
+                        if value:
+                            number_sequences.append(int(value))
+                    database[column_name] = number_sequences
 
             if name in database:
                 database[name].update(sequences)
