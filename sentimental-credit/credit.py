@@ -24,7 +24,7 @@ elif len(card_number) == 16 and card_number[0] == '5' and card_number[1] in ('1'
 
     final_sum = sum_of_numbers_1 + sum_of_numbers_2
     if final_sum % 10 == 0:
-        print("MASTERCARD\n")
+        print("MASTERCARD")
 
 
 
