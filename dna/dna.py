@@ -15,9 +15,12 @@ def main():
         # Store each name as a dictionary
         for row in file_reader:
             name = row["name"]
-            sequence = row["sequence"]
-            if name not in database:
-                database.append({"name": name, "sequnce": sequence})
+
+            
+        if name in database:
+            database[name].update(values)
+        else:
+            database[name] = values
 
     # TODO: Read DNA sequence file into a variable
 
