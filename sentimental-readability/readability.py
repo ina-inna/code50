@@ -10,6 +10,7 @@ def main():
     l = round((letters / words) * 100)
     s = round((sentences / words) * 100)
     index = 0.0588 * l - 0.296 * s - 15.8
+    print(index)
     if index > 16:
         printf("Grade 16+\n")
 
@@ -27,6 +28,7 @@ def count_letters(user_text):
     for i in range (len(user_text)):
         if user_text[i] >= 'a' and user_text[i] <= 'z' or user_text[i] >= 'A' and user_text[i] <= 'Z':
             count += 1
+    print(count)
     return count
 
 
@@ -35,6 +37,7 @@ def count_words(user_text):
     for i in range (len(user_text)):
         if user_text[i] == ' ':
            count += 1
+    print(count)
     return count
 
 
@@ -43,6 +46,7 @@ def count_sentences(user_text):
     for i in range (len(user_text)):
         if user_text[i] == '.' or user_text[i] == '!' or user_text[i] == '?':
             count += 1
+    print(count)
     return count
 
 main()
