@@ -28,25 +28,19 @@ def main():
                         if value:
                             number_sequences.append(int(value))
                     database[name][column_name] = number_sequences
-        print(database)
     # TODO: Read DNA sequence file into a variable
     with open(sys.argv[2]) as file2:
         sequence_txt = file2.read()
 
-    print(sequence_txt)
-
     # TODO: Find longest match of each STR in DNA sequence
     #DNA = ['AGATC', 'TTTTTTCT', 'AATG', 'TCTAG', 'GATA', 'TATC', 'GAAA', 'TCTG']
     DNA_names = list(database[name].keys())
-    print(DNA_names)
     counts = {}
     for name in DNA_names:
         result = longest_match(sequence_txt, name)
         if name not in counts:
             counts[name] = []
             counts[name].append(result)
-    print(counts)
-
 
     # TODO: Check database for matching profiles
     for name in database:
