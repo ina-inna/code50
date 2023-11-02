@@ -1,8 +1,4 @@
-import nltk
-
-nltk.download('punkt')
-
-from nltk.tokenize import word_tokenize
+import re
 
 def main():
     #prompt user for an input
@@ -41,7 +37,7 @@ def count_letters(user_text):
 
 
 def count_words(user_text):
-    words = word_tokenize(user_text)
+    words = re.findall(r"\S+|[\w']+", user_text)
     processed_words = []
     for word in words:
         if word.strip() != "":
