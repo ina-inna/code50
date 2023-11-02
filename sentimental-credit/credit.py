@@ -32,6 +32,9 @@ def main():
         else:
             print("INVALID")
 
+    else:
+        print("INVALID")
+
 
 
 # function for sum calculation
