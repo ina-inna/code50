@@ -7,8 +7,8 @@ def main():
     words = count_words(text)
     sentences = count_sentences(text)
 
-    l = (letters / words) * 100
-    s = (sentences / words) * 100
+    l = round((letters / words) * 100)
+    s = round((sentences / words) * 100)
     index = 0.0588 * l - 0.296 * s - 15.8
     if index > 16:
         printf("Grade 16+\n")
