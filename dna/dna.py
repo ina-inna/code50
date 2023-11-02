@@ -22,8 +22,6 @@ def main():
 
             for column_name in row.keys():
                 if column_name != 'name':
-                        if column_name not in DNA_names:
-                            DNA_names.append(column_name)
                     column_values = row[column_name].split(',') if row[column_name] else []
                     number_sequences = []
                     for value in column_values:
