@@ -40,16 +40,12 @@ def main():
     DNA_names = list(database[name].keys())
     print(DNA_names)
     counts = {}
-    n = len(DNA_names)
-    for name in DNA_names in range (n):
+    for name in DNA_names:
         result = longest_match(sequence_txt, name)
         if name not in counts:
             counts[name] = []
             counts[name].append(result)
     print(counts)
-
-
-
 
 
     # TODO: Check database for matching profiles
