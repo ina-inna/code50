@@ -16,6 +16,9 @@ def main():
         for row in file_reader:
             name = row["name"]
 
+            if name not in database:
+            database[name] = {}
+
             sequences = {}
             for column_name in row.keys():
                 if column_name != 'name':
@@ -25,11 +28,6 @@ def main():
                         if value:
                             number_sequences.append(int(value))
                     database[column_name] = number_sequences
-
-            if name in database:
-                database[name].update(sequences)
-            else:
-                database[name] = sequences
         print(database)
 
 
