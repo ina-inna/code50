@@ -24,24 +24,24 @@ def main():
 def count_letters(user_text):
 
     count = 0
-    for i in range len(user_text)
-        if user_text[i] >= 'a' and user_text[i] <= 'z' or user_text[i] >= 'A' and user_text[i] <= 'Z'
-        count += 1
+    for i in range (len(user_text)):
+        if user_text[i] >= 'a' and user_text[i] <= 'z' or user_text[i] >= 'A' and user_text[i] <= 'Z':
+            count += 1
     return count
 
 
 def count_words(user_text):
-    int count = 0
-    for i in range len(user_text)
-        if user_text[i] == ' ' or text[i] == '\0'
+    count = 0
+    for i in range (len(user_text)):
+        if user_text[i] == ' ' or text[i] == '\0':
            count += 1
     return count
 
 
 def count_sentences(user_text):
-    int count = 0
-    for i in range len(user_text)
-        if user_text[i] == '.' or user_text[i] == '!' or user_text[i] == '?'
+    count = 0
+    for i in range (len(user_text)):
+        if user_text[i] == '.' or user_text[i] == '!' or user_text[i] == '?':
             count += 1
     return count
 
