@@ -12,6 +12,7 @@ elif len(card_number) is 16 and card_number[0] + card_number[1] is (51, 52, 53, 
     for i in range (n-1, 0, -2):
         card_number[i] = card_number[i] * 2
         list_of_numbers.append(card_number[i])
+        for n
 
 # or for american express
 
