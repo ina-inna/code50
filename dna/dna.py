@@ -30,17 +30,18 @@ def main():
         print(database)
     # TODO: Read DNA sequence file into a variable
     with open(sys.argv[2]) as file2:
-        sequence = file2.read()
+        sequence_txt = file2.read()
 
-    print(sequence)
+    print(sequence_txt)
 
     # TODO: Find longest match of each STR in DNA sequence
     #DNA = ['AGATC', 'TTTTTTCT', 'AATG', 'TCTAG', 'GATA', 'TATC', 'GAAA', 'TCTG']
     DNA_sequences = next(csv_reader)
 
-    for DNA_sequences in range (1, len(DNA_sequences)):
+    for i in DNA_sequences in range (1, len(DNA_sequences)):
         DNA_results = []
-        
+        result = longest_match(sequence_txt, DNA_sequences[i])
+
 
 
 
