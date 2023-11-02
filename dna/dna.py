@@ -19,8 +19,9 @@ def main():
             sequences = {}
             for column_name in row.keys():
                 if column_name != 'name':
-                    column_values = row[column.name].split if row[column_name] else []
-                    sequences[column_name] =
+                    number_sequences = []
+                    for 
+
             if name in database:
                 database[name].update(sequences)
             else:
