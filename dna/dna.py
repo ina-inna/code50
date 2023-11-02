@@ -3,7 +3,6 @@ import sys
 
 
 def main():
-
     # TODO: Check for command-line usage
     if len(sys.argv) != 3:
         sys.exit("Usage: python dna.py database sequence")
@@ -21,14 +20,15 @@ def main():
 
             # Store DNA sequences as a dictionary for each name
             for column_name in row.keys():
-                if column_name != 'name':
-                    column_values = row[column_name].split(',') if row[column_name] else []
+                if column_name != "name":
+                    column_values = (
+                        row[column_name].split(",") if row[column_name] else []
+                    )
                     number_sequences = []
                     for value in column_values:
                         if value:
                             number_sequences.append(int(value))
                     database[name][column_name] = number_sequences
-            print(database)
     # TODO: Read DNA sequence file into a variable
     with open(sys.argv[2]) as file2:
         sequence_txt = file2.read()
@@ -51,7 +51,6 @@ def main():
         print("No match")
 
 
-
 def longest_match(sequence, subsequence):
     """Returns length of longest run of subsequence in sequence."""
     # Initialize variables
@@ -61,7 +60,6 @@ def longest_match(sequence, subsequence):
 
     # Check each character in sequence for most consecutive runs of subsequence
     for i in range(sequence_length):
-
         # Initialize count of consecutive runs
         count = 0
 
@@ -69,7 +67,6 @@ def longest_match(sequence, subsequence):
         # If a match, move substring to next potential match in sequence
         # Continue moving substring and checking for matches until out of consecutive matches
         while True:
-
             # Adjust substring start and end
             start = i + count * subsequence_length
             end = start + subsequence_length
