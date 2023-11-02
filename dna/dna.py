@@ -16,7 +16,8 @@ def main():
         for row in file_reader:
             name = row["name"]
 
-            
+            sequences = {}
+            for column.name in row
         if name in database:
             database[name].update(values)
         else:
