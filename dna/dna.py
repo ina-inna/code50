@@ -40,7 +40,8 @@ def main():
     DNA_names = list(database[name].keys())
     print(DNA_names)
     counts = {}
-    for name in DNA_names in range (1, len(DNA_names)):
+    n = len(DNA_names)
+    for name in DNA_names in range (n):
         result = longest_match(sequence_txt, name)
         if name not in counts:
             counts[name] = []
