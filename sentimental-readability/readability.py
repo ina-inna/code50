@@ -3,17 +3,10 @@ def main()
     #prompt user for an input
     text = input("Text: ")
 
-    #count and print letters
-    count_letters(text);
-    #count and print words
-    count_words(text);
-    #count and print sentences
-    count_sentences(text);
-
     #compute a grade using the given formula
-    float letters = (float) count_letters(text)
-    float words = (float) count_words(text)
-    float sentences = (float) count_sentences(text)
+    letters = count_letters(text)
+    words = count_words(text)
+    sentences = count_sentences(text)
 
     l = (letters / words) * 100
     s = (sentences / words) * 100
@@ -29,7 +22,6 @@ def main()
         printf(f"Grade {rounded}\n")
 
 
-
 def count_letters(user_text):
 
     count = 0
@@ -39,26 +31,19 @@ def count_letters(user_text):
     return count
 
 
-def count_words(user_text)
-
+def count_words(user_text):
     int count = 0
     for i in range len(user_text)
-        if user_text[i] == ' ' or (text[i] == '\0'))
+        if user_text[i] == ' ' or text[i] == '\0'
            count += 1
     return count
 
 
-int count_sentences(string text)
-{
-    int count = 0;
-    int length = strlen(text);
-    for (int i = 0; i < length; i++)
-    {
-        if ((text[i] == '.') || (text[i] == '!') || (text[i] == '?'))
-        {
-            count++;
-        }
-    }
-    printf("%d", count);
-    return count;
-}
+def count_sentences(user_text):
+    int count = 0
+    for i in range len(user_text)
+        if user_text[i] == '.' or user_text[i] == '!' or user_text[i] == '?'
+            count += 1
+    return count
+
+main()
