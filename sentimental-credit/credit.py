@@ -6,7 +6,9 @@ if len(card_number) is not (13, 15, 16):
     print("INVALID")
 
 # or for visa
-elif card_number[0] is 4
+elif len(card_number) is 16 and card_number[0] + card_number[1] is (51, 52, 53, 54, 55):
+    for i in range (0, len(card_number), 2):
+        
 
 # or for american express
 
