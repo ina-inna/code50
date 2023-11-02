@@ -51,7 +51,7 @@ def count_words(user_text):
 def count_sentences(user_text):
     count = 0
     for i in range (len(user_text)):
-        if user_text[i] == '.' or user_text[i] == '!' or user_text[i] == '?'or user_text[i] == 've':
+        if user_text[i] == '.' or user_text[i] == '!' or user_text[i] == '?':
             count += 1
     print(count)
     return count
