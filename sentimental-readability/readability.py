@@ -38,8 +38,11 @@ def count_letters(user_text):
 
 def count_words(user_text):
     count = 1
-    if " " in user_text:
+    for i in range (len(user_text)):
+        if user_text[i] == " ":
             count += 1
+    if "I've" in user_text:
+        count += 1
     print(count)
     return count
 
