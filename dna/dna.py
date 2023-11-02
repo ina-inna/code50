@@ -9,6 +9,16 @@ def main():
         sys.exit("Usage: python dna.py database sequence")
 
     # TODO: Read database file into a variable
+    teams = []
+    # TODO: Read teams into memory from file
+    with open(sys.argv[1]) as file:
+        file_reader = csv.DictReader(file)
+        # Store each team as a dictionary, convert rating into an integer
+        for row in file_reader:
+            team = row["team"]
+            rating = int(row["rating"])
+            if team not in teams:
+                teams.append({"team": team, "rating": rating})
 
     # TODO: Read DNA sequence file into a variable
 
