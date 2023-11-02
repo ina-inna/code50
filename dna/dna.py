@@ -19,6 +19,7 @@ def main():
             sequences = {}
             for column_name in row.keys():
                 if column_name != 'name':
+                    column_values = row[column_name].split(',') if row[column_name] else []
                     number_sequences = []
                     for value in column_values:
                         if value:
@@ -29,12 +30,8 @@ def main():
                 database[name].update(sequences)
             else:
                 database[name] = sequences
+        print(database)
 
-    # TODO: Read DNA sequence file into a variable
-
-    # TODO: Find longest match of each STR in DNA sequence
-
-    # TODO: Check database for matching profiles
 
     return
 
