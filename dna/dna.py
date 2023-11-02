@@ -40,10 +40,10 @@ def main():
     counts = {}
     for name in DNA_names in range (1, len(DNA_names)):
 
-        result = longest_match(sequence_txt, DNA_names[i])
+        result = longest_match(sequence_txt, name)
 
         if name not in counts:
-            counts[name] = 1
+            counts[name] = []
 
 
 
