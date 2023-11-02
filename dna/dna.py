@@ -39,7 +39,9 @@ def main():
     DNA_sequences = next(csv_reader)
 
     for DNA_sequences in range (1, len(DNA_sequences)):
+        DNA_results = []
         
+
 
 
 
