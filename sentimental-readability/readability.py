@@ -1,5 +1,4 @@
-def main()
-
+def main():
     #prompt user for an input
     text = input("Text: ")
 
