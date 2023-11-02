@@ -33,7 +33,6 @@ def main():
         sequence_txt = file2.read()
 
     # TODO: Find longest match of each STR in DNA sequence
-    #DNA = ['AGATC', 'TTTTTTCT', 'AATG', 'TCTAG', 'GATA', 'TATC', 'GAAA', 'TCTG']
     DNA_names = list(database[name].keys())
     counts = {}
     for name in DNA_names:
@@ -54,7 +53,6 @@ def main():
 
 def longest_match(sequence, subsequence):
     """Returns length of longest run of subsequence in sequence."""
-
     # Initialize variables
     longest_run = 0
     subsequence_length = len(subsequence)
