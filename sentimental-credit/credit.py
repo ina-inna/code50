@@ -25,8 +25,6 @@ elif len(card_number) == 16 and card_number[0] == '5' and card_number[1] in ('1'
     final_sum = sum_of_numbers_1 + sum_of_numbers_2
     if final_sum % 10 == 0:
         print("MASTERCARD")
-    else:
-        print("INVALID")
 
 elif len(card_number) == 15 and card_number[0] == '3' and card_number[1] in ('4', '7'):
     n = len(card_number)
@@ -38,6 +36,7 @@ elif len(card_number) == 15 and card_number[0] == '3' and card_number[1] in ('4'
             sum_of_numbers_1 += x/10 + x % 10
         else:
             sum_of_numbers_1 += x
+        print(f'{sum_of_numbers_1}')
 
     sum_of_numbers_2 = 0
     for i in range (n-1, 0, -2):
@@ -47,8 +46,7 @@ elif len(card_number) == 15 and card_number[0] == '3' and card_number[1] in ('4'
     final_sum = sum_of_numbers_1 + sum_of_numbers_2
     if final_sum % 10 == 0:
         print("AMEX")
-    else:
-        print("INVALID")
+
 
 
 # or for american express
