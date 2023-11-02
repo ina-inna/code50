@@ -1,3 +1,5 @@
+import re
+
 def main():
     #prompt user for an input
     text = input("Text: ")
@@ -35,6 +37,10 @@ def count_letters(user_text):
 
 
 def count_words(user_text):
+    words = re.findall(r'\S+|\s+', user_text)
+    processed_words = []
+    if word
+
     count = 1
     for i in range (len(user_text)):
         if user_text[i] == " ":
