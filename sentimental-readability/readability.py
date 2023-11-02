@@ -37,13 +37,10 @@ def count_letters(user_text):
 
 
 def count_words(user_text):
-    pattern = r"\b\w+(?:'\w+)?\b"
-    words = re.findall(pattern, user_text)
-    processed_words = []
-    for word in words:
-        if word.strip() != "":
-            processed_words.append(word.strip())
-    count = len(processed_words)
+    count = 0
+    for i in range (len(user_text)):
+        if user_text[i] == ' ' or user_text[i] == 'U+0027ve':
+            count += 1
     print(count)
     return count
 
