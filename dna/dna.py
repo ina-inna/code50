@@ -17,11 +17,14 @@ def main():
             name = row["name"]
 
             sequences = {}
-            for column.name in row
-        if name in database:
-            database[name].update(values)
-        else:
-            database[name] = values
+            for column_name in row.keys():
+                if column_name != 'name':
+                    column_values = row[column.name].split if row[column_name] else []
+                    sequences[column_name] =
+            if name in database:
+                database[name].update(sequences)
+            else:
+                database[name] = sequences
 
     # TODO: Read DNA sequence file into a variable
 
