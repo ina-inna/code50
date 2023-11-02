@@ -13,13 +13,14 @@ elif len(card_number) == 16 and card_number[0] == '5' and card_number[1] in ('1'
         digit = int(card_number[i])
         x = digit * 2
         if x > 9:
-            sum_of_numbers = x/10 + x % 10
+            sum_of_numbers_1 = x/10 + x % 10
         else:
-            sum_of_numbers += x
+            sum_of_numbers_1 += x
 
     sum_of_numbers_2 = 0
     for i in range (n, 0, -2):
-        sum_of_numbers_2 += card_number[i]
+        digit = int(card_number[i])
+        sum_of_numbers_2 += digit
 
     final_sum = sum_of_numbers_1 + sum_of_numbers_2
     if final_sum % 10 == 0:
