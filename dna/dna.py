@@ -28,6 +28,7 @@ def main():
                         if value:
                             number_sequences.append(int(value))
                     database[name][column_name] = number_sequences
+            print(database)
     # TODO: Read DNA sequence file into a variable
     with open(sys.argv[2]) as file2:
         sequence_txt = file2.read()
