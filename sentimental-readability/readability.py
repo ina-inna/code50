@@ -14,7 +14,7 @@ def main():
     index = 0.0588 * l - 0.296 * s - 15.8
     print(index)
     if index > 16:
-        printf("Grade 16+\n")
+        print("Grade 16+\n")
 
     elif index < 1:
         print("Before Grade 1\n")
