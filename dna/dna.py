@@ -19,7 +19,6 @@ def main():
             if name not in database:
                 database[name] = {}
 
-            sequences = {}
             for column_name in row.keys():
                 if column_name != 'name':
                     column_values = row[column_name].split(',') if row[column_name] else []
