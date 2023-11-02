@@ -44,6 +44,7 @@ def main():
 
         if name not in counts:
             counts[name] = []
+        counts[name].append(result)
 
 
 
