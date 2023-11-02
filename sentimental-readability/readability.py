@@ -33,7 +33,7 @@ def count_letters(user_text):
 def count_words(user_text):
     count = 0
     for i in range (len(user_text)):
-        if user_text[i] == ' ' or text[i] == '\0':
+        if user_text[i] == ' ' or user_text[i] == '\0':
            count += 1
     return count
 
