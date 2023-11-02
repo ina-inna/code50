@@ -50,7 +50,10 @@ def main():
 
     # TODO: Check database for matching profiles
     for name in database:
-        
+        if database[name] == counts:
+            print(name)
+        else:
+            print
 
     return
 
