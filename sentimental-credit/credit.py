@@ -56,6 +56,8 @@ elif len(card_number) == 15 and card_number[0] == '3' and card_number[1] in ('4'
 
 # function for sum calculation
 
+def calculate_sum(number)
+    
 # or for american express
 
 # write Luhn's algorithms
