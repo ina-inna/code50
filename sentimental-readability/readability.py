@@ -34,24 +34,19 @@ def count_letters(user_text):
 
     count = 0
     for i in range len(user_text)
-        if text[i] >= 'a' and text[i] <= 'z' or text[i] >= 'A' and text[i] <= 'Z'
+        if user_text[i] >= 'a' and user_text[i] <= 'z' or user_text[i] >= 'A' and user_text[i] <= 'Z'
         count += 1
     return count
 
 
-int count_words(string text)
-{
-    int count = 0;
-    int length = strlen(text);
-    for (int i = 0; i <= length; i++)
-    {
-        if ((text[i] == ' ') || (text[i] == '\0'))
-        {
-            count++;
-        }
-    }
-    return count;
-}
+def count_words(user_text)
+
+    int count = 0
+    for i in range len(user_text)
+        if user_text[i] == ' ' or (text[i] == '\0'))
+           count += 1
+    return count
+
 
 int count_sentences(string text)
 {
