@@ -45,6 +45,7 @@ elif len(card_number) == 15 and card_number[0] == '3' and card_number[1] in ('4'
         print(f'{sum_of_numbers_2}')
 
     final_sum = sum_of_numbers_1 + sum_of_numbers_2
+    print(f'{final_sum}')
     if final_sum % 10 == 0:
         print("AMEX")
 
