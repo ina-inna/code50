@@ -17,8 +17,8 @@ def main():
         print("Before Grade 1\n")
 
     else:
-        rounded = (int) round(index)
-        printf(f"Grade {rounded}\n")
+        rounded = round(index)
+        print(f"Grade {rounded}")
 
 
 def count_letters(user_text):
