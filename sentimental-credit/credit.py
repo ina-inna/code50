@@ -1,31 +1,33 @@
 # prompt for user input
-card_number = input("Number: ")
+def main():
 
-# check if it's valid for mastercard
-if len(card_number) not in (13, 15, 16):
-    print("INVALID")
+    card_number = input("Number: ")
 
-# or for mastercard
-elif len(card_number) == 16 and card_number[0] == '5' and card_number[1] in ('1', '2', '3', '4', '5'):
-
-    final_sum = calculate_sum(card_number)
-    if final_sum % 10 == 0:
-        print("MASTERCARD")
-    else:
+    # check if it's valid for mastercard
+    if len(card_number) not in (13, 15, 16):
         print("INVALID")
 
-elif len(card_number) == 15 and card_number[0] == '3' and card_number[1] in ('4', '7'):
+    # or for mastercard
+    elif len(card_number) == 16 and card_number[0] == '5' and card_number[1] in ('1', '2', '3', '4', '5'):
 
-    final_sum = calculate_sum(card_number)
-    if final_sum % 10 == 0:
-        print("AMEX")
-    else:
-        print("INVALID")
+        final_sum = calculate_sum(card_number)
+        if final_sum % 10 == 0:
+            print("MASTERCARD")
+        else:
+            print("INVALID")
+
+    elif len(card_number) == 15 and card_number[0] == '3' and card_number[1] in ('4', '7'):
+
+        final_sum = calculate_sum(card_number)
+        if final_sum % 10 == 0:
+            print("AMEX")
+        else:
+            print("INVALID")
 
 
 # function for sum calculation
 
-def calculate_sum(number)
+def calculate_sum(number):
     n = len(number)
     sum_of_numbers_1 = 0
     for i in range (n-2, -1, -2):
@@ -45,6 +47,8 @@ def calculate_sum(number)
 
     result = sum_of_numbers_1 + sum_of_numbers_2
     return result
+
+main()
 
 # or for american express
 
