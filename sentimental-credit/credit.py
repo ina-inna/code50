@@ -2,7 +2,7 @@
 card_number = input("Number: ")
 
 # check if it's valid for mastercard
-if len(card_number) is not (13, 15, 16):
+if len(card_number) not in (13, 15, 16):
     print("INVALID")
 
 # or for visa
