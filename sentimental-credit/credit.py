@@ -24,6 +24,15 @@ def main():
         else:
             print("INVALID")
 
+    elif len(card_number) in (13, 16) and card_number[0] == '4':
+
+        final_sum = calculate_sum(card_number)
+        if final_sum % 10 == 0:
+            print("VISA")
+        else:
+            print("INVALID")
+
+
 
 # function for sum calculation
 
