@@ -1,5 +1,3 @@
-import re
-
 
 def main():
     # prompt user for an input
@@ -11,11 +9,8 @@ def main():
     sentences = count_sentences(text)
 
     l = round((letters / words) * 100)
-    print(l)
     s = round((sentences / words) * 100)
-    print(s)
     index = 0.0588 * l - 0.296 * s - 15.8
-    print(index)
     if index > 16:
         print("Grade 16+\n")
 
@@ -37,7 +32,6 @@ def count_letters(user_text):
             and user_text[i] <= "Z"
         ):
             count += 1
-    print(count)
     return count
 
 
@@ -48,7 +42,6 @@ def count_words(user_text):
             count += 1
     if "I've" in user_text:
         count += 1
-    print(count)
     return count
 
 
@@ -57,7 +50,6 @@ def count_sentences(user_text):
     for i in range(len(user_text)):
         if user_text[i] == "." or user_text[i] == "!" or user_text[i] == "?":
             count += 1
-    print(count)
     return count
 
 
