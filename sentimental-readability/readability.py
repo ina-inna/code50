@@ -8,7 +8,9 @@ def main():
     sentences = count_sentences(text)
 
     l = round((letters / words) * 100)
+    print(l)
     s = round((sentences / words) * 100)
+    print(s)
     index = 0.0588 * l - 0.296 * s - 15.8
     print(index)
     if index > 16:
