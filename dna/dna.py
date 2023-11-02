@@ -17,7 +17,7 @@ def main():
             name = row["name"]
 
             if name not in database:
-            database[name] = {}
+                database[name] = {}
 
             sequences = {}
             for column_name in row.keys():
@@ -27,7 +27,7 @@ def main():
                     for value in column_values:
                         if value:
                             number_sequences.append(int(value))
-                    database[column_name] = number_sequences
+                    database[name][column_name] = number_sequences
         print(database)
 
 
