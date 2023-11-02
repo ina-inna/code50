@@ -52,10 +52,10 @@ def main():
     for name in database:
         if database[name] == counts:
             print(name)
+            return
     else:
         print("No match")
 
-    return
 
 
 def longest_match(sequence, subsequence):
