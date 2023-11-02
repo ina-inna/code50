@@ -33,7 +33,7 @@ elif len(card_number) == 15 and card_number[0] == '3' and card_number[1] in ('4'
         digit = int(card_number[i])
         x = digit * 2
         if x > 9:
-            sum_of_numbers_1 += (x//10 + x % 10) % 10
+            sum_of_numbers_1 += x//10 + x % 10
         else:
             sum_of_numbers_1 += x
         print(f'{sum_of_numbers_1}')
