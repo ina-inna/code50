@@ -36,6 +36,8 @@ def main():
 
     # TODO: Find longest match of each STR in DNA sequence
     #DNA = ['AGATC', 'TTTTTTCT', 'AATG', 'TCTAG', 'GATA', 'TATC', 'GAAA', 'TCTG']
+    with open(sys.argv[1]) as file:
+        file_reader = csv.DictReader(file)
     DNA_names = next(file_reader)
     counts = {}
     for name in DNA_names in range (1, len(DNA_names)):
