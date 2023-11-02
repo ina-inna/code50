@@ -10,7 +10,6 @@ def main():
 
     # TODO: Read database file into a variable
     database = {}
-    DNA_names = []
     with open(sys.argv[1]) as file:
         file_reader = csv.DictReader(file)
         # Store each name as a dictionary
@@ -20,6 +19,7 @@ def main():
             if name not in database:
                 database[name] = {}
 
+            # Store DNA sequences as a dictionary for each name
             for column_name in row.keys():
                 if column_name != 'name':
                     column_values = row[column_name].split(',') if row[column_name] else []
