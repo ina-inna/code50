@@ -40,3 +40,11 @@ SELECT id from airports
    ...> WHERE flights.origin_airport_id = 8
    ...> AND flights.year = 2021 AND flights.month = 7 AND flights.day = 29
    ...> AND people.passport_number IN (5773159633, 3592750733, 7049073643, 8496433585);
+
+
+   -- retrive Luca and Bruce's phone numbers
+   SELECT phone_number FROM people
+   ...> WHERE passport_number IN (5773159633, 8496433585);
+
+   
+
