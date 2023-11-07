@@ -8,5 +8,9 @@ SELECT transcript FROM interviews
    ...> WHERE year = 2021 AND month = 7 AND day = 28
    ...> AND transcript LIKE '%bakery%';
 
--- check bakery security logs
+-- check license plate of the thief in the bakery security logs
+SELECT license_plate from bakery_security_logs
+   ...> WHERE year = 2021 AND month = 7 AND day = 28
+   ...> AND hour = 10 AND minute >=15 AND minute <=25;
+
 
