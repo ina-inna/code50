@@ -4,3 +4,7 @@ SELECT description FROM crime_scene_reports
    ...> AND street = 'Humphrey Street';
 
    -- check interview reports with bakery
+
+
+-- check bakery security logs
+
