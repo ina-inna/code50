@@ -54,3 +54,7 @@ SELECT caller, receiver FROM phone_calls
    ...> WHERE year = 2021 AND month = 7 AND day = 28
    ...> AND duration <=60
    ...> AND caller IN ('(389) 555-5198', '(367) 555-5533');
+
+   -- find out names of the caller and receiver: Bruce and Robin
+   SELECT name FROM people
+   ...> WHERE phone_number IN ('(367) 555-5533', '(375) 555-8161');
