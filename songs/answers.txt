@@ -1,0 +1,3 @@
+Based on the data provided, I can see that the average numbers for danceability and energy are > than 0.6, so I may assume that their is quite energetic.
+However, this might not be representative as I don't know the benchmarks for all aura attributes among the listeners who are in the same audience profile, so it is
+difficult/impossible to make assumptions if values provided are high/low relative to the benchmarks.
