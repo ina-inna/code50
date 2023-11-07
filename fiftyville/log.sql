@@ -16,6 +16,11 @@ SELECT license_plate from bakery_security_logs
    -- list of suspects: retrieved license plates
    SELECT name FROM people
    ...> WHERE license_plate IN ('5P2BI95', '94KL13X', '6P58WS2', '4328GD8', 'G412CB7', 'L93JTIZ', '322W7JE', '0NTHK55');
-   
+
+   -- list of suspects from ATM transactions:
+   SELECT account_number, transaction_type from atm_transactions
+   ...> WHERE year = 2021 AND month = 7 AND day = 28
+   ...> AND atm_location LIKE '%Leggett%';
+
 
 
