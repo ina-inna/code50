@@ -4,7 +4,9 @@ SELECT description FROM crime_scene_reports
    ...> AND street = 'Humphrey Street';
 
    -- check interview reports with bakery
-
+SELECT transcript FROM interviews
+   ...> WHERE year = 2021 AND month = 7 AND day = 28
+   ...> AND transcript LIKE '%bakery%';
 
 -- check bakery security logs
 
