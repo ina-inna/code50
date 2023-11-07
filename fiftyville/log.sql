@@ -29,15 +29,14 @@ SELECT license_plate from bakery_security_logs
    ...> AND bank_accounts.account_number IN (28500762, 28296815, 76054385, 49610011, 16153065, 25506511, 81061156, 26013199);
 
 
--- retrieve Fiftyville airport id
-SELECT id from airports
-   ...> WHERE full_name LIKE '%Fiftyville%';
-
 -- retrieve those who are flying early from Fiftyville with the passport numbers of suspects: Bruce and Luca
    SELECT people.name, flights.hour, flights.minute FROM people
    ...> JOIN passengers ON people.passport_number = passengers.passport_number
    ...> JOIN flights ON passengers.flight_id = flights.id
-   ...> WHERE flights.origin_airport_id = 8
+   ...> WHERE flights.origin_airport_id IN
+   (SELECT airports.id FROM airports
+   WHERE full_name LIKE '%Fiftyville%'
+   )
    ...> AND flights.year = 2021 AND flights.month = 7 AND flights.day = 29
    ...> AND people.passport_number IN (5773159633, 3592750733, 7049073643, 8496433585);
 
