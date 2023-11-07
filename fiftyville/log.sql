@@ -60,7 +60,7 @@ SELECT caller, receiver FROM phone_calls
 
 
    -- desitnation airport ID
-   SELECT destination_airport_id FROM flights
+   SELECT fli FROM flights
    ...> JOIN passengers ON flights.id = passengers.flight_id
    ...> WHERE origin_airport_id = 8
    ...> AND flights.year = 2021 AND flights.month = 7 AND flights.day = 29
