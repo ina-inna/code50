@@ -29,4 +29,6 @@ SELECT license_plate from bakery_security_logs
    ...> AND bank_accounts.account_number IN (28500762, 28296815, 76054385, 49610011, 16153065, 25506511, 81061156, 26013199);
 
 
-
+-- retrieve Fiftyville airport id
+SELECT id from airports
+   ...> WHERE full_name LIKE '%Fiftyville%';
