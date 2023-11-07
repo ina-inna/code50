@@ -58,3 +58,11 @@ SELECT caller, receiver FROM phone_calls
    -- find out names of the caller and receiver: Bruce and Robin
    SELECT name FROM people
    ...> WHERE phone_number IN ('(367) 555-5533', '(375) 555-8161');
+
+
+   -- desitnation airport ID
+   SELECT destination_airport_id FROM flights
+   ...> JOIN passengers ON flights.id = passengers.flight_id
+   ...> WHERE origin_airport_id = 8
+   ...> AND flights.year = 2021 AND flights.month = 7 AND flights.day = 29
+   ...> AND passengers.passport_number = 5773159633;
