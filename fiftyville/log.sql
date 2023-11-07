@@ -46,5 +46,11 @@ SELECT id from airports
    SELECT phone_number FROM people
    ...> WHERE passport_number IN (5773159633, 8496433585);
 
-   
 
+
+-- find out the phone number of the thief caller and who booked tickets:
+
+SELECT caller, receiver FROM phone_calls
+   ...> WHERE year = 2021 AND month = 7 AND day = 28
+   ...> AND duration <=60
+   ...> AND caller IN ('(389) 555-5198', '(367) 555-5533');
