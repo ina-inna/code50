@@ -7,7 +7,87 @@
         <link href="styles.css" rel="stylesheet">
         <title>My Webpage</title>
     </head>
-    <body>
-        hello, homepage
-    </body>
+    <script>
+        function correctAnswer ()
+        {
+            document.querySelector('#add1').style.backgroundColor = '#00FF00';
+            document.querySelector('#answerCheck1').textContent = 'Correct!';
+        }
+
+        function falseAnswer (buttonID)
+        {
+            document.getElementById(buttonID).style.backgroundColor = '#FF0000';
+            document.querySelector('#answerCheck1').textContent = 'Incorrect!';
+        }
+
+        function resetButtonStyles() {
+            const buttonIds = ['add1', 'add2', 'add3', 'add4', 'add5'];
+
+            buttonIds.forEach(buttonId => {
+                const button = document.getElementById(buttonId);
+                button.classList.remove('correct', 'incorrect');
+                button.style.backgroundColor = '#d9edff';
+            });
+            }
+        function checkAnswer(buttonID)
+                {
+                    if (document.getElementById(buttonID).value.toLowerCase() == 'switzerland')
+                    {
+                        document.getElementById(buttonID).style.backgroundColor = '#00FF00';
+                        document.querySelector('#answerCheck2').textContent = 'Correct!';
+                    }
+                    else
+                    {
+                        document.getElementById(buttonID).style.backgroundColor = '#FF0000';
+                        document.querySelector('#answerCheck2').textContent = 'Incorrect!';
+                    }
+                }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1>Inna's page</h1>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2>Part 1: Multiple Choice </h2>
+            <hr>
+
+            <h3> What's the approximate level of people to sheep in New Zealand?</h3>
+            <h4 id ="answerCheck1"></h4>
+            <table>
+            <tr>
+            <td>
+                <button id="add1" onclick="correctAnswer('add1')" > 5 people per 1 sheep</button>
+            <td>
+                <button id="add2" onclick="falseAnswer('add2')" >2 people per 1 sheep</button>
+            </td>
+            <td>
+                <button id="add3" onclick="falseAnswer('add3')" >1 person per 5 sheep</button>
+            </td>
+            <td>
+                <button id="add4" onclick="falseAnswer('add4')" >3 people per 2 sheep</button>
+            </td>
+            <td>
+                <button id="add5" onclick="falseAnswer('add5')" >1 person per 1 sheep</button>
+            </td>
+
+            </tr>
+            </table>
+            <!-- TODO: Add multiple choice question here -->
+        </div>
+
+        <div class="section">
+            <h2>Part 2: Free Response</h2>
+            <hr>
+            <h3> In which country is it illegal to own only one guinea pig, as a lone guinew pig might get lonely?</h3>
+            <h4 id ="answerCheck2"></h4>
+            <input type="text" id="input1" name="input1">
+            <button id="answer1" onclick="checkAnswer('input1')">Check answer</button>
+            <!-- TODO: Add free response question here -->
+        </div>
+    </div>
+
+</body>
 </html>
