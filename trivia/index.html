@@ -29,9 +29,15 @@
                     }
             function checkAnswer(buttonID)
                     {
-                        if (document.getElementById('input1').value.toLowerCase()) == 'switzerland'
+                        if (document.getElementById(buttonID).value.toLowerCase()) == 'switzerland'
                         {
-                            document.getElementById('input1')
+                            document.getElementById(buttonID).style.backgroundColor = '#00FF00';
+                            document.querySelector('#answer2').textContent = 'Correct!';
+                        }
+                        else
+                        {
+                            document.getElementById(buttonID).style.backgroundColor = '#FF0000';
+                            document.querySelector('#answer2').textContent = 'Incorrect!';
                         }
                     }
         </script>
@@ -71,6 +77,7 @@
                 <h2>Part 2: Free Response</h2>
                 <hr>
                 <h3> In which country is it illegal to own only one guinea pig, as a lone guinew pig might get lonely?</h3>
+                <h4 id ="answer2"></h4>
                 <input type="text" id="input1" name="answer1">
                 <button id="answer1" onclick="checkAnswer('input1')">Check answer</button>
                 <!-- TODO: Add free response question here -->
