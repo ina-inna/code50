@@ -73,6 +73,11 @@ h2 {
     font-size: 16px;
 }
 
+h3 {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 14px;
+}
+
 button, input[type="submit"] {
     background-color: #d9edff;
     border: 1px solid transparent;
