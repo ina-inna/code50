@@ -6,7 +6,27 @@
         <link href="styles.css" rel="stylesheet">
         <title>Trivia!</title>
         <script>
-            // TODO: Add code to check answers to questions
+            function correctAnswer ()
+            {
+                document.querySelector('#add1').style.backgroundColor = '#00FF00';
+                document.querySelector('#answer1').textContent = 'Correct!';
+            }
+
+            function falseAnswer (buttonID)
+            {
+                document.getElementById(buttonID).style.backgroundColor = '#FF0000';
+                document.querySelector('#answer1').textContent = 'Incorrect!';
+            }
+
+            function resetButtonStyles() {
+            const buttonIds = ['add1', 'add2', 'add3', 'add4', 'add5'];
+
+            buttonIds.forEach(buttonId => {
+                const button = document.getElementById(buttonId);
+                button.classList.remove('correct', 'incorrect');
+                document.querySelector(button).style.backgroundColor = '#d9edff';
+            });
+        }
         </script>
     </head>
     <body>
@@ -49,31 +69,6 @@
                 <!-- TODO: Add free response question here -->
             </div>
         </div>
-        <script>
 
-            function correctAnswer ()
-            {
-                document.querySelector('#add1').style.backgroundColor = '#00FF00';
-                document.querySelector('#answer1').textContent = 'Correct!';
-            }
-
-            function falseAnswer (buttonID)
-            {
-                document.getElementById(buttonID).style.backgroundColor = '#FF0000';
-                document.querySelector('#answer1').textContent = 'Incorrect!';
-            }
-
-            function resetButtonStyles() {
-            const buttonIds = ['add1', 'add2', 'add3', 'add4', 'add5'];
-
-            buttonIds.forEach(buttonId => {
-                const button = document.getElementById(buttonId);
-                button.classList.remove('correct', 'incorrect');
-                button.style.backgroundColor = '#d9edff';
-            });
-        }
-
-
-            </script>
     </body>
 </html>
