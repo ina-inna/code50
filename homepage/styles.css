@@ -17,7 +17,7 @@ body {
 
 .header {
     background-color: #EE4B2B;
-    font-family: 'Press Start 2P';
+    font-family: 'Press Start 2P', sans-serif;
     color: #fff;
     margin-bottom: 2rem;
     padding: 2rem 1rem;
