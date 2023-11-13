@@ -60,6 +60,11 @@ h1 {
     font-size: 24px;
 }
 
+h2 {
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 16px;
+}
+
 button, input[type="submit"] {
     background-color: #d9edff;
     border: 1px solid transparent;
