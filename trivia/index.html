@@ -50,11 +50,22 @@
         </div>
         <script>
 
-            
-            document.querySelector('#add1').addEventListener('click', function ()
+            var buttons = document.querySelectorAll('.myButton');
+            buttons.forEach(function(button))
             {
-                document.querySelector('#add1').style.backgroundColor = '#FF0000';
+            button.addEventListener('click', function () {
+                if document.querySelector('#add1').onclick == 1
+                {
+                    document.querySelector('#add1').style.backgroundColor = '00FF00';
+                }
+                else
+                {
+
+                }
+
             })
+            }
+          
 
             </script>
     </body>
