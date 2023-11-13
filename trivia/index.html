@@ -19,14 +19,14 @@
             }
 
             function resetButtonStyles() {
-                    const buttonIds = ['add1', 'add2', 'add3', 'add4', 'add5'];
+                const buttonIds = ['add1', 'add2', 'add3', 'add4', 'add5'];
 
-                    buttonIds.forEach(buttonId => {
-                        const button = document.getElementById(buttonId);
-                        button.classList.remove('correct', 'incorrect');
-                        button.style.backgroundColor = '#d9edff';
-                    });
-                    }
+                buttonIds.forEach(buttonId => {
+                    const button = document.getElementById(buttonId);
+                    button.classList.remove('correct', 'incorrect');
+                    button.style.backgroundColor = '#d9edff';
+                });
+                }
             function checkAnswer(buttonID)
                     {
                         if (document.getElementById(buttonID).value.toLowerCase()) == 'switzerland'
