@@ -9,13 +9,13 @@
             function correctAnswer ()
             {
                 document.querySelector('#add1').style.backgroundColor = '#00FF00';
-                document.querySelector('#answer1').textContent = 'Correct!';
+                document.querySelector('#answerCheck1').textContent = 'Correct!';
             }
 
             function falseAnswer (buttonID)
             {
                 document.getElementById(buttonID).style.backgroundColor = '#FF0000';
-                document.querySelector('#answer1').textContent = 'Incorrect!';
+                document.querySelector('#answerCheck1').textContent = 'Incorrect!';
             }
 
             function resetButtonStyles() {
@@ -32,12 +32,12 @@
                         if (document.getElementById(buttonID).value.toLowerCase() == 'switzerland')
                         {
                             document.getElementById(buttonID).style.backgroundColor = '#00FF00';
-                            document.querySelector('#answer2').textContent = 'Correct!';
+                            document.querySelector('#answerCheck2').textContent = 'Correct!';
                         }
                         else
                         {
                             document.getElementById(buttonID).style.backgroundColor = '#FF0000';
-                            document.querySelector('#answer2').textContent = 'Incorrect!';
+                            document.querySelector('#answerCheck2').textContent = 'Incorrect!';
                         }
                     }
         </script>
@@ -53,7 +53,7 @@
                 <hr>
 
                 <h3> What's the approximate level of people to sheep in New Zealand?</h3>
-                <h4 id ="answer1"></h4>
+                <h4 id ="answerCheck1"></h4>
                 <table>
                 <tr>
                 <td>
@@ -80,8 +80,8 @@
                 <h2>Part 2: Free Response</h2>
                 <hr>
                 <h3> In which country is it illegal to own only one guinea pig, as a lone guinew pig might get lonely?</h3>
-                <h4 id ="answer2"></h4>
-                <input type="text" id="input1" name="answer1">
+                <h4 id ="answerCheck2"></h4>
+                <input type="text" id="input1" name="input1">
                 <button id="answer1" onclick="checkAnswer('input1')">Check answer</button>
                 <!-- TODO: Add free response question here -->
             </div>
