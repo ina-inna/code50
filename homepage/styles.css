@@ -45,6 +45,7 @@ body {
 .scrolling-text {
     white-space: nowrap;
     animation: scrollText 10s linear infinite;
+    color: #fff;
 }
 
 @keyframes scrollText {
