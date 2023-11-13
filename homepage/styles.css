@@ -60,6 +60,10 @@ h1 {
     font-size: 24px;
 }
 
+.big-emoji {
+    font-size: 5rem;
+}
+
 h2 {
     font-family: 'Press Start 2P', sans-serif;
     font-size: 16px;
