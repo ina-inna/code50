@@ -52,10 +52,10 @@
         <script>
 
             function correctAnswer ()
-                {
-                    document.querySelector('#add1').style.backgroundColor = '#00FF00';
-                    document.querySelector('#answer1').textContent = 'Correct!';
-                }
+            {
+                document.querySelector('#add1').style.backgroundColor = '#00FF00';
+                document.querySelector('#answer1').textContent = 'Correct!';
+            }
 
             function falseAnswer (buttonID)
             {
@@ -70,6 +70,7 @@
                 const button = document.getElementById(buttonId);
                 button.classList.remove('correct', 'incorrect');
             });
+        }
 
 
             </script>
