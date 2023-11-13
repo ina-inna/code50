@@ -17,8 +17,6 @@ body {
 
 .header {
     background-color: #fff;
-    font-family: 'Helvetica', sans-serif;
-    font-size: 24px;
     color: #000000;
     margin-bottom: 2rem;
     padding: 2rem 1rem;
@@ -58,8 +56,8 @@ body {
 }
 
 h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 48px;
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 24px;
 }
 
 button, input[type="submit"] {
