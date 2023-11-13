@@ -21,18 +21,18 @@
                 <h3> What's the approximate level of people to sheep in New Zealand?</h3>
                 <tr>
                 <td>
-                    <button id="add1" onclick="correctAnswer()" > 5 people per 1 sheep</button>
+                    <button id="add1" onclick="correctAnswer('add1')" > 5 people per 1 sheep</button>
                 <td>
-                    <button id="add2" onclick="falseAnswer()" >2 people per 1 sheep</button>
+                    <button id="add2" onclick="falseAnswer('add2')" >2 people per 1 sheep</button>
                 </td>
                 <td>
-                    <button id="add3" onclick="falseAnswer()" >1 person per 5 sheep</button>
+                    <button id="add3" onclick="falseAnswer('add3')" >1 person per 5 sheep</button>
                 </td>
                 <td>
-                    <button id="add4" onclick="falseAnswer()" >3 people per 2 sheep</button>
+                    <button id="add4" onclick="falseAnswer('add4')" >3 people per 2 sheep</button>
                 </td>
                 <td>
-                    <button id="add5" onclick="falseAnswer()" >1 person per 1 sheep</button>
+                    <button id="add5" onclick="falseAnswer('add5')" >1 person per 1 sheep</button>
                 </td>
 
                 </tr>
@@ -56,9 +56,9 @@
                     document.querySelector('#add1').style.backgroundColor = '00FF00';
                 }
 
-            function falseAnswer ()
+            function falseAnswer (buttonID)
             {
-                document.getElementById.style.backgroundColor = 'FF0000';
+                document.getElementById(buttonID).style.backgroundColor = 'FF0000';
             }
 
 
