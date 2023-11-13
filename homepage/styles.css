@@ -35,6 +35,18 @@ body {
     transition: color 2s ease-in-out, background-color 0.15s ease-in-out;
 }
 
+
+.scrolling-text-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.scrolling-text {
+    white-space: nowrap;
+    animation: scrollText 10s linear infinite;
+}
+
 h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 48px;
