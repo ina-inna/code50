@@ -21,18 +21,18 @@
                 <h3> What's the approximate level of people to sheep in New Zealand?</h3>
                 <tr>
                 <td>
-                    <button id="add1" class="myButton" > 5 people per 1 sheep</button>
+                    <button id="add1" onclick="correctAnswer()" > 5 people per 1 sheep</button>
                 <td>
-                    <button id="add2" class="myButton" >2 people per 1 sheep</button>
+                    <button id="add2" onclick="falseAnswer()" >2 people per 1 sheep</button>
                 </td>
                 <td>
-                    <button id="add3" class="myButton" >1 person per 5 sheep</button>
+                    <button id="add3" onclick="falseAnswer()" >1 person per 5 sheep</button>
                 </td>
                 <td>
-                    <button id="add4" class="myButton" >3 people per 2 sheep</button>
+                    <button id="add4" onclick="falseAnswer()" >3 people per 2 sheep</button>
                 </td>
                 <td>
-                    <button id="add5" class="myButton" >1 person per 1 sheep</button>
+                    <button id="add5" onclick="falseAnswer()" >1 person per 1 sheep</button>
                 </td>
 
                 </tr>
@@ -50,9 +50,8 @@
         </div>
         <script>
 
-            var buttons = document.querySelectorAll('.myButton');
-            buttons.forEach(function(button))
-            {
+
+            
                 button.addEventListener('click', function () {
                 if document.querySelector('#add1').onclick == 1
                 {
@@ -63,8 +62,6 @@
                     document.querySelector(button).style.backgroundColor = 'FF0000';
                 }
 
-            })
-            }
 
 
             </script>
