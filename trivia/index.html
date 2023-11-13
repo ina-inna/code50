@@ -19,7 +19,7 @@
                 <h2>Part 1: Multiple Choice </h2>
                 <hr>
                 <h3> What's the approximate level of people to sheep in New Zealand?</h3>
-                <h4> id = "answer1" </h4>
+                <h4 id ="answer1"></h4>
                 <tr>
                 <td>
                     <button id="add1" onclick="correctAnswer('add1')" > 5 people per 1 sheep</button>
@@ -55,6 +55,7 @@
             function correctAnswer ()
                 {
                     document.querySelector('#add1').style.backgroundColor = '#00FF00';
+                    document.querySelector('#answer1') = 'Correct!';
                 }
 
             function falseAnswer (buttonID)
