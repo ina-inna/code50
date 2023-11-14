@@ -12,7 +12,7 @@
         <script>
         function correctAnswer ()
         {
-            document.querySelector('#add1').style.backgroundColor = '#00FF00';
+            document.querySelector('#add3').style.backgroundColor = '#00FF00';
             document.querySelector('#answerCheck1').textContent = 'Correct!';
         }
 
@@ -78,12 +78,12 @@
             <table>
             <tr>
             <td>
-                <button id="add1" onclick="correctAnswer('add1')" > Yoga 🧘‍♀️</button>
+                <button id="add1" onclick="falseAnswer('add1')" > Yoga 🧘‍♀️</button>
             <td>
                 <button id="add2" onclick="falseAnswer('add2')" >Basketball ⛹️‍♀️</button>
             </td>
             <td>
-                <a href="page1.html"></a><button></a> id="add3" onclick="falseAnswer('add3')" >Mountain climbing 🧗‍♀️</button></a>
+                <button id="add3" onclick="correctAnswer('add3'); window.location.href='page1.html'" >Mountain climbing 🧗‍♀️</button>
             </td>
             <td>
                 <button id="add4" onclick="falseAnswer('add4')" >Cycling 🚴‍♀️</button>
