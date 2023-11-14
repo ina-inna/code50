@@ -12,12 +12,14 @@
         <script>
         function correctAnswer ()
         {
+            resetButtonStyles()
             document.querySelector('#add3').style.backgroundColor = '#00FF00';
             document.querySelector('#answerCheck1').textContent = 'Correct!';
         }
 
         function falseAnswer (buttonID)
         {
+            resetButtonStyles()
             document.getElementById(buttonID).style.backgroundColor = '#FF0000';
             document.querySelector('#answerCheck1').textContent = 'Incorrect!';
         }
