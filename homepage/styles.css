@@ -127,3 +127,22 @@ input[type="text"]:hover {
     transform: scale(1.1);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
+
+    .text-overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        color: #fff;
+        text-align: center;
+        transition: opacity 0.3s ease-in-out;
+      }
+
+      .image-container:hover .image {
+        filter: brightness(70%); /* Dim the image on hover */
+      }
+
+      .image-container:hover .text-overlay {
+        opacity: 1; /* Make text visible on hover */
+      }
