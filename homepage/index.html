@@ -102,10 +102,28 @@
         <div class="section">
             <h2>Part 2: Literature</h2>
             <hr>
-            <h3> Once again: choose wisely. I love literature but there is a specific period which I enjoy the most. Can you guess?</h3>
+            <h3> Once again: choose wisely. I love literature but there is a specific period which I enjoy the most. Can you guess which century?</h3>
             <h4 id ="answerCheck2"></h4>
-            <input type="text" id="input1" name="input1">
-            <button id="answer1" onclick="checkAnswer('input1')">Check answer</button>
+            <form action="/submit-form" method="post">
+                <label>
+                    <input type="radio" name="century" value="XXVIII">
+                    XXVIII
+                </label>
+
+                <label>
+                    <input type="radio" name="century" value="XIX">
+                    XIX
+                </label>
+
+                <label>
+                    <input type="radio" name="century" value="XX">
+                    XX
+                </label>
+
+                <br>
+
+                <input type="submit" value="Submit">
+            </form>
             <!-- TODO: Add free response question here -->
         </div>
         <div class="section">
