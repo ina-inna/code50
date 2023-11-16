@@ -47,6 +47,22 @@
             document.getElementById('answerCheck2').textContent = 'Incorrect!';
            }
         }
+
+
+        function checkAnswer(buttonID)
+        {
+           if (document.querySelector('input[name="cinema"]:checked').value == 'David Lynch')
+           {
+            window.location.href = 'page3.html';
+           }
+
+           else
+           {
+            document.getElementById('add7').style.backgroundColor = '#FF0000';
+            document.getElementById('answerCheck3').textContent = 'Incorrect!';
+           }
+        }
+
     </script>
 </head>
 <body>
@@ -130,7 +146,7 @@
             <h2>Part 3: Cinema</h2>
             <hr>
             <h3> My favourite director: </h3>
-            <h4 id ="answerCheck2"></h4>
+            <h4 id ="answerCheck3"></h4>
             <form>
                 <label for="Cinema">Guess my favourite director:</label>
                 <select id="cinemaSelect" name="cinema">
@@ -141,7 +157,7 @@
                     <option value="dychovny">David Dychovny</option>
                 </select>
             </form>
-            <button id="answer1" onclick="checkAnswer('input1')">Check answer</button>
+            <button id="add7" onclick="checkAnswer('input1')">Check answer</button>
             <!-- TODO: Add free response question here -->
         </div>
 
