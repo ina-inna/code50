@@ -24,8 +24,9 @@ button, input[type="submit"] {
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 10px;
+    font-weight: bold;
     background-color: #4CAF50; /* Green background color */
-    color: white; /* White text color */
+    color: #C80815; /* White text color */
     border: none; /* Remove borders */
     border-radius: 5px; /* Optional: Rounded corners */
     cursor: pointer; /* Change cursor on hover */
