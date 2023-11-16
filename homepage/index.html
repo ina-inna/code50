@@ -36,15 +36,15 @@
 
         function checkCentury(buttonID)
         {
-           if (document.querySelector('input[name="century"]:checked')) == 'XX'
+           if (document.querySelector('input[name="century"]:checked') == 'XX')
            {
             window.location.href = 'page2.html';
            }
 
            else
            {
-            document.querySelector('add6').style.backgroundColor = '#FF0000';
-            document.querySelector('#answerCheck2').textContent = 'Incorrect!';
+            document.getElementById('add6').style.backgroundColor = '#FF0000';
+            document.getElementById('#answerCheck2').textContent = 'Incorrect!';
            }
         }
     </script>
