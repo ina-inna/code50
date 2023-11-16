@@ -33,6 +33,21 @@ button {
 }
 
 
+button2 {
+    position: absolute;
+    bottom: 15%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    font-weight: bold;
+    background-color: #000000; /* Green background color */
+    color: #C80815; /* White text color */
+    border: none; /* Remove borders */
+    border-radius: 5px; /* Optional: Rounded corners */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+
 
 .text {
     font-family: 'Helvetica', sans-serif;
