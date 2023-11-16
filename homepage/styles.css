@@ -65,7 +65,7 @@ h1 {
 }
 
 .text {
-    font-family: 'Helvetica', sans-serif;
+    font-family: 'Monospace', sans-serif;
     font-size: 14px;
 }
 
@@ -75,12 +75,12 @@ h2 {
 }
 
 h3 {
-    font-family: 'Helvetica', sans-serif;
+    font-family: 'Monospace', sans-serif;
     font-size: 14px;
 }
 
 h4 {
-    font-family: 'Helvetica', sans-serif;
+    font-family: 'Monospace', sans-serif;
     font-size: 14px;
     font-weight: bold;
 }
