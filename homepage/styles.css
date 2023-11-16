@@ -108,25 +108,4 @@ input[type="text"]:hover {
 }
 
 
-.photo-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
-    gap: 100px;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .photo {
-    width: 200%;
-    height: 200%;
-    object-fit: cover;
-    border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  }
-
-  .photo:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
 
