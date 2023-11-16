@@ -131,7 +131,15 @@
             <hr>
             <h3> My favourite director: </h3>
             <h4 id ="answerCheck2"></h4>
-            <input type="text" id="input1" name="input1">
+            <form>
+                <label for="Cinema">Guess my favourite director:</label>
+                <select id="cinemaSelect" name="cinema">
+                    <option value="fincher">David Fincher</option>
+                    <option value="lynch">David Lynch</option>
+                    <option value="malan">David Malan</option>
+                    <option value="dychovny">David Dychovny</option>
+                </select>
+            </form>
             <button id="answer1" onclick="checkAnswer('input1')">Check answer</button>
             <!-- TODO: Add free response question here -->
         </div>
