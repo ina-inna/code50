@@ -54,3 +54,10 @@ button2 {
     text-align: right;
     padding: 20px;
 }
+
+
+.emoji-button {
+    font-size: 20px; /* Adjust the font size as needed */
+    padding: 10px;
+    cursor: pointer;
+}
