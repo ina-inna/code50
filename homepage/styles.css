@@ -78,6 +78,12 @@ h3 {
     font-size: 14px;
 }
 
+form {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 14px;
+    padding: 0.375rem 0.75rem;
+}
+
 h4 {
     font-family: 'Helvetica', sans-serif;
     font-size: 14px;
