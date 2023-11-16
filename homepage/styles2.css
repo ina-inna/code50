@@ -33,20 +33,6 @@ button {
 }
 
 
-button2 {
-    position: absolute;
-    top: 35%;
-    left: 10%;
-    transform: translate(-50%, -50%);
-    padding: 10px;
-    font-weight: bold;
-    background-color: #C80815; /* Green background color */
-    color: #4CAF50; /* White text color */
-    border: none; /* Remove borders */
-    border-radius: 5px; /* Optional: Rounded corners */
-    cursor: pointer; /* Change cursor on hover */
-}
-
 
 .text {
     font-family: 'Helvetica', sans-serif;
@@ -56,8 +42,10 @@ button2 {
 }
 
 
-.emoji-button {
-    font-size: 20px; /* Adjust the font size as needed */
-    padding: 10px;
+.emoji {
+    font-size: 30px; /* Adjust the font size as needed */
     cursor: pointer;
+    position: absolute;
+    bottom: 15%;
+    right: 50%;
 }
