@@ -59,3 +59,12 @@ button {
     bottom: 15%;
     right: 15%;
 }
+
+
+.emoji3 {
+    font-size: 50px; /* Adjust the font size as needed */
+    cursor: pointer;
+    position: absolute;
+    top: 25%;
+    right: 25%;
+}
