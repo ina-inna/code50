@@ -35,4 +35,6 @@ button, input[type="submit"] {
 .text {
     font-family: 'Helvetica', sans-serif;
     font-size: 14px;
+    text-align: right;
+    padding: 20px;
 }
