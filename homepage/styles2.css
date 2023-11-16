@@ -33,6 +33,21 @@ button, input[type="submit"] {
 }
 
 
+buttonHome, input[type="submit"] {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    font-weight: bold;
+    background-color: #C80815; /* Green background color */
+    color: #4CAF50; /* White text color */
+    border: none; /* Remove borders */
+    border-radius: 5px; /* Optional: Rounded corners */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+
 .text {
     font-family: 'Helvetica', sans-serif;
     font-size: 14px;
