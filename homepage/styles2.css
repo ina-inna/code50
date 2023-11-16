@@ -33,21 +33,6 @@ button {
 }
 
 
-button2 {
-    position: absolute;
-    bottom: 15%;
-    right: 50%;
-    transform: translate(-50%, -50%);
-    padding: 10px;
-    font-weight: bold;
-    background-color: #000000; /* Green background color */
-    color: #C80815; /* White text color */
-    border: none; /* Remove borders */
-    border-radius: 5px; /* Optional: Rounded corners */
-    cursor: pointer; /* Change cursor on hover */
-}
-
-
 
 .text {
     font-family: 'Helvetica', sans-serif;
@@ -61,6 +46,16 @@ button2 {
     font-size: 30px; /* Adjust the font size as needed */
     cursor: pointer;
     position: absolute;
-    bottom: 65%;
-    right: 50%;
+    bottom: 35%;
+    right: 85%;
+}
+
+
+
+.emoji2 {
+    font-size: 50px; /* Adjust the font size as needed */
+    cursor: pointer;
+    position: absolute;
+    bottom: 15%;
+    right: 15%;
 }
