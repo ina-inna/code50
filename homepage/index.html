@@ -33,26 +33,18 @@
                 button.style.backgroundColor = '#d9edff';
             });
             }
-        function checkAnswer(buttonID)
-                {
-                    if (document.getElementById(buttonID).value.toLowerCase() == 'switzerland')
-                    {
-                        document.getElementById(buttonID).style.backgroundColor = '#00FF00';
-                        document.querySelector('#answerCheck2').textContent = 'Correct!';
-                    }
-                    else
-                    {
-                        document.getElementById(buttonID).style.backgroundColor = '#FF0000';
-                        document.querySelector('#answerCheck2').textContent = 'Incorrect!';
-                    }
-                }
 
-        function checkCentury()
-
+        function checkCentury(buttonID)
         {
-           if (document.querySelector('input[name="question1"]:checked')) == 'XX'
+           if (document.querySelector('input[name="century"]:checked')) == 'XX'
            {
-            
+            window.location.href = 'page2.html';
+           }
+
+           else
+           {
+            document.querySelector('add6').style.backgroundColor = '#FF0000';
+            document.querySelector('#answerCheck2').textContent = 'Incorrect!';
            }
         }
     </script>
