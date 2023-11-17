@@ -44,3 +44,22 @@ button, input[type="submit"] {
     background-color: #FFD800;
     margin: 20px;
 }
+
+
+.homepage-btn2 {
+    position: absolute;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid #4a4a4a;
+    position: relative;
+    overflow: hidden;
+    background-color: #636363;
+    color: #ffffff;
+
+}
+
+

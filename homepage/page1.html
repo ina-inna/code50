@@ -9,11 +9,22 @@
         <title>Mountains</title>
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+
+        <script>
+
+          function redirectToHomepage() {
+              window.location.href = 'index.html';
+          }
+          </script>
     </head>
     <body>
         <div class="header">
             <h1>A page about Mountain climbing</h1>
+            <button id="add7" class="homepage-btn2" onclick = "redirectToHomepage()">Back to homepage</button>
+
         </div>
+
+                <div style="display: flex; justify-content: center;">
 
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false" >
             <div class="carousel-indicators">
@@ -53,6 +64,7 @@
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </button>
+          </div>
           </div>
     </body>
     </html>
