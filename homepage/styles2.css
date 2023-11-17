@@ -91,3 +91,7 @@ body {
 .carousel-control-prev-icon, .carousel-control-next-icon {
     background-color: #00FF00;
 }
+
+.carousel-caption {
+    color: #000;
+}
