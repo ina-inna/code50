@@ -33,3 +33,14 @@ button, input[type="submit"] {
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     vertical-align: middle;
 }
+
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: #1c14fb;
+}
+
+.carousel-caption {
+    color: #000;
+    background-color: #FA9C1B;
+    margin: 20px;
+}
