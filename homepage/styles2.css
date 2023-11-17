@@ -18,7 +18,7 @@ body {
     text-align: left;
 }
 
-button {
+.homepage-btn {
     position: absolute;
     top: 15%;
     left: 50%;
