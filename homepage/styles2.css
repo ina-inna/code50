@@ -88,6 +88,6 @@ body {
     right: 50%;
 }
 
-/* .carousel {
-    max-width: 50%;
-} */
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: #00FF00;
+}
