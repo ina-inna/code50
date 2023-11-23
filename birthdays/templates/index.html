@@ -18,8 +18,8 @@
 
                 <form action="/" method="post">
                     <input autocomplete="off" autofocus name="name" placeholder="Name" type="text">
-                    <input autocomplete="off" autofocus name="month" placeholder="Month" type="int">
-                    <input autocomplete="off" autofocus name="day" placeholder="Day" type="int">
+                    <input autocomplete="off" autofocus name="month" placeholder="Month" type="number">
+                    <input autocomplete="off" autofocus name="day" placeholder="Day" type="number">
                    <button type="submit">Register</button>
                    </form>
             </div>
@@ -40,7 +40,7 @@
                         {% for birthday in birthdays %}
                         <tr>
                         <td>{{ birthday.name }}</td>
-                        <td>{{ birthday.month + birthday.day }}</td>
+                        <td>{{ 'birthday.month' + 'birthday.day' }}</td>
                         </tr>
                         {% endfor %}
                     </tbody>
