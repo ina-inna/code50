@@ -37,7 +37,7 @@ def index():
 
         # Confirm registration
 
-            return redirect("/")
+        return redirect("/")
 
     else:
 
