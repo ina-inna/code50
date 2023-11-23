@@ -36,8 +36,12 @@
                     </thead>
                     <tbody>
                         <!-- TODO: Loop through the database entries to display them in this table -->
+
+                        {% for birthday in birthdays %}
+                        <tr>
                         <td>{{ registrant.name }}</td>
                         <td>{{ registrant.sport }}</td>
+                            <td>
                     </tbody>
                 </table>
             </div>
