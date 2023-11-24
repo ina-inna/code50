@@ -108,6 +108,8 @@ def quote():
             return apology("stock symbol doesn't exist", 403)
         else:
             return render_template("quoted.html", name = "name", price = "price", symbol = "symbol")
+    else:
+        return render_template("quote.html")
 
 
 @app.route("/register", methods=["GET", "POST"])
