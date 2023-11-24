@@ -141,7 +141,7 @@ def register():
 
 
         # Remember registrant
-        user_id = db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", username, hashed_password)
+        rows = db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", username, hashed_password)
 
         # Remember which user has logged in
         session["user_id"] = rows[0]["id"]
