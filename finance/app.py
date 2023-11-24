@@ -103,6 +103,8 @@ def logout():
 @login_required
 def quote():
     """Get stock quote."""
+    stock = lookup("stock_symbol")
+    
     return apology("TODO")
 
 
