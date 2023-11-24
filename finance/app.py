@@ -141,10 +141,10 @@ def register():
 
 
         # Remember registrant
-        rows = db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", username, hashed_password)
+        id = db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", username, hashed_password)
 
         # Remember which user has logged in
-        session["user_id"] = rows[0]["id"]
+        session["id"] = rows[0]["id"]
 
     else:
         return render_template("register.html")
