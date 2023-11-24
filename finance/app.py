@@ -129,10 +129,10 @@ def register():
 
 
         # Query database for username
-        rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
+        existing_user = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
 
         # Ensure username exists and password is correct
-        if len(rows) >= 1:
+        if existing_user:
             return apology("username already taken", 403)
 
         # Add the user to the database
@@ -141,7 +141,7 @@ def register():
 
 
         # Remember registrant
-        db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", username, hash)
+        user_id = db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", username, hashed_password)
 
         # Remember which user has logged in
         session["user_id"] = rows[0]["id"]
