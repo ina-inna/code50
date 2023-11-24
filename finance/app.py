@@ -104,8 +104,11 @@ def logout():
 def quote():
     """Get stock quote."""
     stock = lookup("stock_symbol")
-    
-    return apology("TODO")
+
+    if not lookup("stock_symbol"):
+        return apology("stock symbol doesn't exist", 403)
+    else:
+        
 
 
 @app.route("/register", methods=["GET", "POST"])
