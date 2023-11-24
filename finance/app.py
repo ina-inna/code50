@@ -137,11 +137,11 @@ def register():
 
         # Add the user to the database
         username = request.form.get("username")
-        password = request.form.get(generate_password_hash("password"))
+        hash = request.form.get(generate_password_hash("password"))
 
 
         # Remember registrant
-        db.execute("INSERT INTO finance (username, password) VALUES(?, ?)", username, password)
+        db.execute("INSERT INTO finance (username, hash) VALUES(?, ?)", username, hash)
 
 
 
