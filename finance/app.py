@@ -135,7 +135,15 @@ def register():
         if len(rows) >= 1:
             return apology("username already taken", 403)
 
+
         # Add the user to the database
+        username = request.form.get("username")
+        password = request.form.get("password")
+
+
+        # Remember registrant
+        db.execute("INSERT INTO finance (username, password) VALUES(?, ?)", username, password)
+
 
 
     else:
