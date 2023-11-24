@@ -135,11 +135,8 @@ def register():
         if len(rows) >= 1:
             return apology("username already taken", 403)
 
-        # Remember which user has logged in
-        session["user_id"] = rows[0]["id"]
+        # Add the user to the database
 
-
-        return apology("TODO")
 
     else:
         return render_template("register.html")
