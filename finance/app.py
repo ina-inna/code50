@@ -137,7 +137,7 @@ def register():
 
         # Add the user to the database
         username = request.form.get("username")
-        hashed_password = request.form.get(generate_password_hash(request.form.get"password"))
+        hashed_password = generate_password_hash(request.form.get("password"))
 
 
         # Remember registrant
