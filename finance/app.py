@@ -146,6 +146,8 @@ def register():
         # Remember which user has logged in
         session["user_id"] = user_id
 
+        return redirect("/")
+
     else:
         return render_template("register.html")
 
