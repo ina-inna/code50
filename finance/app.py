@@ -107,7 +107,7 @@ def quote():
         if not lookup("stock_symbol"):
             return apology("stock symbol doesn't exist", 403)
         else:
-            return render_template("quoted.html", name = "name", price = "price", symbol = "symbol")
+            return render_template("quoted.html")
     else:
         return render_template("quote.html")
 
