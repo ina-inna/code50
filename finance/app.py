@@ -136,6 +136,9 @@ def register():
             return apology("username already taken", 403)
 
 
+        # Hash the password
+        
+
         # Add the user to the database
         username = request.form.get("username")
         password = request.form.get("password")
