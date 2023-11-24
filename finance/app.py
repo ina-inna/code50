@@ -103,8 +103,9 @@ def logout():
 @login_required
 def quote():
     """Get stock quote."""
+    stock = lookup(request.form.get("symbol"))
     if request.method == "POST":
-        if not lookup(request.form.get("symbol")):
+        if not stock:
             return apology("stock symbol doesn't exist", 403)
         else:
             return render_template("quoted.html", name = "name", price = "price", symbol = request.form.get("symbol"))
