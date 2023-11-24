@@ -141,7 +141,7 @@ def register():
 
 
         # Remember registrant
-        db.execute("INSERT INTO finance (username, hash) VALUES(?, ?)", username, hash)
+        db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", username, hash)
 
         # Remember which user has logged in
         session["user_id"] = rows[0]["id"]
