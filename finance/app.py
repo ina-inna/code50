@@ -135,13 +135,9 @@ def register():
         if len(rows) >= 1:
             return apology("username already taken", 403)
 
-
-        # Hash the password
-        
-
         # Add the user to the database
         username = request.form.get("username")
-        password = request.form.get("password")
+        password = request.form.get(generate_password_hash("password"))
 
 
         # Remember registrant
