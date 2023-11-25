@@ -44,7 +44,14 @@ def buy():
     """Buy shares of stock"""
 
     if request.method == "POST":
-        return apology("TODO")
+
+         if not request.form.get("username"):
+            return apology("must provide username", 403)
+
+        # Ensure password was submitted
+        elif not request.form.get("password"):
+            return apology("must provide password", 403)
+
 
         return redirect("/")
 
