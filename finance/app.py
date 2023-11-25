@@ -45,12 +45,12 @@ def buy():
 
     if request.method == "POST":
 
-         if not request.form.get("username"):
-            return apology("must provide username", 403)
+         if not request.form.get("symbol"):
+            return apology("must provide stock's symbol", 403)
 
         # Ensure password was submitted
-        elif not request.form.get("password"):
-            return apology("must provide password", 403)
+        elif not (request.form.get("shares") > 0):
+            return apology("must provide number of shares", 403)
 
 
         return redirect("/")
