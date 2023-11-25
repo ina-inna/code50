@@ -55,8 +55,14 @@ def buy():
             return apology("must provide number of shares", 403)
 
         # check if cash is enough
-        cash = 
+        stock = lookup(request.form.get("symbol"))
+        sum = stock["price"]*int(request.form.get("shares"))
         db.execute("SELECT * FROM users WHERE id = ?", request.form.get("id"))
+        if sum > int(request.form.get("cash"))
+            return apology("not enough cash", 403)
+        else:
+         
+
 
         # if enough insert information about a purchase into a database
 
