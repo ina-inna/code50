@@ -54,11 +54,14 @@ def buy():
          elif request.form.get("shares") is None or int(request.form.get("shares")) < 0:
             return apology("must provide number of shares", 403)
 
+        # check if cash is enough
 
 
-        # Create a database for users and stocks 
+        # if enough insert information about a purchase into a database
         existing_user = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
 
+
+        # update cash remaining in the database users
 
          return redirect("/")
 
