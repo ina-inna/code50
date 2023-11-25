@@ -47,8 +47,10 @@ def buy():
 
          if not request.form.get("symbol"):
             return apology("must provide stock's symbol", 403)
+         elif not lookup(request.form.get("symbol")):
+            return apology("stock symbol doesn't exist", 403)
 
-        # Ensure password was submitted
+        # Ensure number of shares was submitted
         elif not request.form.get("shares") >= 0:
             return apology("must provide number of shares", 403)
 
