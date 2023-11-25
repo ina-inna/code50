@@ -58,7 +58,7 @@ def buy():
         stock = lookup(request.form.get("symbol"))
         sum = stock["price"]*int(request.form.get("shares"))
         db.execute("SELECT * FROM users WHERE id = ?", session.get("user_id"))
-        if sum > int(request.form.get("cash"))
+        if sum > int(request.form.get("cash")):
             return apology("not enough cash", 403)
         else:
             db.execute("INSERT INTO purchases (id_iser, stock, number_shares, price_per_share, timestamp_column) VALUES(?, ?, ?, ?, CURRENT_TIMESTAMP)", session.get("user_id"), request.form.get("symbol"), request.form.get("shares"), stock["price"],  )
