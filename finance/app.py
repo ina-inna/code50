@@ -64,7 +64,9 @@ def buy():
             id_user = session.get("user_id")
             stock = request.form.get("symbol")
             number_shares = request.form.get("shares")
+            price_per_share = stock["price"]
             
+
 
 
 
