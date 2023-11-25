@@ -46,6 +46,8 @@ def buy():
     if request.method == "POST":
         return apology("TODO")
 
+        return redirect("/")
+
     else:
         return render_template("buy.html")
 
