@@ -49,7 +49,7 @@ def buy():
             return apology("must provide stock's symbol", 403)
 
         # Ensure password was submitted
-        elif not (request.form.get("shares") > 0):
+        elif not request.form.get("shares") >= 0:
             return apology("must provide number of shares", 403)
 
 
