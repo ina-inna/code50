@@ -55,6 +55,11 @@ def buy():
             return apology("must provide number of shares", 403)
 
 
+
+        # Create a database for users and stocks 
+        existing_user = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
+
+
          return redirect("/")
 
     else:
