@@ -45,13 +45,13 @@ def buy():
 
     if request.method == "POST":
 
-         if not request.form.get("symbol"):
+        if not request.form.get("symbol"):
             return apology("must provide stock's symbol", 403)
-         elif not lookup(request.form.get("symbol")):
+        elif not lookup(request.form.get("symbol")):
             return apology("stock symbol doesn't exist", 403)
 
         # Ensure number of shares was submitted
-         elif request.form.get("shares") is None or int(request.form.get("shares")) < 0:
+        elif request.form.get("shares") is None or int(request.form.get("shares")) < 0:
             return apology("must provide number of shares", 403)
 
         # check if cash is enough
@@ -61,6 +61,10 @@ def buy():
         if sum > int(request.form.get("cash"))
             return apology("not enough cash", 403)
         else:
+            id_user = session.get("user_id")
+            stock = request.form.get("symbol")
+            number_shares = request.form.get("shares")
+            
 
 
 
