@@ -58,7 +58,7 @@ def buy():
 
 
         # if enough insert information about a purchase into a database
-        existing_user = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
+        db.execute("SELECT * FROM users WHERE id = ?", request.form.get("id"))
 
 
         # update cash remaining in the database users
