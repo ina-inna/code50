@@ -57,14 +57,14 @@ def buy():
         # check if cash is enough
         stock = lookup(request.form.get("symbol"))
         cost = stock["price"]*int(request.form.get("shares"))
-        user = db.execute("SELECT * FROM users WHERE id = ?", session.get("user_id"))
+        user = db.execute("SELECT * FROM users WHERE id = ?", session.get("user_id").fetchone())
 
 
-        if sum > user["cash"]:
+        if sum > user[0]["cash"]:
             return apology("not enough cash", 403)
         else:
             # update cash remaining in the database users
-            new_cash = user["cash"] - cost
+            new_cash = user[0]["cash"] - cost
             db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, session.get("user_id"))
 
             # if enough insert information about a purchase into a database
