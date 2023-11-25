@@ -51,11 +51,11 @@ def buy():
             return apology("stock symbol doesn't exist", 403)
 
         # Ensure number of shares was submitted
-        elif not request.form.get("shares") >= 0:
+         elif request.form.get("shares") is None or int(request.form.get("shares")) < 0:
             return apology("must provide number of shares", 403)
 
 
-        return redirect("/")
+         return redirect("/")
 
     else:
         return render_template("buy.html")
