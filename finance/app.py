@@ -58,23 +58,20 @@ def buy():
         stock = lookup(request.form.get("symbol"))
         cost = stock["price"]*int(request.form.get("shares"))
         user = db.execute("SELECT * FROM users WHERE id = ?", session.get("user_id"))
+
+
         if sum > user["cash"]:
             return apology("not enough cash", 403)
         else:
+            # update cash remaining in the database users
             new_cash = user["cash"] - cost
-            db.execute("INSERT INTO purchases (id_iser, stock, number_shares, price_per_share, timestamp_column) VALUES(?, ?, ?, ?, CURRENT_TIMESTAMP)", session.get("user_id"), request.form.get("symbol"), request.form.get("shares"), stock["price"],  )
+            db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, session.get("user_id"))
+
+            # if enough insert information about a purchase into a database
+            db.execute("INSERT INTO purchases (id_iser, stock, number_shares, price_per_share, timestamp_column) VALUES(?, ?, ?, ?, CURRENT_TIMESTAMP)", session.get("user_id"), request.form.get("symbol"), int(request.form.get("shares")), stock["price"])
 
 
-
-
-
-        # if enough insert information about a purchase into a database
-
-
-
-        # update cash remaining in the database users
-
-         return redirect("/")
+        return redirect("/")
 
     else:
         return render_template("buy.html")
