@@ -37,10 +37,11 @@ def index():
     """Show portfolio of stocks"""
 
     user_stocks = db.execute("SELECT stock, SUM (number_shares) AS total_shares FROM purchases WHERE id_user = ? GROUP BY stock HAVING SUM (number_shares) > 0", session.get("user_id"))
+    total_value = 0
     for stock in user_stocks:
-        request_for_stock = lookup(user_stocks["stock"])
+        request_for_stock = lookup(stock["stock"])
         current_price = request_for_stock["price"]
-        total_value = current_price * user_stocks["number_shares"]
+        total_value += current_price * stock["number_shares"]
     current_cash = db.execute("SELECT cash FROM users where id = ?", session.get("user_id"))
     return render_template("index.html", user_stocks, current_cash)
 
