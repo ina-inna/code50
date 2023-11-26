@@ -224,10 +224,22 @@ def sell():
         if not request.form.get("shares"):
             return apology("must provide quantity of shares", 403)
 
-        # Ensure number of shares was submitted
-        user_stocks = db.execute("SELECT stock = "share_to_sell", SUM (number_shares) AS total_shares FROM purchases WHERE id_user = ? GROUP BY stock HAVING SUM (number_shares) > 0", session.get("user_id"))
-        elif int(request.form.get("shares")) > int(user_stocks['total.shares']):
-            return apology("incorrect provide number of shares", 403)
+        # Ensure number of shares is correct
+        user_stocks = db.execute("SELECT stock, SUM (number_shares) AS total_shares FROM purchases WHERE id_user = ? AND stock = 'share_to_sell' GROUP BY stock HAVING SUM (number_shares) > 0", session.get("user_id"))
+        elif int(request.form.get("shares")) > user_stocks[0]['total.shares']:
+            return apology("insufficient funds", 403)
+        else:
+            # update cash remaining in the database users
+            new_cash = user[0]["cash"] - cost
+            db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, session.get("user_id"))
+
+            # if enough insert information about a purchase into a database
+            db.execute("INSERT INTO purchases (id_user, stock, number_shares, price_per_share, timestamp_column) VALUES(?, ?, ?, ?, CURRENT_TIMESTAMP)", session.get("user_id"), request.form.get("symbol"), int(request.form.get("shares")), stock["price"])
+
+
+        return redirect("/")
+
+
 
     else:
         stocks = db.execute("SELECT DISTINCT stock FROM purchases WHERE id_user = ?", session.get("user_id"))
