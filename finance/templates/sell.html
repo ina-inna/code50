@@ -7,7 +7,7 @@
 {% block main %}
     <form action="/sell" method="post">
         <div class="mb-3">
-                    <select name="share_to_sell" id="share_to_sell">
+                    <select name="symbol" id="share_to_sell">
                     <option value="choose" selected disabled>Choose a stock to sell</option>
 
                     {% for stock in stocks %}
