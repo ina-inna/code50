@@ -37,6 +37,7 @@ def index():
     """Show portfolio of stocks"""
 
       user_stocks = db.execute("SELECT *, SUM (number_shares) AS total_shares FROM purchases WHERE id = ? GROUP BY stock HAVING SUM (number_shares) > 0", session.get("user_id"))
+      
         return render_template("index.html", user_stocks=user_stocks)
 
     return apology("TODO")
