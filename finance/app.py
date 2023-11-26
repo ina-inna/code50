@@ -225,8 +225,8 @@ def sell():
             return apology("must provide quantity of shares", 403)
 
         # Ensure number of shares was submitted
-        user_stocks = db.execute("SELECT stock, SUM (number_shares) AS total_shares FROM purchases WHERE id_user = ? GROUP BY stock HAVING SUM (number_shares) > 0", session.get("user_id"))
-        elif int(request.form.get("shares")) > int(db.execute("SELECT stock, SUM (number_shares) AS total_shares FROM purchases WHERE id_user = ?", session.get("user_id")):
+        user_stocks = db.execute("SELECT stock = "share_to_sell", SUM (number_shares) AS total_shares FROM purchases WHERE id_user = ? GROUP BY stock HAVING SUM (number_shares) > 0", session.get("user_id"))
+        elif int(request.form.get("shares")) > int(user_stocks['total.shares']):
             return apology("incorrect provide number of shares", 403)
 
     else:
