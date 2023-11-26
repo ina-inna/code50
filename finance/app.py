@@ -66,7 +66,7 @@ def buy():
             return apology("stock symbol doesn't exist", 400)
 
         # Ensure number of shares was submitted
-        elif not request.form.get("shares") or request.form.get("shares").isdigit() or int(request.form.get("shares")) <= 0:
+        elif not request.form.get("shares") or not request.form.get("shares").isdigit() or int(request.form.get("shares")) <= 0:
             return apology("must provide a whole positive number of shares", 400)
 
         # check if cash is enough
