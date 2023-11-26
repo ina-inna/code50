@@ -47,7 +47,7 @@ def index():
         })
     raw_cash = db.execute("SELECT cash FROM users where id = ?", session.get("user_id"))
     current_cash = usd(raw_cash[0]['cash'])
-    grand_total = current_cash + sum(stock.total_value)
+    grand_total = current_cash + sum(user_stocks.total_value)
     return render_template("index.html", user_stocks = user_stocks, current_cash = current_cash,  grand_total = grand_total)
 
 
