@@ -40,7 +40,6 @@ def index():
     total_value = 0
 
     for stock in user_stocks:
-        total_value = 0
         request_for_stock = lookup(stock["stock"])
         current_price = request_for_stock["price"]
         total_value += current_price * stock['total_shares']
