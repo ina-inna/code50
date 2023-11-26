@@ -61,13 +61,13 @@ def buy():
     if request.method == "POST":
 
         if not request.form.get("symbol"):
-            return apology("must provide stock's symbol", 403)
+            return apology("must provide stock's symbol", 400)
         elif not lookup(request.form.get("symbol")):
-            return apology("stock symbol doesn't exist", 403)
+            return apology("stock symbol doesn't exist", 400)
 
         # Ensure number of shares was submitted
         elif request.form.get("shares") is None or int(request.form.get("shares")) < 0:
-            return apology("must provide number of shares", 403)
+            return apology("must provide number of shares", 400)
 
         # check if cash is enough
         stock = lookup(request.form.get("symbol"))
@@ -152,6 +152,9 @@ def logout():
 def quote():
     """Get stock quote."""
     if request.method == "POST":
+
+        if not request.form.get("symbol"):
+            return apology("must provide stock symbol", 400)
         if not lookup(request.form.get("symbol")):
             return apology("stock symbol doesn't exist", 400)
         else:
@@ -214,14 +217,14 @@ def sell():
     """Sell shares of stock"""
     if request.method == "POST":
         if not request.form.get("share_to_sell"):
-            return apology("must provide stock's symbol", 403)
+            return apology("must provide stock's symbol", 400)
         if not request.form.get("shares"):
-            return apology("must provide quantity of shares", 403)
+            return apology("must provide quantity of shares", 400)
 
         # Ensure number of shares is correct
         user_stocks = db.execute("SELECT stock, SUM (number_shares) AS total_shares FROM purchases WHERE id_user = ? AND stock = ? GROUP BY stock HAVING SUM (number_shares) > 0", session.get("user_id"), request.form.get("share_to_sell"))
         if int(request.form.get("shares")) > user_stocks[0]['total_shares']:
-            return apology("insufficient funds", 403)
+            return apology("insufficient funds", 400)
         else:
             # update cash remaining in the database users
             stock = lookup(request.form.get("share_to_sell"))
@@ -233,8 +236,6 @@ def sell():
 
             new_cash = user[0]["cash"] + cost
             db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, session.get("user_id"))
-
-
 
         return redirect("/")
 
