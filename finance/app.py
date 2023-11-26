@@ -101,7 +101,7 @@ def history():
     """Show history of transactions"""
     user_purchases = db.execute("SELECT * FROM purchases WHERE id_user = ?", session.get("user_id"))
     if not user_purchases:
-        return apology("there are no transactions to disaply", 403)
+        return apology("there are no transactions to display", 403)
     else:
         return render_template("history.html", user_purchases = user_purchases)
 
