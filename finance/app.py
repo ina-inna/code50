@@ -219,14 +219,12 @@ def register():
 def sell():
     """Sell shares of stock"""
     if request.method == "POST":
-        if not request.form.get("symbol"):
+        if not request.form.get("share_to_sell"):
             return apology("must provide stock's symbol", 403)
-        elif not lookup(request.form.get("symbol")):
-            return apology("stock symbol doesn't exist", 403)
 
         # Ensure number of shares was submitted
-        elif request.form.get("shares") is None or int(request.form.get("shares")) < 0:
-            return apology("must provide number of shares", 403)
+        elif request.form.get("shares") is None or int(request.form.get("shares")) > 0:
+            return apology("incorrect provide number of shares", 403)
 
     else:
         stocks = db.execute("SELECT DISTINCT stock FROM purchases WHERE id_user = ?", session.get("user_id"))
