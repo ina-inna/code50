@@ -226,7 +226,8 @@ def sell():
 
         # Ensure number of shares is correct
         user_stocks = db.execute("SELECT stock, SUM (number_shares) AS total_shares FROM purchases WHERE id_user = ? AND stock = 'share_to_sell' GROUP BY stock HAVING SUM (number_shares) > 0", session.get("user_id"))
-        if int(request.form.get("shares")) > user_stocks['total.shares']:
+        total_shares = user_stocks['total_shares']
+        if int(request.form.get("shares")) > total_shares:
             return apology("insufficient funds", 403)
         else:
             # update cash remaining in the database users
