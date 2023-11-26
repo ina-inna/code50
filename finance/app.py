@@ -174,19 +174,19 @@ def register():
 
          # Ensure username was submitted
         if not request.form.get("username"):
-            return apology("must provide username", 403)
+            return apology("must provide username", 400)
 
         # Ensure password was submitted
         elif not request.form.get("password"):
-            return apology("must provide password", 403)
+            return apology("must provide password", 400)
 
         # Ensure password was submitted
         elif not request.form.get("confirmation"):
-            return apology("must retype password", 403)
+            return apology("must retype password", 400)
 
          # Ensure passwords match
         elif not request.form.get("password") == request.form.get("confirmation"):
-            return apology("passwords should match", 403)
+            return apology("passwords should match", 400)
 
 
         # Query database for username
@@ -194,7 +194,7 @@ def register():
 
         # Ensure username exists and password is correct
         if existing_user:
-            return apology("username already taken", 403)
+            return apology("username already taken", 200)
 
         # Add the user to the database
         username = request.form.get("username")
