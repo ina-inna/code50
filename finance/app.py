@@ -221,9 +221,11 @@ def sell():
     if request.method == "POST":
         if not request.form.get("share_to_sell"):
             return apology("must provide stock's symbol", 403)
+        if not request.form.get("shares"):
+            return apology("must provide quantity of shares", 403)
 
         # Ensure number of shares was submitted
-        elif request.form.get("shares") is None or int(request.form.get("shares")) > 0:
+        elif int(request.form.get("shares")) > 0:
             return apology("incorrect provide number of shares", 403)
 
     else:
