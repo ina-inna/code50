@@ -227,5 +227,7 @@ def sell():
         # Ensure number of shares was submitted
         elif request.form.get("shares") is None or int(request.form.get("shares")) < 0:
             return apology("must provide number of shares", 403)
+
     else:
-        return render_template("sell.html")
+        stocks = db.execute("SELECT DISTINCT stock FROM purchases WHERE id_user = ?", session.get("user_id"))
+        return render_template("sell.html", stocks = stocks)
