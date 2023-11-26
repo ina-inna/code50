@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index page
+{% endblock %}
+
+{% block main %}
+
+
+<h2>Shares owned</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Stock</th>
+            <th>Number of shares</th>
+            <th>Current price</th>
+            <th>Total value</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- TODO: Loop through the database entries to display them in this table -->
+
+        {% for stock in user_stocks %}
+        <tr>
+        <td>{{ stock.name }}</td>
+        <td>{{ birthday.month }}/{{ birthday.day }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
