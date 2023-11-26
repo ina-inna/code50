@@ -30,5 +30,24 @@
         </tr>
         {% endfor %}
     </tbody>
+
+
+
+    <h2>Finacial summary</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Current cash balance</th>
+            <th>Grand total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- TODO: Loop through the database entries to display them in this table -->
+        <tr>
+        <td>{{ stock.stock }}</td>
+        <td>{{ stock.total_shares }}</td>
+        </tr>
+
+    </tbody>
 </table>
 {% endblock %}
