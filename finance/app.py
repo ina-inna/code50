@@ -234,11 +234,12 @@ def sell():
             cost = stock["price"]*int(request.form.get("shares"))
             user = db.execute("SELECT * FROM users WHERE id = ?", session.get("user_id"))
 
+            # if enough insert information about a purchase into a database
+            db.execute("INSERT INTO purchases (id_user, stock, number_shares, price_per_share, timestamp_column) VALUES(?, ?, ?, ?, CURRENT_TIMESTAMP)", session.get("user_id"), request.form.get("share_to_sell"), -int(request.form.get("shares")), stock["price"])
+
             new_cash = user[0]["cash"] + cost
             db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, session.get("user_id"))
 
-            # if enough insert information about a purchase into a database
-            db.execute("INSERT INTO purchases (id_user, stock, number_shares, price_per_share, timestamp_column) VALUES(?, ?, ?, ?, CURRENT_TIMESTAMP)", session.get("user_id"), request.form.get("share_to_sell"), int(request.form.get("shares")), stock["price"])
 
 
         return redirect("/")
