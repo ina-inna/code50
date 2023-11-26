@@ -8,8 +8,10 @@
     <form action="/sell" method="post">
         <div class="mb-3">
                 <select name="color">
-                    <option value="red">Harvard Crimson</option>
-                    <option value="blue">Yale Blue</option>
+                    {% for stock in stocks %}
+                    <option value="stock"> {{ stock.stock }} </option>
+                    {% endfor %}
+
                 </select>
                     </div>
         <div class="mb-3">
