@@ -42,7 +42,7 @@ def index():
         current_price = request_for_stock["price"]
         total_value = current_price * stock['total_shares']
         stock.update({
-            "current_price": current_price
+            "current_price": current_price,
             "total_value": total_value
         })
     raw_cash = db.execute("SELECT cash FROM users where id = ?", session.get("user_id"))
