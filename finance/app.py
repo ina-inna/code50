@@ -66,7 +66,7 @@ def buy():
             return apology("stock symbol doesn't exist", 400)
 
         # Ensure number of shares was submitted
-        elif request.form.get("shares") is None or int(request.form.get("shares")) < 0:
+        elif request.form.get("shares") is None or int(request.form.get("shares")) <= 0:
             return apology("must provide number of shares", 400)
 
         # check if cash is enough
@@ -220,6 +220,8 @@ def sell():
             return apology("must provide stock's symbol", 400)
         if not request.form.get("shares"):
             return apology("must provide quantity of shares", 400)
+         if not request.form.get("shares") <= 0:
+             return apology("must provide quantity of shares", 400)
 
         # Ensure number of shares is correct
         user_stocks = db.execute("SELECT stock, SUM (number_shares) AS total_shares FROM purchases WHERE id_user = ? AND stock = ? GROUP BY stock HAVING SUM (number_shares) > 0", session.get("user_id"), request.form.get("share_to_sell"))
