@@ -85,7 +85,7 @@ def buy():
             db.execute("INSERT INTO purchases (id_user, stock, number_shares, price_per_share, timestamp_column) VALUES(?, ?, ?, ?, CURRENT_TIMESTAMP)", session.get("user_id"), request.form.get("symbol"), int(request.form.get("shares")), stock["price"])
 
 
-        return redirect("index.html")
+        return redirect("/")
 
     else:
         return render_template("buy.html")
@@ -239,7 +239,7 @@ def sell():
             new_cash = user[0]["cash"] + cost
             db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, session.get("user_id"))
 
-        return redirect("index.html")
+        return redirect("/")
 
 
     else:
