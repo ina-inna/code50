@@ -37,7 +37,7 @@ def index():
 
     user_stocks = db.execute("SELECT stock, SUM (number_shares) AS total_shares FROM purchases WHERE id_user = ? GROUP BY stock HAVING SUM (number_shares) > 0", session.get("user_id"))
     if not user_stocks:
-        return apology("no stocks in your portfolio", 403)
+        return apology("no stocks in your portfolio", 200)
     else:
 
         for stock in user_stocks:
