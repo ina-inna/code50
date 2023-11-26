@@ -153,7 +153,7 @@ def quote():
     """Get stock quote."""
     if request.method == "POST":
         if not lookup(request.form.get("symbol")):
-            return apology("stock symbol doesn't exist", 403)
+            return apology("stock symbol doesn't exist", 400)
         else:
             stock = lookup(request.form.get("symbol"))
             return render_template("quoted.html", name = stock["name"], price = stock["price"], symbol = stock["symbol"])
@@ -188,7 +188,7 @@ def register():
 
         # Ensure username exists and password is correct
         if existing_user:
-            return apology("username already taken", 200)
+            return apology("username already taken", 400)
 
         # Add the user to the database
         username = request.form.get("username")
