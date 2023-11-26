@@ -41,13 +41,14 @@ def index():
         request_for_stock = lookup(stock["stock"])
         current_price = request_for_stock["price"]
         total_value = current_price * stock['total_shares']
+        stock['current_price'] = request_for_stock["price"]
         stock.update({
-            "current_price": current_price,
+            # "current_price": current_price,
             "total_value": total_value,
             "current_price_html": usd(current_price),
             "total_value_html": usd(total_value)
         })
- 
+
 
     raw_cash = db.execute("SELECT cash FROM users where id = ?", session.get("user_id"))
     float_cash = raw_cash[0]['cash']
