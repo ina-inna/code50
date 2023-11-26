@@ -220,7 +220,7 @@ def sell():
             return apology("must provide stock's symbol", 400)
         if not request.form.get("shares"):
             return apology("must provide quantity of shares", 400)
-         if not request.form.get("shares") <= 0:
+        if request.form.get("shares") <= 0:
              return apology("must provide quantity of shares", 400)
 
         # Ensure number of shares is correct
