@@ -41,9 +41,8 @@ def index():
         current_price = lookup(user_stocks["stock"])
         total_value = current_price * user_stocks["number_shares"]
     current_cash = db.execute("SELECT cash FROM users where id = ?", session.get("user_id"))
-    return render_template("index.html", user_stocks=user_stocks)
-    if not user_stocks:
-        return apology("no shares purchased yet", 403")
+    return render_template("index.html", user_stocks, current_price, total_value, current_cash)
+
 
 
 @app.route("/buy", methods=["GET", "POST"])
