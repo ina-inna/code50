@@ -36,9 +36,9 @@ def after_request(response):
 def index():
     """Show portfolio of stocks"""
 
-      user_stocks = db.execute("SELECT * FROM purchases WHERE id = ?", session.get("user_id"))
+      user_stocks = db.execute("SELECT * FROM purchases WHERE id = ? GROUP BY stock", session.get("user_id"))
         return render_template("index.html", user_stocks=user_stocks)
-    
+
     return apology("TODO")
 
 
