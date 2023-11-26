@@ -5,10 +5,14 @@
 {% endblock %}
 
 {% block main %}
-    <form action="/buy" method="post">
+    <form action="/sell" method="post">
         <div class="mb-3">
-            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="stock_to_buy" name="symbol" placeholder="Type the stock's symbol" type="text">
-        </div>
+                What is your favorite color?
+                <select name="color">
+                    <option value="red">Harvard Crimson</option>
+                    <option value="blue">Yale Blue</option>
+                </select>
+                    </div>
         <div class="mb-3">
             <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="number_of_shares" name="shares" placeholder="Number of shares" type="text">
         </div>
