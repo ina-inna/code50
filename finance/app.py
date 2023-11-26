@@ -218,4 +218,14 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
-    return apology("TODO")
+    if request.method == "POST":
+        if not request.form.get("symbol"):
+            return apology("must provide stock's symbol", 403)
+        elif not lookup(request.form.get("symbol")):
+            return apology("stock symbol doesn't exist", 403)
+
+        # Ensure number of shares was submitted
+        elif request.form.get("shares") is None or int(request.form.get("shares")) < 0:
+            return apology("must provide number of shares", 403)
+    else:
+        return render_template("sell.html")
