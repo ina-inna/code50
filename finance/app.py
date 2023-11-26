@@ -225,7 +225,7 @@ def sell():
             return apology("must provide quantity of shares", 403)
 
         # Ensure number of shares is correct
-        user_stocks = db.execute("SELECT stock, SUM (number_shares) AS total_shares FROM purchases WHERE id_user = ? AND stock = 'share_to_sell' GROUP BY stock HAVING SUM (number_shares) > 0", session.get("user_id"))
+        user_stocks = db.execute("SELECT stock, SUM (number_shares) AS total_shares FROM purchases WHERE id_user = ? AND stock = ? GROUP BY stock HAVING SUM (number_shares) > 0", session.get("user_id"), request.form.get("share_to_sell"))
         if int(request.form.get("shares")) > user_stocks[0]['total_shares']:
             return apology("insufficient funds", 403)
         else:
@@ -238,7 +238,7 @@ def sell():
             db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, session.get("user_id"))
 
             # if enough insert information about a purchase into a database
-            db.execute("INSERT INTO purchases (id_user, stock, number_shares, price_per_share, timestamp_column) VALUES(?, ?, ?, ?, CURRENT_TIMESTAMP)", session.get("user_id"), request.form.get("symbol"), int(request.form.get("shares")), stock["price"])
+            db.execute("INSERT INTO purchases (id_user, stock, number_shares, price_per_share, timestamp_column) VALUES(?, ?, ?, ?, CURRENT_TIMESTAMP)", session.get("user_id"), request.form.get("share_to_sell"), int(request.form.get("shares")), stock["price"])
 
 
         return redirect("/")
