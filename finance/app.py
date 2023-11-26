@@ -36,22 +36,23 @@ def index():
     """Show portfolio of stocks"""
 
     user_stocks = db.execute("SELECT stock, SUM (number_shares) AS total_shares FROM purchases WHERE id_user = ? GROUP BY stock HAVING SUM (number_shares) > 0", session.get("user_id"))
+    if not user_stocks:
+        return apology("no stocks in your portfolio", 403)
+    else:
 
-    for stock in user_stocks:
-        request_for_stock = lookup(stock["stock"])
-        current_price = request_for_stock["price"]
-        total_value = current_price * stock['total_shares']
-        stock.update({
-            "current_price": current_price,
-            "total_value": total_value
-        })
-    raw_cash = db.execute("SELECT cash FROM users where id = ?", session.get("user_id"))
-    float_cash = raw_cash[0]['cash']
-    current_cash = usd(raw_cash[0]['cash'])
-    grand_total = usd(float_cash + sum(stock['total_value'] for stock in user_stocks))
-    return render_template("index.html", user_stocks = user_stocks, current_cash = current_cash,  grand_total = grand_total)
-
-    
+        for stock in user_stocks:
+            request_for_stock = lookup(stock["stock"])
+            current_price = request_for_stock["price"]
+            total_value = current_price * stock['total_shares']
+            stock.update({
+                "current_price": current_price,
+                "total_value": total_value
+            })
+        raw_cash = db.execute("SELECT cash FROM users where id = ?", session.get("user_id"))
+        float_cash = raw_cash[0]['cash']
+        current_cash = usd(raw_cash[0]['cash'])
+        grand_total = usd(float_cash + sum(stock['total_value'] for stock in user_stocks))
+        return render_template("index.html", user_stocks = user_stocks, current_cash = current_cash,  grand_total = grand_total)
 
 
 
@@ -98,7 +99,11 @@ def buy():
 @login_required
 def history():
     """Show history of transactions"""
-    return apology("TODO")
+    user_purchases = db.execute("SELECT * FROM purchases WHERE id_user = ?", session.get("user_id"))
+    if not user_purchases:
+        return apology("there are no transactions to disaply", 403)
+    else:
+        return render_template("history.html", user_purchases = user_purchases)
 
 
 @app.route("/login", methods=["GET", "POST"])
