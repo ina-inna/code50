@@ -9,7 +9,7 @@
         <div class="mb-3">
                 <select name="share_to_sell">
                     {% for stock in stocks %}
-                    <option value="stock"> {{ stock.stock }} </option>
+                    <option value="{{ stock.stock }}"> {{ stock.stock }} </option>
                     {% endfor %}
 
                 </select>
