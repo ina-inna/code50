@@ -22,8 +22,11 @@
 
         {% for stock in user_stocks %}
         <tr>
-        <td>{{ stock.name }}</td>
-        <td>{{ birthday.month }}/{{ birthday.day }}</td>
+        <td>{{ stock.stock }}</td>
+        <td>{{ stock.total_shares }}</td>
+        <td>{{ stock.current_price }}</td>
+        <td>{{ stock.total_value }}</td>
+
         </tr>
         {% endfor %}
     </tbody>
