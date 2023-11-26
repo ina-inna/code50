@@ -38,7 +38,8 @@ def index():
 
     user_stocks = db.execute("SELECT stock, SUM (number_shares) AS total_shares FROM purchases WHERE id_user = ? GROUP BY stock HAVING SUM (number_shares) > 0", session.get("user_id"))
     for stock in user_stocks:
-        current_price = lookup(user_stocks["stock"])
+        request_for_stock = lookup(user_stocks["stock"])
+        current_price = request_for_stock["price"]
         total_value = current_price * user_stocks["number_shares"]
     current_cash = db.execute("SELECT cash FROM users where id = ?", session.get("user_id"))
     return render_template("index.html", user_stocks, current_cash)
