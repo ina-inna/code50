@@ -159,7 +159,7 @@ def quote():
             return apology("stock symbol doesn't exist", 400)
         else:
             stock = lookup(request.form.get("symbol"))
-            return render_template("quoted.html", name = stock["name"], price = stock["price"], symbol = stock["symbol"])
+            return render_template("quoted.html", name = stock["name"], price = usd(stock["price"]), symbol = stock["symbol"])
     else:
         return render_template("quote.html")
 
