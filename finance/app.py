@@ -68,6 +68,8 @@ def buy():
         # Ensure number of shares was submitted
         elif request.form.get("shares") is None or int(request.form.get("shares")) <= 0:
             return apology("must provide number of shares", 400)
+        if not request.form.get("shares").is_integer():
+            return apology("please enter a whole number of shares", 400)
 
         # check if cash is enough
         stock = lookup(request.form.get("symbol"))
