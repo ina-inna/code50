@@ -45,6 +45,9 @@ def index():
             "current_price": current_price,
             "total_value": total_value
         })
+        current_price = usd(current_price)
+        total_value = usd(total_value)
+        
     raw_cash = db.execute("SELECT cash FROM users where id = ?", session.get("user_id"))
     float_cash = raw_cash[0]['cash']
     current_cash = usd(raw_cash[0]['cash'])
