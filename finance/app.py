@@ -52,7 +52,7 @@ def index():
         float_cash = raw_cash[0]['cash']
         current_cash = usd(raw_cash[0]['cash'])
         grand_total = usd(float_cash + sum(stock['total_value'] for stock in user_stocks))
-        return render_template("index.html", user_stocks = user_stocks, current_cash = current_cash,  grand_total = grand_total)
+        return render_template("index.html", user_stocks = user_stocks, current_cash = current_cash, grand_total = grand_total)
 
 
 
