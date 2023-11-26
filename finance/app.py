@@ -85,7 +85,7 @@ def buy():
             db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, session.get("user_id"))
 
             # if enough insert information about a purchase into a database
-            db.execute("INSERT INTO purchases (id_user, stock, number_shares, price_per_share, timestamp_column) VALUES(?, ?, ?, ?, CURRENT_TIMESTAMP)", session.get("user_id"), request.form.get("symbol"), -int(request.form.get("shares")), stock["price"])
+            db.execute("INSERT INTO purchases (id_user, stock, number_shares, price_per_share, timestamp_column) VALUES(?, ?, ?, ?, CURRENT_TIMESTAMP)", session.get("user_id"), request.form.get("symbol"), int(request.form.get("shares")), stock["price"])
 
 
         return redirect("/")
