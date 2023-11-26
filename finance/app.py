@@ -36,13 +36,14 @@ def after_request(response):
 def index():
     """Show portfolio of stocks"""
 
-      user_stocks = db.execute("SELECT stock, SUM (number_shares) AS total_shares FROM purchases WHERE id = ? GROUP BY stock HAVING SUM (number_shares) > 0", session.get("user_id"))
-      for stocks in user_stocks:
+    user_stocks = db.execute("SELECT stock, SUM (number_shares) AS total_shares FROM purchases WHERE id_user = ? GROUP BY stock HAVING SUM (number_shares) > 0", session.get("user_id"))
+    for stocks in user_stocks:
         current_price = lookup(user_stocks["stock"])
         total_value = current_price * user_stocks["number_shares"]
-        return render_template("index.html", user_stocks=user_stocks)
-
-    return apology("TODO")
+    current_cash = db.execute("SELECT cash FROM users where id = ?", session.get("user_id"))
+    return render_template("index.html", user_stocks=user_stocks)
+    if not user_stocks:
+        return apology("no shares purchased yet", 403")
 
 
 @app.route("/buy", methods=["GET", "POST"])
