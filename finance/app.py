@@ -228,16 +228,12 @@ def settings():
         elif not request.form.get("new_password") == request.form.get("password_checker"):
             return apology("passwords should match", 400)
 
-
-        # Query database for username
-        existing_user = db.execute("SELECT * FROM users WHERE id = ?", session.get("user_id"))
-
         # Generate new hash
         hashed_password = generate_password_hash(request.form.get("new_password"))
 
 
         # Update new password
-        db.execute("UPDATE users SET hash = ? WHERE id = ?", new_cash, session.get("user_id"))
+        db.execute("UPDATE users SET hash = ? WHERE id = ?", hashed_password, session.get("user_id"))
 
 
     else:
