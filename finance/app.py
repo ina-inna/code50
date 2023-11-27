@@ -224,10 +224,15 @@ def settings():
         elif not request.form.get("password_checker"):
             return apology("must provide new password", 400)
 
-        hash_old_password = generate_password_hash(request.form.get("current_password"))
-        current_hash = db.execute("SELECT hash FROM users WHERE id = ?", session.get("user_id"))
-        if not hash_old_password == current_hash[0]['hash']:
-            return apology("provide correct password", 400)
+        current_hash_result = db.execute("SELECT hash FROM users WHERE id = ?", session.get("user_id"))
+
+        if current_hash_result is None or not current_hash_result:
+            return apology("User not found", 404)
+
+        current_hash = current_hash_result[0]['hash']
+
+        if not check_password_hash(current_hash, request.form.get("current_password")):
+            return apology("Provide correct password", 400)
 
 
          # Ensure passwords match
