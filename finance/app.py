@@ -21,7 +21,6 @@ Session(app)
 # Configure CS50 Library to use SQLite database
 db = SQL("sqlite:///finance.db")
 
-app.jinja_env.globals.update(usd=usd)
 
 @app.after_request
 def after_request(response):
@@ -39,21 +38,14 @@ def index():
     user_stocks = db.execute("SELECT stock, SUM (number_shares) AS total_shares FROM purchases WHERE id_user = ? GROUP BY stock HAVING SUM (number_shares) > 0", session.get("user_id"))
 
     for stock in user_stocks:
-        request_for_stock = lookup(stock["stock"])
-        stock['total_value'] = request_for_stock["price"] * stock['total_shares']
-        stock['current_price'] = request_for_stock["price"]
-        # stock.update({
-            # "current_price": current_price,
-            # "total_value": total_value,
-            # "current_price_html": usd(current_price),
-            # "total_value_html": usd(total_value)
-        # })
-
+        price_requested = lookup(stock["stock"])['price']
+        stock['total_value'] = price_requested * stock['total_shares']
+        stock['current_price'] = price_requested
 
     raw_cash = db.execute("SELECT cash FROM users where id = ?", session.get("user_id"))
     float_cash = raw_cash[0]['cash']
-    current_cash = usd(raw_cash[0]['cash'])
-    grand_total = usd(float_cash + sum(stock['total_value'] for stock in user_stocks))
+    current_cash = raw_cash[0]['cash']
+    grand_total = float_cash + sum(stock['total_value'] for stock in user_stocks)
     return render_template("index.html", user_stocks = user_stocks, current_cash = current_cash, grand_total = grand_total)
 
 

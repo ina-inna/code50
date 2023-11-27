@@ -24,8 +24,8 @@
         <tr>
         <td>{{ stock.stock }}</td>
         <td>{{ stock.total_shares }}</td>
-        <td>{{ usd(stock.current_price) }}</td>
-        <td>{{ usd(stock.total_value) }}</td>
+        <td>{{ stock.current_price | usd }}</td>
+        <td>{{ stock.total_value | usd }}</td>
 
         </tr>
         {% endfor %}
@@ -43,8 +43,8 @@
     <tbody>
         <!-- TODO: Loop through the database entries to display them in this table -->
         <tr>
-        <td>{{ current_cash }}</td>
-        <td>{{ grand_total }}</td>
+        <td>{{ current_cash | usd }}</td>
+        <td>{{ grand_total | usd }}</td>
         </tr>
 
     </tbody>
