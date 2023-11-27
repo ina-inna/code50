@@ -207,6 +207,53 @@ def register():
 
 
 
+@app.route("/settings", methods=["GET", "POST"])
+def settings():
+    """Allow users to change their password"""
+    if request.method == "POST":
+
+         # Ensure username was submitted
+        if not request.form.get("current_password"):
+            return apology("must provide current password", 400)
+
+        # Ensure password was submitted
+        elif not request.form.get("new_password"):
+            return apology("must provide new password", 400)
+
+        # Ensure password was submitted
+        elif not request.form.get("password_checker"):
+            return apology("must verify passwords", 400)
+
+         # Ensure passwords match
+        elif not request.form.get("new_password") == request.form.get("password_checker"):
+            return apology("passwords should match", 400)
+
+
+        # Query database for username
+        existing_user = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
+
+        # Ensure username exists and password is correct
+        if existing_user:
+            return apology("username already taken", 400)
+
+        # Add the user to the database
+        username = request.form.get("username")
+        hashed_password = generate_password_hash(request.form.get("password"))
+
+
+        # Remember registrant
+        user_id = db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", username, hashed_password)
+
+        # Remember which user has logged in
+        session["user_id"] = user_id
+
+        return redirect("/")
+
+    else:
+        return render_template("settings.html")
+
+
+
 @app.route("/sell", methods=["GET", "POST"])
 @login_required
 def sell():
