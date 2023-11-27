@@ -1,11 +1,11 @@
 {% extends "layout.html" %}
 
 {% block title %}
-    Log In
+   Settings
 {% endblock %}
 
 {% block main %}
-    <form action="/register" method="post">
+    <form action="/settings" method="post">
         <div class="mb-3">
             <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="username" placeholder="Type your current password" type="text">
         </div>
@@ -13,7 +13,7 @@
             <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Type your new password" type="password">
         </div>
         <div class="mb-3">
-            <input class="form-control mx-auto w-auto" id="password_checker" name="confirmation" placeholder="Retype your password" type="password">
+            <input class="form-control mx-auto w-auto" id="password_checker" name="confirmation" placeholder="Retype your new password" type="password">
         </div>
         <button class="btn btn-primary" type="submit">Change password</button>
     </form>
