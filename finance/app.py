@@ -245,7 +245,7 @@ def settings():
         # Update new password
         db.execute("UPDATE users SET hash = ? WHERE id = ?", hashed_password, session.get("user_id"))
 
-        return redirect("success.html")
+        return render_template("success.html")
 
 
     else:
