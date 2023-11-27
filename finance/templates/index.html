@@ -24,8 +24,8 @@
         <tr>
         <td>{{ stock.stock }}</td>
         <td>{{ stock.total_shares }}</td>
-        <td>{{ stock.current_price_html }}</td>
-        <td>{{ stock.total_value_html }}</td>
+        <td>{{ usd(stock.current_price) }}</td>
+        <td>{{ usd(stock.total_value) }}</td>
 
         </tr>
         {% endfor %}
