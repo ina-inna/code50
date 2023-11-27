@@ -225,7 +225,7 @@ def settings():
             return apology("must provide new password", 400)
 
         hash_old_password = generate_password_hash(request.form.get("current_password"))
-        
+
 
          # Ensure passwords match
         elif not request.form.get("new_password") == request.form.get("password_checker"):
@@ -233,6 +233,7 @@ def settings():
 
         # Generate new hash
         hashed_password = generate_password_hash(request.form.get("new_password"))
+        current_hash = db.execute("SELECT hash FROM users WHERE id = ?", session.get("user_id"))
 
 
         # Update new password
