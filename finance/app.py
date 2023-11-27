@@ -222,7 +222,10 @@ def settings():
 
         # Ensure password was submitted
         elif not request.form.get("password_checker"):
-            return apology("must verify passwords", 400)
+            return apology("must provide new password", 400)
+
+        hash_old_password = generate_password_hash(request.form.get("current_password"))
+        
 
          # Ensure passwords match
         elif not request.form.get("new_password") == request.form.get("password_checker"):
