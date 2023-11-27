@@ -226,7 +226,7 @@ def settings():
 
         hash_old_password = generate_password_hash(request.form.get("current_password"))
         current_hash = db.execute("SELECT hash FROM users WHERE id = ?", session.get("user_id"))
-        elif not hash_old_password == current_hash[0]['hash']
+        if not hash_old_password == current_hash[0]['hash']:
             return apology("provide correct password", 400)
 
 
