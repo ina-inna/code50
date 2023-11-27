@@ -236,8 +236,8 @@ def settings():
         hashed_password = generate_password_hash(request.form.get("new_password"))
 
 
-        # Remember registrant
-db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, session.get("user_id"))
+        # Update new password
+        db.execute("UPDATE users SET hash = ? WHERE id = ?", new_cash, session.get("user_id"))
 
 
     else:
