@@ -230,24 +230,15 @@ def settings():
 
 
         # Query database for username
-        existing_user = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
+        existing_user = db.execute("SELECT * FROM users WHERE id = ?", session.get("user_id"))
 
-        # Ensure username exists and password is correct
-        if existing_user:
-            return apology("username already taken", 400)
-
-        # Add the user to the database
-        username = request.form.get("username")
-        hashed_password = generate_password_hash(request.form.get("password"))
+        # Generate new hash
+        hashed_password = generate_password_hash(request.form.get("new_password"))
 
 
         # Remember registrant
-        user_id = db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", username, hashed_password)
+db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, session.get("user_id"))
 
-        # Remember which user has logged in
-        session["user_id"] = user_id
-
-        return redirect("/")
 
     else:
         return render_template("settings.html")
