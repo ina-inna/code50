@@ -53,5 +53,29 @@ The updated user data is then saved in Chrome storage.
 
 
 Options.js define interaction with the Chrome Storage API. In this version of extension logs are stored for the last 7 entries.
+Let's break down its functionality:
+
+The main function is the entry point of the script. It logs a message to the console and then uses the Chrome Identity API to retrieve the user's ID.
+Data Retrieval:
+
+It retrieves user-specific data from Chrome storage using the Chrome Storage API. The user's data is stored in a map with user IDs as keys, and the extension is looking specifically for the current user's data.
+HTML Element Creation:
+
+The script then creates and manipulates HTML elements dynamically. It looks for an HTML element with the ID 'data-container' to serve as the container for displaying user data.
+Document Ready Event:
+
+The script listens for the 'DOMContentLoaded' event to ensure the HTML document is fully loaded before attempting to manipulate the DOM.
+Container Check and Clearing:
+
+It checks if the container element (data-container) exists. If found, it clears any existing content within the container.
+New Child Element:
+
+It creates a new element with the text "This is a new paragraph" and appends it to the container. This seems to be a placeholder or an initial content marker.
+User Data Rendering:
+
+It iterates through the user-specific data obtained from Chrome storage and creates HTML elements dynamically for each entry. Each entry is displayed in a div with details such as the date, emoji, and word. A horizontal line (<hr>) separates each entry.
+Console Logging:
+
+It logs the user-specific history for the last 7 days to the console.
 CSS files: history.css and style.css define style for the extension and the history page.
 Hello.html and options.html build structure for the defaul popup and history page. Each file contains a respective js script.
