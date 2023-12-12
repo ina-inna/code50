@@ -1,6 +1,84 @@
 <html>
-  <body>
-    <h1>Hello Extensions</h1>
-    <script src="popup.js"></script>
-  </body>
+
+<head>
+  <title>How do you feel?</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+
+
+  <script src="/popup/popup.js"></script>
+
+
+
+</head>
+
+
+
+<body>
+
+  <div class="settings_emoji" id="settings">
+    <a href="#">📆</a>
+  </div>
+  <div class = "container">
+
+        <div class="header" id="greeting">How do you feel now?</div>
+        <table class="first_page" id="table">
+        <tr>
+        <td>
+          <a href="#" class="emoji" id="emoji0">😄</a>
+
+        </td>
+
+        <td>
+          <a href="#" class="emoji" id="emoji1">🥰</a>
+
+        </td>
+
+        <td>
+          <a href="#" class="emoji" id="emoji2">😔</a>
+        </td>
+
+        <td>
+          <a href="#" class="emoji" id="emoji3">😶‍🌫️</a>
+        </td>
+
+        <td>
+          <a href="#" class="emoji" id="emoji4">😠</a>
+        </td>
+
+        <td>
+          <a href="#" class="emoji" id="emoji5">😜</a>
+        </td>
+
+        <td>
+          <a href="#" class="emoji" id="emoji6">💩</a>
+        </td>
+
+      </tr>
+      </table>
+
+
+  <div id="textInput" class="text_input">
+  <input type="text" id="userInput" placeholder="Just one word:">
+  <button class="button-85" role="button" id="button">Send</button>
+  </div>
+
+  <div class="big_emoji" id="emoji_of_the_day"></div>
+
+
+  <div class="centered-text" id="word_of_the_day">
+    <p> </p>
+  </div>
+
+
+  <div class="footer"> Your daily mood tracker </div>
+</div>
+
+
+</body>
+<script src="./scripts/script.js"></script>
+
+
 </html>

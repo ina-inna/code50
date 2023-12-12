@@ -1,0 +1,92 @@
+
+body {
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(153,79,113,1) 58%, rgba(0,212,255,1) 100%);
+
+  }
+
+
+  .centered-text {
+
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    text-align: center;
+}
+
+.data-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    margin-top: 50px;
+}
+
+.data-container > div {
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+    padding: 10px;
+    animation:spin 10s linear infinite;
+
+}
+
+.data-container > div:hover {
+    animation: reset;
+}
+
+.data-container > div > p:nth-child(2) {
+    font-size: 30px;
+
+}
+
+@keyframes spin {
+    1% {
+        transform:rotate(0deg);
+        background: rgba(0,255,0,0.3);
+    }
+
+    25% {
+        transform:rotate(2deg);
+        background: rgba(255,0,0,0.3);
+    }
+
+    50% {
+        transform:rotate(0deg);
+        background: rgba(0,255,0,0.3);
+    }
+
+    75% {
+        transform:rotate(-2deg);
+        background: rgba(255,0,0,0.3);
+    }
+
+    100% {
+        transform:rotate(0deg);
+    }
+}
+
+.header {
+    font-family: 'Monospace', sans-serif;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust height as needed */
+}
+
+  .footer {
+    font-family: 'Monospace', sans-serif;
+    font-size: 14px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    position: fixed; /* Fixed positioning at the bottom */
+    width: 100%;
+    bottom: 0;
+  }
+  
