@@ -102,10 +102,6 @@ def shortest_path(source, target):
     path = StackFrontier()
     path.add(start)
 
-    queue_of_paths = QueueFrontier()
-
-    queue_of_paths.add(path)
-
     # Initialize an empty explored set
 
     # Keep looping until solution found
@@ -117,7 +113,7 @@ def shortest_path(source, target):
              # Choose a node from the frontier
              node = frontier.remove()
              # If node is the goal, then we have a solution
-            #  if node.state == target_id:
+             if node.state == target_id:
             #     movie = []
             #     person = []
             #     while node.parent is not None:
