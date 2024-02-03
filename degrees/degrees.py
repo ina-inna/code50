@@ -127,9 +127,6 @@ def shortest_path(source, target):
             child = Node(state=person_id, parent=node, action=movie_id)
             path.add(child)
 
-    raise NotImplementedError
-
-
 def person_id_for_name(name):
     """
     Returns the IMDB id for a person's name,
