@@ -103,6 +103,7 @@ def shortest_path(source, target):
     path.add(start)
 
     # Initialize an empty explored set
+    self.explored = set()
 
     # Keep looping until solution found
     while True:
@@ -126,6 +127,7 @@ def shortest_path(source, target):
             #     return
 
              # Mark node as explored
+             self.explored.add(node.state)
 
              # Add neighbors to frontier
 
