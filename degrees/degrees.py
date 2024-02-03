@@ -103,6 +103,14 @@ def shortest_path(source, target):
 
     # Keep looping until solution found
 
+             # If nothing left in frontier, then no path
+             # Choose a node from the frontier
+             # If node is the goal, then we have a solution
+
+             # Mark node as explored
+
+             # Add neighbors to frontier
+
 
     # TODO
     raise NotImplementedError
