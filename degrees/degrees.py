@@ -115,8 +115,8 @@ def shortest_path(source, target):
              node = frontier.remove()
              # If node is the goal, then we have a solution
              if node.state == target_id:
-                movie = []
-                person = []
+                actions = []
+                cells = []
                 while node.parent is not None:
                     actions.append(node.action)
                     cells.append(node.state)
