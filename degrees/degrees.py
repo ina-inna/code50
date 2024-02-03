@@ -115,16 +115,16 @@ def shortest_path(source, target):
              node = frontier.remove()
              # If node is the goal, then we have a solution
              if node.state == target_id:
-            #     movie = []
-            #     person = []
-            #     while node.parent is not None:
-            #         actions.append(node.action)
-            #         cells.append(node.state)
-            #         node = node.parent
-            #     actions.reverse()
-            #     cells.reverse()
-            #     self.solution = (actions, cells)
-            #     return
+                movie = []
+                person = []
+                while node.parent is not None:
+                    actions.append(node.action)
+                    cells.append(node.state)
+                    node = node.parent
+                actions.reverse()
+                cells.reverse()
+                self.solution = (actions, cells)
+                return
 
              # Mark node as explored
              self.explored.add(node.state)
