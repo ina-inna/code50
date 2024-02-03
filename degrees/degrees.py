@@ -102,7 +102,7 @@ def shortest_path(source, target):
     path = StackFrontier()
     path.add(start)
 
-    queue_of_paths = QueueFrontier(StackFrontier)
+    queue_of_paths = QueueFrontier()
 
     queue_of_paths.add(path)
 
