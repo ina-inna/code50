@@ -96,7 +96,12 @@ def shortest_path(source, target):
     target_id = person_id_for_name(target)
 
     actorsToCheck = neighbors_for_person(source_id)
-    
+
+    # Initialize frontier to just the starting position
+
+    # Initialize an empty explored set
+
+    # Keep looping until solution found
 
 
     # TODO
