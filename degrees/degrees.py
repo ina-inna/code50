@@ -103,29 +103,29 @@ def shortest_path(source, target):
     # Keep looping until solution found
     while True:
 
-             # If nothing left in frontier, then no path
-             if frontier.empty():
-                raise Exception("None")
-             # Choose a node from the frontier
-             node = frontier.remove()
-             # If node is the goal, then we have a solution
-             if node.state == target:
-                solution = []
-                while node.parent is not None:
-                    solution.append((node.action, node.state))
-                    node = node.parent
-                solution.reverse()
-                return solution
+        # If nothing left in frontier, then no path
+        if frontier.empty():
+            raise Exception("None")
+        # Choose a node from the frontier
+        node = frontier.remove()
+        # If node is the goal, then we have a solution
+        if node.state == target:
+        solution = []
+        while node.parent is not None:
+            solution.append((node.action, node.state))
+            node = node.parent
+        solution.reverse()
+        return solution
 
-             # Mark node as explored
-             explored.add(node.state)
+        # Mark node as explored
+        explored.add(node.state)
 
-             # Add neighbors to frontier
-             for neighbor in neighbors_for_person(node.state):
-                movie_id, person_id = neighbor
-                if not frontier.contains_state(person_id) and person_id not in self.explored:
-                    child = Node(state=person_id, parent=node, action=movie_id)
-                    frontier.add(child)
+        # Add neighbors to frontier
+        for neighbor in neighbors_for_person(node.state):
+        movie_id, person_id = neighbor
+        if not frontier.contains_state(person_id) and person_id not in self.explored:
+            child = Node(state=person_id, parent=node, action=movie_id)
+            frontier.add(child)
     raise NotImplementedError
 
 
