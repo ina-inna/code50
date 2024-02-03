@@ -123,10 +123,10 @@ def shortest_path(source, target):
         # Add neighbors to path
         for neighbor in neighbors_for_person(node.state):
             movie_id, person_id = neighbor
-        if not path.contains_state(person_id) and person_id not in self.explored:
+        if not path.contains_state(person_id) and person_id not in explored:
             child = Node(state=person_id, parent=node, action=movie_id)
             path.add(child)
-            
+
     raise NotImplementedError
 
 
