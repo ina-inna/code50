@@ -98,14 +98,32 @@ def shortest_path(source, target):
     actorsToCheck = neighbors_for_person(source_id)
 
     # Initialize frontier to just the starting position
+    start = Node(state=source_id, parent=None, action=None)
+    frontier = StackFrontier()
+    frontier.add(start)
 
     # Initialize an empty explored set
 
     # Keep looping until solution found
+    while True:
 
              # If nothing left in frontier, then no path
+             if frontier.empty():
+                raise Exception("None")
              # Choose a node from the frontier
+             node = frontier.remove()
              # If node is the goal, then we have a solution
+            #  if node.state == target_id:
+            #     movie = []
+            #     person = []
+            #     while node.parent is not None:
+            #         actions.append(node.action)
+            #         cells.append(node.state)
+            #         node = node.parent
+            #     actions.reverse()
+            #     cells.reverse()
+            #     self.solution = (actions, cells)
+            #     return
 
              # Mark node as explored
 
