@@ -132,7 +132,7 @@ def shortest_path(source, target):
              # Add neighbors to frontier
              for neighbour in neighbors_for_person(node.state):
                 if not frontier.contains_state(neigbour[0]) and neigbour[0] not in self.explored:
-                    child = Node(state=state, parent=node, action=action)
+                    child = Node(state=neigbour[0], parent=node, action=action)
                     frontier.add(child)
 
 
