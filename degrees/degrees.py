@@ -95,15 +95,13 @@ def shortest_path(source, target):
     source_id = person_id_for_name(source)
     target_id = person_id_for_name(target)
 
-    # actorsToCheck = neighbors_for_person(source_id)
-
     # Initialize path to just the starting position
     start = Node(state=source_id, parent=None, action=None)
     path = StackFrontier()
     path.add(start)
 
     # Initialize an empty explored set
-    self.explored = set()
+    explored = set()
 
     # Keep looping until solution found
     while True:
@@ -123,7 +121,7 @@ def shortest_path(source, target):
                 return solution
 
              # Mark node as explored
-             self.explored.add(node.state)
+             explored.add(node.state)
 
              # Add neighbors to frontier
              for neighbor in neighbors_for_person(node.state):
@@ -131,9 +129,6 @@ def shortest_path(source, target):
                 if not frontier.contains_state(person_id) and person_id not in self.explored:
                     child = Node(state=person_id, parent=node, action=movie_id)
                     frontier.add(child)
-
-
-    # TODO
     raise NotImplementedError
 
 
