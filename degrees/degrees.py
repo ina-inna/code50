@@ -97,12 +97,14 @@ def shortest_path(source, target):
 
     # actorsToCheck = neighbors_for_person(source_id)
 
-    # Initialize frontier to just the starting position
+    # Initialize path to just the starting position
     start = Node(state=source_id, parent=None, action=None)
     path = StackFrontier()
     path.add(start)
 
     queue_of_paths = QueueFrontier(StackFrontier)
+
+    queue_of_paths.add(path)
 
     # Initialize an empty explored set
 
