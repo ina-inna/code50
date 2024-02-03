@@ -105,7 +105,7 @@ def shortest_path(source, target):
 
         # If nothing left in frontier, then no path
         if path.empty():
-            raise Exception("None")
+            return None
         # Choose a node from the frontier
         node = path.remove()
         # If node is the goal, then we have a solution
