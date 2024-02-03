@@ -92,11 +92,8 @@ def shortest_path(source, target):
     If no possible path, returns None.
     """
 
-    source_id = person_id_for_name(source)
-    target_id = person_id_for_name(target)
-
     # Initialize path to just the starting position
-    start = Node(state=source_id, parent=None, action=None)
+    start = Node(state=source, parent=None, action=None)
     path = StackFrontier()
     path.add(start)
 
@@ -112,7 +109,7 @@ def shortest_path(source, target):
              # Choose a node from the frontier
              node = frontier.remove()
              # If node is the goal, then we have a solution
-             if node.state == target_id:
+             if node.state == target:
                 solution = []
                 while node.parent is not None:
                     solution.append((node.action, node.state))
