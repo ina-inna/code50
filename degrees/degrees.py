@@ -107,7 +107,7 @@ def shortest_path(source, target):
         if path.empty():
             raise Exception("None")
         # Choose a node from the frontier
-        node = frontier.remove()
+        node = path.remove()
         # If node is the goal, then we have a solution
         if node.state == target:
             solution = []
@@ -120,12 +120,13 @@ def shortest_path(source, target):
         # Mark node as explored
         explored.add(node.state)
 
-        # Add neighbors to frontier
+        # Add neighbors to path
         for neighbor in neighbors_for_person(node.state):
             movie_id, person_id = neighbor
-        if not frontier.contains_state(person_id) and person_id not in self.explored:
+        if not path.contains_state(person_id) and person_id not in self.explored:
             child = Node(state=person_id, parent=node, action=movie_id)
-            frontier.add(child)
+            path.add(child)
+            
     raise NotImplementedError
 
 
