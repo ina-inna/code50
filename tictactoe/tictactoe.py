@@ -65,6 +65,9 @@ def winner(board):
 def terminal(board):
     """
     Returns True if game is over, False otherwise.
+    return true if all cells are filled or there is a winner,
+    else: return false
+    
     """
     raise NotImplementedError
 
