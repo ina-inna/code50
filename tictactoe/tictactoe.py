@@ -46,6 +46,8 @@ def result(board, action):
     Returns the board that results from making move (i, j) on the board.
 
     if action in not valid: not on empty sell within the bound of the board, return error
+
+    
     """
     raise NotImplementedError
 
