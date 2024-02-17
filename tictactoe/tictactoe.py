@@ -47,7 +47,7 @@ def result(board, action):
 
     if action in not valid: not on empty sell within the bound of the board, return error
 
-    for X or O, return a deep copy with i,j updated
+    for X or O, return a deep copy with i,j move
     """
     raise NotImplementedError
 
