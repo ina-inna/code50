@@ -57,6 +57,7 @@ def winner(board):
     Returns the winner of the game, if there is one.
 
     if for any diagonal, horizontal or vertical, there is x or o, return x or o
+    else: return none
     """
     raise NotImplementedError
 
