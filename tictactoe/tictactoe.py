@@ -21,7 +21,13 @@ def initial_state():
 def player(board):
     """
     Returns player who has the next turn on a board.
+
+    if initial state, then x
+
+    else:
+    if x number is odd, then x, otherwise - o
     """
+
     raise NotImplementedError
 
 
