@@ -33,7 +33,7 @@ def player(board):
 
 def actions(board):
     """
-    Returns set of all possible actions (i, j) available on the board.
+    Returns the set of all possible actions (i, j) available on the board.
 
     check empty places on board
     include all empty moves to the set
