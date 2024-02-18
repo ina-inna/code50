@@ -33,7 +33,7 @@ def player(board):
                     x_count += 1
                 elif cell == 'O':
                     o_count += 1
-    if x % 2 == 0:
+    if x_count % 2 == 0:
         return 'X'
     else:
         return 'O'
