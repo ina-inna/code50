@@ -108,16 +108,12 @@ def minimax(board):
 
 def check_board(board):
     results = []
-    results.append(horizontal(board))
+    results.append(board)
     results.append(vertical(board))
     results.append(diagonal1(board))
     results.append(diagonal2(board))
     return results
 
-
-
-def horizontal(board):
-    return [[row] for row in board]
 
 def vertical(board):
     return [[board[j][i] for j in range(len(board))] for i in range(len(board[0]))]
