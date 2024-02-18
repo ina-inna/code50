@@ -124,3 +124,18 @@ def minimax(board):
     Returns the optimal action for the current player on the board.
     """
     raise NotImplementedError
+
+
+def check_board(board):
+
+    def horizontal(board):
+        return [row for row in board]
+    def vertical(board):
+        return [[board[j][i] for j in range(len(board))] for i in range(len(board[0]))]
+
+    def diagonals(board):
+        diagonal1 = [board[i][i] for i in range(len(board))]
+        # Check secondary diagonal
+        diagonal2 = [board[i][len(board) - 1 - i] for i in range(len(board))]
+        return [diagonal1, diagonal2]
+
