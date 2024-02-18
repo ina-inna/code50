@@ -72,7 +72,7 @@ def result(board, action):
     if action == None or action[0] < 0 or action[0] > 2 or action[1] < 0 or action[1] > 2:
         raise ValueError
     else:
-        copy.deepcopy(board)
+        new_board = copy.deepcopy(board)
         return
 
 def winner(board):
