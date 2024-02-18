@@ -115,6 +115,7 @@ def check_board(board):
     results.append(vertical(board))
     results.append(diagonal1(board))
     results.append(diagonal2(board))
+    print(results)
     return results
 
 
