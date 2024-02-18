@@ -97,12 +97,10 @@ def terminal(board):
     else: return false
 
     """
-    if winner(board) == 'X' or 'O':
+    if winner(board) == 'X' or 'O' or None
         return True
-    elif
-
-    
-    raise NotImplementedError
+    else:
+        return False
 
 
 def utility(board):
