@@ -75,8 +75,8 @@ def winner(board):
             return 'X'
         elif result == ['O', 'O', 'O']:
             return 'O'
-        else:
-            None
+
+    return None
 
 
 def terminal(board):
