@@ -82,7 +82,7 @@ def terminal(board):
     """
     Returns True if game is over, False otherwise.
     """
-    if winner(board) == 'X' or winner(board) == 'O':
+    if winner(board) == X or winner(board) == O:
         return True
     elif allCellsFilled(board) == True:
         return True
@@ -94,9 +94,9 @@ def utility(board):
     """
     Returns 1 if X has won the game, -1 if O has won, 0 otherwise.
     """
-    if winner(board) == 'X':
+    if winner(board) == X:
         return 1
-    elif winner(board) == 'O':
+    elif winner(board) == O:
         return -1
     else:
         return 0
