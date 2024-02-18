@@ -58,8 +58,8 @@ def result(board, action):
     action[1] = j
     if action == None or i < 0 or i > 2 or j < 0 or j > 2:
         raise ValueError("Invalid action")
-    elif board[i][j] is not None:
-        raise ValueError("Move takes")
+    elif board[i][j] == 'X' or board[i][j] == 'O':
+        raise ValueError("Move taken")
     else:
         new_board = copy.deepcopy(board)
         who_moves = player(board)
