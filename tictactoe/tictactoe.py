@@ -69,6 +69,7 @@ def result(board, action):
 
     for X or O, return a deep copy with i,j move
     """
+    if action == None or 
     raise NotImplementedError
 
 
