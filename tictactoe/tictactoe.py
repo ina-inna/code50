@@ -33,8 +33,7 @@ def player(board):
                     count += 1
     if count % 2 == 0:
         return 'X'
-    else:
-        return 'O'
+    return 'O'
 
 
 def actions(board):
@@ -97,8 +96,7 @@ def utility(board):
         return 1
     elif winner(board) == O:
         return -1
-    else:
-        return 0
+    return 0
 
 def minimax(board):
     """
