@@ -100,6 +100,8 @@ def utility(board):
     else: 0
 
     """
+
+    
     raise NotImplementedError
 
 
