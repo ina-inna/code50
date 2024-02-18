@@ -21,12 +21,6 @@ def initial_state():
 def player(board):
     """
     Returns player who has the next turn on a board.
-
-    if initial state, then x
-
-
-    else:
-    if x number is odd, then x, otherwise - o
     """
     x_count = 0
     o_count = 0
@@ -48,9 +42,6 @@ def player(board):
 def actions(board):
     """
     Returns the set of all possible actions (i, j) available on the board.
-
-    check empty places on board
-    include all empty moves to the set
     """
 
     moves = {}
@@ -76,9 +67,6 @@ def result(board, action):
 def winner(board):
     """
     Returns the winner of the game, if there is one.
-
-    if for any diagonal, horizontal or vertical, there is x or o, return x or o
-    else: return none
     """
     array_of_results = check_board(board)
     for result in array_of_results:
@@ -93,11 +81,10 @@ def winner(board):
 def terminal(board):
     """
     Returns True if game is over, False otherwise.
-    return true if all cells are filled or if there is a winner,
-    else: return false
-
     """
-    if winner(board) == 'X' or 'O' or None
+    if winner(board) == 'X' or 'O':
+        return True
+    elif allCellsFilled(board) == True:
         return True
     else:
         return False
@@ -142,3 +129,16 @@ def diagonals(board):
     # Check secondary diagonal
     diagonal2 = [board[i][len(board) - 1 - i] for i in range(len(board))]
     return [diagonal1, diagonal2]
+
+
+def allCellsFilled(board):
+    count = 0
+    for row in board:
+        for cell in row:
+            if cell == None:
+                count += 1
+    if count = 0:
+        return True
+    else:
+        return False
+
