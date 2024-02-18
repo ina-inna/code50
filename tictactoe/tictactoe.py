@@ -67,6 +67,7 @@ def winner(board):
     Returns the winner of the game, if there is one.
     """
     array_of_results = check_board(board)
+    print(array_of_results)
     for result in array_of_results:
         if result == ['X', 'X', 'X']:
             return 'X'
