@@ -31,7 +31,7 @@ def player(board):
             for cell in row:
                 if cell == 'X':
                     x_count += 1
-                else if cell == 'O':
+                elif cell == 'O':
                     o_count += 1
     if x % 2 == 0:
         return 'X'
@@ -93,17 +93,10 @@ def terminal(board):
 def utility(board):
     """
     Returns 1 if X has won the game, -1 if O has won, 0 otherwise.
-
-    call winner function to return a winner
-    if x, then 1
-    if o, then -1
-    else: 0
-
     """
-
     if winner(board) == 'X':
         return 1
-    elif winner(board) == 'O'
+    elif winner(board) == 'O':
         return -1
     else:
         return 0
@@ -142,7 +135,7 @@ def allCellsFilled(board):
         for cell in row:
             if cell == None:
                 count += 1
-    if count = 0:
+    if count == 0:
         return True
     else:
         return False
