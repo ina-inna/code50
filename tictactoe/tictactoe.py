@@ -82,7 +82,8 @@ def winner(board):
     """
     def horizontal(board):
         return [row for row in board]
-    
+    def vertical(board):
+        
 
     raise NotImplementedError
 
