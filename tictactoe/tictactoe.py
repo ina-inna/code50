@@ -30,7 +30,9 @@ def player(board):
     """
     if board == initial_state():
         return X
-    
+    else:
+        for i in
+
     raise NotImplementedError
 
 
