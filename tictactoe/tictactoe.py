@@ -24,10 +24,13 @@ def player(board):
 
     if initial state, then x
 
+
     else:
     if x number is odd, then x, otherwise - o
     """
-
+    if board == initial_state():
+        return X
+    
     raise NotImplementedError
 
 
