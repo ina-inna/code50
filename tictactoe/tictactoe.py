@@ -52,6 +52,9 @@ def actions(board):
     check empty places on board
     include all empty moves to the set
     """
+
+    moves = {}
+    
     raise NotImplementedError
 
 
