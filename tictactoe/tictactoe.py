@@ -73,6 +73,8 @@ def result(board, action):
         raise ValueError
     else:
         new_board = copy.deepcopy(board)
+        who_moves = player(board)
+        
         return
 
 def winner(board):
