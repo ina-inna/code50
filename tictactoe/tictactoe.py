@@ -54,7 +54,9 @@ def actions(board):
     """
 
     moves = {}
-    
+
+    for i in range 2:
+        
     raise NotImplementedError
 
 
