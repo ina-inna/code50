@@ -112,19 +112,19 @@ def check_board(board):
     results = []
     results.append(board)
     results.append(vertical(board))
-    results.append(diagonal1(board))
-    results.append(diagonal2(board))
+    results.append(diagonals(board))
+
     return results
 
 
 def vertical(board):
     return [[board[j][i] for j in range(len(board))] for i in range(len(board[0]))]
 
-def diagonal1(board):
-    return [[board[i][i] for i in range(len(board))]]
-
-def diagonal2(board):
-    return [[board[i][len(board) - 1 - i] for i in range(len(board))]]
+def diagonals(board):
+    return [
+        [board[i][i] for i in range(len(board))],
+        [board[i][len(board) - 1 - i] for i in range(len(board))]
+    ]
 
 def allCellsFilled(board):
     count = 0
