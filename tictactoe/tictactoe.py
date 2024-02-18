@@ -44,7 +44,7 @@ def actions(board):
     Returns the set of all possible actions (i, j) available on the board.
     """
 
-    moves = {}
+    moves = set()
 
     for i in range (3):
         for j in range (3):
