@@ -28,24 +28,21 @@ def player(board):
     else:
     if x number is odd, then x, otherwise - o
     """
-    x = 0
-    o = 0
+    x_count = 0
+    o_count = 0
     if board == initial_state():
-        return X
+        return 'X'
     else:
         for row in board:
             for cell in row:
-                if cell == x:
-                    x+=1
-                else if cell == o:
-                    o+=1
-    if x % 2 = 0:
-        return x
+                if cell == 'X':
+                    x_count += 1
+                else if cell == 'O':
+                    o_count += 1
+    if x % 2 == 0:
+        return 'X'
     else:
-        return 0
-
-
-    raise NotImplementedError
+        return 'O'
 
 
 def actions(board):
