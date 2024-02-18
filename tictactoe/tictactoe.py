@@ -54,8 +54,12 @@ def result(board, action):
     """
     Returns the board that results from making move (i, j) on the board.
     """
-    if action == None or action[0] < 0 or action[0] > 2 or action[1] < 0 or action[1] > 2:
+    action[0] = i
+    action[1] = j
+    if action == None or i < 0 or i > 2 or j < 0 or j > 2:
         raise ValueError("Invalid action")
+    elif board[i][j] is not None:
+        raise ValueError("Move takes")
     else:
         new_board = copy.deepcopy(board)
         who_moves = player(board)
