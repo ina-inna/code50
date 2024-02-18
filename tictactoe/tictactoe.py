@@ -66,11 +66,11 @@ def result(board, action):
     Returns the board that results from making move (i, j) on the board.
     """
     if action == None or action[0] < 0 or action[0] > 2 or action[1] < 0 or action[1] > 2:
-        raise ValueError
+        raise ValueError("Invalid action")
     else:
         new_board = copy.deepcopy(board)
         who_moves = player(board)
-        new_board[action] = who_moves
+        new_board[action[0]][action[1]] = who_moves
         return new_board
 
 def winner(board):
@@ -80,6 +80,10 @@ def winner(board):
     if for any diagonal, horizontal or vertical, there is x or o, return x or o
     else: return none
     """
+    def horizontal(board):
+        return [row for row in board]
+    
+
     raise NotImplementedError
 
 
