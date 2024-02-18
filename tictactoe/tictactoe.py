@@ -113,7 +113,8 @@ def check_board(board):
     results = []
     results.append(horizontal(board))
     results.append(vertical(board))
-    results.append(diagonals(board))
+    results.append(diagonal1(board))
+    results.append(diagonal2(board))
     return results
 
 
@@ -124,12 +125,11 @@ def horizontal(board):
 def vertical(board):
     return [[board[j][i] for j in range(len(board))] for i in range(len(board[0]))]
 
-def diagonals(board):
-    diagonal1 = [board[i][i] for i in range(len(board))]
-    # Check secondary diagonal
-    diagonal2 = [board[i][len(board) - 1 - i] for i in range(len(board))]
-    return [diagonal1, diagonal2]
+def diagonal1(board):
+    return [board[i][i] for i in range(len(board))]
 
+def diagonal2(board):
+    return [board[i][len(board) - 1 - i] for i in range(len(board))]
 
 def allCellsFilled(board):
     count = 0
