@@ -64,18 +64,14 @@ def actions(board):
 def result(board, action):
     """
     Returns the board that results from making move (i, j) on the board.
-
-    if action in not valid: not on empty sell within the bound of the board, return error
-
-    for X or O, return a deep copy with i,j move
     """
     if action == None or action[0] < 0 or action[0] > 2 or action[1] < 0 or action[1] > 2:
         raise ValueError
     else:
         new_board = copy.deepcopy(board)
         who_moves = player(board)
-        
-        return
+        new_board[action] = who_moves
+        return new_board
 
 def winner(board):
     """
