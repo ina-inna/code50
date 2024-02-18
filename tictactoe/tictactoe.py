@@ -97,6 +97,11 @@ def terminal(board):
     else: return false
 
     """
+    if winner(board) == 'X' or 'O':
+        return True
+    elif
+
+    
     raise NotImplementedError
 
 
