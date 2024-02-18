@@ -80,20 +80,14 @@ def winner(board):
     if for any diagonal, horizontal or vertical, there is x or o, return x or o
     else: return none
     """
-    def horizontal(board):
-        return [row for row in board]
-    def vertical(board):
-        return [[board[j][i] for j in range(len(board))] for i in range(len(board[0]))]
-
-    def diagonals(board):
-        diagonal1 = [board[i][i] for i in range(len(board))]
-        # Check secondary diagonal
-        diagonal2 = [board[i][len(board) - 1 - i] for i in range(len(board))]
-        return [diagonal1, diagonal2]
-
-    if horizontal(board) or vertical(board) or diagonals(board)
-
-    raise NotImplementedError
+    array_of_results = check_board(board)
+    for result in array_of_results:
+        if result == ['X', 'X', 'X']:
+            return 'X'
+        elif result == ['O', 'O', 'O']:
+            return 'O'
+        else:
+            None
 
 
 def terminal(board):
@@ -127,15 +121,21 @@ def minimax(board):
 
 
 def check_board(board):
+    results = []
+    results.append(horizontal(board))
+    results.append(vertical(board))
+    results.append(diagonals(board))
 
-    def horizontal(board):
-        return [row for row in board]
-    def vertical(board):
-        return [[board[j][i] for j in range(len(board))] for i in range(len(board[0]))]
 
-    def diagonals(board):
-        diagonal1 = [board[i][i] for i in range(len(board))]
-        # Check secondary diagonal
-        diagonal2 = [board[i][len(board) - 1 - i] for i in range(len(board))]
-        return [diagonal1, diagonal2]
 
+def horizontal(board):
+    return [row for row in board]
+
+def vertical(board):
+    return [[board[j][i] for j in range(len(board))] for i in range(len(board[0]))]
+
+def diagonals(board):
+    diagonal1 = [board[i][i] for i in range(len(board))]
+    # Check secondary diagonal
+    diagonal2 = [board[i][len(board) - 1 - i] for i in range(len(board))]
+    return [diagonal1, diagonal2]
