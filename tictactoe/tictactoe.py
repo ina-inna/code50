@@ -101,9 +101,12 @@ def utility(board):
 
     """
 
-    
-    raise NotImplementedError
-
+    if winner(board) == 'X':
+        return 1
+    elif winner(board) == 'O'
+        return -1
+    else:
+        return 0
 
 def minimax(board):
     """
