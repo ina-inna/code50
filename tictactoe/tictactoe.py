@@ -58,7 +58,8 @@ def actions(board):
     for i in range (3):
         for j in range (3):
             if board[i][j] is None:
-                moves.add(i,j)
+                moves.add((i,j))
+    return moves
 
 def result(board, action):
     """
