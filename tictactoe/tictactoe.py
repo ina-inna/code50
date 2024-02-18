@@ -108,7 +108,7 @@ def minimax(board):
 
 def check_board(board):
     results = []
-    results.append(horizontal(board))
+    results.append([horizontal(board)])
     results.append(vertical(board))
     results.append(diagonal1(board))
     results.append(diagonal2(board))
