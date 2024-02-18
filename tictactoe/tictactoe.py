@@ -68,12 +68,11 @@ def winner(board):
     """
     array_of_results = check_board(board)
 
-    for one_of_results in array_of_results:
-        for result in one_of_results:
-            if result == ['X', 'X', 'X']:
-                return 'X'
-            elif result == ['O', 'O', 'O']:
-                return 'O'
+    for result in array_of_results:
+        if result == ['X', 'X', 'X']:
+            return 'X'
+        elif result == ['O', 'O', 'O']:
+            return 'O'
 
     return None
 
@@ -110,9 +109,9 @@ def minimax(board):
 
 def check_board(board):
     results = []
-    results.append(board)
-    results.append(vertical(board))
-    results.append(diagonals(board))
+    results.extend(board)
+    results.extend(vertical(board))
+    results.extend(diagonals(board))
 
     return results
 
