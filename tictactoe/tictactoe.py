@@ -71,9 +71,9 @@ def winner(board):
     array_of_results = check_board(board)
     for result in array_of_results:
         if result == ['X', 'X', 'X']:
-            return X
+            return 'X'
         elif result == ['O', 'O', 'O']:
-            return O
+            return 'O'
         else:
             None
 
@@ -82,7 +82,7 @@ def terminal(board):
     """
     Returns True if game is over, False otherwise.
     """
-    if winner(board) == X or winner(board) == O:
+    if winner(board) == 'X' or winner(board) == 'O':
         return True
     elif allCellsFilled(board) == True:
         return True
