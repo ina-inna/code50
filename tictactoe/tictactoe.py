@@ -120,7 +120,7 @@ def check_board(board):
 
 
 def horizontal(board):
-    return [row for row in board]
+    return [[row] for row in board]
 
 def vertical(board):
     return [[board[j][i] for j in range(len(board))] for i in range(len(board[0]))]
