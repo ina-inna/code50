@@ -84,8 +84,8 @@ def terminal(board):
         return True
     elif allCellsFilled(board) == True:
         return True
-    else:
-        return False
+
+    return False
 
 
 def utility(board):
