@@ -34,10 +34,10 @@ def player(board):
                     x_count += 1
                 elif cell == 'O':
                     o_count += 1
-    if x_count == 1 or x_count % 2 == 0:
-        return 'O'
-    else:
+    if x_count % 2 == 0:
         return 'X'
+    else:
+        return 'O'
 
 
 def actions(board):
@@ -115,7 +115,6 @@ def check_board(board):
     results.append(vertical(board))
     results.append(diagonal1(board))
     results.append(diagonal2(board))
-    print(results)
     return results
 
 
