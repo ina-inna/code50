@@ -67,12 +67,13 @@ def winner(board):
     Returns the winner of the game, if there is one.
     """
     array_of_results = check_board(board)
-    print(array_of_results)
-    for result in array_of_results:
-        if result == ['X', 'X', 'X']:
-            return 'X'
-        elif result == ['O', 'O', 'O']:
-            return 'O'
+
+    for one_of_results in array_of_results:
+        for result in one_of_results:
+            if result == ['X', 'X', 'X']:
+                return 'X'
+            elif result == ['O', 'O', 'O']:
+                return 'O'
 
     return None
 
@@ -120,10 +121,10 @@ def vertical(board):
     return [[board[j][i] for j in range(len(board))] for i in range(len(board[0]))]
 
 def diagonal1(board):
-    return [board[i][i] for i in range(len(board))]
+    return [[board[i][i] for i in range(len(board))]]
 
 def diagonal2(board):
-    return [board[i][len(board) - 1 - i] for i in range(len(board))]
+    return [[board[i][len(board) - 1 - i] for i in range(len(board))]]
 
 def allCellsFilled(board):
     count = 0
