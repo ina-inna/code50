@@ -55,10 +55,10 @@ def actions(board):
 
     moves = {}
 
-    for i in range 2:
-        
-    raise NotImplementedError
-
+    for i in range (3):
+        for j in range (3):
+            if board[i][j] is None:
+                moves.add(i,j)
 
 def result(board, action):
     """
