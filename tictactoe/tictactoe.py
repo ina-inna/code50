@@ -188,7 +188,7 @@ def allCellsFilled(board):
  def Max-value(board):
      if terminal(board):
          return utility(board)
-     v = -infty
+     v = -inf
      for action in actions(board):
          v = max(v, min_value(result(board, action)))
          return v
@@ -197,7 +197,7 @@ def allCellsFilled(board):
      if terminal(board):
             return utility(board)
 
-        v = infty
+        v = inf
         for action in actions(board):
             v = min(v, max_value(result(board, action)))
         return v
