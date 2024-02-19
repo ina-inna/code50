@@ -124,6 +124,8 @@ def minimax(board):
                 best_action = action
 
         return best_action
+    else:
+        return None
 
 def check_board(board):
     results = []
