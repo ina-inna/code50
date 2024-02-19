@@ -190,7 +190,7 @@ def max_value(board):
     best_action = None
     v = -float('inf')
     for action in actions(board):
-        new_value = min_value(result(board, action))
+        new_value = float(min_value(result(board, action)))
         if new_value > v:
             v = new_value
             best_action = action
@@ -204,7 +204,7 @@ def min_value(board):
     best_action = None
     v = float('inf')
     for action in actions(board):
-        new_value = max_value(result(board, action))
+        new_value = float(max_value(result(board, action)))
         if new_value < v:
             v = new_value
             best_action = action
