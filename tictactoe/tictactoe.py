@@ -109,6 +109,9 @@ def minimax(board):
 
     given a state(board), O picks action A in actions(board), that produces lowest value of Max-Value(result(board, action))
 
+    Max-value(state):
+        if terminal(state), return utility(state)
+
 
 
 
