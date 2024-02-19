@@ -190,7 +190,7 @@ def max_value(board):
 
     v = -float('inf')
     for action in actions(board):
-        v = min_value(result(board, action))
+        v = max(v, min_value(result(board, action)))
         values[action] = v
     best_action = max(values, key=lambda k: values[k])
     print(values)
@@ -202,7 +202,7 @@ def min_value(board):
     values = {}
     v = float('inf')
     for action in actions(board):
-        v = max_value(result(board, action))
+        v = min(v, max_value(result(board, action)))
         values[action] = v
     best_action = min(values, key=lambda k: values[k])
     print(values)
