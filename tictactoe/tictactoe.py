@@ -55,7 +55,7 @@ def result(board, action):
     """
     if action == None or action[0] < 0 or action[0] > 2 or action[1] < 0 or action[1] > 2:
         raise ValueError("Invalid action")
-    elif board[action[0]][action[1]] not None:
+    elif board[action[0]][action[1]] is not None:
         raise ValueError("Move taken")
     else:
         new_board = copy.deepcopy(board)
