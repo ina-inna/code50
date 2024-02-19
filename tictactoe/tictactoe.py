@@ -101,54 +101,6 @@ def utility(board):
 def minimax(board):
     """
     Returns the optimal action for the current player on the board.
-
-
-    given a state(board), X picks action A in actions(board), that produces highest value of Min-Value(result(board, action))
-
-
-
-    given a state(board), O picks action A in actions(board), that produces lowest value of Max-Value(result(board, action))
-
-    def Max-value(state):
-        if terminal(state):
-            return utility(state)
-
-        v = -infty
-        for action in actions(state):
-            v = max(v, min_value(result(state, action)))
-        return v
-
-    def Min-value(state):
-        if terminal(state):
-            return utility(state)
-
-        v = +infty
-        for action in actions(state):
-            v = min(v, max_value(result(state, action)))
-        return v
-
-
-
-
-    helper function (board, player)
-
-    define min_value
-    define max_value
-
-    recursive backtracking?
-
-    basecase:
-    player has won
-    or
-    all cells are filled
-
-    else:
-    choose
-
-    explore
-
-    unchoose
-
     """
     if player(board) == 'X':
         best_action = None
