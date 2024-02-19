@@ -151,7 +151,16 @@ def minimax(board):
 
     """
     if player(board) == 'X':
-        return max_value(board)
+        best_action = None
+        best_value = -float('inf')
+
+        for action in actions:
+            value = max_value(action)
+            if value > best_value:
+                best_value = value
+                best_action = action
+
+        return best_action
     return min_value(board)
 
 def check_board(board):
