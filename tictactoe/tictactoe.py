@@ -151,11 +151,8 @@ def minimax(board):
 
     """
     if player(board) == 'X':
-        findMaxMove(board, 'X')
-    findMinMove(board, 'O')
-
-    raise NotImplementedError
-
+        return Max-value(board)
+    return Min-value(board)
 
 def check_board(board):
     results = []
@@ -185,4 +182,24 @@ def allCellsFilled(board):
         return True
     else:
         return False
+
+
+
+ def Max-value(state):
+        if terminal(state):
+            return utility(state)
+
+        v = -infty
+        for action in actions(state):
+            v = max(v, min_value(result(state, action)))
+        return v
+
+    def Min-value(state):
+        if terminal(state):
+            return utility(state)
+
+        v = +infty
+        for action in actions(state):
+            v = min(v, max_value(result(state, action)))
+        return v
 
