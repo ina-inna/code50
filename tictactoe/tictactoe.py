@@ -195,7 +195,6 @@ def allCellsFilled(board):
 def max_value(board):
     if terminal(board):
         return utility(board)
-    values = {}
 
     v = -float('inf')
     for action in actions(board):
