@@ -102,6 +102,8 @@ def minimax(board):
     """
     Returns the optimal action for the current player on the board.
 
+    helper function 
+
     define min_value
     define max_value
 
@@ -116,7 +118,7 @@ def minimax(board):
     choose
 
     explore
-    
+
     unchoose
 
     """
