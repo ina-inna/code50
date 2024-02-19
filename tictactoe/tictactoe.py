@@ -113,6 +113,7 @@ def minimax(board):
         if terminal(state), return utility(state)
 
         v = -infty
+        for action in actions(state):
 
 
 
