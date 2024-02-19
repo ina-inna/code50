@@ -183,8 +183,6 @@ def allCellsFilled(board):
     else:
         return False
 
-
-
  def Max-value(board):
      if terminal(board):
          return utility(board)
