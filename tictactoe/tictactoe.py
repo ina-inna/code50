@@ -191,7 +191,7 @@ def max_value(board):
     for action in actions(board):
         v = max(v, min_value(result(board, action)))
 
-    return v
+    return action
 
 def min_value(board):
     if terminal(board):
@@ -201,4 +201,4 @@ def min_value(board):
     for action in actions(board):
         v = min(v, max_value(result(board, action)))
 
-    return v
+    return action
