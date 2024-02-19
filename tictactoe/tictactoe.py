@@ -101,6 +101,20 @@ def utility(board):
 def minimax(board):
     """
     Returns the optimal action for the current player on the board.
+
+    define min_value
+    define max_value
+
+    recursive backtracking?
+
+    basecase:
+    player has won
+    or
+    all cells are filled
+
+    else:
+    
+
     """
     raise NotImplementedError
 
