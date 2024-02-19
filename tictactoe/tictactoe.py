@@ -113,7 +113,11 @@ def minimax(board):
     all cells are filled
 
     else:
+    choose
+
+    explore
     
+    unchoose
 
     """
     raise NotImplementedError
