@@ -122,6 +122,10 @@ def minimax(board):
     unchoose
 
     """
+    if player(board) == 'X':
+        findMaxMove(board, 'X')
+    findMinMove(board, 'O')
+
     raise NotImplementedError
 
 
