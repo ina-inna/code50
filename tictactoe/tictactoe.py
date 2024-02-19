@@ -186,19 +186,22 @@ def allCellsFilled(board):
 def max_value(board):
     if terminal(board):
         return utility(board)
-
+    best_action = None
     v = -float('inf')
     for action in actions(board):
         v = max(v, min_value(result(board, action)))
+        best_action = action
 
-    return v
+    return best_action
 
 def min_value(board):
     if terminal(board):
         return utility(board)
 
     v = float('inf')
+    best_action = None
     for action in actions(board):
         v = min(v, max_value(result(board, action)))
+        best_action = action
 
-    return v
+    return best_action
