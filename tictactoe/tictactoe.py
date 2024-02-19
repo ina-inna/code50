@@ -110,7 +110,7 @@ def minimax(board):
         best_value = -float('inf')
 
         for action in actions(board):
-            value = max(v, min_value(result(board, action)))
+            value = max_value(result(board, action))
             if value > best_value:
                 best_value = value
                 best_action = action
@@ -121,12 +121,14 @@ def minimax(board):
         best_value = float('inf')
 
         for action in actions(board):
-            value = min(v, max_value(result(board, action)))
+            value = min_value(result(board, action))
             if value < best_value:
                 best_value = value
                 best_action = action
 
         return best_action
+    else:
+        return None
 
 def check_board(board):
     results = []
@@ -156,7 +158,7 @@ def allCellsFilled(board):
         return True
     else:
         return False
-''''
+
 def max_value(board):
     if terminal(board):
         return utility(board)
@@ -176,4 +178,3 @@ def min_value(board):
         v = min(v, max_value(result(board, action)))
 
     return v
-''''
