@@ -102,6 +102,14 @@ def minimax(board):
     """
     Returns the optimal action for the current player on the board.
 
+
+    given a state(board), X picks action A in actions(board), that produces highest value of Min-Value(result(board, action))
+
+
+
+
+
+
     helper function (board, player)
 
     define min_value
