@@ -161,7 +161,17 @@ def minimax(board):
                 best_action = action
 
         return best_action
-    return min_value(board)
+    else:
+        best_action = None
+        best_value = float('inf')
+
+        for action in actions:
+            value = min_value(action)
+            if value < best_value:
+                best_value = value
+                best_action = action
+
+        return best_action
 
 def check_board(board):
     results = []
@@ -197,16 +207,11 @@ def max_value(board):
         return utility(board)
 
     v = -float('inf')
-    for action in actions(board):
-        v = max(v, min_value(result(board, action)))
-    return v
+    return max(v, min_value(result(board, action)))
 
 def min_value(board):
     if terminal(board):
         return utility(board)
 
     v = float('inf')
-    for action in actions(board):
-        v = min(v, max_value(result(board, action)))
-
-    return v
+    return min(v, max_value(result(board, action)))
