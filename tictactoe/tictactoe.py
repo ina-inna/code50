@@ -192,6 +192,7 @@ def max_value(board):
     for action in actions(board):
         v = max(v, min_value(result(board, action)))
         values[action] = v
+    max_value = max(values, key = values.get)
 
     return v
 
@@ -203,5 +204,4 @@ def min_value(board):
     for action in actions(board):
         v = min(v, max_value(result(board, action)))
         values[action] = v
-        
     return v
