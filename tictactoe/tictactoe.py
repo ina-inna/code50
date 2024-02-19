@@ -193,7 +193,7 @@ def max_value(board):
         v = max(v, min_value(result(board, action)))
         values[action] = v
     best_action = max(values, key=lambda k: values[k])
-
+    print(values)
     return best_action
 
 def min_value(board):
@@ -205,4 +205,6 @@ def min_value(board):
         v = min(v, max_value(result(board, action)))
         values[action] = v
     best_action = min(values, key=lambda k: values[k])
+    print(values)
+
     return best_action
