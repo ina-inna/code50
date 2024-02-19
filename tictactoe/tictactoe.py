@@ -112,6 +112,8 @@ def minimax(board):
     Max-value(state):
         if terminal(state), return utility(state)
 
+        v = -infty
+
 
 
 
