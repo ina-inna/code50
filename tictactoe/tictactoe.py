@@ -185,21 +185,20 @@ def allCellsFilled(board):
 
 
 
- def Max-value(state):
-        if terminal(state):
-            return utility(state)
+ def Max-value(board):
+     if terminal(board):
+         return utility(board)
+     v = -infty
+     for action in actions(board):
+         v = max(v, min_value(result(board, action)))
+         return v
 
-        v = -infty
-        for action in actions(state):
-            v = max(v, min_value(result(state, action)))
-        return v
+ def Min-value(board):
+     if terminal(board):
+            return utility(board)
 
-    def Min-value(state):
-        if terminal(state):
-            return utility(state)
-
-        v = +infty
-        for action in actions(state):
-            v = min(v, max_value(result(state, action)))
+        v = infty
+        for action in actions(board):
+            v = min(v, max_value(result(board, action)))
         return v
 
