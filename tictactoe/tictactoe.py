@@ -151,8 +151,8 @@ def minimax(board):
 
     """
     if player(board) == 'X':
-        return Max-value(board)
-    return Min-value(board)
+        return max-value(board)
+    return min-value(board)
 
 def check_board(board):
     results = []
