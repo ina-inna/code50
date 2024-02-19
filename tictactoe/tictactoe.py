@@ -113,8 +113,7 @@ def minimax(board):
             if value > best_value:
                 best_value = value
                 best_action = action
-
-    return best_action
+        return best_action
     elif player(board) == 'O':
         best_action = None
         best_value = float('inf')
