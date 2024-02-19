@@ -118,7 +118,14 @@ def minimax(board):
             v = max(v, min_value(result(state, action)))
         return v
 
+    def Min-value(state):
+        if terminal(state):
+            return utility(state)
 
+        v = +infty
+        for action in actions(state):
+            v = min(v, max_value(result(state, action)))
+        return v
 
 
 
