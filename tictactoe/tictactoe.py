@@ -102,7 +102,8 @@ def minimax(board):
     """
     Returns the optimal action for the current player on the board.
     """
-
+    if allCellsFilled(board):
+        return None
     if terminal(board):
         return utility(board)
     if player(board) == 'X':
