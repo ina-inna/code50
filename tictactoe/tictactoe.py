@@ -104,32 +104,33 @@ def minimax(board):
     """
     if allCellsFilled(board):
         return None
-    if terminal(board):
-        return utility(board)
-    if player(board) == 'X':
-        best_action = None
-        best_value = -float('inf')
-
-        for action in actions(board):
-            value = max_value(result(board, action))
-            if value > best_value:
-                best_value = value
-                best_action = action
-
-        return best_action
-    elif player(board) == 'O':
-        best_action = None
-        best_value = float('inf')
-
-        for action in actions(board):
-            value = min_value(result(board, action))
-            if value < best_value:
-                best_value = value
-                best_action = action
-
-        return best_action
     else:
-        return None
+        if terminal(board):
+            return utility(board)
+        if player(board) == 'X':
+            best_action = None
+            best_value = -float('inf')
+
+            for action in actions(board):
+                value = max_value(result(board, action))
+                if value > best_value:
+                    best_value = value
+                    best_action = action
+
+            return best_action
+        elif player(board) == 'O':
+            best_action = None
+            best_value = float('inf')
+
+            for action in actions(board):
+                value = min_value(result(board, action))
+                if value < best_value:
+                    best_value = value
+                    best_action = action
+
+            return best_action
+        else:
+            return None
 
 def check_board(board):
     results = []
