@@ -140,9 +140,6 @@ def allCellsFilled(board):
         return False
 
 def max_value(board):
-    if terminal(board):
-        return utility(board)
-
     best_action = None
     best_value = -float('inf')
     for action in actions(board):
@@ -154,8 +151,7 @@ def max_value(board):
     return best_action
 
 def min_value(board):
-    if terminal(board):
-        return utility(board)
+
     best_action = None
     best_value = float('inf')
     for action in actions(board):
