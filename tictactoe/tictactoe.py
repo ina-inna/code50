@@ -111,6 +111,7 @@ def minimax(board):
         best_value = -float('inf')
 
         for action in actions(board):
+            print(action)
             value = max_value(result(board, action))
             if value > best_value:
                 best_value = value
@@ -121,6 +122,7 @@ def minimax(board):
         best_value = float('inf')
 
         for action in actions(board):
+            print(action)
             value = min_value(result(board, action))
             if value < best_value:
                 best_value = value
