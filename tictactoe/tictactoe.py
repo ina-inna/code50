@@ -42,11 +42,12 @@ def actions(board):
 
     moves = set()
 
-    for i in range (3):
-        for j in range (3):
+    for i in range(3):
+        for j in range(3):
             if board[i][j] is None:
-                moves.add((i,j))
+                moves.add((i, j))
     return moves
+
 
 def result(board, action):
     """
@@ -61,6 +62,7 @@ def result(board, action):
         who_moves = player(board)
         new_board[action[0]][action[1]] = who_moves
         return new_board
+
 
 def winner(board):
     """
@@ -99,6 +101,7 @@ def utility(board):
         return -1
     return 0
 
+
 def minimax(board):
     """
     Returns the optimal action for the current player on the board.
@@ -128,6 +131,7 @@ def minimax(board):
 
         return best_action
 
+
 def check_board(board):
     results = []
     results.extend(board)
@@ -140,11 +144,13 @@ def check_board(board):
 def vertical(board):
     return [[board[j][i] for j in range(len(board))] for i in range(len(board[0]))]
 
+
 def diagonals(board):
     return [
         [board[i][i] for i in range(len(board))],
         [board[i][len(board) - 1 - i] for i in range(len(board))]
     ]
+
 
 def allCellsFilled(board):
     count = 0
@@ -156,6 +162,7 @@ def allCellsFilled(board):
         return True
     else:
         return False
+
 
 def max_value(board):
     if terminal(board):
@@ -174,4 +181,3 @@ def min_value(board):
     for action in actions(board):
         v = min(v, max_value(result(board, action)))
     return v
-
