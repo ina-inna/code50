@@ -107,26 +107,26 @@ def minimax(board):
     if terminal(board):
         return None
     if player(board) == 'X':
-        # best_action = None
-        # best_value = -float('inf')
+        best_action = None
+        best_value = -float('inf')
 
-        # for action in actions(board):
-        #     value = max_value(result(board, action))
-        #     if value > best_value:
-        #         best_value = value
-        #         best_action = action
-        return max_value(board)
+        for action in actions(board):
+            value = max_value(result(board, action))
+            if value > best_value:
+                best_value = value
+                best_action = action
+        return best_action
     elif player(board) == 'O':
-        # best_action = None
-        # best_value = float('inf')
+        best_action = None
+        best_value = float('inf')
 
-        # for action in actions(board):
-        #     value = min_value(result(board, action))
-        #     if value < best_value:
-        #         best_value = value
-        #         best_action = action
+        for action in actions(board):
+            value = min_value(result(board, action))
+            if value < best_value:
+                best_value = value
+                best_action = action
 
-        return min_value(board)
+        return best_action
 
 def check_board(board):
     results = []
